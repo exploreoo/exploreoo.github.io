@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>样式素材</title>
+    <url>/zh-CN/effect/</url>
+    <content><![CDATA[<h5 id="素材"><a href="#素材" class="headerlink" title="素材"></a>素材</h5><ul>
+<li><p><em><a href="https://www.17sucai.com/">jQuery 网页特效最全网页模板和网站模板 jQuery 代码</a></em></p>
+</li>
+<li><p><em><a href="https://www.zcool.com.cn/work/ZMzI2MzUwOTY=.html">数据可视化设计 2018 总集_光影年年-站酷 ZCOOL</a></em></p>
+</li>
+</ul>
+<h5 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h5><ul>
+<li><em><a href="https://animate.style/">animate.css</a></em> <em>+ <a href="https://github.com/graingert/wow">wowjs</a></em></li>
+</ul>
+<h5 id="图表"><a href="#图表" class="headerlink" title="图表"></a>图表</h5><ul>
+<li><p><em><a href="https://echarts.apache.org/zh/index.html">Apache ECharts</a></em></p>
+</li>
+<li><p><em><a href="https://www.makeapie.cn/echarts">makeapie echarts 社区图表可视化案例</a></em></p>
+</li>
+<li><p><em><a href="http://ppchart.com/#/">PPChart - 让图表更简单</a></em></p>
+</li>
+<li><p><em><a href="https://www.hcharts.cn/demo/highcharts">Highcharts</a></em></p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/zh-CN/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -19,15 +46,112 @@
 ]]></content>
   </entry>
   <entry>
-    <title>test</title>
-    <url>/zh-CN/test/</url>
-    <content><![CDATA[<p>这是一个分类信息页</p>
+    <title>资料</title>
+    <url>/zh-CN/infos/</url>
+    <content><![CDATA[<ul>
+<li><em><a href="https://wangdoc.com/es6/">ES6 教程 - 网道 (wangdoc.com)</a></em></li>
+<li><em><a href="https://developer.mozilla.org/zh-CN/docs/Web">Web 开发技术 | MDN (mozilla.org)</a></em></li>
+<li><a href="https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=neteasecloudmusicapi">网易云音乐 NodeJS 版 API (binaryify.github.io)</a></li>
+</ul>
+<h5 id="vue"><a href="#vue" class="headerlink" title="vue"></a>vue</h5><ul>
+<li><p><em><a href="https://pinia.web3doc.top/introduction.html">Pinia 中文文档 </a></em></p>
+</li>
+<li><p><em><a href="https://vueuse.org/core/usedark/">useDark | VueUse</a></em></p>
+</li>
+</ul>
+<h5 id="react"><a href="#react" class="headerlink" title="react"></a>react</h5><ul>
+<li><em><a href="https://umijs.org/docs/introduce/introduce">UmiJS</a></em></li>
+<li><em><a href="https://create-react-app.bootcss.com/docs/getting-started">Create React App 中文文档 (bootcss.com)</a></em></li>
+</ul>
+<h5 id="wechat"><a href="#wechat" class="headerlink" title="wechat"></a>wechat</h5><ul>
+<li><a href="https://mp.weixin.qq.com/">微信公众平台 (qq.com)</a></li>
+<li><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/">微信开放文档 (qq.com)</a></li>
+</ul>
+<h5 id="webgl"><a href="#webgl" class="headerlink" title="webgl"></a>webgl</h5><ul>
+<li><p><a href="https://www.blender.org/download/">*blender.org</a>*</p>
+</li>
+<li><p><em><a href="http://mars3d.cn/example.html#ex_0_0">Mars3D 三维可视化平台 | 火星科技</a></em></p>
+</li>
+<li><p><em><a href="https://ecomfe.github.io/zrender-doc/public/api.html">ZRender (ecomfe.github.io)</a></em></p>
+</li>
+<li><p><em><a href="http://www.webgl3d.cn/pages/aac9ab/">Three.js</a></em></p>
+</li>
+</ul>
+<h5 id="跨平台，微应用"><a href="#跨平台，微应用" class="headerlink" title="跨平台，微应用"></a>跨平台，微应用</h5><ul>
+<li><em><a href="https://uniapp.dcloud.net.cn/">uni-app 官网 (dcloud.net.cn)</a></em></li>
+<li><em><a href="https://docs.taro.zone/docs/GETTING-STARTED/">Taro 文档</a></em></li>
+<li><em><a href="https://www.reactnative.cn/">React Native 中文网 · 使用 React 来编写原生应用的框架</a></em></li>
+<li><em><a href="https://flutter.cn/docs">Flutter 开发文档 </a></em></li>
+<li><a href="https://qiankun.umijs.org/zh/guide">qiankun (umijs.org)</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>vue</tag>
+        <tag>react</tag>
+        <tag>webgl</tag>
+        <tag>es6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>插件</title>
+    <url>/zh-CN/plugin/</url>
+    <content><![CDATA[<h5 id="富文本插件"><a href="#富文本插件" class="headerlink" title="富文本插件"></a>富文本插件</h5><ul>
+<li><em><a href="https://vueup.github.io/vue-quill/guide/">VueQuill</a></em>  <a href="https://flyween.github.io/vue3-quill/">示例</a></li>
+<li><em><a href="https://microsoft.github.io/monaco-editor/">Monaco</a></em></li>
+</ul>
+<h5 id="上传插件"><a href="#上传插件" class="headerlink" title="上传插件"></a>上传插件</h5><ul>
+<li><h5 id="vue-uploader-solutions-next"><a href="#vue-uploader-solutions-next" class="headerlink" title="vue-uploader-solutions-next"></a><em><a href="https://github.com/shady-xia/vue-uploader-solutions-next">vue-uploader-solutions-next</a></em></h5>基于 <code>vue-simple-uploader</code> ，封装可以分片、秒传及断点续传的vue3上传插件</li>
+</ul>
+<h5 id="拖放排序插件"><a href="#拖放排序插件" class="headerlink" title="拖放排序插件"></a>拖放排序插件</h5><ul>
+<li><h5 id="Sortable-js"><a href="#Sortable-js" class="headerlink" title="Sortable.js"></a><em><a href="http://www.manongjc.com/article/106870.html">Sortable.js</a></em></h5></li>
+</ul>
 ]]></content>
       <categories>
-        <category>-测试</category>
+        <category>tools</category>
       </categories>
       <tags>
-        <tag>categorie-1</tag>
+        <tag>plugin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>threeJs</title>
+    <url>/zh-CN/threejs/</url>
+    <content><![CDATA[<h5 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h5><ul>
+<li>地址：*<a href="http://www.webgl3d.cn/pages/aac9ab/">three.js</a>*</li>
+</ul>
+]]></content>
+      <categories>
+        <category>webGL</category>
+      </categories>
+      <tags>
+        <tag>threeJs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拓展</title>
+    <url>/zh-CN/tool/</url>
+    <content><![CDATA[<h5 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h5><ul>
+<li><em><a href="https://ip8.com/">ip8.com</a></em></li>
+</ul>
+<h5 id="github加速"><a href="#github加速" class="headerlink" title="github加速"></a>github加速</h5><ul>
+<li><em><a href="https://github.com/dotnetcore/FastGithub/releases">FastGithub</a></em></li>
+<li><em><a href="https://github.com/docmirror/dev-sidecar">dev-sidecar</a></em></li>
+</ul>
+<h5 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h5><ul>
+<li><em><a href="https://openai.com/">OpenAI</a></em></li>
+<li><em><a href="https://steamship.us.auth0.com/u/login?state=hKFo2SBIUEgyVi1EbDFJa0w2YURfVXJZNGVxdmNHSFNxRjdYaaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFl2NlI0dmM2T2toZkNDYS1ZaHdHZVAyVkZyczc3b003o2NpZNkga21ZbWNKTFJpSzU4TER2WXR6cmNmQWlDUmNCMHVQR0s">Steamship</a></em></li>
+<li><em><a href="https://monica.im/tutorial?from=index">Monica</a></em></li>
+<li><a href="https://monica.im/tutorial?from=index"><em><a href="http://chatmoss.aihao123.cn/#/chat">ChatMoss</a></em></a></li>
+</ul>
+<h5 id="代码自动构建"><a href="#代码自动构建" class="headerlink" title="代码自动构建"></a>代码自动构建</h5><ul>
+<li><em><a href="https://aws.amazon.com/cn/codewhisperer/resources/#Getting_started">aws CodeWhispererer</a></em></li>
+</ul>
+]]></content>
+      <categories>
+        <category>tools</category>
+      </categories>
+      <tags>
+        <tag>tool</tag>
       </tags>
   </entry>
 </search>
