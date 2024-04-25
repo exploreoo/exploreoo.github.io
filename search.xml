@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>bug</title>
-    <url>/zh-CN/bug/</url>
-    <content><![CDATA[<ul>
-<li><p><code>Angular</code><strong>Error: Zone.js has detected that ZoneAwarePromise (window|global).Promise has been overwritten. Most likely cause is that a Promise polyfill has been loaded after Zone.js (Polyfilling Promise api is not necessary when zone.js is loaded. If you must load one, do so before loading zone.js.)</strong></p>
-<span id="more"></span>
-
-<p>原因：Zone.js检测到ZoneAwarePromise（window | global）.Promise已被覆盖。 最可能的原因是在Zone.js之后加载了Promise polyfill（加载zone.js时不需要填充Promise api。如果必须加载，则在加载zone.js之前执行。）</p>
-<p>解决：</p>
-<ol>
-<li>改的方向就是在zone.js之前加载它，把polyfill.ts里import ‘zone.js&#x2F;dist&#x2F;zone’的这一行提到main.ts里</li>
-<li>在polyfill.ts里import ‘zone.js&#x2F;dist&#x2F;zone’这一行前面，引入import ‘core-js&#x2F;es&#x2F;promise’</li>
-</ol>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>bug</category>
-      </categories>
-      <tags>
-        <tag>bug</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JSON</title>
     <url>/zh-CN/JSON/</url>
     <content><![CDATA[<h5 id="JSON（JavaScript-Object-Notation）"><a href="#JSON（JavaScript-Object-Notation）" class="headerlink" title="JSON（JavaScript Object Notation）"></a>JSON（JavaScript Object Notation）</h5><p>是一种轻量级的数据交换格式，因其简洁、易读、易于解析的特点，在前后端数据交互、API 设计、配置文件等领域广泛应用。下面是使用 JSON 传输数据的优缺点：</p>
@@ -61,6 +38,29 @@
       </tags>
   </entry>
   <entry>
+    <title>bug</title>
+    <url>/zh-CN/bug/</url>
+    <content><![CDATA[<ul>
+<li><p><code>Angular</code><strong>Error: Zone.js has detected that ZoneAwarePromise (window|global).Promise has been overwritten. Most likely cause is that a Promise polyfill has been loaded after Zone.js (Polyfilling Promise api is not necessary when zone.js is loaded. If you must load one, do so before loading zone.js.)</strong></p>
+<span id="more"></span>
+
+<p>原因：Zone.js检测到ZoneAwarePromise（window | global）.Promise已被覆盖。 最可能的原因是在Zone.js之后加载了Promise polyfill（加载zone.js时不需要填充Promise api。如果必须加载，则在加载zone.js之前执行。）</p>
+<p>解决：</p>
+<ol>
+<li>改的方向就是在zone.js之前加载它，把polyfill.ts里import ‘zone.js&#x2F;dist&#x2F;zone’的这一行提到main.ts里</li>
+<li>在polyfill.ts里import ‘zone.js&#x2F;dist&#x2F;zone’这一行前面，引入import ‘core-js&#x2F;es&#x2F;promise’</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>bug</category>
+      </categories>
+      <tags>
+        <tag>bug</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>css</title>
     <url>/zh-CN/css/</url>
     <content><![CDATA[<ul>
@@ -83,6 +83,38 @@
       </categories>
       <tags>
         <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>兼容性问题</title>
+    <url>/zh-CN/hack/</url>
+    <content><![CDATA[<ul>
+<li><code>Autoprefixer</code>自动添加浏览器前缀插件，属于后处理程序，不像 Sass 以及 Stylus 之类的预处理器。它适用于普通的 CSS，可以实现css3代码自动补全。也可以轻松跟 Sass，LESS及Stylus集成，在CSS编译前或编译后运行。</li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li><p>ant-design table树结构折叠图标火狐浏览器内显示错误</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这种写法仅火狐识别</span></span><br><span class="line"><span class="variable">@-moz-document</span> <span class="built_in">url-prefix</span>() &#123;</span><br><span class="line">  <span class="selector-class">.surely-table-row-expand-icon</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a><a href="https://www.chromium.org/">Chromium</a></h5><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*滚动条整体粗细样式*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="comment">/*高宽分别对应横竖滚动条的尺寸*/</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条里面小方块*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="comment">/* 颜色 */</span></span><br><span class="line">  <span class="comment">/* background:#b6b6b6!important; */</span></span><br><span class="line">  <span class="comment">/* 线性渐变背景 */</span></span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>, <span class="number">#ffbd61</span> <span class="number">25%</span>, <span class="number">#ffbd61</span> <span class="number">25%</span>, <span class="number">#ff8800</span> <span class="number">25%</span>, <span class="number">#ff8800</span> <span class="number">50%</span>, <span class="number">#ffbd61</span> <span class="number">50%</span>, <span class="number">#ffbd61</span> <span class="number">75%</span>, <span class="number">#ff8800</span> <span class="number">75%</span>, <span class="number">#ff8800</span> <span class="number">100%</span>) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#1175c2</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条轨道*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-track</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#EDEDED</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条角落*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-corner</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#000</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<h5 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h5><p>scrollbar-width</p>
+<p>scrollbar-color</p>
+<h5 id="IE"><a href="#IE" class="headerlink" title="IE"></a>IE</h5><p>scrollbar-base-color</p>
+<p>scrollbar-track-color</p>
+<p>scrollbar-arrow-color</p>
+<p>scrollbar-3dlight-color</p>
+<p>scrollbar-shadow-color</p>
+<p>scrollbar-highlight-color</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>hack</tag>
       </tags>
   </entry>
   <entry>
@@ -203,7 +235,7 @@
 
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 全排列算法</span></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">func</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> len = arr.<span class="property">length</span></span><br><span class="line">  <span class="keyword">let</span> res = [] <span class="comment">// 所有排列结果</span></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 【全排列算法】</span></span><br><span class="line"><span class="comment">   * 说明：arrange用来对arr中的元素进行排列组合，将排列好的各个结果存在新数组中</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> tempArr：排列好的元素</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> leftArr：待排列元素</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">let</span> <span class="title function_">arrange</span> = (<span class="params">tempArr, leftArr</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (tempArr.<span class="property">length</span> === len) &#123; <span class="comment">// 这里就是递归结束的地方</span></span><br><span class="line">      <span class="comment">// res.push(tempArr) // 得到全排列的每个元素都是数组</span></span><br><span class="line">      res.<span class="title function_">push</span>(tempArr.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>)) <span class="comment">// 得到全排列的每个元素都是字符串</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      leftArr.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> temp = [].<span class="title function_">concat</span>(leftArr)</span><br><span class="line">        temp.<span class="title function_">splice</span>(index, <span class="number">1</span>)</span><br><span class="line">        <span class="comment">// 此时，第一个参数是当前分离出的元素所在数组；第二个参数temp是传入的leftArr去掉第一个后的结果</span></span><br><span class="line">        <span class="title function_">arrange</span>(tempArr.<span class="title function_">concat</span>(item), temp) <span class="comment">// 这里使用了递归</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">arrange</span>([], arr)</span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;结果：&#x27;</span>, <span class="title function_">func</span>([<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>]))</span><br></pre></td></tr></table></figure>
 
-
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 防抖</span><br><span class="line">  const debounce = (fun, time) =&gt; &#123;</span><br><span class="line">    let timer = null;</span><br><span class="line">    return (...arg) =&gt; &#123;</span><br><span class="line">      if (timer) clearTimeout(timer);</span><br><span class="line">      timer = setTimeout(() =&gt; &#123;</span><br><span class="line">        fun.apply(this, arg);</span><br><span class="line">      &#125;, time);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;;</span><br><span class="line">  // 节流</span><br><span class="line">  const throttle = (fun, time) =&gt; &#123;</span><br><span class="line">    let lock = null;</span><br><span class="line">    return (...arg) =&gt; &#123;</span><br><span class="line">      if (!lock) &#123;</span><br><span class="line">        lock = true;</span><br><span class="line">        setTimeout(() =&gt; &#123;</span><br><span class="line">          fun.apply(this, arg);</span><br><span class="line">          lock = false;</span><br><span class="line">        &#125;, time)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  // 测试</span><br><span class="line">  // const test = (param) =&gt; &#123;</span><br><span class="line">  //   console.log(param)</span><br><span class="line">  // &#125;</span><br><span class="line">  // const debounceFun = debounce(test, 3000);</span><br><span class="line">  // debounceFun(&#x27;this is debounce&#x27;);</span><br><span class="line">  // const throttleFun = throttle(test, 5000);</span><br><span class="line">  // setInterval(() =&gt; &#123;</span><br><span class="line">  //   throttleFun(&#x27;this is throttle&#x27;);</span><br><span class="line">  // &#125;, 1000)</span><br><span class="line"></span><br><span class="line">  // 千分位隔断字符串</span><br><span class="line">  const num = 1234567;</span><br><span class="line">  // 测试-1</span><br><span class="line">  // console.log(num.toLocaleString(&#x27;en-US&#x27;));</span><br><span class="line">  const toBreakStr = (num) =&gt; &#123;</span><br><span class="line">    const arr = String(num).split(&#x27;&#x27;).reverse();</span><br><span class="line">    let res = [];</span><br><span class="line">    while (arr.length) &#123;</span><br><span class="line">      res.push(arr.splice(0, 3).reverse().join(&#x27;&#x27;))</span><br><span class="line">      if (arr.length) res.push(&#x27;,&#x27;)</span><br><span class="line">    &#125;</span><br><span class="line">    return res.reverse().join(&#x27;&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line">  // 测试-2</span><br><span class="line">  // console.log(toBreakStr(num))</span><br><span class="line"></span><br><span class="line">  // 函数柯里化</span><br><span class="line">  const curry = function (fun) &#123;</span><br><span class="line">    if (typeof (fun) !== &#x27;function&#x27;) throw new Error(&#x27;this is not a function&#x27;);</span><br><span class="line">    return function curried(...arg) &#123;</span><br><span class="line">      // 参数足够则立即执行</span><br><span class="line">      if (arg.length &gt;= fun.length) &#123;</span><br><span class="line">        return fun.apply(this, arg)</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        return function (...arg2) &#123;</span><br><span class="line">          // 递归获取剩余参数</span><br><span class="line">          return curried.apply(this, arg.concat(arg2))</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  // 测试</span><br><span class="line">  // const add = (a, b, c) =&gt; a + b + c;</span><br><span class="line">  // console.log(curry(add)(1)(2)(3), curry(add)(1, 2)(3))</span><br><span class="line"></span><br><span class="line">  // 对象数组转树形结构</span><br><span class="line">  const transformToTree = (arr, parentId = null) =&gt; &#123;</span><br><span class="line">    let tree = [];</span><br><span class="line">    arr.forEach(item =&gt; &#123;</span><br><span class="line">      if (item.parentId == parentId) &#123;</span><br><span class="line">        const children = transformToTree(arr, item.id);</span><br><span class="line">        if (children.length) item.children = children;</span><br><span class="line">        tree.push(item);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    return tree;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -211,38 +243,6 @@
       </categories>
       <tags>
         <tag>Javascript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>兼容性问题</title>
-    <url>/zh-CN/hack/</url>
-    <content><![CDATA[<ul>
-<li><code>Autoprefixer</code>自动添加浏览器前缀插件，属于后处理程序，不像 Sass 以及 Stylus 之类的预处理器。它适用于普通的 CSS，可以实现css3代码自动补全。也可以轻松跟 Sass，LESS及Stylus集成，在CSS编译前或编译后运行。</li>
-</ul>
-<span id="more"></span>
-
-<ul>
-<li><p>ant-design table树结构折叠图标火狐浏览器内显示错误</p>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这种写法仅火狐识别</span></span><br><span class="line"><span class="variable">@-moz-document</span> <span class="built_in">url-prefix</span>() &#123;</span><br><span class="line">  <span class="selector-class">.surely-table-row-expand-icon</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><h5 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a><a href="https://www.chromium.org/">Chromium</a></h5><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*滚动条整体粗细样式*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="comment">/*高宽分别对应横竖滚动条的尺寸*/</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条里面小方块*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="comment">/* 颜色 */</span></span><br><span class="line">  <span class="comment">/* background:#b6b6b6!important; */</span></span><br><span class="line">  <span class="comment">/* 线性渐变背景 */</span></span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>, <span class="number">#ffbd61</span> <span class="number">25%</span>, <span class="number">#ffbd61</span> <span class="number">25%</span>, <span class="number">#ff8800</span> <span class="number">25%</span>, <span class="number">#ff8800</span> <span class="number">50%</span>, <span class="number">#ffbd61</span> <span class="number">50%</span>, <span class="number">#ffbd61</span> <span class="number">75%</span>, <span class="number">#ff8800</span> <span class="number">75%</span>, <span class="number">#ff8800</span> <span class="number">100%</span>) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#1175c2</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条轨道*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-track</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#EDEDED</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条角落*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-corner</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#000</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<h5 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h5><p>scrollbar-width</p>
-<p>scrollbar-color</p>
-<h5 id="IE"><a href="#IE" class="headerlink" title="IE"></a>IE</h5><p>scrollbar-base-color</p>
-<p>scrollbar-track-color</p>
-<p>scrollbar-arrow-color</p>
-<p>scrollbar-3dlight-color</p>
-<p>scrollbar-shadow-color</p>
-<p>scrollbar-highlight-color</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>css</category>
-      </categories>
-      <tags>
-        <tag>hack</tag>
       </tags>
   </entry>
   <entry>
