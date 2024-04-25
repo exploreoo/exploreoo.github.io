@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>bug</title>
+    <url>/zh-CN/bug/</url>
+    <content><![CDATA[<ul>
+<li><p><code>Angular</code><strong>Error: Zone.js has detected that ZoneAwarePromise (window|global).Promise has been overwritten. Most likely cause is that a Promise polyfill has been loaded after Zone.js (Polyfilling Promise api is not necessary when zone.js is loaded. If you must load one, do so before loading zone.js.)</strong></p>
+<span id="more"></span>
+
+<p>原因：Zone.js检测到ZoneAwarePromise（window | global）.Promise已被覆盖。 最可能的原因是在Zone.js之后加载了Promise polyfill（加载zone.js时不需要填充Promise api。如果必须加载，则在加载zone.js之前执行。）</p>
+<p>解决：</p>
+<ol>
+<li>改的方向就是在zone.js之前加载它，把polyfill.ts里import ‘zone.js&#x2F;dist&#x2F;zone’的这一行提到main.ts里</li>
+<li>在polyfill.ts里import ‘zone.js&#x2F;dist&#x2F;zone’这一行前面，引入import ‘core-js&#x2F;es&#x2F;promise’</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>bug</category>
+      </categories>
+      <tags>
+        <tag>bug</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JSON</title>
     <url>/zh-CN/JSON/</url>
     <content><![CDATA[<h5 id="JSON（JavaScript-Object-Notation）"><a href="#JSON（JavaScript-Object-Notation）" class="headerlink" title="JSON（JavaScript Object Notation）"></a>JSON（JavaScript Object Notation）</h5><p>是一种轻量级的数据交换格式，因其简洁、易读、易于解析的特点，在前后端数据交互、API 设计、配置文件等领域广泛应用。下面是使用 JSON 传输数据的优缺点：</p>
@@ -38,29 +61,6 @@
       </tags>
   </entry>
   <entry>
-    <title>bug</title>
-    <url>/zh-CN/bug/</url>
-    <content><![CDATA[<ul>
-<li><p><code>Angular</code><strong>Error: Zone.js has detected that ZoneAwarePromise (window|global).Promise has been overwritten. Most likely cause is that a Promise polyfill has been loaded after Zone.js (Polyfilling Promise api is not necessary when zone.js is loaded. If you must load one, do so before loading zone.js.)</strong></p>
-<span id="more"></span>
-
-<p>原因：Zone.js检测到ZoneAwarePromise（window | global）.Promise已被覆盖。 最可能的原因是在Zone.js之后加载了Promise polyfill（加载zone.js时不需要填充Promise api。如果必须加载，则在加载zone.js之前执行。）</p>
-<p>解决：</p>
-<ol>
-<li>改的方向就是在zone.js之前加载它，把polyfill.ts里import ‘zone.js&#x2F;dist&#x2F;zone’的这一行提到main.ts里</li>
-<li>在polyfill.ts里import ‘zone.js&#x2F;dist&#x2F;zone’这一行前面，引入import ‘core-js&#x2F;es&#x2F;promise’</li>
-</ol>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>bug</category>
-      </categories>
-      <tags>
-        <tag>bug</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>css</title>
     <url>/zh-CN/css/</url>
     <content><![CDATA[<ul>
@@ -80,6 +80,38 @@
 ]]></content>
       <categories>
         <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>素材</title>
+    <url>/zh-CN/effect/</url>
+    <content><![CDATA[<ul>
+<li><p><em><a href="https://www.17sucai.com/">jQuery 网页特效最全网页模板和网站模板 jQuery 代码</a></em></p>
+</li>
+<li><p><em><a href="https://www.zcool.com.cn/work/ZMzI2MzUwOTY=.html">数据可视化设计 2018 总集_光影年年-站酷 ZCOOL</a></em></p>
+</li>
+</ul>
+<span id="more"></span>
+
+<h5 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h5><ul>
+<li><em><a href="https://animate.style/">animate.css</a></em> <em>+ <a href="https://github.com/graingert/wow">wowjs</a></em></li>
+</ul>
+<h5 id="图表"><a href="#图表" class="headerlink" title="图表"></a>图表</h5><ul>
+<li><p><em><a href="https://echarts.apache.org/zh/index.html">Apache ECharts</a></em></p>
+</li>
+<li><p><em><a href="https://www.makeapie.cn/echarts">makeapie echarts 社区图表可视化案例</a></em></p>
+</li>
+<li><p><em><a href="http://ppchart.com/#/">PPChart - 让图表更简单</a></em></p>
+</li>
+<li><p><em><a href="https://www.hcharts.cn/demo/highcharts">Highcharts</a></em></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>素材</category>
       </categories>
       <tags>
         <tag>css</tag>
@@ -115,38 +147,6 @@
       </categories>
       <tags>
         <tag>hack</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>素材</title>
-    <url>/zh-CN/effect/</url>
-    <content><![CDATA[<ul>
-<li><p><em><a href="https://www.17sucai.com/">jQuery 网页特效最全网页模板和网站模板 jQuery 代码</a></em></p>
-</li>
-<li><p><em><a href="https://www.zcool.com.cn/work/ZMzI2MzUwOTY=.html">数据可视化设计 2018 总集_光影年年-站酷 ZCOOL</a></em></p>
-</li>
-</ul>
-<span id="more"></span>
-
-<h5 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h5><ul>
-<li><em><a href="https://animate.style/">animate.css</a></em> <em>+ <a href="https://github.com/graingert/wow">wowjs</a></em></li>
-</ul>
-<h5 id="图表"><a href="#图表" class="headerlink" title="图表"></a>图表</h5><ul>
-<li><p><em><a href="https://echarts.apache.org/zh/index.html">Apache ECharts</a></em></p>
-</li>
-<li><p><em><a href="https://www.makeapie.cn/echarts">makeapie echarts 社区图表可视化案例</a></em></p>
-</li>
-<li><p><em><a href="http://ppchart.com/#/">PPChart - 让图表更简单</a></em></p>
-</li>
-<li><p><em><a href="https://www.hcharts.cn/demo/highcharts">Highcharts</a></em></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>素材</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -237,6 +237,8 @@
 
 <h5 id="基础工具代码"><a href="#基础工具代码" class="headerlink" title="基础工具代码"></a>基础工具代码</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">//防抖</span><br><span class="line">  const debounce = (fun, time) =&gt; &#123;</span><br><span class="line">    let timer = null;</span><br><span class="line">    return (...arg) =&gt; &#123;</span><br><span class="line">      if (timer) clearTimeout(timer);</span><br><span class="line">      timer = setTimeout(() =&gt; &#123;</span><br><span class="line">        fun.apply(this, arg);</span><br><span class="line">      &#125;, time);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;;</span><br><span class="line">  // 节流</span><br><span class="line">  const throttle = (fun, time) =&gt; &#123;</span><br><span class="line">    let lock = null;</span><br><span class="line">    return (...arg) =&gt; &#123;</span><br><span class="line">      if (!lock) &#123;</span><br><span class="line">        lock = true;</span><br><span class="line">        setTimeout(() =&gt; &#123;</span><br><span class="line">          fun.apply(this, arg);</span><br><span class="line">          lock = false;</span><br><span class="line">        &#125;, time)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  // 测试</span><br><span class="line">  // const test = (param) =&gt; &#123;</span><br><span class="line">  //   console.log(param)</span><br><span class="line">  // &#125;</span><br><span class="line">  // const debounceFun = debounce(test, 3000);</span><br><span class="line">  // debounceFun(&#x27;this is debounce&#x27;);</span><br><span class="line">  // const throttleFun = throttle(test, 5000);</span><br><span class="line">  // setInterval(() =&gt; &#123;</span><br><span class="line">  //   throttleFun(&#x27;this is throttle&#x27;);</span><br><span class="line">  // &#125;, 1000)</span><br><span class="line"></span><br><span class="line">  // 千分位隔断字符串</span><br><span class="line">  const num = 1234567;</span><br><span class="line">  // 测试-1</span><br><span class="line">  // console.log(num.toLocaleString(&#x27;en-US&#x27;));</span><br><span class="line">  const toBreakStr = (num) =&gt; &#123;</span><br><span class="line">    const arr = String(num).split(&#x27;&#x27;).reverse();</span><br><span class="line">    let res = [];</span><br><span class="line">    while (arr.length) &#123;</span><br><span class="line">      res.push(arr.splice(0, 3).reverse().join(&#x27;&#x27;))</span><br><span class="line">      if (arr.length) res.push(&#x27;,&#x27;)</span><br><span class="line">    &#125;</span><br><span class="line">    return res.reverse().join(&#x27;&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line">  // 测试-2</span><br><span class="line">  // console.log(toBreakStr(num))</span><br><span class="line"></span><br><span class="line">  // 函数柯里化</span><br><span class="line">  const curry = function (fun) &#123;</span><br><span class="line">    if (typeof (fun) !== &#x27;function&#x27;) throw new Error(&#x27;this is not a function&#x27;);</span><br><span class="line">    return function curried(...arg) &#123;</span><br><span class="line">      // 参数足够则立即执行</span><br><span class="line">      if (arg.length &gt;= fun.length) &#123;</span><br><span class="line">        return fun.apply(this, arg)</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        return function (...arg2) &#123;</span><br><span class="line">          // 递归获取剩余参数</span><br><span class="line">          return curried.apply(this, arg.concat(arg2))</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  // 测试</span><br><span class="line">  // const add = (a, b, c) =&gt; a + b + c;</span><br><span class="line">  // console.log(curry(add)(1)(2)(3), curry(add)(1, 2)(3))</span><br><span class="line"></span><br><span class="line">  // 对象数组转树形结构</span><br><span class="line">  const transformToTree = (arr, parentId = null) =&gt; &#123;</span><br><span class="line">    let tree = [];</span><br><span class="line">    arr.forEach(item =&gt; &#123;</span><br><span class="line">      if (item.parentId == parentId) &#123;</span><br><span class="line">        const children = transformToTree(arr, item.id);</span><br><span class="line">        if (children.length) item.children = children;</span><br><span class="line">        tree.push(item);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    return tree;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 
+<h5 id="笔试题"><a href="#笔试题" class="headerlink" title="笔试题"></a>笔试题</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#1.对象引用赋值问题</span><br><span class="line">function fun(demo) &#123;</span><br><span class="line">  demo.name = &#x27;demo2&#x27;</span><br><span class="line">  demo = &#123;</span><br><span class="line">    name: &#x27;new&#x27;,</span><br><span class="line">    age: 18</span><br><span class="line">  &#125;</span><br><span class="line">  return demo</span><br><span class="line">&#125;</span><br><span class="line">const demo = &#123;</span><br><span class="line">  name: &#x27;demo&#x27;,</span><br><span class="line">  age: 20</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(fun(demo));  //&#123; name: &#x27;new&#x27;, age: 18 &#125;</span><br><span class="line">console.log(demo);       //&#123; name: &#x27;demo2&#x27;, age: 20 &#125;</span><br><span class="line"></span><br><span class="line">#2.实现flat方法</span><br><span class="line">const flat = (arr = [1, [2, 3, [4, [5], 6]], [[7, 8], 9]], counts = 4) =&gt; &#123;</span><br><span class="line">  return arr.reduce((prev, next) =&gt; &#123;</span><br><span class="line">    return prev.concat(counts &gt; 1 &amp;&amp; Array.isArray(next) ? flat(next, counts - 1) : next)</span><br><span class="line">  &#125;, [])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(flat([1, [2, 3, [4, [5], 6]], [[7, [8]], 9]], Infinity))</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>Javascript</category>
@@ -298,27 +300,20 @@
       </tags>
   </entry>
   <entry>
-    <title>插件</title>
-    <url>/zh-CN/plugin/</url>
-    <content><![CDATA[<h4 id="常用插件推荐合集"><a href="#常用插件推荐合集" class="headerlink" title="常用插件推荐合集"></a>常用插件推荐合集</h4><span id="more"></span>
+    <title>threeJs</title>
+    <url>/zh-CN/threejs/</url>
+    <content><![CDATA[<h4 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h4><ul>
+<li>地址：*<a href="http://www.webgl3d.cn/pages/aac9ab/">three.js</a>*</li>
+</ul>
+<span id="more"></span>
 
-<h5 id="富文本插件"><a href="#富文本插件" class="headerlink" title="富文本插件"></a>富文本插件</h5><ul>
-<li><em><a href="https://vueup.github.io/vue-quill/guide/">VueQuill</a></em>  <a href="https://flyween.github.io/vue3-quill/">示例</a></li>
-<li><em><a href="https://microsoft.github.io/monaco-editor/">Monaco</a></em></li>
-</ul>
-<h5 id="上传插件"><a href="#上传插件" class="headerlink" title="上传插件"></a>上传插件</h5><ul>
-<li><h5 id="vue-uploader-solutions-next"><a href="#vue-uploader-solutions-next" class="headerlink" title="vue-uploader-solutions-next"></a><em><a href="https://github.com/shady-xia/vue-uploader-solutions-next">vue-uploader-solutions-next</a></em></h5>基于 <code>vue-simple-uploader</code> ，封装可以分片、秒传及断点续传的vue3上传插件</li>
-</ul>
-<h5 id="拖放排序插件"><a href="#拖放排序插件" class="headerlink" title="拖放排序插件"></a>拖放排序插件</h5><ul>
-<li><h5 id="Sortable-js"><a href="#Sortable-js" class="headerlink" title="Sortable.js"></a><em><a href="http://www.manongjc.com/article/106870.html">Sortable.js</a></em></h5></li>
-</ul>
 <p>待更新…</p>
 ]]></content>
       <categories>
-        <category>工具</category>
+        <category>webGL</category>
       </categories>
       <tags>
-        <tag>plugin</tag>
+        <tag>threeJs</tag>
       </tags>
   </entry>
   <entry>
@@ -554,23 +549,6 @@
       </tags>
   </entry>
   <entry>
-    <title>threeJs</title>
-    <url>/zh-CN/threejs/</url>
-    <content><![CDATA[<h4 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h4><ul>
-<li>地址：*<a href="http://www.webgl3d.cn/pages/aac9ab/">three.js</a>*</li>
-</ul>
-<span id="more"></span>
-
-<p>待更新…</p>
-]]></content>
-      <categories>
-        <category>webGL</category>
-      </categories>
-      <tags>
-        <tag>threeJs</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>拓展</title>
     <url>/zh-CN/tool/</url>
     <content><![CDATA[<h5 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h5><ul>
@@ -597,6 +575,30 @@
       </categories>
       <tags>
         <tag>tool</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>插件</title>
+    <url>/zh-CN/plugin/</url>
+    <content><![CDATA[<h4 id="常用插件推荐合集"><a href="#常用插件推荐合集" class="headerlink" title="常用插件推荐合集"></a>常用插件推荐合集</h4><span id="more"></span>
+
+<h5 id="富文本插件"><a href="#富文本插件" class="headerlink" title="富文本插件"></a>富文本插件</h5><ul>
+<li><em><a href="https://vueup.github.io/vue-quill/guide/">VueQuill</a></em>  <a href="https://flyween.github.io/vue3-quill/">示例</a></li>
+<li><em><a href="https://microsoft.github.io/monaco-editor/">Monaco</a></em></li>
+</ul>
+<h5 id="上传插件"><a href="#上传插件" class="headerlink" title="上传插件"></a>上传插件</h5><ul>
+<li><h5 id="vue-uploader-solutions-next"><a href="#vue-uploader-solutions-next" class="headerlink" title="vue-uploader-solutions-next"></a><em><a href="https://github.com/shady-xia/vue-uploader-solutions-next">vue-uploader-solutions-next</a></em></h5>基于 <code>vue-simple-uploader</code> ，封装可以分片、秒传及断点续传的vue3上传插件</li>
+</ul>
+<h5 id="拖放排序插件"><a href="#拖放排序插件" class="headerlink" title="拖放排序插件"></a>拖放排序插件</h5><ul>
+<li><h5 id="Sortable-js"><a href="#Sortable-js" class="headerlink" title="Sortable.js"></a><em><a href="http://www.manongjc.com/article/106870.html">Sortable.js</a></em></h5></li>
+</ul>
+<p>待更新…</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>plugin</tag>
       </tags>
   </entry>
 </search>
