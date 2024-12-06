@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>JSON（JavaScript Object Notation）</title>
+    <url>/zh-CN/JSON/</url>
+    <content><![CDATA[<h5 id="JSON（JavaScript-Object-Notation）"><a href="#JSON（JavaScript-Object-Notation）" class="headerlink" title="JSON（JavaScript Object Notation）"></a>JSON（JavaScript Object Notation）</h5><p>是一种轻量级的数据交换格式，因其简洁、易读、易于解析的特点，在前后端数据交互、API 设计、配置文件等领域广泛应用。下面是使用 JSON 传输数据的优缺点：</p>
+<span id="more"></span>
+
+<p>优点：</p>
+<ol>
+<li>简洁、易读：JSON 格式的数据非常简洁易读，使用起来非常方便。可以轻松地通过文本编辑器或浏览器插件进行查看、编辑、调试。</li>
+<li>易于解析：JSON 数据可以使用多种编程语言解析，支持主流的编程语言，如JavaScript、Java、Python、C#等，因此JSON数据格式具有良好的跨平台和可扩展性。</li>
+<li>结构化数据：JSON数据是一种结构化的数据格式，具有良好的扩展性和兼容性，可以非常容易地扩展、更新、维护和重用。</li>
+<li>跨域请求：JSON 支持跨域请求，允许在不同域名之间安全地传输数据。这使得使用 JSON 传输数据成为一个非常有用的选择。</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>不适合传输大文件：JSON 是基于文本的格式，传输大文件时会占用较多的带宽和时间。</li>
+<li>缺乏标准：虽然 JSON 是一种非常流行的数据交换格式，但是没有官方标准或规范，因此可能存在不同实现之间的差异性。</li>
+<li>不支持注释：JSON格式不支持注释，因此无法在数据中添加注释，这可能会导致在一些场景下的不便利。</li>
+<li>安全性：JSON 格式虽然支持跨域请求，但是如果没有正确地处理跨域请求，可能会导致安全问题。</li>
+</ol>
+<h5 id="JSON-parse-JSON-stringify-的缺点"><a href="#JSON-parse-JSON-stringify-的缺点" class="headerlink" title="JSON.parse(JSON.stringify())的缺点"></a>JSON.parse(JSON.stringify())的缺点</h5><ol>
+<li>如果obj里面有<strong>时间对象</strong>，则JSON.stringify后再JSON.parse的结果，时间将只是字符串的形式；</li>
+<li>如果obj里有<strong>RegExp</strong>(正则表达式的缩写)、Error对象，则序列化的结果将只得到空对象； </li>
+<li>如果obj里有<strong>函数、undefined</strong>，则序列化的结果会把函数或 undefined丢失；</li>
+<li>如果obj里有<strong>NaN、Infinity和-Infinity</strong>，则序列化的结果会变成null</li>
+<li>JSON.stringify()只能序列化<strong>对象的可枚举的自有属性</strong>，例如 如果obj中的对象是有构造函数生成的， 则使用JSON.parse(JSON.stringify(obj))深拷贝后，会丢弃对象的constructor；</li>
+<li>如果对象中存在<strong>循环引用</strong>的情况也无法正确实现深拷贝（可利用map结构辅助过滤）；</li>
+</ol>
+<p>综上所述，JSON 是一种非常便捷、灵活和可扩展的数据交换格式，独立于计算机各类语言，但在使用时需要注意其缺点，以确保数据的安全性和完整性。</p>
+]]></content>
+      <categories>
+        <category>Javascript</category>
+      </categories>
+      <tags>
+        <tag>JSON</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端BUG</title>
     <url>/zh-CN/bug/</url>
     <content><![CDATA[<ul>
@@ -49,43 +86,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JSON（JavaScript Object Notation）</title>
-    <url>/zh-CN/JSON/</url>
-    <content><![CDATA[<h5 id="JSON（JavaScript-Object-Notation）"><a href="#JSON（JavaScript-Object-Notation）" class="headerlink" title="JSON（JavaScript Object Notation）"></a>JSON（JavaScript Object Notation）</h5><p>是一种轻量级的数据交换格式，因其简洁、易读、易于解析的特点，在前后端数据交互、API 设计、配置文件等领域广泛应用。下面是使用 JSON 传输数据的优缺点：</p>
-<span id="more"></span>
-
-<p>优点：</p>
-<ol>
-<li>简洁、易读：JSON 格式的数据非常简洁易读，使用起来非常方便。可以轻松地通过文本编辑器或浏览器插件进行查看、编辑、调试。</li>
-<li>易于解析：JSON 数据可以使用多种编程语言解析，支持主流的编程语言，如JavaScript、Java、Python、C#等，因此JSON数据格式具有良好的跨平台和可扩展性。</li>
-<li>结构化数据：JSON数据是一种结构化的数据格式，具有良好的扩展性和兼容性，可以非常容易地扩展、更新、维护和重用。</li>
-<li>跨域请求：JSON 支持跨域请求，允许在不同域名之间安全地传输数据。这使得使用 JSON 传输数据成为一个非常有用的选择。</li>
-</ol>
-<p>缺点：</p>
-<ol>
-<li>不适合传输大文件：JSON 是基于文本的格式，传输大文件时会占用较多的带宽和时间。</li>
-<li>缺乏标准：虽然 JSON 是一种非常流行的数据交换格式，但是没有官方标准或规范，因此可能存在不同实现之间的差异性。</li>
-<li>不支持注释：JSON格式不支持注释，因此无法在数据中添加注释，这可能会导致在一些场景下的不便利。</li>
-<li>安全性：JSON 格式虽然支持跨域请求，但是如果没有正确地处理跨域请求，可能会导致安全问题。</li>
-</ol>
-<h5 id="JSON-parse-JSON-stringify-的缺点"><a href="#JSON-parse-JSON-stringify-的缺点" class="headerlink" title="JSON.parse(JSON.stringify())的缺点"></a>JSON.parse(JSON.stringify())的缺点</h5><ol>
-<li>如果obj里面有<strong>时间对象</strong>，则JSON.stringify后再JSON.parse的结果，时间将只是字符串的形式；</li>
-<li>如果obj里有<strong>RegExp</strong>(正则表达式的缩写)、Error对象，则序列化的结果将只得到空对象； </li>
-<li>如果obj里有<strong>函数、undefined</strong>，则序列化的结果会把函数或 undefined丢失；</li>
-<li>如果obj里有<strong>NaN、Infinity和-Infinity</strong>，则序列化的结果会变成null</li>
-<li>JSON.stringify()只能序列化<strong>对象的可枚举的自有属性</strong>，例如 如果obj中的对象是有构造函数生成的， 则使用JSON.parse(JSON.stringify(obj))深拷贝后，会丢弃对象的constructor；</li>
-<li>如果对象中存在<strong>循环引用</strong>的情况也无法正确实现深拷贝（可利用map结构辅助过滤）；</li>
-</ol>
-<p>综上所述，JSON 是一种非常便捷、灵活和可扩展的数据交换格式，独立于计算机各类语言，但在使用时需要注意其缺点，以确保数据的安全性和完整性。</p>
-]]></content>
-      <categories>
-        <category>Javascript</category>
-      </categories>
-      <tags>
-        <tag>JSON</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Cursor AI编辑器</title>
     <url>/zh-CN/cursor/</url>
     <content><![CDATA[<h5 id="Cursor"><a href="#Cursor" class="headerlink" title="Cursor"></a>Cursor</h5><p>链接地址：<a href="https://www.cursor.com/">https://www.cursor.com</a></p>
@@ -93,8 +93,8 @@
 <span id="more"></span>
 
 <p>途径如下</p>
-<p>1、<a href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x78;&#x78;&#x78;&#x2e;&#99;&#111;&#x6d;">&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x78;&#x78;&#x78;&#x2e;&#99;&#111;&#x6d;</a></p>
-<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#x65;&#x78;&#97;&#109;&#x70;&#108;&#101;&#43;&#x31;&#x40;&#x78;&#120;&#120;&#x2e;&#x63;&#111;&#x6d;">&#x65;&#x78;&#97;&#109;&#x70;&#108;&#101;&#43;&#x31;&#x40;&#x78;&#120;&#120;&#x2e;&#x63;&#111;&#x6d;</a>&#x2F;<a href="mailto:&#101;&#120;&#97;&#x6d;&#x70;&#108;&#101;&#43;&#50;&#64;&#x78;&#x78;&#x78;&#x2e;&#99;&#111;&#x6d;">&#101;&#120;&#97;&#x6d;&#x70;&#108;&#101;&#43;&#50;&#64;&#x78;&#x78;&#x78;&#x2e;&#99;&#111;&#x6d;</a>…</p>
+<p>1、<a href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x78;&#x78;&#120;&#46;&#x63;&#111;&#109;">&#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#64;&#x78;&#x78;&#120;&#46;&#x63;&#111;&#109;</a></p>
+<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#x65;&#x78;&#97;&#109;&#112;&#108;&#x65;&#43;&#x31;&#64;&#120;&#x78;&#x78;&#x2e;&#99;&#x6f;&#x6d;">&#x65;&#x78;&#97;&#109;&#112;&#108;&#x65;&#43;&#x31;&#64;&#120;&#x78;&#x78;&#x2e;&#99;&#x6f;&#x6d;</a>&#x2F;<a href="mailto:&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2b;&#x32;&#x40;&#x78;&#x78;&#120;&#x2e;&#99;&#x6f;&#x6d;">&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2b;&#x32;&#x40;&#x78;&#x78;&#120;&#x2e;&#99;&#x6f;&#x6d;</a>…</p>
 <h5 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h5><p><strong>Premium models   0 &#x2F; 500</strong></p>
 <p>You’ve used no requests out of your <strong>500</strong> fast requests quota.</p>
 <p><strong>gpt-4o-mini or cursor-small   0 &#x2F; No Limit</strong></p>
@@ -344,6 +344,30 @@
       </tags>
   </entry>
   <entry>
+    <title>插件</title>
+    <url>/zh-CN/plugin/</url>
+    <content><![CDATA[<h4 id="常用插件推荐合集"><a href="#常用插件推荐合集" class="headerlink" title="常用插件推荐合集"></a>常用插件推荐合集</h4><span id="more"></span>
+
+<h5 id="富文本插件"><a href="#富文本插件" class="headerlink" title="富文本插件"></a>富文本插件</h5><ul>
+<li><em><a href="https://vueup.github.io/vue-quill/guide/">VueQuill</a></em>  <a href="https://flyween.github.io/vue3-quill/">示例</a></li>
+<li><em><a href="https://microsoft.github.io/monaco-editor/">Monaco</a></em></li>
+</ul>
+<h5 id="上传插件"><a href="#上传插件" class="headerlink" title="上传插件"></a>上传插件</h5><ul>
+<li><h5 id="vue-uploader-solutions-next"><a href="#vue-uploader-solutions-next" class="headerlink" title="vue-uploader-solutions-next"></a><em><a href="https://github.com/shady-xia/vue-uploader-solutions-next">vue-uploader-solutions-next</a></em></h5>基于 <code>vue-simple-uploader</code> ，封装可以分片、秒传及断点续传的vue3上传插件</li>
+</ul>
+<h5 id="拖放排序插件"><a href="#拖放排序插件" class="headerlink" title="拖放排序插件"></a>拖放排序插件</h5><ul>
+<li><h5 id="Sortable-js"><a href="#Sortable-js" class="headerlink" title="Sortable.js"></a><em><a href="http://www.manongjc.com/article/106870.html">Sortable.js</a></em></h5></li>
+</ul>
+<p>待更新…</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>threeJs</title>
     <url>/zh-CN/threejs/</url>
     <content><![CDATA[<h4 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h4><ul>
@@ -405,30 +429,6 @@
       </categories>
       <tags>
         <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>插件</title>
-    <url>/zh-CN/plugin/</url>
-    <content><![CDATA[<h4 id="常用插件推荐合集"><a href="#常用插件推荐合集" class="headerlink" title="常用插件推荐合集"></a>常用插件推荐合集</h4><span id="more"></span>
-
-<h5 id="富文本插件"><a href="#富文本插件" class="headerlink" title="富文本插件"></a>富文本插件</h5><ul>
-<li><em><a href="https://vueup.github.io/vue-quill/guide/">VueQuill</a></em>  <a href="https://flyween.github.io/vue3-quill/">示例</a></li>
-<li><em><a href="https://microsoft.github.io/monaco-editor/">Monaco</a></em></li>
-</ul>
-<h5 id="上传插件"><a href="#上传插件" class="headerlink" title="上传插件"></a>上传插件</h5><ul>
-<li><h5 id="vue-uploader-solutions-next"><a href="#vue-uploader-solutions-next" class="headerlink" title="vue-uploader-solutions-next"></a><em><a href="https://github.com/shady-xia/vue-uploader-solutions-next">vue-uploader-solutions-next</a></em></h5>基于 <code>vue-simple-uploader</code> ，封装可以分片、秒传及断点续传的vue3上传插件</li>
-</ul>
-<h5 id="拖放排序插件"><a href="#拖放排序插件" class="headerlink" title="拖放排序插件"></a>拖放排序插件</h5><ul>
-<li><h5 id="Sortable-js"><a href="#Sortable-js" class="headerlink" title="Sortable.js"></a><em><a href="http://www.manongjc.com/article/106870.html">Sortable.js</a></em></h5></li>
-</ul>
-<p>待更新…</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
