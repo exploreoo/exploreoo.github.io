@@ -86,6 +86,28 @@
       </tags>
   </entry>
   <entry>
+    <title>Cursor AI编辑器</title>
+    <url>/zh-CN/cursor/</url>
+    <content><![CDATA[<h5 id="Cursor"><a href="#Cursor" class="headerlink" title="Cursor"></a>Cursor</h5><p>链接地址：<a href="https://www.cursor.com/">https://www.cursor.com</a></p>
+<p>目前<u><em>v0.43.5</em></u>版本，新注册获取<code>Pro Trial</code> 15 days，到期续账号即可</p>
+<span id="more"></span>
+
+<p>途径如下</p>
+<p>1、<a href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#64;&#x78;&#x78;&#120;&#46;&#x63;&#x6f;&#x6d;">&#x65;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#64;&#x78;&#x78;&#120;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#x65;&#x78;&#97;&#x6d;&#112;&#x6c;&#101;&#x2b;&#49;&#x40;&#x78;&#120;&#120;&#x2e;&#x63;&#x6f;&#x6d;">&#x65;&#x78;&#97;&#x6d;&#112;&#x6c;&#101;&#x2b;&#49;&#x40;&#x78;&#120;&#120;&#x2e;&#x63;&#x6f;&#x6d;</a>&#x2F;<a href="mailto:&#x65;&#x78;&#97;&#109;&#112;&#108;&#101;&#43;&#x32;&#64;&#x78;&#x78;&#120;&#x2e;&#x63;&#x6f;&#109;">&#x65;&#x78;&#97;&#109;&#112;&#108;&#101;&#43;&#x32;&#64;&#x78;&#x78;&#120;&#x2e;&#x63;&#x6f;&#109;</a>…</p>
+<h5 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h5><p><strong>Premium models   0 &#x2F; 500</strong></p>
+<p>You’ve used no requests out of your <strong>500</strong> fast requests quota.</p>
+<p><strong>gpt-4o-mini or cursor-small   0 &#x2F; No Limit</strong></p>
+<p>You’ve used <strong>0</strong> fast requests of this model. You have no monthly quota.</p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端素材汇总</title>
     <url>/zh-CN/effect/</url>
     <content><![CDATA[<ul>
@@ -115,28 +137,6 @@
       </categories>
       <tags>
         <tag>素材</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cursor AI编辑器</title>
-    <url>/zh-CN/cursor/</url>
-    <content><![CDATA[<h5 id="Cursor"><a href="#Cursor" class="headerlink" title="Cursor"></a>Cursor</h5><p>链接地址：<a href="https://www.cursor.com/">https://www.cursor.com</a></p>
-<p>目前<u><em>v0.43.5</em></u>版本，新注册获取<code>Pro Trial</code> 15 days，到期续账号即可</p>
-<span id="more"></span>
-
-<p>途径如下</p>
-<p>1、<a href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#x40;&#x78;&#120;&#120;&#x2e;&#x63;&#x6f;&#109;">&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#x40;&#x78;&#120;&#120;&#x2e;&#x63;&#x6f;&#109;</a></p>
-<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2b;&#49;&#x40;&#x78;&#x78;&#120;&#x2e;&#x63;&#x6f;&#x6d;">&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2b;&#49;&#x40;&#x78;&#x78;&#120;&#x2e;&#x63;&#x6f;&#x6d;</a>&#x2F;<a href="mailto:&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2b;&#50;&#x40;&#x78;&#x78;&#x78;&#x2e;&#x63;&#111;&#109;">&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2b;&#50;&#x40;&#x78;&#x78;&#x78;&#x2e;&#x63;&#111;&#109;</a>…</p>
-<h5 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h5><p><strong>Premium models   0 &#x2F; 500</strong></p>
-<p>You’ve used no requests out of your <strong>500</strong> fast requests quota.</p>
-<p><strong>gpt-4o-mini or cursor-small   0 &#x2F; No Limit</strong></p>
-<p>You’ve used <strong>0</strong> fast requests of this model. You have no monthly quota.</p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
       </tags>
   </entry>
   <entry>
@@ -368,6 +368,23 @@
       </tags>
   </entry>
   <entry>
+    <title>threeJs</title>
+    <url>/zh-CN/threejs/</url>
+    <content><![CDATA[<h4 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h4><ul>
+<li>地址：*<a href="http://www.webgl3d.cn/pages/aac9ab/">three.js</a>*</li>
+</ul>
+<span id="more"></span>
+
+<p>物理引擎cannon-es  <a href="https://pmndrs.github.io/cannon-es/docs/">https://pmndrs.github.io/cannon-es/docs/</a></p>
+]]></content>
+      <categories>
+        <category>webGL</category>
+      </categories>
+      <tags>
+        <tag>threeJs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>工具箱</title>
     <url>/zh-CN/tool/</url>
     <content><![CDATA[<h5 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h5><ul>
@@ -412,23 +429,6 @@
       </categories>
       <tags>
         <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>threeJs</title>
-    <url>/zh-CN/threejs/</url>
-    <content><![CDATA[<h4 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h4><ul>
-<li>地址：*<a href="http://www.webgl3d.cn/pages/aac9ab/">three.js</a>*</li>
-</ul>
-<span id="more"></span>
-
-<p>物理引擎cannon-es  <a href="https://pmndrs.github.io/cannon-es/docs/">https://pmndrs.github.io/cannon-es/docs/</a></p>
-]]></content>
-      <categories>
-        <category>webGL</category>
-      </categories>
-      <tags>
-        <tag>threeJs</tag>
       </tags>
   </entry>
   <entry>
