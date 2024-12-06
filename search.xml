@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>JSON（JavaScript Object Notation）</title>
+    <url>/zh-CN/JSON/</url>
+    <content><![CDATA[<h5 id="JSON（JavaScript-Object-Notation）"><a href="#JSON（JavaScript-Object-Notation）" class="headerlink" title="JSON（JavaScript Object Notation）"></a>JSON（JavaScript Object Notation）</h5><p>是一种轻量级的数据交换格式，因其简洁、易读、易于解析的特点，在前后端数据交互、API 设计、配置文件等领域广泛应用。下面是使用 JSON 传输数据的优缺点：</p>
+<span id="more"></span>
+
+<p>优点：</p>
+<ol>
+<li>简洁、易读：JSON 格式的数据非常简洁易读，使用起来非常方便。可以轻松地通过文本编辑器或浏览器插件进行查看、编辑、调试。</li>
+<li>易于解析：JSON 数据可以使用多种编程语言解析，支持主流的编程语言，如JavaScript、Java、Python、C#等，因此JSON数据格式具有良好的跨平台和可扩展性。</li>
+<li>结构化数据：JSON数据是一种结构化的数据格式，具有良好的扩展性和兼容性，可以非常容易地扩展、更新、维护和重用。</li>
+<li>跨域请求：JSON 支持跨域请求，允许在不同域名之间安全地传输数据。这使得使用 JSON 传输数据成为一个非常有用的选择。</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>不适合传输大文件：JSON 是基于文本的格式，传输大文件时会占用较多的带宽和时间。</li>
+<li>缺乏标准：虽然 JSON 是一种非常流行的数据交换格式，但是没有官方标准或规范，因此可能存在不同实现之间的差异性。</li>
+<li>不支持注释：JSON格式不支持注释，因此无法在数据中添加注释，这可能会导致在一些场景下的不便利。</li>
+<li>安全性：JSON 格式虽然支持跨域请求，但是如果没有正确地处理跨域请求，可能会导致安全问题。</li>
+</ol>
+<h5 id="JSON-parse-JSON-stringify-的缺点"><a href="#JSON-parse-JSON-stringify-的缺点" class="headerlink" title="JSON.parse(JSON.stringify())的缺点"></a>JSON.parse(JSON.stringify())的缺点</h5><ol>
+<li>如果obj里面有<strong>时间对象</strong>，则JSON.stringify后再JSON.parse的结果，时间将只是字符串的形式；</li>
+<li>如果obj里有<strong>RegExp</strong>(正则表达式的缩写)、Error对象，则序列化的结果将只得到空对象； </li>
+<li>如果obj里有<strong>函数、undefined</strong>，则序列化的结果会把函数或 undefined丢失；</li>
+<li>如果obj里有<strong>NaN、Infinity和-Infinity</strong>，则序列化的结果会变成null</li>
+<li>JSON.stringify()只能序列化<strong>对象的可枚举的自有属性</strong>，例如 如果obj中的对象是有构造函数生成的， 则使用JSON.parse(JSON.stringify(obj))深拷贝后，会丢弃对象的constructor；</li>
+<li>如果对象中存在<strong>循环引用</strong>的情况也无法正确实现深拷贝（可利用map结构辅助过滤）；</li>
+</ol>
+<p>综上所述，JSON 是一种非常便捷、灵活和可扩展的数据交换格式，独立于计算机各类语言，但在使用时需要注意其缺点，以确保数据的安全性和完整性。</p>
+]]></content>
+      <categories>
+        <category>Javascript</category>
+      </categories>
+      <tags>
+        <tag>JSON</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端BUG</title>
+    <url>/zh-CN/bug/</url>
+    <content><![CDATA[<ul>
+<li><p><code>Angular</code><strong>Error: Zone.js has detected that ZoneAwarePromise (window|global).Promise has been overwritten. Most likely cause is that a Promise polyfill has been loaded after Zone.js (Polyfilling Promise api is not necessary when zone.js is loaded. If you must load one, do so before loading zone.js.)</strong></p>
+<span id="more"></span>
+
+<p>原因：Zone.js检测到ZoneAwarePromise（window | global）.Promise已被覆盖。 最可能的原因是在Zone.js之后加载了Promise polyfill（加载zone.js时不需要填充Promise api。如果必须加载，则在加载zone.js之前执行。）</p>
+<p>解决：</p>
+<ol>
+<li>改的方向就是在zone.js之前加载它，把polyfill.ts里import ‘zone.js&#x2F;dist&#x2F;zone’的这一行提到main.ts里</li>
+<li>在polyfill.ts里import ‘zone.js&#x2F;dist&#x2F;zone’这一行前面，引入import ‘core-js&#x2F;es&#x2F;promise’</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>BUG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS样式效果</title>
+    <url>/zh-CN/css/</url>
+    <content><![CDATA[<ul>
+<li><h5 id="background-渐变色、图片叠加"><a href="#background-渐变色、图片叠加" class="headerlink" title="background 渐变色、图片叠加"></a>background 渐变色、图片叠加</h5><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 使用,间隔 需要渐变色置后</span><br><span class="line"><span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">static/images/xxx.png</span>) no-repeat center center, <span class="built_in">linear-gradient</span>(<span class="number">105deg</span>, <span class="number">#F8FCFF</span> <span class="number">0%</span>, <span class="number">#C4CBD5</span> <span class="number">100%</span>);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li><h5 id="断线边框动画"><a href="#断线边框动画" class="headerlink" title="断线边框动画"></a>断线边框动画</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> run &#123;</span><br><span class="line">  <span class="number">0%</span>,</span><br><span class="line">  <span class="number">100%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0px</span>, <span class="number">220px</span>, <span class="number">2px</span>, <span class="number">0px</span>);</span><br><span class="line">    <span class="comment">/*初始和结束状态:上边线条*/</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="number">25%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0px</span>, <span class="number">2px</span>, <span class="number">220px</span>, <span class="number">0px</span>);</span><br><span class="line">    <span class="comment">/*左边线条*/</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="number">50%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">218px</span>, <span class="number">220px</span>, <span class="number">220px</span>, <span class="number">0px</span>);</span><br><span class="line">    <span class="comment">/*底边线条*/</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="number">75%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0px</span>, <span class="number">220px</span>, <span class="number">220px</span>, <span class="number">218px</span>);</span><br><span class="line">    <span class="comment">/*右边线条*/</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">10</span>, <span class="number">150</span>, <span class="number">220</span>, <span class="number">1</span>);</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">50px</span> auto;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">&amp;</span><span class="selector-pseudo">::after</span>,</span><br><span class="line">  <span class="selector-tag">&amp;</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">220px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">220px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>);</span><br><span class="line">    <span class="comment">/*内阴影 inset*/</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: -<span class="number">10px</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设计CLIP:</span></span><br><span class="line">    <span class="comment">//  clip:rect(上边起始的距离 ,  自左道右的距离,  自上到下的距离,  左边起始的距离)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 开始0% ： 裁剪保留上边部分*/</span></span><br><span class="line">    <span class="comment">/* clip: rect(0px, 220px, 2px, 0px); */</span></span><br><span class="line">    <span class="comment">/* 25% ： 裁剪保留左边部分*/</span></span><br><span class="line">    <span class="comment">/* clip: rect(0px, 2px, 220px, 0px); */</span></span><br><span class="line">    <span class="comment">/* 50% ： 裁剪保留底边部分*/</span></span><br><span class="line">    <span class="comment">/* clip: rect(218px, 220px, 220px, 0px); */</span></span><br><span class="line">    <span class="comment">/*  75% ： 裁剪保留右边部分 */</span></span><br><span class="line">    <span class="comment">/* clip: rect(0px, 220px, 220px, 218px); */</span></span><br><span class="line">    <span class="comment">/* 结束100% ： 回到原点 裁剪保留上边部分*/</span></span><br><span class="line">    <span class="comment">/* clip: rect(0px, 220px, 2px, 0px); */</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">animation</span>: run <span class="number">6s</span> linear infinite;</span><br><span class="line">    <span class="comment">/*应用动画run 匀速运动  重复执行*/</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">&amp;</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">animation-delay</span>: <span class="number">3s</span>;</span><br><span class="line">    <span class="comment">/*让before 比after 慢3秒,总时间6秒,这样就形成对角线动画效果*/</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="滚动显示"><a href="#滚动显示" class="headerlink" title="滚动显示"></a>滚动显示</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;clip-txt&quot;</span>&gt;</span>稍等~稍等等~~稍等~~~~马上出现！ -done！<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> clipTxt &#123;</span><br><span class="line">  <span class="number">0%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0px</span>, <span class="number">0px</span>, <span class="number">30px</span>, <span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">100%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0px</span>, <span class="number">200px</span>, <span class="number">30px</span>, <span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clip-txt</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>);</span><br><span class="line">  <span class="attribute">animation</span>: clipTxt <span class="number">5s</span> infinite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端素材汇总</title>
+    <url>/zh-CN/effect/</url>
+    <content><![CDATA[<ul>
+<li><p><em><a href="https://www.17sucai.com/">jQuery 网页特效最全网页模板和网站模板 jQuery 代码</a></em></p>
+</li>
+<li><p><em><a href="https://www.zcool.com.cn/work/ZMzI2MzUwOTY=.html">数据可视化设计 2018 总集_光影年年-站酷 ZCOOL</a></em></p>
+</li>
+</ul>
+<span id="more"></span>
+
+<h5 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h5><ul>
+<li><em><a href="https://animate.style/">animate.css</a></em> <em>+ <a href="https://github.com/graingert/wow">wowjs</a></em></li>
+</ul>
+<h5 id="图表"><a href="#图表" class="headerlink" title="图表"></a>图表</h5><ul>
+<li><p><em><a href="https://echarts.apache.org/zh/index.html">Apache ECharts</a></em></p>
+</li>
+<li><p><em><a href="https://www.makeapie.cn/echarts">makeapie echarts 社区图表可视化案例</a></em></p>
+</li>
+<li><p><em><a href="http://ppchart.com/#/">PPChart - 让图表更简单</a></em></p>
+</li>
+<li><p><em><a href="https://www.hcharts.cn/demo/highcharts">Highcharts</a></em></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>素材</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cursor AI编辑器</title>
+    <url>/zh-CN/cursor/</url>
+    <content><![CDATA[<h5 id="Cursor"><a href="#Cursor" class="headerlink" title="Cursor"></a>Cursor</h5><p>链接地址：<a href="https://www.cursor.com/">https://www.cursor.com</a></p>
+<p>目前<u><em>v0.43.5</em></u>版本，新注册获取<code>Pro Trial</code> 15 days，到期续账号即可</p>
+<span id="more"></span>
+
+<p>途径如下</p>
+<p>1、<a href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#x40;&#x78;&#120;&#120;&#x2e;&#x63;&#x6f;&#109;">&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#x40;&#x78;&#120;&#120;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2b;&#49;&#x40;&#x78;&#x78;&#120;&#x2e;&#x63;&#x6f;&#x6d;">&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2b;&#49;&#x40;&#x78;&#x78;&#120;&#x2e;&#x63;&#x6f;&#x6d;</a>&#x2F;<a href="mailto:&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2b;&#50;&#x40;&#x78;&#x78;&#x78;&#x2e;&#x63;&#111;&#109;">&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2b;&#50;&#x40;&#x78;&#x78;&#x78;&#x2e;&#x63;&#111;&#109;</a>…</p>
+<h5 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h5><p><strong>Premium models   0 &#x2F; 500</strong></p>
+<p>You’ve used no requests out of your <strong>500</strong> fast requests quota.</p>
+<p><strong>gpt-4o-mini or cursor-small   0 &#x2F; No Limit</strong></p>
+<p>You’ve used <strong>0</strong> fast requests of this model. You have no monthly quota.</p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端兼容性问题</title>
+    <url>/zh-CN/hack/</url>
+    <content><![CDATA[<ul>
+<li><code>Autoprefixer</code>自动添加浏览器前缀插件，属于后处理程序，不像 Sass 以及 Stylus 之类的预处理器。它适用于普通的 CSS，可以实现css3代码自动补全。也可以轻松跟 Sass，LESS及Stylus集成，在CSS编译前或编译后运行。</li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li><p>ant-design table树结构折叠图标火狐浏览器内显示错误</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这种写法仅火狐识别</span></span><br><span class="line"><span class="variable">@-moz-document</span> <span class="built_in">url-prefix</span>() &#123;</span><br><span class="line">  <span class="selector-class">.surely-table-row-expand-icon</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a><a href="https://www.chromium.org/">Chromium</a></h5><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*滚动条整体粗细样式*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="comment">/*高宽分别对应横竖滚动条的尺寸*/</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条里面小方块*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="comment">/* 颜色 */</span></span><br><span class="line">  <span class="comment">/* background:#b6b6b6!important; */</span></span><br><span class="line">  <span class="comment">/* 线性渐变背景 */</span></span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>, <span class="number">#ffbd61</span> <span class="number">25%</span>, <span class="number">#ffbd61</span> <span class="number">25%</span>, <span class="number">#ff8800</span> <span class="number">25%</span>, <span class="number">#ff8800</span> <span class="number">50%</span>, <span class="number">#ffbd61</span> <span class="number">50%</span>, <span class="number">#ffbd61</span> <span class="number">75%</span>, <span class="number">#ff8800</span> <span class="number">75%</span>, <span class="number">#ff8800</span> <span class="number">100%</span>) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#1175c2</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条轨道*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-track</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#EDEDED</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条角落*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-corner</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#000</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<h5 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h5><p>scrollbar-width</p>
+<p>scrollbar-color</p>
+<h5 id="IE"><a href="#IE" class="headerlink" title="IE"></a>IE</h5><p>scrollbar-base-color</p>
+<p>scrollbar-track-color</p>
+<p>scrollbar-arrow-color</p>
+<p>scrollbar-3dlight-color</p>
+<p>scrollbar-shadow-color</p>
+<p>scrollbar-highlight-color</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>兼容性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS合集</title>
+    <url>/zh-CN/javascript/</url>
+    <content><![CDATA[<h5 id="JS的异步"><a href="#JS的异步" class="headerlink" title="JS的异步"></a>JS的异步</h5><p>js是单线程的语言，它运行在浏览器的渲染主线程中，而渲染主线程只有一个。</p>
+<p>渲染主线程承担着诸多工作，例如解析、渲染页面、执行js都在其中，如果使用同步会极有可能产生阻塞，从而导致消息队列中许多其他任务无法得到执行，<strong>造成1主线程白白的消耗时间 2页面无法及时更新，产生页面卡死现象</strong>。</p>
+<p>所以浏览器采用异步的方式来解决，具体做法是（<strong>事件循环</strong>）当某些任务发生时，例如计时器、网络、事件监听，主线程将其交给其他线程处理，自身继续执行后续代码，当其他线程结束后，将<strong>事先传递的回调函数包装成任务加入到消息队列末尾，等待主线程的调度执行</strong>。</p>
+<p>在这种异步模式下，浏览器永不阻塞，最大限度的保证了单线程的流畅运行。</p>
+<span id="more"></span>
+
+<h5 id="关于事件循环"><a href="#关于事件循环" class="headerlink" title="关于事件循环"></a>关于事件循环</h5><p>事件循环又称<strong>消息循环，是浏览器渲染主进程的工作方式</strong>。</p>
+<p>在Chrome的源码中，它开启一个不会结束的for循环，每次循环从消息队列中取出第一个任务执行，其他线程只需要在合适的时候将任务加入到消息队列的末尾中即可。</p>
+<p>早期把消息队列分为宏任务和微任务，这种说法已经无法满足复杂的浏览器环境，取而代之的是一种更灵活的方式，例如交互队列、延时队列、事件，根据w3c的解释，每个任务都有不同的类型，同类型的任务必须在同一个队列中，不同的任务可以属于不同的队列。不同的任务队列有不同的优先级，<strong>在一次事件循环中，有浏览器自行决定取哪一个队列的任务，但必须有一个微队列，并且优先级最高</strong>。</p>
+<h5 id="js计时器能否精确计时？"><a href="#js计时器能否精确计时？" class="headerlink" title="js计时器能否精确计时？"></a>js计时器能否精确计时？</h5><p>不行，原因：</p>
+<ol>
+<li>计算机硬件没有原子钟，无法做到精确计时</li>
+<li>操作系统的计时函数本身就有少量偏差，由于js的计时器最终是调用操作系统的函数，也就有携带偏差</li>
+<li>根据w3c的标准，浏览器实现计时器时，如果嵌套层级超过5层，会产生最少4毫秒的增量</li>
+<li>事件循环会影响计时，计时器的回调函数只会在主线程空闲时运行，从而带来偏差</li>
+</ol>
+<h5 id="浏览器的渲染过程"><a href="#浏览器的渲染过程" class="headerlink" title="浏览器的渲染过程"></a>浏览器的渲染过程</h5><p>整个渲染过程分为多个阶段，分别是：html解析、样式计算、布局、分层、生成绘制指令、分块、光栅化、绘制。</p>
+<ol>
+<li><p>解析html</p>
+<p>解析过程遇到css解析css，遇到js执行js，为了提高效率，浏览器在解析之前启动一个预解析的线程，率先下载html中外部css和外部js文件。</p>
+<p>如果主线程解析到link位置，此时外部的css文件还没有下载解析好，主线程会继续执行后续html。因为下载和解析css的工作是处于预解析线程中进行，这就是css不会阻塞html的根本原因。</p>
+<p>如果解析到script位置，会停止html而等待script下载好，并全局代码执行完毕后再继续执行html。因为js的执行可能会改变当前dom树，所以dom树的生成必须暂停，这就是js会阻塞html解析的根本原因。</p>
+<p>会形成dom树和cssom树，浏览器的默认样式、内部样式、外部样式、行内样式都会包含在cssom树中。</p>
+</li>
+<li><p>样式计算</p>
+<p>主线程会遍历得到dom树，依次为树中每个节点计算出它的最终样式，称之为computed style。</p>
+<p><strong>回流reflow</strong>会从此重新计算布局树，为了避免多次reflow导致反复计算，浏览器会合并这些操作，当js代码全部完成再进行统一的计算，所以改动造成的reflow是异步的。为了保证获取到最新的布局信息，在获取属性时则立即reflow。</p>
+</li>
+<li><p>布局</p>
+<p>依次遍历每一个dom树节点，计算每个节点的几何信息，形成布局树，例如节点的宽高，相对包含块的位置。大部分时候布局树和dom树并非一一对应，例如display: none的节点没有几何信息，不会生成到布局树中；伪元素不存在于dom树中，会拥有几何信息，生成到布局树中；其他还有匿名行盒、匿名块盒等。</p>
+</li>
+<li><p>分层</p>
+<p>主线程会使用一套复杂策略对布局树分层，好处在于将来改变一个层后，不会影响到其他层，提升效率。滚动条、堆叠上下文、transform、opacity、等样式或多或少会影响分层结果，will-change更大程度影响结果。</p>
+</li>
+<li><p>绘制</p>
+<p>主线程会为每个分层产生绘制指令集，用于描述如何绘制。<strong>绘制主线程到此结束，剩余工作由合成线程完成</strong>。</p>
+<p><strong>重绘repaint</strong>会从此重新计算绘制指令</p>
+</li>
+<li><p>分块</p>
+<p>合成线程会对每个图层分块，划分成更小的区域，它会从线程池中取多个线程完成分块工作。</p>
+</li>
+<li><p>光栅化</p>
+<p>合成线程会将分块信息交给GPU进程完成光栅化，形成一块块位图，优先处理视口区域内的块。</p>
+</li>
+<li><p>绘制</p>
+<p>合成线程拿到每一个位图后，生成一个个指引信息，提交给GPU进程，进而提交给GPU显卡硬件，完成屏幕成像。</p>
+<p>变形发生在合成线程，与渲染主线程无关，不会影响布局也不会影响绘制指令，这就是<strong>transform效率高</strong>的本质原因。</p>
+</li>
+</ol>
+<h5 id="Observer观察器"><a href="#Observer观察器" class="headerlink" title="Observer观察器"></a>Observer观察器</h5><ul>
+<li><p><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API">IntersectionObserver</a></strong></p>
+<p>​		过去，相交检测通常要用到事件监听，并且需要频繁调用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect"><code>Element.getBoundingClientRect()</code></a> 方法以获取相关元素的边界信息。事件监听和调用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect"><code>Element.getBoundingClientRect()</code></a> 都是在主线程上运行，因此频繁触发、调用可能会造成性能问题。这种检测方法极其怪异且不优雅。</p>
+<p>​		Intersection Observer API 会注册一个回调函数，每当被监视的元素进入或者退出另外一个元素时 (或者 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Viewport">viewport</a> )，或者两个元素的相交部分大小发生变化时，该回调方法会被触发执行。这样，我们网站的主线程不需要再为了监听元素相交而辛苦劳作，浏览器会自行优化元素相交管理。</p>
+<p>应用场景：</p>
+<ul>
+<li>图片懒加载——当图片滚动到可见时才进行加载</li>
+</ul>
+</li>
+<li><p>内容无限滚动——也就是用户滚动到接近内容底部时直接加载更多，而无需用户操作翻页，给用户一种网页可以无限滚动的错觉</p>
+<ul>
+<li>检测广告的曝光情况——为了计算广告收益，需要知道广告元素的曝光情况</li>
+<li>在用户看见某个区域时执行任务或播放动画</li>
+</ul>
+</li>
+<li><p><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver">MutationObserver</a></strong></p>
+<p>监听一个普通 JS 对象的变化，我们会用 Object.defineProperty 或者 Proxy。</p>
+<p>监听元素属性和子节点变化，比如可以用来做去不掉的水印。MutationObserver 可以监听对元素的属性的修改、对它的子节点的增删改</p>
+</li>
+<li><p><strong>ResizeObserver</strong></p>
+<p>窗口我们可以用 addEventListener 监听 resize 事件。</p>
+<p>监听元素大小变化。使用 ResizeObserver 监听大小的改变，当 width、height 被修改时会触发回调</p>
+</li>
+<li><p><strong>PerformanceObserver</strong></p>
+<p>PerformanceObserver 用于监听记录 performance 数据的行为。一旦记录了就会触发回调，这样我们就可以在回调里把这些数据上报</p>
+</li>
+<li><p><strong>ReportingObserver</strong></p>
+<p>可以保证更全面的了解网页 app 的运行情况。ReportingObserver 可以监听过时的 api、浏览器干预等报告等的打印，在回调里上报，这些是错误监听无法监听到但对了解网页运行情况很有用的数据</p>
+</li>
+</ul>
+<h5 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 冒泡排序</span></span><br><span class="line"><span class="comment">// 核心思想：不停的对数组进行两两比较，将较大（较小）的一项放在前面</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">BubbleSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span> - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; arr.<span class="property">length</span> - <span class="number">1</span> - i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">        [arr[j], arr[j + <span class="number">1</span>]] = [arr[j + <span class="number">1</span>], arr[j]]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// console.log(SelectSort([5, 3, 1, 43, 10, 23, 11]))</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 选择排序</span></span><br><span class="line"><span class="comment">// 核心思想：进入升序排列，保证序列起始值为最小值</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">SelectSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span> - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt;= arr.<span class="property">length</span> - <span class="number">1</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[i] &gt; arr[j]) &#123;</span><br><span class="line">        [arr[i], arr[j]] = [arr[j], arr[i]]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// *快速排序</span></span><br><span class="line"><span class="comment">// 核心思想：</span></span><br><span class="line"><span class="comment">// 1.从序列中选择一个基准数（一般选择第一个数）。</span></span><br><span class="line"><span class="comment">// 2.构建两个临时数组，比中间数小的放到左边，大的放到右边</span></span><br><span class="line"><span class="comment">// 3.递归，对临时数组重复1-2；</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">QuickSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">let</span> base = arr.<span class="title function_">splice</span>(<span class="number">0</span>, <span class="number">1</span>)[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">let</span> left = [];</span><br><span class="line">  <span class="keyword">let</span> right = [];</span><br><span class="line">  arr.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (item &lt; base) &#123;</span><br><span class="line">      left.<span class="title function_">push</span>(item);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      right.<span class="title function_">push</span>(item);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">QuickSort</span>(left).<span class="title function_">concat</span>(base, <span class="title class_">QuickSort</span>(right));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 插入排序</span></span><br><span class="line"><span class="comment">// 核心思想：假定第一项已经排序了。接着， 它和第二项进行比较——第二项是应该待在原位还是插到第一项之前呢？</span></span><br><span class="line"><span class="comment">// 这样，头两项就已正确 排序，接着和第三项比较（它是该插入到第一、第二还是第三的位置呢），以此类推</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">InsertSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> j = i</span><br><span class="line">    <span class="keyword">let</span> temp = arr[i]</span><br><span class="line">    <span class="comment">//插入操作</span></span><br><span class="line">    <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; arr[j - <span class="number">1</span>] &gt; temp) &#123;</span><br><span class="line">      arr[j] = arr[j - <span class="number">1</span>]</span><br><span class="line">      j--</span><br><span class="line">    &#125;</span><br><span class="line">    arr[j] = temp</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 希尔排序 </span></span><br><span class="line"><span class="comment">// 减少增量排序 插入排序的优化版 属于非稳定排序算法。复杂度未被证明，猜测为 O (N ^1.3)</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">ShellSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">  <span class="comment">//获取增量</span></span><br><span class="line">  <span class="keyword">let</span> gap = <span class="title class_">Math</span>.<span class="title function_">floor</span>(arr.<span class="property">length</span> / <span class="number">2</span>)</span><br><span class="line">  <span class="comment">//增量等于1 即为 插入排序 原始。 一定会将数组排好 这个时候结束循环</span></span><br><span class="line">  <span class="keyword">while</span> (gap &gt;= <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="comment">//进行插入排序</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = gap; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">      <span class="keyword">let</span> j = i</span><br><span class="line">      <span class="keyword">let</span> temp = arr[i]</span><br><span class="line">      <span class="keyword">while</span> (j &gt; gap - <span class="number">1</span> &amp;&amp; arr[j - gap] &gt; temp) &#123;</span><br><span class="line">        arr[j] = arr[j - gap]</span><br><span class="line">        j -= gap</span><br><span class="line">      &#125;</span><br><span class="line">      arr[j] = temp</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//缩小增量</span></span><br><span class="line">    gap = <span class="title class_">Math</span>.<span class="title function_">floor</span>(gap / <span class="number">2</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 归并排序</span></span><br><span class="line"><span class="comment">// 核心思想：采用分治法,首先将数组分成若干个子数组变成有序数组，再合并有序数组</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">MergeSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 序列长度为1时退出</span></span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 将序列分为两个子序列，这一块用到“分治法”中的“分割”</span></span><br><span class="line">  <span class="keyword">const</span> middle = <span class="title class_">Math</span>.<span class="title function_">floor</span>(arr.<span class="property">length</span> / <span class="number">2</span>)</span><br><span class="line">  <span class="keyword">const</span> left = arr.<span class="title function_">slice</span>(<span class="number">0</span>, middle)</span><br><span class="line">  <span class="keyword">const</span> right = arr.<span class="title function_">slice</span>(middle)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 递归，这一块用到“分治法”中的“集成（合并）”</span></span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">merge</span>(<span class="title class_">MergeSort</span>(left), <span class="title class_">MergeSort</span>(right))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">merge</span> = (<span class="params">left, right</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> result = []</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 两个子序列进行比较，从小到大放入新的序列result中</span></span><br><span class="line">  <span class="keyword">while</span> (left.<span class="property">length</span> &gt; <span class="number">0</span> &amp;&amp; right.<span class="property">length</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="comment">// 将较小的放入result,并改变left或者right的长度，灵活使用shift方法</span></span><br><span class="line">    <span class="keyword">if</span> (left[<span class="number">0</span>] &lt; right[<span class="number">0</span>]) &#123;</span><br><span class="line">      result.<span class="title function_">push</span>(left.<span class="title function_">shift</span>())</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      result.<span class="title function_">push</span>(right.<span class="title function_">shift</span>())</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 先将小的元素放入result中，直到left或者right为空，剩余的一个数组肯定是大于result的有序序列，所以直接通过concat进行合并返回</span></span><br><span class="line">  <span class="keyword">return</span> result.<span class="title function_">concat</span>(left, right)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="笔试题"><a href="#笔试题" class="headerlink" title="笔试题"></a>笔试题</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">#<span class="number">1.</span>对象引用赋值问题</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fun</span>(<span class="params">demo</span>) &#123;</span><br><span class="line">  demo.<span class="property">name</span> = <span class="string">&#x27;demo2&#x27;</span></span><br><span class="line">  demo = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;new&#x27;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">18</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> demo</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> demo = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;demo&#x27;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">20</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">fun</span>(demo));  <span class="comment">//&#123; name: &#x27;new&#x27;, age: 18 &#125;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(demo);       <span class="comment">//&#123; name: &#x27;demo2&#x27;, age: 20 &#125;</span></span><br><span class="line"></span><br><span class="line">#<span class="number">2.</span>实现flat方法</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">flat</span> = (<span class="params">arr = [<span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>, [<span class="number">4</span>, [<span class="number">5</span>], <span class="number">6</span>]], [[<span class="number">7</span>, <span class="number">8</span>], <span class="number">9</span>]], counts = <span class="number">4</span></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> arr.<span class="title function_">reduce</span>(<span class="function">(<span class="params">prev, next</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> prev.<span class="title function_">concat</span>(counts &gt; <span class="number">1</span> &amp;&amp; <span class="title class_">Array</span>.<span class="title function_">isArray</span>(next) ? <span class="title function_">flat</span>(next, counts - <span class="number">1</span>) : next)</span><br><span class="line">  &#125;, [])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">flat</span>([<span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>, [<span class="number">4</span>, [<span class="number">5</span>], <span class="number">6</span>]], [[<span class="number">7</span>, [<span class="number">8</span>]], <span class="number">9</span>]], <span class="title class_">Infinity</span>))</span><br><span class="line"></span><br><span class="line">#<span class="number">3.</span>函数柯里化</span><br><span class="line"><span class="keyword">const</span> curry = <span class="keyword">function</span> (<span class="params">fun</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> (fun) !== <span class="string">&#x27;function&#x27;</span>) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;this is not a function&#x27;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> <span class="title function_">curried</span>(<span class="params">...arg</span>) &#123;</span><br><span class="line">      <span class="comment">// 参数足够则立即执行</span></span><br><span class="line">      <span class="keyword">if</span> (arg.<span class="property">length</span> &gt;= fun.<span class="property">length</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, arg)</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">...arg2</span>) &#123;</span><br><span class="line">          <span class="comment">// 递归获取剩余参数</span></span><br><span class="line">          <span class="keyword">return</span> curried.<span class="title function_">apply</span>(<span class="variable language_">this</span>, arg.<span class="title function_">concat</span>(arg2))</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Javascript</category>
+      </categories>
+      <tags>
+        <tag>Javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>API/METHODS</title>
+    <url>/zh-CN/methods/</url>
+    <content><![CDATA[<h5 id="全排列算法"><a href="#全排列算法" class="headerlink" title="全排列算法"></a>全排列算法</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">func</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> len = arr.<span class="property">length</span>, res = []; </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 【全排列算法】</span></span><br><span class="line"><span class="comment">   * 说明：arrange用来对arr中的元素进行排列组合，将排列好的各个结果存在新数组中</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> tempArr：排列好的元素</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> leftArr：待排列元素</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">let</span> <span class="title function_">arrange</span> = (<span class="params">tempArr, leftArr</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (tempArr.<span class="property">length</span> === len) &#123; <span class="comment">// 这里就是递归结束的地方</span></span><br><span class="line">      <span class="comment">// res.push(tempArr) // 得到全排列的每个元素都是数组</span></span><br><span class="line">      res.<span class="title function_">push</span>(tempArr.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>)) <span class="comment">// 得到全排列的每个元素都是字符串</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      leftArr.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> temp = [].<span class="title function_">concat</span>(leftArr)</span><br><span class="line">        temp.<span class="title function_">splice</span>(index, <span class="number">1</span>)</span><br><span class="line">        <span class="comment">// 此时，第一个参数是当前分离出的元素所在数组；第二个参数temp是传入的leftArr去掉第一个后的结果</span></span><br><span class="line">        <span class="title function_">arrange</span>(tempArr.<span class="title function_">concat</span>(item), temp) <span class="comment">// 这里使用了递归</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">arrange</span>([], arr)</span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h5 id="防抖-x2F-节流"><a href="#防抖-x2F-节流" class="headerlink" title="防抖&#x2F;节流"></a>防抖&#x2F;节流</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 防抖</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">debounce</span> = (<span class="params">fun, time</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">...arg</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (timer) <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">      timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, arg);</span><br><span class="line">      &#125;, time);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 节流</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">throttle</span> = (<span class="params">fun, time</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> lock = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">...arg</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (!lock) &#123;</span><br><span class="line">        lock = <span class="literal">true</span>;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">          fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, arg);</span><br><span class="line">          lock = <span class="literal">false</span>;</span><br><span class="line">        &#125;, time)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="字符串千分位隔断"><a href="#字符串千分位隔断" class="headerlink" title="字符串千分位隔断"></a>字符串千分位隔断</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">const toBreakStr = (num) =&gt; &#123;</span><br><span class="line">    const arr = String(num).split(&#x27;&#x27;).reverse();</span><br><span class="line">    let res = [];</span><br><span class="line">    while (arr.length) &#123;</span><br><span class="line">      res.push(arr.splice(0, 3).reverse().join(&#x27;&#x27;))</span><br><span class="line">      if (arr.length) res.push(&#x27;,&#x27;)</span><br><span class="line">    &#125;</span><br><span class="line">    return res.reverse().join(&#x27;&#x27;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="对象数组转树"><a href="#对象数组转树" class="headerlink" title="对象数组转树"></a>对象数组转树</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">transformToTree</span> = (<span class="params">arr, parentId = <span class="literal">null</span></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> tree = [];</span><br><span class="line">    arr.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (item.<span class="property">parentId</span> == parentId) &#123;</span><br><span class="line">        <span class="keyword">const</span> children = <span class="title function_">transformToTree</span>(arr, item.<span class="property">id</span>);</span><br><span class="line">        <span class="keyword">if</span> (children.<span class="property">length</span>) item.<span class="property">children</span> = children;</span><br><span class="line">        tree.<span class="title function_">push</span>(item);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> tree;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">downloadFile</span> = (<span class="params">buffer, fileName</span>) =&gt; &#123;</span><br><span class="line">	<span class="keyword">let</span> fileURL = <span class="variable language_">window</span>.<span class="property">URL</span>.<span class="title function_">createObjectURL</span>(<span class="keyword">new</span> <span class="title class_">Blob</span>([buffer]));</span><br><span class="line">	<span class="keyword">let</span> fileLink = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">	fileLink.<span class="property">href</span> = fileURL;</span><br><span class="line">	fileLink.<span class="title function_">setAttribute</span>(<span class="string">&quot;download&quot;</span>, fileName);</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(fileLink);</span><br><span class="line">	fileLink.<span class="title function_">click</span>();</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">removeChild</span>(fileLink);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">downloadFile</span> = (<span class="params">url, fileName</span>) =&gt; &#123;</span><br><span class="line">	<span class="keyword">let</span> fileLink = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">	fileLink.<span class="property">href</span> = url;</span><br><span class="line">	fileLink.<span class="property">download</span> = fileName;</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(fileLink);</span><br><span class="line">	fileLink.<span class="title function_">click</span>();</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">removeChild</span>(fileLink);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123;saveAs&#125; <span class="keyword">from</span> file-saver;</span><br><span class="line"><span class="title function_">saveAs</span>(<span class="keyword">new</span> <span class="title class_">Blob</span>([buffer]), <span class="string">&#x27;fileName&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="crypto-js加密"><a href="#crypto-js加密" class="headerlink" title="crypto-js加密"></a>crypto-js加密</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="attr">encryption</span>: any = &#123;</span><br><span class="line">  <span class="attr">keyEnum</span>: &#123;</span><br><span class="line">    <span class="attr">DEFAULTKEY</span>: <span class="string">&#x27;ws12345678901234&#x27;</span>, <span class="comment">//默认密钥 16位</span></span><br><span class="line">    <span class="attr">USERKEY</span>: <span class="string">&#x27;ws12345678901234&#x27;</span>,</span><br><span class="line">    <span class="attr">LIBRARY</span>: <span class="string">&#x27;ABCDEFGHIJKLMNOPORSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">encrypt</span>: <span class="function">(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">    word: any,</span></span></span><br><span class="line"><span class="params"><span class="function">    keyStr: string | <span class="literal">null</span> = encryption.keyEnum.DEFAULTKEY</span></span></span><br><span class="line"><span class="params"><span class="function">  </span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> _word = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(word) || <span class="string">&#x27;&#x27;</span> <span class="comment">//转string 类型</span></span><br><span class="line">    <span class="keyword">const</span> _keyStr = keyStr <span class="comment">//判断是否存在key，不存在就用定义好的key</span></span><br><span class="line">    <span class="keyword">const</span> _key = <span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">parse</span>(_keyStr)</span><br><span class="line">    <span class="keyword">const</span> _srcs = <span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">parse</span>(_word)</span><br><span class="line">    <span class="keyword">const</span> _encrypted = <span class="title class_">CryptoJS</span>.<span class="property">AES</span>.<span class="title function_">encrypt</span>(_srcs, _key, &#123;</span><br><span class="line">      <span class="attr">mode</span>: <span class="title class_">CryptoJS</span>.<span class="property">mode</span>.<span class="property">ECB</span>,</span><br><span class="line">      <span class="attr">padding</span>: <span class="title class_">CryptoJS</span>.<span class="property">pad</span>.<span class="property">Pkcs7</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> _encrypted.<span class="title function_">toString</span>()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">decrypt</span>: <span class="function">(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">    word: string,</span></span></span><br><span class="line"><span class="params"><span class="function">    keyStr: string | <span class="literal">null</span> = encryption.keyEnum.DEFAULTKEY</span></span></span><br><span class="line"><span class="params"><span class="function">  </span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> _keyStr = keyStr</span><br><span class="line">    <span class="keyword">const</span> _key = <span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">parse</span>(_keyStr)</span><br><span class="line">    <span class="keyword">const</span> _word = word || <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">const</span> _decrypt = <span class="title class_">CryptoJS</span>.<span class="property">AES</span>.<span class="title function_">decrypt</span>(_word, _key, &#123;</span><br><span class="line">      <span class="attr">mode</span>: <span class="title class_">CryptoJS</span>.<span class="property">mode</span>.<span class="property">ECB</span>,</span><br><span class="line">      <span class="attr">padding</span>: <span class="title class_">CryptoJS</span>.<span class="property">pad</span>.<span class="property">Pkcs7</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">JSON</span>.<span class="title function_">parse</span>(<span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">stringify</span>(_decrypt).<span class="title function_">toString</span>())</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Javascript</category>
+      </categories>
+      <tags>
+        <tag>Javascript</tag>
+        <tag>API</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>移动端问题</title>
+    <url>/zh-CN/mobile/</url>
+    <content><![CDATA[<ul>
+<li><h5 id="真机测试方案"><a href="#真机测试方案" class="headerlink" title="真机测试方案"></a>真机测试方案</h5><ul>
+<li><strong>跨平台调试</strong><ul>
+<li><a href="https://github.com/Tencent/vConsole/blob/dev/README_CN.md"><strong>Vconsole</strong></a></li>
+<li><a href="https://github.com/liriliri/eruda/blob/master/doc/README_CN.md"><strong>Eruda</strong></a></li>
+</ul>
+</li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li><p><strong>window下调试 iOS-Safari</strong></p>
+<p>实现真机调试主要是使用了 remotedebug-ios-webkit-adapter</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">安装scoopeWindows 命令行安装工具</span><br><span class="line"></span><br><span class="line">Set-ExecutionPolicy RemoteSigned -scope CurrentUser</span><br><span class="line">iex (new-object net.webclient).downloadstring(&#x27;https://get.scoop.sh&#x27;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scoop bucket add extras</span><br><span class="line">scoop install ios-webkit-debug-proxy</span><br><span class="line">npm install -g vs-libimobile</span><br><span class="line"></span><br><span class="line">npm install remotedebug-ios-webkit-adapter -g</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>进入 iPhone 中的 <em>设置 &gt; Safari 浏览器 &gt; 高级 &gt; Web 检查器</em>，开启该选项。</li>
+<li>打开 iTunes 并连接 iPhone，在 iPhone 弹框中选择信任该电脑。</li>
+<li>打开命令行，执行以下命令，启动适配器：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">remotedebug_ios_webkit_adapter --port=9000</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>在 iPhone 中打开 Safari 浏览器，打开待调试页面。</li>
+<li>打开 Chrome 浏览器，进入 <a href="https://links.jianshu.com/go?to=chrome://inspect/%23devices">chrome:&#x2F;&#x2F;inspect&#x2F;#devices</a> 页面，在 Discover network targets 选项添加 localhost:9000 配置。刷新页面，这时页面中会出现 ‘Remote Target’ 列表，该列表展示了 iPhone 中打开的页面，点击 inspect，即可进行调试。（科学上网&#x2F;edge）</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><h5 id="h5键盘输入遮挡问题"><a href="#h5键盘输入遮挡问题" class="headerlink" title="h5键盘输入遮挡问题"></a>h5键盘输入遮挡问题</h5></li>
+</ul>
+<p>​		处理方式有 <code>scrollIntoView</code> &#x2F;<code>scrollTop</code>，原生键盘安卓、safari适用，<code>ios</code>中可能有bug，后续待更新，以下为使用<code>vant</code>为例：</p>
+<p>​		整体思路：由于键盘控件定位语底部，用<code>innerHeight</code> ,<code>getBoundingClientRect()</code>计算输入<code>DOM</code>节点与视口底部的距离，小于键盘高度则需要显示，结合<code>scrollTop</code>按需来滚动，其中需要动态添加键盘占位空元素（高度与控件保持一致，需结合布局灵活计算），撑起滚动底部区域，此方案兼容性较好</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">&quot;showKeyboard&quot;</span> <span class="attr">class</span>=<span class="string">&quot;empty-keyboard&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const scrollArea = document.querySelector(&#x27;.scroll-l&#x27;);</span><br><span class="line">const arrBottom = window.innerHeight -</span><br><span class="line">    e.target.getBoundingClientRect().y -</span><br><span class="line">    e.target.getBoundingClientRect().height;</span><br><span class="line"> if (arrBottom &lt; 260) &#123;</span><br><span class="line">   nextTick(() =&gt; &#123;</span><br><span class="line">     scrollArea.scrollTop += 260 - arrBottom;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>待更新…</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>BUG</tag>
+        <tag>移动端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>插件</title>
+    <url>/zh-CN/plugin/</url>
+    <content><![CDATA[<h4 id="常用插件推荐合集"><a href="#常用插件推荐合集" class="headerlink" title="常用插件推荐合集"></a>常用插件推荐合集</h4><span id="more"></span>
+
+<h5 id="富文本插件"><a href="#富文本插件" class="headerlink" title="富文本插件"></a>富文本插件</h5><ul>
+<li><em><a href="https://vueup.github.io/vue-quill/guide/">VueQuill</a></em>  <a href="https://flyween.github.io/vue3-quill/">示例</a></li>
+<li><em><a href="https://microsoft.github.io/monaco-editor/">Monaco</a></em></li>
+</ul>
+<h5 id="上传插件"><a href="#上传插件" class="headerlink" title="上传插件"></a>上传插件</h5><ul>
+<li><h5 id="vue-uploader-solutions-next"><a href="#vue-uploader-solutions-next" class="headerlink" title="vue-uploader-solutions-next"></a><em><a href="https://github.com/shady-xia/vue-uploader-solutions-next">vue-uploader-solutions-next</a></em></h5>基于 <code>vue-simple-uploader</code> ，封装可以分片、秒传及断点续传的vue3上传插件</li>
+</ul>
+<h5 id="拖放排序插件"><a href="#拖放排序插件" class="headerlink" title="拖放排序插件"></a>拖放排序插件</h5><ul>
+<li><h5 id="Sortable-js"><a href="#Sortable-js" class="headerlink" title="Sortable.js"></a><em><a href="http://www.manongjc.com/article/106870.html">Sortable.js</a></em></h5></li>
+</ul>
+<p>待更新…</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工具箱</title>
+    <url>/zh-CN/tool/</url>
+    <content><![CDATA[<h5 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h5><ul>
+<li><em><a href="https://ip8.com/">ip8.com</a></em></li>
+</ul>
+<h5 id="魔法"><a href="#魔法" class="headerlink" title="魔法"></a>魔法</h5><ul>
+<li><p><em><a href="https://github.com/dotnetcore/FastGithub/releases">FastGithub</a></em></p>
+</li>
+<li><p><em><a href="https://github.com/docmirror/dev-sidecar">dev-sidecar</a></em></p>
+</li>
+<li><p><a href="https://steampp.net/">steam++</a></p>
+</li>
+<li><p>飞机场+Clash （<a href="https://ikuuu.one/user%EF%BC%89">https://ikuuu.one/user）</a></p>
+</li>
+<li><p>（付费）<a href="https://www.zionladdero.com/login/?next=/affiliate/">https://www.zionladdero.com/login/?next=/affiliate/</a></p>
+</li>
+<li><p>（付费）<a href="https://portal.shadowsocks.au/">https://portal.shadowsocks.au/</a></p>
+<span id="more"></span></li>
+</ul>
+<h5 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h5><ul>
+<li><p><em><a href="https://openai.com/">OpenAI</a></em></p>
+</li>
+<li><p><a href="https://rightbrain.art/text2Image">Vega</a></p>
+</li>
+<li><p><em><a href="https://steamship.us.auth0.com/u/login?state=hKFo2SBIUEgyVi1EbDFJa0w2YURfVXJZNGVxdmNHSFNxRjdYaaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFl2NlI0dmM2T2toZkNDYS1ZaHdHZVAyVkZyczc3b003o2NpZNkga21ZbWNKTFJpSzU4TER2WXR6cmNmQWlDUmNCMHVQR0s">Steamship</a></em></p>
+</li>
+<li><p><em><a href="https://monica.im/tutorial?from=index">Monica</a></em></p>
+</li>
+<li><p><em><a href="https://aws.amazon.com/cn/codewhisperer/resources/#Getting_started">aws CodeWhispererer</a></em></p>
+</li>
+<li><p><a href="https://xinghuo.xfyun.cn/desk">科大讯飞-星火</a></p>
+</li>
+<li><p><a href="https://yiyan.baidu.com/agreement">文心一言</a></p>
+</li>
+</ul>
+<h5 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h5><ul>
+<li><a href="https://www.2925.com/#/">无限邮箱</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>threeJs</title>
+    <url>/zh-CN/threejs/</url>
+    <content><![CDATA[<h4 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h4><ul>
+<li>地址：*<a href="http://www.webgl3d.cn/pages/aac9ab/">three.js</a>*</li>
+</ul>
+<span id="more"></span>
+
+<p>物理引擎cannon-es  <a href="https://pmndrs.github.io/cannon-es/docs/">https://pmndrs.github.io/cannon-es/docs/</a></p>
+]]></content>
+      <categories>
+        <category>webGL</category>
+      </categories>
+      <tags>
+        <tag>threeJs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端性能优化</title>
+    <url>/zh-CN/optimize/</url>
+    <content><![CDATA[<h4 id="性能优化目标"><a href="#性能优化目标" class="headerlink" title="性能优化目标"></a>性能优化目标</h4><ul>
+<li><h5 id="保证资源更快的-加载速度（网络层面）"><a href="#保证资源更快的-加载速度（网络层面）" class="headerlink" title="保证资源更快的 加载速度（网络层面）"></a><strong>保证资源更快的 加载速度（网络层面）</strong></h5></li>
+<li><h5 id="保证视图更快的-渲染速度-x2F-交互速度-（浏览器层面）"><a href="#保证视图更快的-渲染速度-x2F-交互速度-（浏览器层面）" class="headerlink" title="保证视图更快的 渲染速度&#x2F;交互速度 （浏览器层面）"></a><strong>保证视图更快的 渲染速度&#x2F;交互速度 （浏览器层面）</strong></h5></li>
+</ul>
+<h4 id="性能检测工具"><a href="#性能检测工具" class="headerlink" title="性能检测工具"></a>性能检测工具</h4><ul>
+<li><p><code>Network</code></p>
+</li>
+<li><p><code>performance</code> 面板（提供一个具体的执行过程)</p>
+</li>
+<li><p><code>lighthouse</code> 面板（网站整体评估) </p>
+</li>
+<li><p><code>webPageTest</code>、 <code>webpack-bundle-analyze</code>（依赖打包构建图）、 <code>speed-measure-webpack-plugin</code>（构建费时分析）</p>
+<span id="more"></span></li>
+</ul>
+<h4 id="性能指标数据收集"><a href="#性能指标数据收集" class="headerlink" title="性能指标数据收集"></a>性能指标数据收集</h4><ul>
+<li><p><code>performance API</code></p>
+<p>浏览器端的全局对象 <code>window</code> 上有一个名为 <code>performance</code> 的属性，它是一个用于支持 <code>IE9</code> 以上及 <code>webkit</code> 内核浏览器中用于记录页面 <strong>加载</strong> 和 <strong>解析</strong> 过程中关键时间点的机制</p>
+</li>
+<li><p><code>Web Vitals</code> 模块化库</p>
+</li>
+</ul>
+<h4 id="常规性能指标"><a href="#常规性能指标" class="headerlink" title="常规性能指标"></a>常规性能指标</h4><p><code>Google</code> 为前端页面性能的评估提出了 <code>RAIL</code> 模型，核心内容如下：</p>
+<ul>
+<li><p><strong><code>Response</code> 响应</strong></p>
+</li>
+<li><p><strong><code>Animation</code> 动画</strong></p>
+</li>
+<li><p><strong><code>Idle</code> 空闲</strong></p>
+</li>
+<li><p><strong><code>Load</code> 加载</strong></p>
+<hr>
+<p><strong>首次绘制（<code>First Paint，FP</code>）</strong></p>
+<ul>
+<li>在渲染进程确认要渲染当前响应资源后，渲染进程会先创建一个空白页面，通常把创建空白页面的这个时间点称为 <code>First Paint</code>，简称 <code>FP</code></li>
+<li>所谓的 <strong>白屏时间</strong> 其实指的就是创建这个空白页面到浏览器开始渲染非空白内容的时间，比如页面背景发生变化等</li>
+</ul>
+<p><strong>首次内容绘制（<code>First Contentful Paint，FCP</code>）</strong></p>
+<ul>
+<li>当用户看见一些 “内容” 元素被绘制在页面上的时间点，和白屏是不一样，它可以是 <strong><code>文本</code></strong> 首次绘制，或 <code>SVG</code> 首次出现，或 <code>Canvas</code> 首次绘制等，即当页面中绘制了第一个 <strong>像素</strong> 时，这个时间点称为 <code>First Content Paint</code>，简称 <code>FCP</code></li>
+</ul>
+<p><strong>首屏时间 &#x2F; 最大内容绘制（<code>Largest Contentful Paint, LCP</code>）</strong></p>
+<ul>
+<li><code>LCP</code> 是一种新的性能度量标准，<code>LCP</code> 侧重于用户体验的性能度量标准，与现有度量标准相比，更容易理解与推理，当首屏内容完全绘制完成时，这个时间点称为 <code>Largest Content Paint</code>，简称 <code>LCP</code></li>
+<li><strong>最大内容绘制应在 <code>2.5s</code> 内完成</strong></li>
+</ul>
+<p><strong>首次输入延迟（<code>First Input Delay, FID</code>）</strong></p>
+<ul>
+<li><code>FID</code> 测量的是当用户第一次在页面上交互的时候（<strong>点击链接</strong>、<strong>点击按钮</strong> 或 <strong>自定义基于 <code>js</code> 的事件</strong>），到浏览器实际开始处理这个事件的时间</li>
+<li><strong>首次输入延迟应在 <code>100ms</code> 内完成</strong></li>
+</ul>
+<p><strong>累积布局偏移（<code>Cumulative Layout Shift, CLS</code>)</strong></p>
+<ul>
+<li><code>CLS</code> 是为了测量 <strong>视觉稳定性</strong>，以便提供良好的用户体验</li>
+<li><strong>累积布局偏移应保持在 <code>0.1</code> 或更少</strong></li>
+</ul>
+<p><strong>首字节达到时间（<code>Time to First Byte，TTFB</code>）</strong></p>
+<ul>
+<li>指的是浏览器开始收到服务器响应数据的时间（<strong>后台处理时间 + 重定向时间</strong>），是反映服务端响应速度的重要指标</li>
+<li><code>TTFB</code> 时间如果超过 <code>500ms</code>，用户在打开网页的时就会感觉到明显的等待</li>
+</ul>
+</li>
+</ul>
+<h4 id="保证资源更快的加载速度"><a href="#保证资源更快的加载速度" class="headerlink" title="保证资源更快的加载速度"></a>保证资源更快的加载速度</h4><ul>
+<li><h5 id="使用-dns-prefetch-减少-DNS-的查询时间"><a href="#使用-dns-prefetch-减少-DNS-的查询时间" class="headerlink" title="使用 dns-prefetch 减少 DNS 的查询时间"></a><strong>使用 <code>dns-prefetch</code> 减少 DNS 的查询时间</strong></h5><p><code>dns-prefetch</code> 能够 <strong>提前解析</strong> 后续可能会用到的 <strong>不同域的域名</strong>，使解析结果 <strong>缓存到系统缓存</strong> 中，缩短 <code>DNS</code> 解析时间以提高网站的访问速度。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;dns-prefetch&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//api.xxx1.cn&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;dns-prefetch&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//api.xxx2.cn&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;dns-prefetch&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//api.xxx3.cn&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="使用-preconnect-提前建立连接"><a href="#使用-preconnect-提前建立连接" class="headerlink" title="使用 preconnect 提前建立连接"></a><strong>使用 <code>preconnect</code> 提前建立连接</strong></h5><p><code>preconnect</code> 的作用是提前和第三方资源建立连接，设置了它浏览器就会做好早期的连接工作，但这个连接通常只会维持 <code>10 s</code>。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;preconnect&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//xxx.com&quot;</span> &gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="使用-preload-prefetch-预先加载资源"><a href="#使用-preload-prefetch-预先加载资源" class="headerlink" title="使用 preload / prefetch 预先加载资源"></a><strong>使用 <code>preload / prefetch</code> 预先加载资源</strong></h5><ul>
+<li><p><code>preload</code> 的作用是提前加载页面对应的 <strong>关键资源</strong> 加快页面的渲染，<code>preload</code> 的优先级顺序和 <code>as</code> 属性相关</p>
+<p><code>preload</code> 是对资源的预加载，它虽提前加载但只在需要执行时执行，即这个资源一定是当前页面所需要的资源</p>
+<p>不会阻塞 <code>onload</code> 事件，<code>preload</code> 加载的<code>JS</code>脚本其加载和执行的过程是分离的，即 <code>preload</code> 会预加载相应的脚本代码，待到需要时自行调用</p>
+</li>
+<li><p>如果是需要为下一个页面提前加载资源，那么应该使用 <code>prefetch</code>，它会在 <strong>浏览器空闲时</strong> 下载资源。</p>
+</li>
+</ul>
+<p><code>v-cli</code>默认有配置 <code>preload / prefetch</code> </p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// as 属性一定要设置，除了上面提到的设置优先级外，还涉及到浏览识别的问题：如果没有设置 as 属性，后续遇到该请求就会被作为一个 XHR 请求，把意味着资源预加载的功能可能会失效，因为可能会每次都发起新的请求获取</span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;preload&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//xxx.com&quot;</span> <span class="attr">as</span>=<span class="string">&quot;script&quot;</span> &gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="压缩资源体积"><a href="#压缩资源体积" class="headerlink" title="压缩资源体积"></a><strong>压缩资源体积</strong></h5><p>资源是需要通过 <code>http</code> 数据包的方式在网络中进行传输的，那么只要能减少传输数据包的体积，也是能够使得资源更快到达客户端，这也是压缩资源体积的核心目的。</p>
+<ul>
+<li><p><strong>HTTP 压缩</strong></p>
+<ul>
+<li><code>gzip</code></li>
+</ul>
+</li>
+<li><p><strong>Webpack 压缩</strong></p>
+<ul>
+<li>使用 <code>CompressionPlugin</code> 压缩文件</li>
+<li>使用 <code>HtmlWebpackPlugin</code> 压缩 <code>HTML</code> 文件</li>
+<li>使用 <code>MiniCssExtractPlugin</code> 抽离和压缩 <code>CSS</code></li>
+<li>使用 <code>ImageMinimizerWebpackPlugin</code> 压缩图片资源</li>
+<li>使用 <code>SplitChunksPlugin</code> 自定义分包策略</li>
+<li>通过 <code>Tree Shaking</code> 移除无用代码</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h5 id="减少-http-请求数量"><a href="#减少-http-请求数量" class="headerlink" title="减少 http 请求数量"></a><strong>减少 http 请求数量</strong></h5><ul>
+<li>合并公共资源，如 雪碧图 等</li>
+<li>内置模块资源，如 生成 <code>base64</code> 图片、通过 <code>symbol</code> 引用 <code>svg</code> 等</li>
+<li>合并代码块，如构建工具分包策略配合 公共组件封装、组件复用逻辑抽离 等</li>
+<li>按需加载资源，如 路由懒加载、图片懒加载、上拉加载、分页加载 等</li>
+</ul>
+</li>
+<li><h5 id="减少不必要的-cookie"><a href="#减少不必要的-cookie" class="headerlink" title="减少不必要的 cookie"></a><strong>减少不必要的 cookie</strong></h5><p>不必要的 <code>cookie</code> 来回传输会造成带宽浪费：</p>
+<ul>
+<li>减少 <code>cookie</code> 存储的内容</li>
+<li>对于静态资源采用 <code>CDN</code> 托管（即非同域），不同域名默认不携带 <code>cookie</code></li>
+</ul>
+</li>
+<li><h5 id="CDN-托管静态资源加速-HTTP-缓存"><a href="#CDN-托管静态资源加速-HTTP-缓存" class="headerlink" title="CDN 托管静态资源加速 + HTTP 缓存"></a><strong>CDN 托管静态资源加速 + HTTP 缓存</strong></h5><ul>
+<li><p>强缓存、协商缓存</p>
+</li>
+<li><p><code>keep-alive</code>、<code>v-once</code>、<code>v-memo</code></p>
+</li>
+</ul>
+</li>
+<li><h5 id="协议升级为-Http2-0"><a href="#协议升级为-Http2-0" class="headerlink" title="协议升级为 Http2.0"></a><strong>协议升级为 Http2.0</strong></h5><p><code>http1.0</code> 中使用的是 <strong>短连接</strong>，即 <strong>一次请求&#x2F;响应</strong> 结束后就会断开连接，这个过程比较耗时</p>
+<p><code>http1.1</code> 中使用的是 <strong>长连接</strong>，在 <strong>请求&#x2F;响应头</strong> 中设置 <code>Connection: keep-alive</code> 即可开启，优点是 <strong>长连接</strong> 允许多个请求共用一个 <code>TCP</code> 连接，缺点是带来了 <strong>队头阻塞</strong>：</p>
+<ul>
+<li>每个 <code>TCP</code> 连接中的多个请求，需要进行排队，只有队头的请求被响应，才能继续处理下一个请求</li>
+<li>其中一个缓解方案就是如果当前 <code>TCP</code> 连接中发生 <strong>队头阻塞</strong>，那就将部分请求放到其他 <code>TCP</code> 连接中</li>
+<li>浏览器一般会限制同一个域名建立 <code>6-8</code> 个 <code>TCP</code> 链接，这也就是为什么需要为应用划分子域名、静态资源托管 <code>CDN</code> 的原因之一</li>
+</ul>
+<p><code>http1.x</code> 中 <code>header</code> 部分的内容可能会很大，而且每一个请求可能都需要携带大量 <strong>重复</strong> <code>header</code> 的 <strong>文本内容</strong>，而这些也是导致 <strong>请求&#x2F;响应</strong> 慢的原因之一</p>
+<p><code>http2.0</code>基于<code>https</code>协议，采用<strong>头部压缩、二进制传输、多路复用</strong>，避免浏览器请求拥堵导致耗时。</p>
+</li>
+</ul>
+<h4 id="保证视图更快的渲染和交互"><a href="#保证视图更快的渲染和交互" class="headerlink" title="保证视图更快的渲染和交互"></a>保证视图更快的渲染和交互</h4><ul>
+<li><h5 id="渲染层面"><a href="#渲染层面" class="headerlink" title="渲染层面"></a><strong>渲染层面</strong></h5><ul>
+<li><h6 id="减少阻塞渲染的因素"><a href="#减少阻塞渲染的因素" class="headerlink" title="减少阻塞渲染的因素"></a><strong>减少阻塞渲染的因素</strong></h6><p>真正渲染视图之前，必然要生成 <strong><code>DOM Tree</code></strong> 和 **<code>CSSOM</code>**，因此必须保证 <strong>HTML 解释器</strong> 和 <strong>CSS 解释器</strong> 都尽早处理完成，同时 <strong><code>JavaScript</code></strong> 的加载和执行可能会阻塞这个过程：</p>
+<ul>
+<li><code>HTML</code> 文档中首次渲染的节点数量要尽量少，避免深层次的嵌套结构，避免大量使用慢标签（如：<code>iframe</code>）等</li>
+<li><code>CSS</code> 资源放文档头部，降低 <code>CSS</code> 复杂度，比如 合理使用 <code>CSS</code> 选择器</li>
+<li><code>JavaScript</code> 资源放文档底部，合理使用 <strong><code>defer、async</code></strong> 的加载方式</li>
+</ul>
+</li>
+<li><h6 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a><strong>懒加载</strong></h6><p>懒加载主要是针对数量大、资源加载慢的情况，比如图片资源、大量列表数据展示等：</p>
+<ul>
+<li><p><strong>图片资源</strong>：优先加载在可视区范围内的图片，可视区外的图片 **<code>延后加载</code>**，或者说当移入的可视区时再加载</p>
+</li>
+<li><p><strong>列表数据</strong>：列表数据通常数据里量大，不可能一次渲染完所有数据，一般通过 <strong><code>分页加载、上拉加载</code></strong> 等方式分批次渲染</p>
+</li>
+<li><p><strong>路由懒加载</strong></p>
+<p><code>webpackChunkName</code> 作用是 <code>webpack</code> 在打包的时候，对异步引入的库代码（<code>lodash</code>）进行代码分割时，设置代码块的名字。<code>webpack</code>会将任何一个异步模块与相同的块名称组合到相同的异步块中。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 通过webpackChunkName设置分割后代码块的名字</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">Home</span> = (<span class="params"></span>) =&gt; <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: &quot;home&quot; */</span> <span class="string">&quot;@/views/home/index.vue&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">MetricGroup</span> = (<span class="params"></span>) =&gt; <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: &quot;metricGroup&quot; */</span> <span class="string">&quot;@/views/metricGroup/index.vue&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> routes = [</span><br><span class="line">    &#123;</span><br><span class="line">       <span class="attr">path</span>: <span class="string">&quot;/&quot;</span>,</span><br><span class="line">       <span class="attr">name</span>: <span class="string">&quot;home&quot;</span>,</span><br><span class="line">       <span class="attr">component</span>: <span class="title class_">Home</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">       <span class="attr">path</span>: <span class="string">&quot;/metricGroup&quot;</span>,</span><br><span class="line">       <span class="attr">name</span>: <span class="string">&quot;metricGroup&quot;</span>,</span><br><span class="line">       <span class="attr">component</span>: <span class="title class_">MetricGroup</span></span><br><span class="line">    &#125;,</span><br><span class="line"> ]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>组件懒加载</strong></p>
+<p>组件懒加载 <em>基于动态<code>import</code></em> &#x2F; ***<code>defineAsyncComponent</code>***，有时资源拆分的过细也不好，可能会造成浏览器 <code>http</code> 请求的增多。</p>
+<p>总结出三种适合组件懒加载的场景：</p>
+<p>1）该页面的 JS 文件体积大，导致页面打开慢，可以通过组件懒加载进行资源拆分，利用浏览器并行下载资源，提升下载速度（比如首页）</p>
+<p>2）该组件不是一进入页面就展示，需要一定条件下才触发（比如弹框组件）</p>
+<p>3）该组件复用性高，很多页面都有引入，利用组件懒加载抽离出该组件，一方面可以很好利用缓存，同时也可以减少页面的 JS 文件大小（比如表格组件、图形组件等）</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">dialogInfo</span> = (<span class="params"></span>) =&gt; <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: &quot;dialogInfo&quot; */</span> <span class="string">&#x27;@/components/dialogInfo&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;homeView&#x27;</span>,</span><br><span class="line">  <span class="attr">components</span>: &#123;</span><br><span class="line">    dialogInfo</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><h6 id="白屏优化"><a href="#白屏优化" class="headerlink" title="白屏优化"></a><strong>白屏优化</strong></h6><p>白屏是由于 <code>SPA</code> 应用需要等待 <code>JavaScript</code> 加载并执行完成后才会生成具体的页面结构内容导致的，即初始化模板中没有任何有意义需要被渲染的 <code>HTML</code> 结构：</p>
+<ul>
+<li>添加 **白屏 <code>loading</code>**，可在模板中添加默认的 <code>loading</code> 效果，等到真正页面内容被渲染就可以替换 <code>loading</code> 内容</li>
+<li>添加 <strong>骨架屏</strong>，和上述方案一致，在真正页面内容展示出来之前，先展示默认的视图内容，避免白屏</li>
+</ul>
+</li>
+<li><h6 id="服务端渲染（SSR）"><a href="#服务端渲染（SSR）" class="headerlink" title="服务端渲染（SSR）"></a><strong>服务端渲染（SSR）</strong></h6></li>
+<li><h6 id="预渲染（prerender）"><a href="#预渲染（prerender）" class="headerlink" title="预渲染（prerender）"></a><strong>预渲染（prerender）</strong></h6><p>上述 <strong>服务端渲染（server-side rendering，SSR）</strong> 虽然能够解决一些客户端存在的问题，但它也带来了别的问题：</p>
+<ul>
+<li>**<code>需要保证开发一致性</code>**，比如 <strong>服务端</strong> 和 <strong>客户端</strong> 能够执行的组件生命周期钩子不同，一些外部库在 <strong>服务端渲染</strong> 应用中可能需要经过特殊处理</li>
+<li>**<code>需要更多的构建设定和部署要求</code>**，一个完全静态的 <strong>SPA</strong> 可以部署在任意的静态文件服务器，但服务端渲染应用需要一个能够运行 <strong>Node.js</strong> 服务器的环境</li>
+<li>**<code>更多的服务端负载</code>**，在 <strong>Node.js</strong> 中渲染一个完整的应用，会比仅供应静态文件产生更密集的 <strong>CPU</strong> 运算，并且需要考虑访问流量过大的情况等</li>
+</ul>
+<p>因此，并不是所有应用都合适 <strong>服务端渲染</strong>，如果只是希望通过 <strong>SSR</strong> 来改善一些 <strong>推广页面</strong> (如 <code>/</code>、<code>/about</code>、<code>/contact</code> 等) 的 <strong>SEO</strong>，那么应该优先考虑 <strong>预渲染</strong> 的方式：</p>
+<ul>
+<li><strong>预渲染</strong> 是在打包构建过程中（离屏状态），针对对应的 <code>routes</code> 路由预先生成对应的页面内容</li>
+<li><strong>预渲染</strong> 需要和 <strong>打包构建工具（webpack、rollup 等）</strong> 进行配合，如 <a href="https://link.juejin.cn/?target=https://webpack.js.org/"><strong><code>webpack</code></strong></a>，就可通过 <a href="https://link.juejin.cn/?target=https://github.com/chrisvfritz/prerender-spa-plugin"><strong><code>prerender-spa-plugin</code></strong></a> 来支持 <strong>预渲染</strong></li>
+</ul>
+</li>
+<li><h6 id="requestAnimationFrame-制作动画"><a href="#requestAnimationFrame-制作动画" class="headerlink" title="requestAnimationFrame 制作动画"></a><code>requestAnimationFrame</code> 制作动画</h6><p><code>requestAnimationFrame</code> 是浏览器专门为动画提供的<code> API</code>，属于GUI引擎，它的刷新频率与显示器的频率保持一致，使用该 <code>api</code> 可以解决用 <code>setTimeout/setInterval</code> 制作动画卡顿的情况。</p>
+</li>
+</ul>
+</li>
+<li><h5 id="交互层面"><a href="#交互层面" class="headerlink" title="交互层面"></a><strong>交互层面</strong></h5><ul>
+<li><h6 id="减少回流-x2F-重绘"><a href="#减少回流-x2F-重绘" class="headerlink" title="减少回流&#x2F;重绘"></a><strong>减少回流&#x2F;重绘</strong></h6><ul>
+<li>避免对 <code>css</code> 进行单个修改，如在 <code>JavaScript</code> 修改多个样式时，尽量使用 <code>css</code> 选择器实现样式的集中变更</li>
+<li>使用定位，利用<code>GPU</code>加速 <code>transform</code>、<code>opacity</code>、<code>filter</code>、<code>will-change</code>…，使用 <code>will-change</code> 开启 <code>GPU</code> 加速，<code>will-change</code> 指定的属性使得浏览器可在元素属性真正发生变化之前提前做好对应的优化</li>
+<li>预先设定图片尺寸，避免图片资源加载完成后引发回流</li>
+</ul>
+</li>
+<li><h6 id="防抖-x2F-节流"><a href="#防抖-x2F-节流" class="headerlink" title="防抖&#x2F;节流"></a><strong>防抖&#x2F;节流</strong></h6><p><strong>防抖</strong>：多次频繁触发执行操作，以 <strong>最后一次</strong> 为准，忽略中间过程</p>
+<p><strong>节流</strong>：在指定的时间间隔内，<strong>只允许</strong> 执行一次对应的操作</p>
+<p>合理使用 <strong><code>防抖/节流</code></strong> 优化应用中的操作，比如 <strong><code>节流</code></strong> 可用于优化 滚动事件、模糊搜索等，**<code>防抖</code>** 可用于优化一些按钮点击操作等。</p>
+</li>
+<li><h6 id="Web-Worker"><a href="#Web-Worker" class="headerlink" title="Web Worker"></a><strong>Web Worker</strong></h6><p><code>JavaScript</code> 是单线程的，如果存在需要大量计算的场景（如视频解码），<code>UI</code> 线程就会被阻塞，甚至浏览器直接卡死。</p>
+<p><code>Web Worker</code> 可以使脚本运行在新的线程中，它们独立于主线程，可以进行大量的计算活动，而不会影响主线程的 <code>UI</code> 渲染，但不能滥用 <code>Web Worker</code> 。</p>
+<p>由于浏览器 <code>GUI</code> 渲染线程与 <code>JS</code> 引擎线程是互斥的关系，当页面中有很多长任务时，会造成页面 <code>UI</code> 阻塞，出现界面卡顿、掉帧等情况，<u><strong>当任务的运算时长 - 通信时长 &gt; <code>50ms</code>，推荐使用Web Worker</strong></u>。并不是执行时间超过 <code>50ms</code> 的任务，就可以使用 Web Worker，还要先考虑<code>通信时长</code>的问题，假如一个运算执行时长为 <code>100ms</code>，但是通信时长为 <code>300ms</code>， 用了 Web Worker可能会更慢。</p>
+</li>
+<li><h6 id="虚拟列表"><a href="#虚拟列表" class="headerlink" title="虚拟列表"></a><strong>虚拟列表</strong></h6><p>比如<code> vue-virtual-scroller</code>、<code>vue-virtual-scroll-list</code>、<code>react-tiny-virtual-list</code>、<code>react-virtualized</code> 等</p>
+<p><code> vue-virtual-scroller</code>示例</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 安装插件</span></span><br><span class="line">npm install vue-virtual-scroller</span><br><span class="line"></span><br><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">VueVirtualScroller</span> <span class="keyword">from</span> <span class="string">&#x27;vue-virtual-scroller&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;vue-virtual-scroller/dist/vue-virtual-scroller.css&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">VueVirtualScroller</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line">&lt;template&gt; </span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">RecycleScroller</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">class</span>=<span class="string">&quot;scroller&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">:items</span>=<span class="string">&quot;list&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">:item-size</span>=<span class="string">&quot;32&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">key-field</span>=<span class="string">&quot;id&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">v-slot</span>=<span class="string">&quot;&#123; item &#125;&quot;</span>&gt;</span> </span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;user&quot;</span>&gt;</span> &#123;&#123; item.name &#125;&#125; <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">RecycleScroller</span>&gt;</span></span> </span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+<li><h6 id="大文件分片上传"><a href="#大文件分片上传" class="headerlink" title="大文件分片上传"></a><strong>大文件分片上传</strong></h6></li>
+<li><h6 id="Excel-导入-x2F-导出"><a href="#Excel-导入-x2F-导出" class="headerlink" title="Excel 导入&#x2F;导出"></a><strong>Excel 导入&#x2F;导出</strong></h6></li>
+<li><h6 id="Vue-项目的优化"><a href="#Vue-项目的优化" class="headerlink" title="Vue 项目的优化"></a><strong>Vue 项目的优化</strong></h6><p>简单列举一些内容（包括但不限于）：</p>
+<ul>
+<li>减少响应式数据的生成，对于纯展示、又需要使用在 <code>template</code> 模板中使用的数据，可使用 <code>Object.freeze()</code> 进行冻结，避免被转为 <strong>不必要的响应式数据</strong></li>
+<li><code>Vue</code> 组件初始化是比较损耗性能的，使用 <strong>函数式组件</strong> 减少组件初始化的过程，适用于实现没有业务逻辑只展示内容的简单组件</li>
+<li>合理使用 <code>v-show</code> 和 <code>v-if</code>、为 <code>v-for</code> 组件设定唯一 <code>key</code>（非 <code>index</code>）、<code>v-for</code> 和 <code>v-if</code> 不要一起使用等</li>
+<li>使用 <code>KeepAlive</code> 复用组件，避免组件重复的创建、销毁带来的性能损耗</li>
+<li>使用 <code>() =&gt; import(xxx)</code> 方式实现路由懒加载</li>
+<li>使用 <code>ESM</code> 的方式封装自定义工具库等</li>
+<li>针对第三方库做到按需引入</li>
+<li>合理使用闭包，避免造成内存泄漏</li>
+<li>及时清除组件中的副作用，比如 <code>setTimeout、setInterval、addEventListener</code> 等</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>性能优化</tag>
+      </tags>
+  </entry>
+</search>
