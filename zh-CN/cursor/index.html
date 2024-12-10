@@ -223,10 +223,7 @@
         </div>
         <ul class="links-of-blogroll-list">
             <li class="links-of-blogroll-item">
-              <a href="https://github.com/" title="https:&#x2F;&#x2F;github.com&#x2F;" rel="noopener" target="_blank">Github</a>
-            </li>
-            <li class="links-of-blogroll-item">
-              <a href="https://developer.mozilla.org/zh-CN/docs/Web" title="https:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;Web" rel="noopener" target="_blank">MDN Web</a>
+              <a href="https://github.com/" title="https:&#x2F;&#x2F;github.com&#x2F;" rel="noopener" target="_blank">GitHub</a>
             </li>
         </ul>
       </div>
@@ -317,8 +314,8 @@
 <span id="more"></span>
 
 <p>途径如下</p>
-<p>1、<a target="_blank" rel="noopener" href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#x40;&#120;&#120;&#120;&#46;&#x63;&#111;&#109;">&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#x40;&#120;&#120;&#120;&#46;&#x63;&#111;&#109;</a></p>
-<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#x65;&#120;&#97;&#109;&#112;&#108;&#101;&#43;&#x31;&#64;&#x78;&#120;&#120;&#x2e;&#99;&#x6f;&#x6d;">&#x65;&#120;&#97;&#109;&#112;&#108;&#101;&#43;&#x31;&#64;&#x78;&#120;&#120;&#x2e;&#99;&#x6f;&#x6d;</a>&#x2F;<a href="mailto:&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#43;&#x32;&#x40;&#120;&#x78;&#120;&#46;&#x63;&#x6f;&#x6d;">&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#43;&#x32;&#x40;&#120;&#x78;&#120;&#46;&#x63;&#x6f;&#x6d;</a>…</p>
+<p>1、<a target="_blank" rel="noopener" href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#64;&#120;&#120;&#120;&#46;&#99;&#x6f;&#109;">&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#64;&#120;&#120;&#120;&#46;&#99;&#x6f;&#109;</a></p>
+<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#101;&#120;&#97;&#x6d;&#x70;&#108;&#101;&#x2b;&#49;&#64;&#120;&#x78;&#120;&#46;&#x63;&#111;&#x6d;">&#101;&#120;&#97;&#x6d;&#x70;&#108;&#101;&#x2b;&#49;&#64;&#120;&#x78;&#120;&#46;&#x63;&#111;&#x6d;</a>&#x2F;<a href="mailto:&#x65;&#120;&#97;&#x6d;&#112;&#108;&#101;&#x2b;&#x32;&#64;&#x78;&#120;&#120;&#x2e;&#99;&#111;&#109;">&#x65;&#120;&#97;&#x6d;&#112;&#108;&#101;&#x2b;&#x32;&#64;&#x78;&#120;&#120;&#x2e;&#99;&#111;&#109;</a>…</p>
 <h5 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h5><p><strong>Premium models   0 &#x2F; 500</strong></p>
 <p>You’ve used no requests out of your <strong>500</strong> fast requests quota.</p>
 <p><strong>gpt-4o-mini or cursor-small   0 &#x2F; No Limit</strong></p>
@@ -435,7 +432,7 @@
 
 
 <!-- 网站运行时间的设置 -->
-<div>
+<div class="run-date">
   <span id="timeDate">载入天数...</span>
   <span id="times">载入时分秒...</span>
 </div>
@@ -450,8 +447,8 @@
         mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
         seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
         snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+"天 ";
-        document.getElementById("times").innerHTML = hnum + "小时 " + mnum + "分 " + snum + "秒";
+        document.getElementById("timeDate").innerHTML = "Safely Running: "+dnum+"天 ";
+        document.getElementById("times").innerHTML = hnum + "时-" + mnum + "分-" + snum + "秒";
     }
 setInterval("createtime()",250);
 </script>
@@ -493,7 +490,7 @@ setInterval("createtime()",250);
   <script src="/js/third-party/addtoany.js"></script>
 
   
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script defer src="https://vercount.one/js"></script>
 
 
 

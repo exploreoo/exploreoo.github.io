@@ -1529,12 +1529,13 @@ pre code {
 }
 .with-love {
   color: #02a802;
+  color: #ac6f00;
   display: inline-block;
   margin: 0 5px;
 }
 @media (max-width: 767px) {
   .with-love {
-    color: #ffa500;
+    color: #02a802;
   }
 }
 .busuanzi-count #busuanzi_container_site_uv {
@@ -1600,7 +1601,7 @@ pre code {
 }
 .reading-progress-bar {
   --progress: 0;
-  background: #ffa500;
+  background: #ff0;
   height: 2px;
   position: fixed;
   z-index: 50;
@@ -2608,7 +2609,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #b50d30;
+  background: #41f26f;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2671,7 +2672,7 @@ header.header {
   color: #000;
 }
 .sidebar {
-  background: linear-gradient(45deg, #222, #760101);
+  background: linear-gradient(45deg, #222, #000, #3b0606);
   box-shadow: unset;
 }
 @media (max-width: 767px) {
@@ -2729,10 +2730,17 @@ header.header {
 .site-meta .brand {
   color: #ffa100;
   background: transparent;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255,165,0,0.88);
+  mix-blend-mode: screen; /*关键 screen混合模式*/
 }
 @media (max-width: 767px) {
   .site-meta .brand {
     color: rgba(0,255,69,0.761);
+    background: transparent;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(38,180,0,0.88);
+    mix-blend-mode: screen;
   }
 }
 .site-meta .site-subtitle {
@@ -2760,4 +2768,22 @@ header.header {
 }
 .social-like {
   justify-content: flex-end;
+}
+#busuanzi_container_page_pv {
+  display: inline;
+}
+.busuanzi-count #busuanzi_container_site_uv {
+  display: inline;
+}
+.busuanzi-count #busuanzi_container_site_pv {
+  display: inline;
+}
+.run-date {
+  font-style: italic;
+}
+.footer {
+  font-size: 0.8rem;
+}
+.pace .pace-progress {
+  background: #ff0 !important;
 }

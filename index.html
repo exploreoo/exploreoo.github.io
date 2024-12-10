@@ -220,10 +220,7 @@
         </div>
         <ul class="links-of-blogroll-list">
             <li class="links-of-blogroll-item">
-              <a href="https://github.com/" title="https:&#x2F;&#x2F;github.com&#x2F;" rel="noopener" target="_blank">Github</a>
-            </li>
-            <li class="links-of-blogroll-item">
-              <a href="https://developer.mozilla.org/zh-CN/docs/Web" title="https:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;Web" rel="noopener" target="_blank">MDN Web</a>
+              <a href="https://github.com/" title="https:&#x2F;&#x2F;github.com&#x2F;" rel="noopener" target="_blank">GitHub</a>
             </li>
         </ul>
       </div>
@@ -893,101 +890,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/javascript/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/t.png">
-      <meta itemprop="name" content="Chanceux.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CHANCEUX">
-      <meta itemprop="description" content="奔赴山海，保持热爱">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | CHANCEUX">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/javascript/" class="post-title-link" itemprop="url">JS合集</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-07-02 22:35:05" itemprop="dateCreated datePublished" datetime="2023-07-02T22:35:05+08:00">2023-07-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-12-06 21:11:07" itemprop="dateModified" datetime="2024-12-06T21:11:07+08:00">2024-12-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h5 id="JS的异步"><a href="#JS的异步" class="headerlink" title="JS的异步"></a>JS的异步</h5><p>js是单线程的语言，它运行在浏览器的渲染主线程中，而渲染主线程只有一个。</p>
-<p>渲染主线程承担着诸多工作，例如解析、渲染页面、执行js都在其中，如果使用同步会极有可能产生阻塞，从而导致消息队列中许多其他任务无法得到执行，<strong>造成1主线程白白的消耗时间 2页面无法及时更新，产生页面卡死现象</strong>。</p>
-<p>所以浏览器采用异步的方式来解决，具体做法是（<strong>事件循环</strong>）当某些任务发生时，例如计时器、网络、事件监听，主线程将其交给其他线程处理，自身继续执行后续代码，当其他线程结束后，将<strong>事先传递的回调函数包装成任务加入到消息队列末尾，等待主线程的调度执行</strong>。</p>
-<p>在这种异步模式下，浏览器永不阻塞，最大限度的保证了单线程的流畅运行。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/zh-CN/javascript/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/mobile/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1057,6 +959,101 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/zh-CN/mobile/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/javascript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/t.png">
+      <meta itemprop="name" content="Chanceux.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHANCEUX">
+      <meta itemprop="description" content="奔赴山海，保持热爱">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | CHANCEUX">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/zh-CN/javascript/" class="post-title-link" itemprop="url">JS合集</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-07-02 22:35:05" itemprop="dateCreated datePublished" datetime="2023-07-02T22:35:05+08:00">2023-07-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-12-06 21:11:07" itemprop="dateModified" datetime="2024-12-06T21:11:07+08:00">2024-12-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h5 id="JS的异步"><a href="#JS的异步" class="headerlink" title="JS的异步"></a>JS的异步</h5><p>js是单线程的语言，它运行在浏览器的渲染主线程中，而渲染主线程只有一个。</p>
+<p>渲染主线程承担着诸多工作，例如解析、渲染页面、执行js都在其中，如果使用同步会极有可能产生阻塞，从而导致消息队列中许多其他任务无法得到执行，<strong>造成1主线程白白的消耗时间 2页面无法及时更新，产生页面卡死现象</strong>。</p>
+<p>所以浏览器采用异步的方式来解决，具体做法是（<strong>事件循环</strong>）当某些任务发生时，例如计时器、网络、事件监听，主线程将其交给其他线程处理，自身继续执行后续代码，当其他线程结束后，将<strong>事先传递的回调函数包装成任务加入到消息队列末尾，等待主线程的调度执行</strong>。</p>
+<p>在这种异步模式下，浏览器永不阻塞，最大限度的保证了单线程的流畅运行。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/zh-CN/javascript/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1212,7 +1209,7 @@
 
 
 <!-- 网站运行时间的设置 -->
-<div>
+<div class="run-date">
   <span id="timeDate">载入天数...</span>
   <span id="times">载入时分秒...</span>
 </div>
@@ -1227,8 +1224,8 @@
         mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
         seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
         snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+"天 ";
-        document.getElementById("times").innerHTML = hnum + "小时 " + mnum + "分 " + snum + "秒";
+        document.getElementById("timeDate").innerHTML = "Safely Running: "+dnum+"天 ";
+        document.getElementById("times").innerHTML = hnum + "时-" + mnum + "分-" + snum + "秒";
     }
 setInterval("createtime()",250);
 </script>
@@ -1270,7 +1267,7 @@ setInterval("createtime()",250);
   <script src="/js/third-party/addtoany.js"></script>
 
   
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script defer src="https://vercount.one/js"></script>
 
 
 
