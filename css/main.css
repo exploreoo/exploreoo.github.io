@@ -2609,7 +2609,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #41f26f;
+  background: #c10fff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2722,7 +2722,12 @@ header.header {
   text-align: center;
 }
 .main>.column {
-  background: url("../../../../images/20190918192138990.jpg") center/cover;
+  background: url("../../../../images/1___737471___0___.jpg") center 70%/cover no-repeat;
+}
+@media (max-width: 767px) {
+  .main>.column {
+    background: url("../../../../images/1___4992662___0___.jpg") center/cover no-repeat;
+  }
 }
 .menu .menu-item a {
   color: #fff;

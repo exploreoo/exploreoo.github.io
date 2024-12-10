@@ -86,6 +86,28 @@
       </tags>
   </entry>
   <entry>
+    <title>Cursor AI编辑器</title>
+    <url>/zh-CN/cursor/</url>
+    <content><![CDATA[<h5 id="Cursor"><a href="#Cursor" class="headerlink" title="Cursor"></a>Cursor</h5><p>链接地址：<a href="https://www.cursor.com/">https://www.cursor.com</a></p>
+<p>目前<u><em>v0.43.5</em></u>版本，新注册获取<code>Pro Trial</code> 15 days，到期续账号即可</p>
+<span id="more"></span>
+
+<p>途径如下</p>
+<p>1、<a href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#x40;&#120;&#x78;&#120;&#x2e;&#x63;&#x6f;&#x6d;">&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#x40;&#120;&#x78;&#120;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#43;&#x31;&#64;&#x78;&#x78;&#120;&#x2e;&#99;&#x6f;&#109;">&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#43;&#x31;&#64;&#x78;&#x78;&#120;&#x2e;&#99;&#x6f;&#109;</a>&#x2F;<a href="mailto:&#101;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#43;&#50;&#64;&#120;&#120;&#x78;&#46;&#x63;&#111;&#x6d;">&#101;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#43;&#50;&#64;&#120;&#120;&#x78;&#46;&#x63;&#111;&#x6d;</a>…</p>
+<h5 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h5><p><strong>Premium models   0 &#x2F; 500</strong></p>
+<p>You’ve used no requests out of your <strong>500</strong> fast requests quota.</p>
+<p><strong>gpt-4o-mini or cursor-small   0 &#x2F; No Limit</strong></p>
+<p>You’ve used <strong>0</strong> fast requests of this model. You have no monthly quota.</p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端素材汇总</title>
     <url>/zh-CN/effect/</url>
     <content><![CDATA[<ul>
@@ -115,138 +137,6 @@
       </categories>
       <tags>
         <tag>素材</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cursor AI编辑器</title>
-    <url>/zh-CN/cursor/</url>
-    <content><![CDATA[<h5 id="Cursor"><a href="#Cursor" class="headerlink" title="Cursor"></a>Cursor</h5><p>链接地址：<a href="https://www.cursor.com/">https://www.cursor.com</a></p>
-<p>目前<u><em>v0.43.5</em></u>版本，新注册获取<code>Pro Trial</code> 15 days，到期续账号即可</p>
-<span id="more"></span>
-
-<p>途径如下</p>
-<p>1、<a href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#64;&#120;&#120;&#120;&#46;&#99;&#x6f;&#109;">&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#64;&#120;&#120;&#120;&#46;&#99;&#x6f;&#109;</a></p>
-<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#101;&#120;&#97;&#x6d;&#x70;&#108;&#101;&#x2b;&#49;&#64;&#120;&#x78;&#120;&#46;&#x63;&#111;&#x6d;">&#101;&#120;&#97;&#x6d;&#x70;&#108;&#101;&#x2b;&#49;&#64;&#120;&#x78;&#120;&#46;&#x63;&#111;&#x6d;</a>&#x2F;<a href="mailto:&#x65;&#120;&#97;&#x6d;&#112;&#108;&#101;&#x2b;&#x32;&#64;&#x78;&#120;&#120;&#x2e;&#99;&#111;&#109;">&#x65;&#120;&#97;&#x6d;&#112;&#108;&#101;&#x2b;&#x32;&#64;&#x78;&#120;&#120;&#x2e;&#99;&#111;&#109;</a>…</p>
-<h5 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h5><p><strong>Premium models   0 &#x2F; 500</strong></p>
-<p>You’ve used no requests out of your <strong>500</strong> fast requests quota.</p>
-<p><strong>gpt-4o-mini or cursor-small   0 &#x2F; No Limit</strong></p>
-<p>You’ve used <strong>0</strong> fast requests of this model. You have no monthly quota.</p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端兼容性问题</title>
-    <url>/zh-CN/hack/</url>
-    <content><![CDATA[<ul>
-<li><code>Autoprefixer</code>自动添加浏览器前缀插件，属于后处理程序，不像 Sass 以及 Stylus 之类的预处理器。它适用于普通的 CSS，可以实现css3代码自动补全。也可以轻松跟 Sass，LESS及Stylus集成，在CSS编译前或编译后运行。</li>
-</ul>
-<span id="more"></span>
-
-<ul>
-<li><p>ant-design table树结构折叠图标火狐浏览器内显示错误</p>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这种写法仅火狐识别</span></span><br><span class="line"><span class="variable">@-moz-document</span> <span class="built_in">url-prefix</span>() &#123;</span><br><span class="line">  <span class="selector-class">.surely-table-row-expand-icon</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><h5 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a><a href="https://www.chromium.org/">Chromium</a></h5><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*滚动条整体粗细样式*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="comment">/*高宽分别对应横竖滚动条的尺寸*/</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条里面小方块*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="comment">/* 颜色 */</span></span><br><span class="line">  <span class="comment">/* background:#b6b6b6!important; */</span></span><br><span class="line">  <span class="comment">/* 线性渐变背景 */</span></span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>, <span class="number">#ffbd61</span> <span class="number">25%</span>, <span class="number">#ffbd61</span> <span class="number">25%</span>, <span class="number">#ff8800</span> <span class="number">25%</span>, <span class="number">#ff8800</span> <span class="number">50%</span>, <span class="number">#ffbd61</span> <span class="number">50%</span>, <span class="number">#ffbd61</span> <span class="number">75%</span>, <span class="number">#ff8800</span> <span class="number">75%</span>, <span class="number">#ff8800</span> <span class="number">100%</span>) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#1175c2</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条轨道*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-track</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#EDEDED</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条角落*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-corner</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#000</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<h5 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h5><p>scrollbar-width</p>
-<p>scrollbar-color</p>
-<h5 id="IE"><a href="#IE" class="headerlink" title="IE"></a>IE</h5><p>scrollbar-base-color</p>
-<p>scrollbar-track-color</p>
-<p>scrollbar-arrow-color</p>
-<p>scrollbar-3dlight-color</p>
-<p>scrollbar-shadow-color</p>
-<p>scrollbar-highlight-color</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>兼容性</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>API/METHODS</title>
-    <url>/zh-CN/methods/</url>
-    <content><![CDATA[<h5 id="全排列算法"><a href="#全排列算法" class="headerlink" title="全排列算法"></a>全排列算法</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">func</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> len = arr.<span class="property">length</span>, res = []; </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 【全排列算法】</span></span><br><span class="line"><span class="comment">   * 说明：arrange用来对arr中的元素进行排列组合，将排列好的各个结果存在新数组中</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> tempArr：排列好的元素</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> leftArr：待排列元素</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">let</span> <span class="title function_">arrange</span> = (<span class="params">tempArr, leftArr</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (tempArr.<span class="property">length</span> === len) &#123; <span class="comment">// 这里就是递归结束的地方</span></span><br><span class="line">      <span class="comment">// res.push(tempArr) // 得到全排列的每个元素都是数组</span></span><br><span class="line">      res.<span class="title function_">push</span>(tempArr.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>)) <span class="comment">// 得到全排列的每个元素都是字符串</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      leftArr.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> temp = [].<span class="title function_">concat</span>(leftArr)</span><br><span class="line">        temp.<span class="title function_">splice</span>(index, <span class="number">1</span>)</span><br><span class="line">        <span class="comment">// 此时，第一个参数是当前分离出的元素所在数组；第二个参数temp是传入的leftArr去掉第一个后的结果</span></span><br><span class="line">        <span class="title function_">arrange</span>(tempArr.<span class="title function_">concat</span>(item), temp) <span class="comment">// 这里使用了递归</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">arrange</span>([], arr)</span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h5 id="防抖-x2F-节流"><a href="#防抖-x2F-节流" class="headerlink" title="防抖&#x2F;节流"></a>防抖&#x2F;节流</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 防抖</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">debounce</span> = (<span class="params">fun, time</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">...arg</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (timer) <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">      timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, arg);</span><br><span class="line">      &#125;, time);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 节流</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">throttle</span> = (<span class="params">fun, time</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> lock = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">...arg</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (!lock) &#123;</span><br><span class="line">        lock = <span class="literal">true</span>;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">          fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, arg);</span><br><span class="line">          lock = <span class="literal">false</span>;</span><br><span class="line">        &#125;, time)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="字符串千分位隔断"><a href="#字符串千分位隔断" class="headerlink" title="字符串千分位隔断"></a>字符串千分位隔断</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">const toBreakStr = (num) =&gt; &#123;</span><br><span class="line">    const arr = String(num).split(&#x27;&#x27;).reverse();</span><br><span class="line">    let res = [];</span><br><span class="line">    while (arr.length) &#123;</span><br><span class="line">      res.push(arr.splice(0, 3).reverse().join(&#x27;&#x27;))</span><br><span class="line">      if (arr.length) res.push(&#x27;,&#x27;)</span><br><span class="line">    &#125;</span><br><span class="line">    return res.reverse().join(&#x27;&#x27;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="对象数组转树"><a href="#对象数组转树" class="headerlink" title="对象数组转树"></a>对象数组转树</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">transformToTree</span> = (<span class="params">arr, parentId = <span class="literal">null</span></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> tree = [];</span><br><span class="line">    arr.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (item.<span class="property">parentId</span> == parentId) &#123;</span><br><span class="line">        <span class="keyword">const</span> children = <span class="title function_">transformToTree</span>(arr, item.<span class="property">id</span>);</span><br><span class="line">        <span class="keyword">if</span> (children.<span class="property">length</span>) item.<span class="property">children</span> = children;</span><br><span class="line">        tree.<span class="title function_">push</span>(item);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> tree;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">downloadFile</span> = (<span class="params">buffer, fileName</span>) =&gt; &#123;</span><br><span class="line">	<span class="keyword">let</span> fileURL = <span class="variable language_">window</span>.<span class="property">URL</span>.<span class="title function_">createObjectURL</span>(<span class="keyword">new</span> <span class="title class_">Blob</span>([buffer]));</span><br><span class="line">	<span class="keyword">let</span> fileLink = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">	fileLink.<span class="property">href</span> = fileURL;</span><br><span class="line">	fileLink.<span class="title function_">setAttribute</span>(<span class="string">&quot;download&quot;</span>, fileName);</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(fileLink);</span><br><span class="line">	fileLink.<span class="title function_">click</span>();</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">removeChild</span>(fileLink);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">downloadFile</span> = (<span class="params">url, fileName</span>) =&gt; &#123;</span><br><span class="line">	<span class="keyword">let</span> fileLink = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">	fileLink.<span class="property">href</span> = url;</span><br><span class="line">	fileLink.<span class="property">download</span> = fileName;</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(fileLink);</span><br><span class="line">	fileLink.<span class="title function_">click</span>();</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">removeChild</span>(fileLink);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123;saveAs&#125; <span class="keyword">from</span> file-saver;</span><br><span class="line"><span class="title function_">saveAs</span>(<span class="keyword">new</span> <span class="title class_">Blob</span>([buffer]), <span class="string">&#x27;fileName&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-<h5 id="crypto-js加密"><a href="#crypto-js加密" class="headerlink" title="crypto-js加密"></a>crypto-js加密</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="attr">encryption</span>: any = &#123;</span><br><span class="line">  <span class="attr">keyEnum</span>: &#123;</span><br><span class="line">    <span class="attr">DEFAULTKEY</span>: <span class="string">&#x27;ws12345678901234&#x27;</span>, <span class="comment">//默认密钥 16位</span></span><br><span class="line">    <span class="attr">USERKEY</span>: <span class="string">&#x27;ws12345678901234&#x27;</span>,</span><br><span class="line">    <span class="attr">LIBRARY</span>: <span class="string">&#x27;ABCDEFGHIJKLMNOPORSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">encrypt</span>: <span class="function">(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">    word: any,</span></span></span><br><span class="line"><span class="params"><span class="function">    keyStr: string | <span class="literal">null</span> = encryption.keyEnum.DEFAULTKEY</span></span></span><br><span class="line"><span class="params"><span class="function">  </span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> _word = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(word) || <span class="string">&#x27;&#x27;</span> <span class="comment">//转string 类型</span></span><br><span class="line">    <span class="keyword">const</span> _keyStr = keyStr <span class="comment">//判断是否存在key，不存在就用定义好的key</span></span><br><span class="line">    <span class="keyword">const</span> _key = <span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">parse</span>(_keyStr)</span><br><span class="line">    <span class="keyword">const</span> _srcs = <span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">parse</span>(_word)</span><br><span class="line">    <span class="keyword">const</span> _encrypted = <span class="title class_">CryptoJS</span>.<span class="property">AES</span>.<span class="title function_">encrypt</span>(_srcs, _key, &#123;</span><br><span class="line">      <span class="attr">mode</span>: <span class="title class_">CryptoJS</span>.<span class="property">mode</span>.<span class="property">ECB</span>,</span><br><span class="line">      <span class="attr">padding</span>: <span class="title class_">CryptoJS</span>.<span class="property">pad</span>.<span class="property">Pkcs7</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> _encrypted.<span class="title function_">toString</span>()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">decrypt</span>: <span class="function">(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">    word: string,</span></span></span><br><span class="line"><span class="params"><span class="function">    keyStr: string | <span class="literal">null</span> = encryption.keyEnum.DEFAULTKEY</span></span></span><br><span class="line"><span class="params"><span class="function">  </span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> _keyStr = keyStr</span><br><span class="line">    <span class="keyword">const</span> _key = <span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">parse</span>(_keyStr)</span><br><span class="line">    <span class="keyword">const</span> _word = word || <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">const</span> _decrypt = <span class="title class_">CryptoJS</span>.<span class="property">AES</span>.<span class="title function_">decrypt</span>(_word, _key, &#123;</span><br><span class="line">      <span class="attr">mode</span>: <span class="title class_">CryptoJS</span>.<span class="property">mode</span>.<span class="property">ECB</span>,</span><br><span class="line">      <span class="attr">padding</span>: <span class="title class_">CryptoJS</span>.<span class="property">pad</span>.<span class="property">Pkcs7</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">JSON</span>.<span class="title function_">parse</span>(<span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">stringify</span>(_decrypt).<span class="title function_">toString</span>())</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Javascript</category>
-      </categories>
-      <tags>
-        <tag>API</tag>
-        <tag>Javascript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>移动端问题</title>
-    <url>/zh-CN/mobile/</url>
-    <content><![CDATA[<ul>
-<li><h5 id="真机测试方案"><a href="#真机测试方案" class="headerlink" title="真机测试方案"></a>真机测试方案</h5><ul>
-<li><strong>跨平台调试</strong><ul>
-<li><a href="https://github.com/Tencent/vConsole/blob/dev/README_CN.md"><strong>Vconsole</strong></a></li>
-<li><a href="https://github.com/liriliri/eruda/blob/master/doc/README_CN.md"><strong>Eruda</strong></a></li>
-</ul>
-</li>
-</ul>
-<span id="more"></span>
-
-<ul>
-<li><p><strong>window下调试 iOS-Safari</strong></p>
-<p>实现真机调试主要是使用了 remotedebug-ios-webkit-adapter</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">安装scoopeWindows 命令行安装工具</span><br><span class="line"></span><br><span class="line">Set-ExecutionPolicy RemoteSigned -scope CurrentUser</span><br><span class="line">iex (new-object net.webclient).downloadstring(&#x27;https://get.scoop.sh&#x27;)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scoop bucket add extras</span><br><span class="line">scoop install ios-webkit-debug-proxy</span><br><span class="line">npm install -g vs-libimobile</span><br><span class="line"></span><br><span class="line">npm install remotedebug-ios-webkit-adapter -g</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>进入 iPhone 中的 <em>设置 &gt; Safari 浏览器 &gt; 高级 &gt; Web 检查器</em>，开启该选项。</li>
-<li>打开 iTunes 并连接 iPhone，在 iPhone 弹框中选择信任该电脑。</li>
-<li>打开命令行，执行以下命令，启动适配器：</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">remotedebug_ios_webkit_adapter --port=9000</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>在 iPhone 中打开 Safari 浏览器，打开待调试页面。</li>
-<li>打开 Chrome 浏览器，进入 <a href="https://links.jianshu.com/go?to=chrome://inspect/%23devices">chrome:&#x2F;&#x2F;inspect&#x2F;#devices</a> 页面，在 Discover network targets 选项添加 localhost:9000 配置。刷新页面，这时页面中会出现 ‘Remote Target’ 列表，该列表展示了 iPhone 中打开的页面，点击 inspect，即可进行调试。（科学上网&#x2F;edge）</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><h5 id="h5键盘输入遮挡问题"><a href="#h5键盘输入遮挡问题" class="headerlink" title="h5键盘输入遮挡问题"></a>h5键盘输入遮挡问题</h5></li>
-</ul>
-<p>​		处理方式有 <code>scrollIntoView</code> &#x2F;<code>scrollTop</code>，原生键盘安卓、safari适用，<code>ios</code>中可能有bug，后续待更新，以下为使用<code>vant</code>为例：</p>
-<p>​		整体思路：由于键盘控件定位语底部，用<code>innerHeight</code> ,<code>getBoundingClientRect()</code>计算输入<code>DOM</code>节点与视口底部的距离，小于键盘高度则需要显示，结合<code>scrollTop</code>按需来滚动，其中需要动态添加键盘占位空元素（高度与控件保持一致，需结合布局灵活计算），撑起滚动底部区域，此方案兼容性较好</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">&quot;showKeyboard&quot;</span> <span class="attr">class</span>=<span class="string">&quot;empty-keyboard&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const scrollArea = document.querySelector(&#x27;.scroll-l&#x27;);</span><br><span class="line">const arrBottom = window.innerHeight -</span><br><span class="line">    e.target.getBoundingClientRect().y -</span><br><span class="line">    e.target.getBoundingClientRect().height;</span><br><span class="line"> if (arrBottom &lt; 260) &#123;</span><br><span class="line">   nextTick(() =&gt; &#123;</span><br><span class="line">     scrollArea.scrollTop += 260 - arrBottom;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>待更新…</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>BUG</tag>
-        <tag>移动端</tag>
       </tags>
   </entry>
   <entry>
@@ -344,44 +234,113 @@
       </tags>
   </entry>
   <entry>
-    <title>插件</title>
-    <url>/zh-CN/plugin/</url>
-    <content><![CDATA[<h4 id="常用插件推荐合集"><a href="#常用插件推荐合集" class="headerlink" title="常用插件推荐合集"></a>常用插件推荐合集</h4><span id="more"></span>
+    <title>API/METHODS</title>
+    <url>/zh-CN/methods/</url>
+    <content><![CDATA[<h5 id="全排列算法"><a href="#全排列算法" class="headerlink" title="全排列算法"></a>全排列算法</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">func</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> len = arr.<span class="property">length</span>, res = []; </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 【全排列算法】</span></span><br><span class="line"><span class="comment">   * 说明：arrange用来对arr中的元素进行排列组合，将排列好的各个结果存在新数组中</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> tempArr：排列好的元素</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> leftArr：待排列元素</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">let</span> <span class="title function_">arrange</span> = (<span class="params">tempArr, leftArr</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (tempArr.<span class="property">length</span> === len) &#123; <span class="comment">// 这里就是递归结束的地方</span></span><br><span class="line">      <span class="comment">// res.push(tempArr) // 得到全排列的每个元素都是数组</span></span><br><span class="line">      res.<span class="title function_">push</span>(tempArr.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>)) <span class="comment">// 得到全排列的每个元素都是字符串</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      leftArr.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> temp = [].<span class="title function_">concat</span>(leftArr)</span><br><span class="line">        temp.<span class="title function_">splice</span>(index, <span class="number">1</span>)</span><br><span class="line">        <span class="comment">// 此时，第一个参数是当前分离出的元素所在数组；第二个参数temp是传入的leftArr去掉第一个后的结果</span></span><br><span class="line">        <span class="title function_">arrange</span>(tempArr.<span class="title function_">concat</span>(item), temp) <span class="comment">// 这里使用了递归</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">arrange</span>([], arr)</span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h5 id="富文本插件"><a href="#富文本插件" class="headerlink" title="富文本插件"></a>富文本插件</h5><ul>
-<li><em><a href="https://vueup.github.io/vue-quill/guide/">VueQuill</a></em>  <a href="https://flyween.github.io/vue3-quill/">示例</a></li>
-<li><em><a href="https://microsoft.github.io/monaco-editor/">Monaco</a></em></li>
+<span id="more"></span>
+
+<h5 id="防抖-x2F-节流"><a href="#防抖-x2F-节流" class="headerlink" title="防抖&#x2F;节流"></a>防抖&#x2F;节流</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 防抖</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">debounce</span> = (<span class="params">fun, time</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">...arg</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (timer) <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">      timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, arg);</span><br><span class="line">      &#125;, time);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 节流</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">throttle</span> = (<span class="params">fun, time</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> lock = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">...arg</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (!lock) &#123;</span><br><span class="line">        lock = <span class="literal">true</span>;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">          fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, arg);</span><br><span class="line">          lock = <span class="literal">false</span>;</span><br><span class="line">        &#125;, time)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="字符串千分位隔断"><a href="#字符串千分位隔断" class="headerlink" title="字符串千分位隔断"></a>字符串千分位隔断</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">const toBreakStr = (num) =&gt; &#123;</span><br><span class="line">    const arr = String(num).split(&#x27;&#x27;).reverse();</span><br><span class="line">    let res = [];</span><br><span class="line">    while (arr.length) &#123;</span><br><span class="line">      res.push(arr.splice(0, 3).reverse().join(&#x27;&#x27;))</span><br><span class="line">      if (arr.length) res.push(&#x27;,&#x27;)</span><br><span class="line">    &#125;</span><br><span class="line">    return res.reverse().join(&#x27;&#x27;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="对象数组转树"><a href="#对象数组转树" class="headerlink" title="对象数组转树"></a>对象数组转树</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">transformToTree</span> = (<span class="params">arr, parentId = <span class="literal">null</span></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> tree = [];</span><br><span class="line">    arr.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (item.<span class="property">parentId</span> == parentId) &#123;</span><br><span class="line">        <span class="keyword">const</span> children = <span class="title function_">transformToTree</span>(arr, item.<span class="property">id</span>);</span><br><span class="line">        <span class="keyword">if</span> (children.<span class="property">length</span>) item.<span class="property">children</span> = children;</span><br><span class="line">        tree.<span class="title function_">push</span>(item);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> tree;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">downloadFile</span> = (<span class="params">buffer, fileName</span>) =&gt; &#123;</span><br><span class="line">	<span class="keyword">let</span> fileURL = <span class="variable language_">window</span>.<span class="property">URL</span>.<span class="title function_">createObjectURL</span>(<span class="keyword">new</span> <span class="title class_">Blob</span>([buffer]));</span><br><span class="line">	<span class="keyword">let</span> fileLink = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">	fileLink.<span class="property">href</span> = fileURL;</span><br><span class="line">	fileLink.<span class="title function_">setAttribute</span>(<span class="string">&quot;download&quot;</span>, fileName);</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(fileLink);</span><br><span class="line">	fileLink.<span class="title function_">click</span>();</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">removeChild</span>(fileLink);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">downloadFile</span> = (<span class="params">url, fileName</span>) =&gt; &#123;</span><br><span class="line">	<span class="keyword">let</span> fileLink = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">	fileLink.<span class="property">href</span> = url;</span><br><span class="line">	fileLink.<span class="property">download</span> = fileName;</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(fileLink);</span><br><span class="line">	fileLink.<span class="title function_">click</span>();</span><br><span class="line">	<span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">removeChild</span>(fileLink);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123;saveAs&#125; <span class="keyword">from</span> file-saver;</span><br><span class="line"><span class="title function_">saveAs</span>(<span class="keyword">new</span> <span class="title class_">Blob</span>([buffer]), <span class="string">&#x27;fileName&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="crypto-js加密"><a href="#crypto-js加密" class="headerlink" title="crypto-js加密"></a>crypto-js加密</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="attr">encryption</span>: any = &#123;</span><br><span class="line">  <span class="attr">keyEnum</span>: &#123;</span><br><span class="line">    <span class="attr">DEFAULTKEY</span>: <span class="string">&#x27;ws12345678901234&#x27;</span>, <span class="comment">//默认密钥 16位</span></span><br><span class="line">    <span class="attr">USERKEY</span>: <span class="string">&#x27;ws12345678901234&#x27;</span>,</span><br><span class="line">    <span class="attr">LIBRARY</span>: <span class="string">&#x27;ABCDEFGHIJKLMNOPORSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">encrypt</span>: <span class="function">(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">    word: any,</span></span></span><br><span class="line"><span class="params"><span class="function">    keyStr: string | <span class="literal">null</span> = encryption.keyEnum.DEFAULTKEY</span></span></span><br><span class="line"><span class="params"><span class="function">  </span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> _word = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(word) || <span class="string">&#x27;&#x27;</span> <span class="comment">//转string 类型</span></span><br><span class="line">    <span class="keyword">const</span> _keyStr = keyStr <span class="comment">//判断是否存在key，不存在就用定义好的key</span></span><br><span class="line">    <span class="keyword">const</span> _key = <span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">parse</span>(_keyStr)</span><br><span class="line">    <span class="keyword">const</span> _srcs = <span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">parse</span>(_word)</span><br><span class="line">    <span class="keyword">const</span> _encrypted = <span class="title class_">CryptoJS</span>.<span class="property">AES</span>.<span class="title function_">encrypt</span>(_srcs, _key, &#123;</span><br><span class="line">      <span class="attr">mode</span>: <span class="title class_">CryptoJS</span>.<span class="property">mode</span>.<span class="property">ECB</span>,</span><br><span class="line">      <span class="attr">padding</span>: <span class="title class_">CryptoJS</span>.<span class="property">pad</span>.<span class="property">Pkcs7</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> _encrypted.<span class="title function_">toString</span>()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">decrypt</span>: <span class="function">(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">    word: string,</span></span></span><br><span class="line"><span class="params"><span class="function">    keyStr: string | <span class="literal">null</span> = encryption.keyEnum.DEFAULTKEY</span></span></span><br><span class="line"><span class="params"><span class="function">  </span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> _keyStr = keyStr</span><br><span class="line">    <span class="keyword">const</span> _key = <span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">parse</span>(_keyStr)</span><br><span class="line">    <span class="keyword">const</span> _word = word || <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">const</span> _decrypt = <span class="title class_">CryptoJS</span>.<span class="property">AES</span>.<span class="title function_">decrypt</span>(_word, _key, &#123;</span><br><span class="line">      <span class="attr">mode</span>: <span class="title class_">CryptoJS</span>.<span class="property">mode</span>.<span class="property">ECB</span>,</span><br><span class="line">      <span class="attr">padding</span>: <span class="title class_">CryptoJS</span>.<span class="property">pad</span>.<span class="property">Pkcs7</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">JSON</span>.<span class="title function_">parse</span>(<span class="title class_">CryptoJS</span>.<span class="property">enc</span>.<span class="property">Utf8</span>.<span class="title function_">stringify</span>(_decrypt).<span class="title function_">toString</span>())</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Javascript</category>
+      </categories>
+      <tags>
+        <tag>Javascript</tag>
+        <tag>API</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端兼容性问题</title>
+    <url>/zh-CN/hack/</url>
+    <content><![CDATA[<ul>
+<li><code>Autoprefixer</code>自动添加浏览器前缀插件，属于后处理程序，不像 Sass 以及 Stylus 之类的预处理器。它适用于普通的 CSS，可以实现css3代码自动补全。也可以轻松跟 Sass，LESS及Stylus集成，在CSS编译前或编译后运行。</li>
 </ul>
-<h5 id="上传插件"><a href="#上传插件" class="headerlink" title="上传插件"></a>上传插件</h5><ul>
-<li><h5 id="vue-uploader-solutions-next"><a href="#vue-uploader-solutions-next" class="headerlink" title="vue-uploader-solutions-next"></a><em><a href="https://github.com/shady-xia/vue-uploader-solutions-next">vue-uploader-solutions-next</a></em></h5>基于 <code>vue-simple-uploader</code> ，封装可以分片、秒传及断点续传的vue3上传插件</li>
+<span id="more"></span>
+
+<ul>
+<li><p>ant-design table树结构折叠图标火狐浏览器内显示错误</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这种写法仅火狐识别</span></span><br><span class="line"><span class="variable">@-moz-document</span> <span class="built_in">url-prefix</span>() &#123;</span><br><span class="line">  <span class="selector-class">.surely-table-row-expand-icon</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a><a href="https://www.chromium.org/">Chromium</a></h5><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*滚动条整体粗细样式*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="comment">/*高宽分别对应横竖滚动条的尺寸*/</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条里面小方块*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="comment">/* 颜色 */</span></span><br><span class="line">  <span class="comment">/* background:#b6b6b6!important; */</span></span><br><span class="line">  <span class="comment">/* 线性渐变背景 */</span></span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>, <span class="number">#ffbd61</span> <span class="number">25%</span>, <span class="number">#ffbd61</span> <span class="number">25%</span>, <span class="number">#ff8800</span> <span class="number">25%</span>, <span class="number">#ff8800</span> <span class="number">50%</span>, <span class="number">#ffbd61</span> <span class="number">50%</span>, <span class="number">#ffbd61</span> <span class="number">75%</span>, <span class="number">#ff8800</span> <span class="number">75%</span>, <span class="number">#ff8800</span> <span class="number">100%</span>) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#1175c2</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条轨道*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-track</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#EDEDED</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条角落*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-corner</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#000</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<h5 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h5><p>scrollbar-width</p>
+<p>scrollbar-color</p>
+<h5 id="IE"><a href="#IE" class="headerlink" title="IE"></a>IE</h5><p>scrollbar-base-color</p>
+<p>scrollbar-track-color</p>
+<p>scrollbar-arrow-color</p>
+<p>scrollbar-3dlight-color</p>
+<p>scrollbar-shadow-color</p>
+<p>scrollbar-highlight-color</p>
+</li>
 </ul>
-<h5 id="拖放排序插件"><a href="#拖放排序插件" class="headerlink" title="拖放排序插件"></a>拖放排序插件</h5><ul>
-<li><h5 id="Sortable-js"><a href="#Sortable-js" class="headerlink" title="Sortable.js"></a><em><a href="http://www.manongjc.com/article/106870.html">Sortable.js</a></em></h5></li>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>兼容性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>移动端问题</title>
+    <url>/zh-CN/mobile/</url>
+    <content><![CDATA[<ul>
+<li><h5 id="真机测试方案"><a href="#真机测试方案" class="headerlink" title="真机测试方案"></a>真机测试方案</h5><ul>
+<li><strong>跨平台调试</strong><ul>
+<li><a href="https://github.com/Tencent/vConsole/blob/dev/README_CN.md"><strong>Vconsole</strong></a></li>
+<li><a href="https://github.com/liriliri/eruda/blob/master/doc/README_CN.md"><strong>Eruda</strong></a></li>
 </ul>
+</li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li><p><strong>window下调试 iOS-Safari</strong></p>
+<p>实现真机调试主要是使用了 remotedebug-ios-webkit-adapter</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">安装scoopeWindows 命令行安装工具</span><br><span class="line"></span><br><span class="line">Set-ExecutionPolicy RemoteSigned -scope CurrentUser</span><br><span class="line">iex (new-object net.webclient).downloadstring(&#x27;https://get.scoop.sh&#x27;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scoop bucket add extras</span><br><span class="line">scoop install ios-webkit-debug-proxy</span><br><span class="line">npm install -g vs-libimobile</span><br><span class="line"></span><br><span class="line">npm install remotedebug-ios-webkit-adapter -g</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>进入 iPhone 中的 <em>设置 &gt; Safari 浏览器 &gt; 高级 &gt; Web 检查器</em>，开启该选项。</li>
+<li>打开 iTunes 并连接 iPhone，在 iPhone 弹框中选择信任该电脑。</li>
+<li>打开命令行，执行以下命令，启动适配器：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">remotedebug_ios_webkit_adapter --port=9000</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>在 iPhone 中打开 Safari 浏览器，打开待调试页面。</li>
+<li>打开 Chrome 浏览器，进入 <a href="https://links.jianshu.com/go?to=chrome://inspect/%23devices">chrome:&#x2F;&#x2F;inspect&#x2F;#devices</a> 页面，在 Discover network targets 选项添加 localhost:9000 配置。刷新页面，这时页面中会出现 ‘Remote Target’ 列表，该列表展示了 iPhone 中打开的页面，点击 inspect，即可进行调试。（科学上网&#x2F;edge）</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><h5 id="h5键盘输入遮挡问题"><a href="#h5键盘输入遮挡问题" class="headerlink" title="h5键盘输入遮挡问题"></a>h5键盘输入遮挡问题</h5></li>
+</ul>
+<p>​		处理方式有 <code>scrollIntoView</code> &#x2F;<code>scrollTop</code>，原生键盘安卓、safari适用，<code>ios</code>中可能有bug，后续待更新，以下为使用<code>vant</code>为例：</p>
+<p>​		整体思路：由于键盘控件定位语底部，用<code>innerHeight</code> ,<code>getBoundingClientRect()</code>计算输入<code>DOM</code>节点与视口底部的距离，小于键盘高度则需要显示，结合<code>scrollTop</code>按需来滚动，其中需要动态添加键盘占位空元素（高度与控件保持一致，需结合布局灵活计算），撑起滚动底部区域，此方案兼容性较好</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">&quot;showKeyboard&quot;</span> <span class="attr">class</span>=<span class="string">&quot;empty-keyboard&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const scrollArea = document.querySelector(&#x27;.scroll-l&#x27;);</span><br><span class="line">const arrBottom = window.innerHeight -</span><br><span class="line">    e.target.getBoundingClientRect().y -</span><br><span class="line">    e.target.getBoundingClientRect().height;</span><br><span class="line"> if (arrBottom &lt; 260) &#123;</span><br><span class="line">   nextTick(() =&gt; &#123;</span><br><span class="line">     scrollArea.scrollTop += 260 - arrBottom;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>待更新…</p>
 ]]></content>
       <categories>
         <category>前端</category>
       </categories>
       <tags>
-        <tag>插件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>threeJs</title>
-    <url>/zh-CN/threejs/</url>
-    <content><![CDATA[<h4 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h4><ul>
-<li>地址：*<a href="http://www.webgl3d.cn/pages/aac9ab/">three.js</a>*</li>
-</ul>
-<span id="more"></span>
-
-<p>物理引擎cannon-es  <a href="https://pmndrs.github.io/cannon-es/docs/">https://pmndrs.github.io/cannon-es/docs/</a></p>
-]]></content>
-      <categories>
-        <category>webGL</category>
-      </categories>
-      <tags>
-        <tag>threeJs</tag>
+        <tag>BUG</tag>
+        <tag>移动端</tag>
       </tags>
   </entry>
   <entry>
@@ -429,6 +388,47 @@
       </categories>
       <tags>
         <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>threeJs</title>
+    <url>/zh-CN/threejs/</url>
+    <content><![CDATA[<h4 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h4><ul>
+<li>地址：*<a href="http://www.webgl3d.cn/pages/aac9ab/">three.js</a>*</li>
+</ul>
+<span id="more"></span>
+
+<p>物理引擎cannon-es  <a href="https://pmndrs.github.io/cannon-es/docs/">https://pmndrs.github.io/cannon-es/docs/</a></p>
+]]></content>
+      <categories>
+        <category>webGL</category>
+      </categories>
+      <tags>
+        <tag>threeJs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>插件</title>
+    <url>/zh-CN/plugin/</url>
+    <content><![CDATA[<h4 id="常用插件推荐合集"><a href="#常用插件推荐合集" class="headerlink" title="常用插件推荐合集"></a>常用插件推荐合集</h4><span id="more"></span>
+
+<h5 id="富文本插件"><a href="#富文本插件" class="headerlink" title="富文本插件"></a>富文本插件</h5><ul>
+<li><em><a href="https://vueup.github.io/vue-quill/guide/">VueQuill</a></em>  <a href="https://flyween.github.io/vue3-quill/">示例</a></li>
+<li><em><a href="https://microsoft.github.io/monaco-editor/">Monaco</a></em></li>
+</ul>
+<h5 id="上传插件"><a href="#上传插件" class="headerlink" title="上传插件"></a>上传插件</h5><ul>
+<li><h5 id="vue-uploader-solutions-next"><a href="#vue-uploader-solutions-next" class="headerlink" title="vue-uploader-solutions-next"></a><em><a href="https://github.com/shady-xia/vue-uploader-solutions-next">vue-uploader-solutions-next</a></em></h5>基于 <code>vue-simple-uploader</code> ，封装可以分片、秒传及断点续传的vue3上传插件</li>
+</ul>
+<h5 id="拖放排序插件"><a href="#拖放排序插件" class="headerlink" title="拖放排序插件"></a>拖放排序插件</h5><ul>
+<li><h5 id="Sortable-js"><a href="#Sortable-js" class="headerlink" title="Sortable.js"></a><em><a href="http://www.manongjc.com/article/106870.html">Sortable.js</a></em></h5></li>
+</ul>
+<p>待更新…</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
