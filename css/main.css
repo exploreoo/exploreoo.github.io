@@ -1601,13 +1601,13 @@ pre code {
 }
 .reading-progress-bar {
   --progress: 0;
-  background: #ff0;
-  height: 2px;
+  background: rgba(0,0,0,0.15);
+  height: 1px;
   position: fixed;
   z-index: 50;
   width: var(--progress);
   left: 0;
-  top: 0;
+  bottom: 0;
 }
 .rtl.post-body p,
 .rtl.post-body a,
@@ -2609,7 +2609,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #c10fff;
+  background: #ff82ff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2673,7 +2673,11 @@ header.header {
 }
 .sidebar {
   background: linear-gradient(45deg, #222, #000, #3b0606);
+  background: url("../../../../images/1___737471___0___.jpg") center/cover no-repeat;
   box-shadow: unset;
+}
+.sidebar>* {
+  background: rgba(0,0,0,0.85);
 }
 @media (max-width: 767px) {
   .sidebar {
@@ -2790,5 +2794,10 @@ header.header {
   font-size: 0.8rem;
 }
 .pace .pace-progress {
-  background: #ff0 !important;
+  background: rgba(255,165,0,0.5) !important;
+}
+@media (max-width: 767px) {
+  .pace .pace-progress {
+    background: rgba(17,156,17,0.6) !important;
+  }
 }
