@@ -61,49 +61,6 @@
       </tags>
   </entry>
   <entry>
-    <title>解决win10系统CPU占用过高</title>
-    <url>/zh-CN/computer/</url>
-    <content><![CDATA[<ul>
-<li><p><strong>关闭Windows Search</strong><br>控制面板–管理工具–服务- Windows Search禁用。</p>
-</li>
-<li><p><strong>禁用 Diagnostics Tracking Service和Connected User Experiences and Telemetry</strong><br>这个服务是用来服务跟踪诊断的，就是在咱们使用系统的时候不停地收集系统信息，是微软的一个搜集工具而已。在很多情况下，CPU的高占用率就是它搞的鬼。<br>win+R 运行 services.msc 进入服务，禁用Diagnostics Tracking Service ，若找不到这个服务的话那就是禁用Diagnostic Policy Service，然后禁用Connected User Experiences and Telemetry 就好。</p>
-</li>
-<li><p><strong>关闭允许后台运行的软件</strong><br>打开系统设置— 隐私 —后台应用 关闭不需要的应用即可 （大多数其实都没什么用可以直接关闭最上方按钮）</p>
-</li>
-<li><p><strong>关闭更新来自多个位置</strong><br>打开系统设置—更新和安全—Windows更新—高级选项—选择如何提供更新，将“更新来自多个位置”关闭即可</p>
-</li>
-<li><p><strong>关闭小娜</strong><br>使用组策略禁用Cortana<br>　　1、使用 Windows + R 快捷键打开「运行」— 执行 gpedit.msc 打开组策略编辑器。<br>　　2、导航到「计算机配置」—「管理模板」—「Windows <a href="https://edu.csdn.net/cloud/houjie?utm_source=highword&spm=1001.2101.3001.7020">组件</a>」—「搜索」。<br>　　3、在右侧面板中找到「允许使用 Cortana」条目，将其设置为「已禁用」即可。</p>
-</li>
-<li><span id="more"></span>
-</li>
-<li><p><strong>修改处理器个数</strong></p>
-<p>\1. 同时按住<strong>Win+r</strong>打开运行框，输入<strong>msconfig</strong>指令，点击<strong>回车</strong>。</p>
-<p>\2. 点击<strong>引导</strong>，再点击<strong>高级选项</strong>。</p>
-<p>\3. 点击<strong>处理器个数</strong>下方的选项框，选择大的数字，再点击<strong>确定</strong>。</p>
-</li>
-<li><p><strong>更新驱动程序</strong></p>
-<p>过时的或不兼容的驱动程序可能导致CPU占用率升高。可以通过更新驱动程序来解决这个问题。可以在设备管理器中检查并更新驱动程序，或者从硬件厂商的官方网站下载新的驱动程序。</p>
-<p>\1. 右键单击<strong>“开始”</strong>菜单，然后选择<strong>“设备管理器”</strong>。</p>
-<p>\2. 选择你的硬盘，然后右键单击它并选择列表中的<strong>“更新驱动程序”</strong>。</p>
-</li>
-<li><p><strong>关闭开机时多余的启动项</strong></p>
-<p>现在很多软件安装完毕后都会自动添加到系统启动项里，开机后也会占用一部分的CPU进程，我们可以通过简单的设置关闭一些不必要的启动项目。</p>
-<p>\1. 在左下角搜索框输入<strong>任务管理器</strong>，点击<strong>回车</strong>进入任务管理器。</p>
-<img src="https://www.disktool.cn/content-center/images/images369/what-if-the-cpu-occupation-is-too-high-369/2.png" alt="进入任务管理器" style="width: 80%;" />
-
-<p>\2. 点击任务管理器窗口的<strong>启动</strong>选项，鼠标右键单击需要关闭启动的进程，在弹出的界面上点击<strong>禁用</strong>即可。</p>
-<img src="https://www.disktool.cn/content-center/images/images369/what-if-the-cpu-occupation-is-too-high-369/7.png" alt="禁用" style="width: 80%;" /></li>
-</ul>
-<p>如有不全，欢迎补充留言~</p>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS样式效果</title>
     <url>/zh-CN/css/</url>
     <content><![CDATA[<ul>
@@ -136,8 +93,8 @@
 <span id="more"></span>
 
 <p>途径如下</p>
-<p>1、<a href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#101;&#x78;&#x61;&#x6d;&#x70;&#108;&#x65;&#64;&#120;&#x78;&#x78;&#46;&#x63;&#x6f;&#109;">&#101;&#x78;&#x61;&#x6d;&#x70;&#108;&#x65;&#64;&#120;&#x78;&#x78;&#46;&#x63;&#x6f;&#109;</a></p>
-<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#43;&#x31;&#x40;&#x78;&#120;&#x78;&#46;&#x63;&#x6f;&#x6d;">&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#43;&#x31;&#x40;&#x78;&#120;&#x78;&#46;&#x63;&#x6f;&#x6d;</a>&#x2F;<a href="mailto:&#x65;&#120;&#97;&#109;&#112;&#x6c;&#x65;&#x2b;&#50;&#x40;&#120;&#120;&#120;&#x2e;&#99;&#x6f;&#109;">&#x65;&#120;&#97;&#109;&#112;&#x6c;&#x65;&#x2b;&#50;&#x40;&#120;&#120;&#120;&#x2e;&#99;&#x6f;&#109;</a>…</p>
+<p>1、<a href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#64;&#120;&#120;&#120;&#x2e;&#x63;&#111;&#x6d;">&#101;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#64;&#120;&#120;&#120;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#x65;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#x2b;&#x31;&#x40;&#x78;&#x78;&#x78;&#46;&#x63;&#111;&#109;">&#x65;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#x2b;&#x31;&#x40;&#x78;&#x78;&#x78;&#46;&#x63;&#111;&#109;</a>&#x2F;<a href="mailto:&#101;&#120;&#x61;&#109;&#112;&#108;&#101;&#43;&#50;&#64;&#120;&#120;&#x78;&#x2e;&#99;&#x6f;&#109;">&#101;&#120;&#x61;&#109;&#112;&#108;&#101;&#43;&#50;&#64;&#120;&#120;&#x78;&#x2e;&#99;&#x6f;&#109;</a>…</p>
 <h5 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h5><p><strong>Premium models   0 &#x2F; 500</strong></p>
 <p>You’ve used no requests out of your <strong>500</strong> fast requests quota.</p>
 <p><strong>gpt-4o-mini or cursor-small   0 &#x2F; No Limit</strong></p>
@@ -151,35 +108,45 @@
       </tags>
   </entry>
   <entry>
-    <title>前端兼容性问题</title>
-    <url>/zh-CN/hack/</url>
+    <title>解决win10系统CPU占用过高</title>
+    <url>/zh-CN/computer/</url>
     <content><![CDATA[<ul>
-<li><code>Autoprefixer</code>自动添加浏览器前缀插件，属于后处理程序，不像 Sass 以及 Stylus 之类的预处理器。它适用于普通的 CSS，可以实现css3代码自动补全。也可以轻松跟 Sass，LESS及Stylus集成，在CSS编译前或编译后运行。</li>
-</ul>
+<li><p><strong>关闭Windows Search</strong><br>控制面板–管理工具–服务- Windows Search禁用。</p>
+</li>
+<li><p><strong>禁用 Diagnostics Tracking Service和Connected User Experiences and Telemetry</strong><br>这个服务是用来服务跟踪诊断的，就是在咱们使用系统的时候不停地收集系统信息，是微软的一个搜集工具而已。在很多情况下，CPU的高占用率就是它搞的鬼。<br>win+R 运行 services.msc 进入服务，禁用Diagnostics Tracking Service ，若找不到这个服务的话那就是禁用Diagnostic Policy Service，然后禁用Connected User Experiences and Telemetry 就好。</p>
+</li>
+<li><p><strong>关闭允许后台运行的软件</strong><br>打开系统设置— 隐私 —后台应用 关闭不需要的应用即可 （大多数其实都没什么用可以直接关闭最上方按钮）</p>
+</li>
+<li><p><strong>关闭更新来自多个位置</strong><br>打开系统设置—更新和安全—Windows更新—高级选项—选择如何提供更新，将“更新来自多个位置”关闭即可</p>
+</li>
+<li><p><strong>关闭小娜</strong><br>使用组策略禁用Cortana<br>　　1、使用 Windows + R 快捷键打开「运行」— 执行 gpedit.msc 打开组策略编辑器。<br>　　2、导航到「计算机配置」—「管理模板」—「Windows <a href="https://edu.csdn.net/cloud/houjie?utm_source=highword&spm=1001.2101.3001.7020">组件</a>」—「搜索」。<br>　　3、在右侧面板中找到「允许使用 Cortana」条目，将其设置为「已禁用」即可。</p>
 <span id="more"></span>
-
-<ul>
-<li><p>ant-design table树结构折叠图标火狐浏览器内显示错误</p>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这种写法仅火狐识别</span></span><br><span class="line"><span class="variable">@-moz-document</span> <span class="built_in">url-prefix</span>() &#123;</span><br><span class="line">  <span class="selector-class">.surely-table-row-expand-icon</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><h5 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a><a href="https://www.chromium.org/">Chromium</a></h5><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*滚动条整体粗细样式*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="comment">/*高宽分别对应横竖滚动条的尺寸*/</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条里面小方块*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="comment">/* 颜色 */</span></span><br><span class="line">  <span class="comment">/* background:#b6b6b6!important; */</span></span><br><span class="line">  <span class="comment">/* 线性渐变背景 */</span></span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>, <span class="number">#ffbd61</span> <span class="number">25%</span>, <span class="number">#ffbd61</span> <span class="number">25%</span>, <span class="number">#ff8800</span> <span class="number">25%</span>, <span class="number">#ff8800</span> <span class="number">50%</span>, <span class="number">#ffbd61</span> <span class="number">50%</span>, <span class="number">#ffbd61</span> <span class="number">75%</span>, <span class="number">#ff8800</span> <span class="number">75%</span>, <span class="number">#ff8800</span> <span class="number">100%</span>) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#1175c2</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条轨道*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-track</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#EDEDED</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条角落*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-corner</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#000</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<h5 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h5><p>scrollbar-width</p>
-<p>scrollbar-color</p>
-<h5 id="IE"><a href="#IE" class="headerlink" title="IE"></a>IE</h5><p>scrollbar-base-color</p>
-<p>scrollbar-track-color</p>
-<p>scrollbar-arrow-color</p>
-<p>scrollbar-3dlight-color</p>
-<p>scrollbar-shadow-color</p>
-<p>scrollbar-highlight-color</p>
+<li><p><strong>修改处理器个数</strong></p>
+<p>\1. 同时按住<strong>Win+r</strong>打开运行框，输入<strong>msconfig</strong>指令，点击<strong>回车</strong>。</p>
+<p>\2. 点击<strong>引导</strong>，再点击<strong>高级选项</strong>。</p>
+<p>\3. 点击<strong>处理器个数</strong>下方的选项框，选择大的数字，再点击<strong>确定</strong>。</p>
 </li>
+<li><p><strong>更新驱动程序</strong></p>
+<p>过时的或不兼容的驱动程序可能导致CPU占用率升高。可以通过更新驱动程序来解决这个问题。可以在设备管理器中检查并更新驱动程序，或者从硬件厂商的官方网站下载新的驱动程序。</p>
+<p>\1. 右键单击<strong>“开始”</strong>菜单，然后选择<strong>“设备管理器”</strong>。</p>
+<p>\2. 选择你的硬盘，然后右键单击它并选择列表中的<strong>“更新驱动程序”</strong>。</p>
+</li>
+<li><p><strong>关闭开机时多余的启动项</strong></p>
+<p>现在很多软件安装完毕后都会自动添加到系统启动项里，开机后也会占用一部分的CPU进程，我们可以通过简单的设置关闭一些不必要的启动项目。</p>
+<p>\1. 在左下角搜索框输入<strong>任务管理器</strong>，点击<strong>回车</strong>进入任务管理器。</p>
+<img src="https://www.disktool.cn/content-center/images/images369/what-if-the-cpu-occupation-is-too-high-369/2.png" alt="进入任务管理器" style="width: 80%;" />
+
+<p>\2. 点击任务管理器窗口的<strong>启动</strong>选项，鼠标右键单击需要关闭启动的进程，在弹出的界面上点击<strong>禁用</strong>即可。</p>
+<img src="https://www.disktool.cn/content-center/images/images369/what-if-the-cpu-occupation-is-too-high-369/7.png" alt="禁用" style="width: 80%;" /></li>
 </ul>
+<p>如有不全，欢迎补充留言~</p>
 ]]></content>
       <categories>
-        <category>前端</category>
+        <category>Windows</category>
       </categories>
       <tags>
-        <tag>兼容性</tag>
+        <tag>Windows</tag>
       </tags>
   </entry>
   <entry>
@@ -212,6 +179,75 @@
       </categories>
       <tags>
         <tag>素材</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>element-ui跨行跨列一文解读</title>
+    <url>/zh-CN/el-table-%E5%B0%81%E8%A3%85/</url>
+    <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>​		基于element-ui v2.4.11版本的饿了么表格跨行跨列渲染，由于接口的数据格式属于梭哈返回，直接给前端渲染上压力！对前端表格跨行跨列的构造只能傻瓜式的写死，要么写死列头索引或者其它标记来实现，如果我要设置多行多列的归并，似乎很困难，那么来一个福利封装如下~</p>
+<p>由于使用的是vue2写法，v3雷同使用。</p>
+<h5 id="饿了么API"><a href="#饿了么API" class="headerlink" title="饿了么API"></a>饿了么API</h5><p>传送门：<a href="https://element.eleme.cn/2.4/#/zh-CN/component/table">https://element.eleme.cn/2.4/#/zh-CN/component/table</a></p>
+<h5 id="设计封装方法"><a href="#设计封装方法" class="headerlink" title="设计封装方法"></a>设计封装方法</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@data</span> 源数据</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@config</span> 配置</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="title function_">createSpanMethod</span>(<span class="params">data, config</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="title function_">sortByFields</span> = (<span class="params">list, fields</span>) =&gt; &#123;</span><br><span class="line">        <span class="keyword">return</span> list.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">let</span> field <span class="keyword">of</span> fields) &#123;</span><br><span class="line">                <span class="keyword">let</span> fieldName = field.<span class="property">field</span>;</span><br><span class="line">                <span class="keyword">let</span> order = field.<span class="property">order</span> === <span class="string">&#x27;desc&#x27;</span> ? -<span class="number">1</span> : <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span> (a[fieldName] &gt; b[fieldName]) &#123;</span><br><span class="line">                    <span class="keyword">return</span> order;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (a[fieldName] &lt; b[fieldName]) &#123;</span><br><span class="line">                    <span class="keyword">return</span> -order;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> <span class="title function_">setRowSpan</span> = (<span class="params">row, column, rowIndex, columnIndex, list, corSpan, rowConfig</span>) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> ((rowIndex &gt; <span class="number">0</span>) &amp;&amp; (row[rowConfig.<span class="property">linkField</span> ?? column.<span class="property">property</span>] === list[rowIndex - <span class="number">1</span>][rowConfig.<span class="property">linkField</span> ?? column.<span class="property">property</span>])) &#123;</span><br><span class="line">            corSpan.<span class="property">rowspan</span> = <span class="number">0</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">let</span> rowspan = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">let</span> temp = rowIndex;</span><br><span class="line">            <span class="keyword">while</span> ((temp &lt; list.<span class="property">length</span> - <span class="number">1</span>) &amp;&amp; (list[temp + <span class="number">1</span>][rowConfig.<span class="property">linkField</span> ?? column.<span class="property">property</span>] === row[rowConfig.<span class="property">linkField</span> ?? column.<span class="property">property</span>])) &#123;</span><br><span class="line">                temp++;</span><br><span class="line">                rowspan++;</span><br><span class="line">            &#125;</span><br><span class="line">            corSpan.<span class="property">rowspan</span> = rowspan;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> <span class="title function_">setColSpan</span> = (<span class="params">row, column, rowIndex, columnIndex, list, corSpan, colConfig</span>) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (colConfig?.<span class="title function_">rule</span>(row, column, rowIndex, columnIndex, list, colConfig)) &#123;</span><br><span class="line">            corSpan.<span class="property">colspan</span> = column.<span class="property">property</span> === colConfig?.<span class="property">fieldRange</span>[<span class="number">0</span>] ? colConfig?.<span class="property">fieldRange</span>?.<span class="property">length</span> : <span class="number">0</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            corSpan.<span class="property">colspan</span> = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (config.<span class="property">sort</span>) data = <span class="title function_">sortByFields</span>(data, config.<span class="property">sortRule</span> ?? []);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">&#123; row, column, rowIndex, columnIndex &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> corSpan = &#123;</span><br><span class="line">            <span class="attr">rowspan</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="attr">colspan</span>: <span class="number">1</span></span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> linkCell = config?.<span class="property">mergeRow</span>?.<span class="title function_">find</span>(<span class="function"><span class="params">item</span> =&gt;</span> item.<span class="property">linkField</span> &amp;&amp; (item.<span class="property">columnIndex</span> === columnIndex));</span><br><span class="line">        <span class="keyword">let</span> rowConfig = config?.<span class="property">mergeRow</span>?.<span class="title function_">find</span>(<span class="function"><span class="params">item</span> =&gt;</span> (item.<span class="property">field</span> === column.<span class="property">property</span>) &amp;&amp; (item.<span class="property">columnIndex</span> === columnIndex));</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (linkCell) &#123;</span><br><span class="line">            <span class="title function_">setRowSpan</span>(row, column, rowIndex, columnIndex, data, corSpan, linkCell);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (rowConfig) &#123;</span><br><span class="line">            <span class="title function_">setRowSpan</span>(row, column, rowIndex, columnIndex, data, corSpan, rowConfig);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> colConfig = config?.<span class="property">mergeCol</span>?.<span class="title function_">find</span>(<span class="function"><span class="params">item</span> =&gt;</span> item.<span class="property">fieldRange</span>?.<span class="title function_">includes</span>(column.<span class="property">property</span>) &amp;&amp; (item.<span class="property">columnIndex</span>?.<span class="title function_">includes</span>(columnIndex)));</span><br><span class="line">        <span class="keyword">if</span> (colConfig) <span class="title function_">setColSpan</span>(row, column, rowIndex, columnIndex, data, corSpan, colConfig);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> corSpan;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>设计步骤</strong>：</p>
+<ul>
+<li><p>进行权重排序。对于无序数据可以按照配置优先顺序，对于后续行归并有优化作用，sort设置为true会<strong>更改源数据</strong></p>
+</li>
+<li><p>定义span-method返回的corSpan，对于每个cell返回规则</p>
+</li>
+<li><p>行合并思想，根据当前cell对比配置的归并值，如果条件相等，代表此行往下直到不相等的那一行，累计值则为rowspan的值，其余为0（条件暂且默认是行key值相等即归并）</p>
+</li>
+<li><p>列合并思想，根据传入的rule，返回true则代表该cell归并生效</p>
+<p><strong>需要注意</strong>的是：如果行列有<strong>重复的field</strong>，列归并会覆盖行归并，或者其它类似情况，所以应该保证按我们需要的配置，独立<strong>单一设置</strong>！</p>
+</li>
+</ul>
+<span id="more"></span>
+
+<h5 id="调用示例"><a href="#调用示例" class="headerlink" title="调用示例"></a>调用示例</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;el-table</span><br><span class="line">    border</span><br><span class="line">    class=&quot;elt-style&quot;</span><br><span class="line">    ref=&quot;tableRef&quot;</span><br><span class="line">    tooltip-effect=&quot;dark&quot;</span><br><span class="line">    height=&quot;228px&quot;</span><br><span class="line">    :data=&quot;tableData&quot;</span><br><span class="line">    v-loading=&quot;loading&quot;</span><br><span class="line">    :row-key=&quot;row =&gt; row.id&quot;</span><br><span class="line">    highlight-current-row</span><br><span class="line">    @current-change=&quot;handleCurrent&quot;</span><br><span class="line">    :span-method=&quot;spanMethod&quot;</span><br><span class="line">&gt;</span><br><span class="line">    &lt;el-table-column</span><br><span class="line">        fixed</span><br><span class="line">        type=&quot;index&quot;</span><br><span class="line">        align=&quot;center&quot;</span><br><span class="line">        width=&quot;60&quot;</span><br><span class="line">        :index=&quot;index =&gt; (page.pageNo - 1) * page.pageSize + index + 1&quot;</span><br><span class="line">    &gt;</span><br><span class="line">        &lt;template #header&gt;&#123;&#123; lingo(&quot;index&quot;, &quot;序号&quot;) &#125;&#125;&lt;/template&gt;</span><br><span class="line">        &lt;template #default=&quot;&#123; row, column, $index &#125;&quot;&gt;</span><br><span class="line">            &lt;el-radio :label=&quot;row&quot;&gt;&#123;&#123; (page.pageNo - 1) * page.pageSize + $index + 1 &#125;&#125;&lt;/el-radio&gt;</span><br><span class="line">        &lt;/template&gt;</span><br><span class="line">    &lt;/el-table-column&gt;</span><br><span class="line">&lt;/el-table&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 提供span-method消费方法</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">spanMethod</span> = <span class="variable language_">this</span>.<span class="title function_">createSpanMethod2</span>(<span class="variable language_">this</span>.<span class="property">tableData</span>, &#123;</span><br><span class="line">    <span class="attr">sort</span>: <span class="literal">true</span>, <span class="comment">// 支持排序，默认关闭</span></span><br><span class="line">    <span class="attr">sortRule</span>: [ <span class="comment">// 排序规则，权重优先级、升降序</span></span><br><span class="line">        &#123; <span class="attr">field</span>: <span class="string">&#x27;containerBarcode&#x27;</span>, <span class="attr">order</span>: <span class="string">&#x27;asc&#x27;</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">field</span>: <span class="string">&#x27;itemDesc&#x27;</span>, <span class="attr">order</span>: <span class="string">&#x27;desc&#x27;</span> &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">mergeRow</span>: [ <span class="comment">// 行合并配置，最好不要有重复字段</span></span><br><span class="line">        <span class="comment">// &#123; linkField: &#x27;containerBarcode&#x27;, columnIndex: 0 &#125;, // 链接格，linkField代表寄生列</span></span><br><span class="line">        &#123; <span class="attr">field</span>: <span class="string">&#x27;containerBarcode&#x27;</span>, <span class="attr">columnIndex</span>: <span class="number">1</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">field</span>: <span class="string">&#x27;itemCode&#x27;</span>, <span class="attr">columnIndex</span>: <span class="number">2</span> &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">mergeCol</span>: [ <span class="comment">// 列合并配置， fieldRange、columnIndex 按照表格columns的连续合并顺序设置，rule代表合并的规则</span></span><br><span class="line">        &#123; <span class="attr">fieldRange</span>: [<span class="string">&#x27;itemCode&#x27;</span>, <span class="string">&#x27;itemDesc&#x27;</span>, <span class="string">&#x27;qty&#x27;</span>], <span class="attr">columnIndex</span>: [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], <span class="attr">rule</span>: <span class="variable language_">this</span>.<span class="property">colRule</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 列归并规则</span></span><br><span class="line"><span class="title function_">colRule</span>(<span class="params">row, column, rowIndex, columnIndex, list, colConfig</span>) &#123;</span><br><span class="line">    <span class="comment">// 当前行如果满足该表达式即可合并</span></span><br><span class="line">    <span class="keyword">return</span> row.<span class="property">itemDesc</span> === <span class="string">&#x27;1&#x27;</span> || row.<span class="property">itemDesc</span> === <span class="string">&#x27;555&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以上发现有误或者优化的地方，请留言评论~</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Element-UI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端兼容性问题</title>
+    <url>/zh-CN/hack/</url>
+    <content><![CDATA[<ul>
+<li><code>Autoprefixer</code>自动添加浏览器前缀插件，属于后处理程序，不像 Sass 以及 Stylus 之类的预处理器。它适用于普通的 CSS，可以实现css3代码自动补全。也可以轻松跟 Sass，LESS及Stylus集成，在CSS编译前或编译后运行。</li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li><p>ant-design table树结构折叠图标火狐浏览器内显示错误</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这种写法仅火狐识别</span></span><br><span class="line"><span class="variable">@-moz-document</span> <span class="built_in">url-prefix</span>() &#123;</span><br><span class="line">  <span class="selector-class">.surely-table-row-expand-icon</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a><a href="https://www.chromium.org/">Chromium</a></h5><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*滚动条整体粗细样式*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="comment">/*高宽分别对应横竖滚动条的尺寸*/</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条里面小方块*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="comment">/* 颜色 */</span></span><br><span class="line">  <span class="comment">/* background:#b6b6b6!important; */</span></span><br><span class="line">  <span class="comment">/* 线性渐变背景 */</span></span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>, <span class="number">#ffbd61</span> <span class="number">25%</span>, <span class="number">#ffbd61</span> <span class="number">25%</span>, <span class="number">#ff8800</span> <span class="number">25%</span>, <span class="number">#ff8800</span> <span class="number">50%</span>, <span class="number">#ffbd61</span> <span class="number">50%</span>, <span class="number">#ffbd61</span> <span class="number">75%</span>, <span class="number">#ff8800</span> <span class="number">75%</span>, <span class="number">#ff8800</span> <span class="number">100%</span>) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#1175c2</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条轨道*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-track</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#EDEDED</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条角落*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-corner</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#000</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<h5 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h5><p>scrollbar-width</p>
+<p>scrollbar-color</p>
+<h5 id="IE"><a href="#IE" class="headerlink" title="IE"></a>IE</h5><p>scrollbar-base-color</p>
+<p>scrollbar-track-color</p>
+<p>scrollbar-arrow-color</p>
+<p>scrollbar-3dlight-color</p>
+<p>scrollbar-shadow-color</p>
+<p>scrollbar-highlight-color</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>兼容性</tag>
       </tags>
   </entry>
   <entry>
@@ -411,23 +447,6 @@
       </tags>
   </entry>
   <entry>
-    <title>threeJs</title>
-    <url>/zh-CN/threejs/</url>
-    <content><![CDATA[<h4 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h4><ul>
-<li>地址：*<a href="http://www.webgl3d.cn/pages/aac9ab/">three.js</a>*</li>
-</ul>
-<span id="more"></span>
-
-<p>物理引擎cannon-es  <a href="https://pmndrs.github.io/cannon-es/docs/">https://pmndrs.github.io/cannon-es/docs/</a></p>
-]]></content>
-      <categories>
-        <category>webGL</category>
-      </categories>
-      <tags>
-        <tag>threeJs</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>工具箱</title>
     <url>/zh-CN/tool/</url>
     <content><![CDATA[<h5 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h5><ul>
@@ -472,6 +491,23 @@
       </categories>
       <tags>
         <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>threeJs</title>
+    <url>/zh-CN/threejs/</url>
+    <content><![CDATA[<h4 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h4><ul>
+<li>地址：*<a href="http://www.webgl3d.cn/pages/aac9ab/">three.js</a>*</li>
+</ul>
+<span id="more"></span>
+
+<p>物理引擎cannon-es  <a href="https://pmndrs.github.io/cannon-es/docs/">https://pmndrs.github.io/cannon-es/docs/</a></p>
+]]></content>
+      <categories>
+        <category>webGL</category>
+      </categories>
+      <tags>
+        <tag>threeJs</tag>
       </tags>
   </entry>
   <entry>
