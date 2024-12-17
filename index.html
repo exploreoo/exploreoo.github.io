@@ -189,7 +189,7 @@
           
           
             <li class="recent_posts_li">
-              <a href="/zh-CN/el-table-%E5%B0%81%E8%A3%85/" title="element-ui跨行跨列一文解读" target="_blank">element-ui跨行跨列一文解读</a>
+              <a href="/zh-CN/elmApi/" title="el-table跨行跨列API设计" target="_blank">el-table跨行跨列API设计</a>
             </li>
           
             <li class="recent_posts_li">
@@ -241,7 +241,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/el-table-%E5%B0%81%E8%A3%85/">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/elmApi/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/t.png">
@@ -259,7 +259,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/el-table-%E5%B0%81%E8%A3%85/" class="post-title-link" itemprop="url">element-ui跨行跨列一文解读</a>
+          <a href="/zh-CN/elmApi/" class="post-title-link" itemprop="url">el-table跨行跨列API设计</a>
         </h2>
 
         <div class="post-meta-container">
@@ -269,9 +269,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-12-16 22:35:05 / 修改时间：21:28:37" itemprop="dateCreated datePublished" datetime="2024-12-16T22:35:05+08:00">2024-12-16</time>
+      <time title="创建时间：2024-12-16 22:35:05" itemprop="dateCreated datePublished" datetime="2024-12-16T22:35:05+08:00">2024-12-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-12-17 19:15:51" itemprop="dateModified" datetime="2024-12-17T19:15:51+08:00">2024-12-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -293,26 +299,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>​		基于element-ui v2.4.11版本的饿了么表格跨行跨列渲染，由于接口的数据格式属于梭哈返回，直接给前端渲染上压力！对前端表格跨行跨列的构造只能傻瓜式的写死，要么写死列头索引或者其它标记来实现，如果我要设置多行多列的归并，似乎很困难，那么来一个福利封装如下~</p>
-<p>由于使用的是vue2写法，v3雷同使用。</p>
-<h5 id="饿了么API"><a href="#饿了么API" class="headerlink" title="饿了么API"></a>饿了么API</h5><p>传送门：<a target="_blank" rel="noopener" href="https://element.eleme.cn/2.4/#/zh-CN/component/table">https://element.eleme.cn/2.4/#/zh-CN/component/table</a></p>
-<h5 id="设计封装方法"><a href="#设计封装方法" class="headerlink" title="设计封装方法"></a>设计封装方法</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@data</span> 源数据</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@config</span> 配置</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="title function_">createSpanMethod</span>(<span class="params">data, config</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="title function_">sortByFields</span> = (<span class="params">list, fields</span>) =&gt; &#123;</span><br><span class="line">        <span class="keyword">return</span> list.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">let</span> field <span class="keyword">of</span> fields) &#123;</span><br><span class="line">                <span class="keyword">let</span> fieldName = field.<span class="property">field</span>;</span><br><span class="line">                <span class="keyword">let</span> order = field.<span class="property">order</span> === <span class="string">&#x27;desc&#x27;</span> ? -<span class="number">1</span> : <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span> (a[fieldName] &gt; b[fieldName]) &#123;</span><br><span class="line">                    <span class="keyword">return</span> order;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (a[fieldName] &lt; b[fieldName]) &#123;</span><br><span class="line">                    <span class="keyword">return</span> -order;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> <span class="title function_">setRowSpan</span> = (<span class="params">row, column, rowIndex, columnIndex, list, corSpan, rowConfig</span>) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> ((rowIndex &gt; <span class="number">0</span>) &amp;&amp; (row[rowConfig.<span class="property">linkField</span> ?? column.<span class="property">property</span>] === list[rowIndex - <span class="number">1</span>][rowConfig.<span class="property">linkField</span> ?? column.<span class="property">property</span>])) &#123;</span><br><span class="line">            corSpan.<span class="property">rowspan</span> = <span class="number">0</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">let</span> rowspan = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">let</span> temp = rowIndex;</span><br><span class="line">            <span class="keyword">while</span> ((temp &lt; list.<span class="property">length</span> - <span class="number">1</span>) &amp;&amp; (list[temp + <span class="number">1</span>][rowConfig.<span class="property">linkField</span> ?? column.<span class="property">property</span>] === row[rowConfig.<span class="property">linkField</span> ?? column.<span class="property">property</span>])) &#123;</span><br><span class="line">                temp++;</span><br><span class="line">                rowspan++;</span><br><span class="line">            &#125;</span><br><span class="line">            corSpan.<span class="property">rowspan</span> = rowspan;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> <span class="title function_">setColSpan</span> = (<span class="params">row, column, rowIndex, columnIndex, list, corSpan, colConfig</span>) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (colConfig?.<span class="title function_">rule</span>(row, column, rowIndex, columnIndex, list, colConfig)) &#123;</span><br><span class="line">            corSpan.<span class="property">colspan</span> = column.<span class="property">property</span> === colConfig?.<span class="property">fieldRange</span>[<span class="number">0</span>] ? colConfig?.<span class="property">fieldRange</span>?.<span class="property">length</span> : <span class="number">0</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            corSpan.<span class="property">colspan</span> = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (config.<span class="property">sort</span>) data = <span class="title function_">sortByFields</span>(data, config.<span class="property">sortRule</span> ?? []);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">&#123; row, column, rowIndex, columnIndex &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> corSpan = &#123;</span><br><span class="line">            <span class="attr">rowspan</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="attr">colspan</span>: <span class="number">1</span></span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> linkCell = config?.<span class="property">mergeRow</span>?.<span class="title function_">find</span>(<span class="function"><span class="params">item</span> =&gt;</span> item.<span class="property">linkField</span> &amp;&amp; (item.<span class="property">columnIndex</span> === columnIndex));</span><br><span class="line">        <span class="keyword">let</span> rowConfig = config?.<span class="property">mergeRow</span>?.<span class="title function_">find</span>(<span class="function"><span class="params">item</span> =&gt;</span> (item.<span class="property">field</span> === column.<span class="property">property</span>) &amp;&amp; (item.<span class="property">columnIndex</span> === columnIndex));</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (linkCell) &#123;</span><br><span class="line">            <span class="title function_">setRowSpan</span>(row, column, rowIndex, columnIndex, data, corSpan, linkCell);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (rowConfig) &#123;</span><br><span class="line">            <span class="title function_">setRowSpan</span>(row, column, rowIndex, columnIndex, data, corSpan, rowConfig);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> colConfig = config?.<span class="property">mergeCol</span>?.<span class="title function_">find</span>(<span class="function"><span class="params">item</span> =&gt;</span> item.<span class="property">fieldRange</span>?.<span class="title function_">includes</span>(column.<span class="property">property</span>) &amp;&amp; (item.<span class="property">columnIndex</span>?.<span class="title function_">includes</span>(columnIndex)));</span><br><span class="line">        <span class="keyword">if</span> (colConfig) <span class="title function_">setColSpan</span>(row, column, rowIndex, columnIndex, data, corSpan, colConfig);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> corSpan;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>基于element-ui v2.4.11版本饿了么表格，实现<strong>动态跨行跨列渲染构造</strong>。由于接口数据格式属于梭哈返回，直接给前端渲染上压力！对于该版本表格组件，跨行跨列的构造只能傻瓜式的写死，通过写死列头索引或者其它标记来实现，例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="title function_">arraySpanMethod</span>(<span class="params">&#123; row, column, rowIndex, columnIndex &#125;</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (rowIndex % <span class="number">2</span> === <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (columnIndex === <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (columnIndex === <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> [<span class="number">0</span>, <span class="number">0</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>设计步骤</strong>：</p>
-<ul>
-<li><p>进行权重排序。对于无序数据可以按照配置优先顺序，对于后续行归并有优化作用，sort设置为true会<strong>更改源数据</strong></p>
-</li>
-<li><p>定义span-method返回的corSpan，对于每个cell返回规则</p>
-</li>
-<li><p>行合并思想，根据当前cell对比配置的归并值，如果条件相等，代表此行往下直到不相等的那一行，累计值则为rowspan的值，其余为0（条件暂且默认是行key值相等即归并）</p>
-</li>
-<li><p>列合并思想，根据传入的rule，返回true则代表该cell归并生效</p>
-<p><strong>需要注意</strong>的是：如果行列有<strong>重复的field</strong>，列归并会覆盖行归并，或者其它类似情况，所以应该保证按我们需要的配置，独立<strong>单一设置</strong>！</p>
-</li>
-</ul>
+<p>如果要设置<strong>多行多列</strong>的归并，并且需要<strong>自定义合并规则</strong>，实现的逻辑似乎很臃肿且困难，由于笔者使用的是vue2写法，vue3雷同使用。</p>
+<h5 id="饿了么API"><a href="#饿了么API" class="headerlink" title="饿了么API"></a>饿了么API</h5><p>传送门：<a target="_blank" rel="noopener" href="https://element.eleme.cn/2.4/#/zh-CN/component/table">https://element.eleme.cn/2.4/#/zh-CN/component/table</a></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/zh-CN/el-table-%E5%B0%81%E8%A3%85/#more" rel="contents">
+              <a class="btn" href="/zh-CN/elmApi/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1035,7 +1029,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-12-06 21:11:07" itemprop="dateModified" datetime="2024-12-06T21:11:07+08:00">2024-12-06</time>
+      <time title="修改时间：2024-12-17 19:15:51" itemprop="dateModified" datetime="2024-12-17T19:15:51+08:00">2024-12-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1093,7 +1087,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/mobile/">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/javascript/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/t.png">
@@ -1111,7 +1105,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/mobile/" class="post-title-link" itemprop="url">移动端问题</a>
+          <a href="/zh-CN/javascript/" class="post-title-link" itemprop="url">JS合集</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1137,7 +1131,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+          <a href="/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
         </span>
     </span>
 
@@ -1151,17 +1145,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <ul>
-<li><h5 id="真机测试方案"><a href="#真机测试方案" class="headerlink" title="真机测试方案"></a>真机测试方案</h5><ul>
-<li><strong>跨平台调试</strong><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/Tencent/vConsole/blob/dev/README_CN.md"><strong>Vconsole</strong></a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/liriliri/eruda/blob/master/doc/README_CN.md"><strong>Eruda</strong></a></li>
-</ul>
-</li>
-</ul>
+          <h5 id="JS的异步"><a href="#JS的异步" class="headerlink" title="JS的异步"></a>JS的异步</h5><p>js是单线程的语言，它运行在浏览器的渲染主线程中，而渲染主线程只有一个。</p>
+<p>渲染主线程承担着诸多工作，例如解析、渲染页面、执行js都在其中，如果使用同步会极有可能产生阻塞，从而导致消息队列中许多其他任务无法得到执行，<strong>造成1主线程白白的消耗时间 2页面无法及时更新，产生页面卡死现象</strong>。</p>
+<p>所以浏览器采用异步的方式来解决，具体做法是（<strong>事件循环</strong>）当某些任务发生时，例如计时器、网络、事件监听，主线程将其交给其他线程处理，自身继续执行后续代码，当其他线程结束后，将<strong>事先传递的回调函数包装成任务加入到消息队列末尾，等待主线程的调度执行</strong>。</p>
+<p>在这种异步模式下，浏览器永不阻塞，最大限度的保证了单线程的流畅运行。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/zh-CN/mobile/#more" rel="contents">
+              <a class="btn" href="/zh-CN/javascript/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>

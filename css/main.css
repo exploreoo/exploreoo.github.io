@@ -2609,7 +2609,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #08be55;
+  background: #c253f4;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2673,10 +2673,17 @@ header.header {
 }
 .sidebar {
   background: linear-gradient(45deg, #222, #000, #3b0606);
-  background: url("../../../../images/1___737471___0___.jpg") center/cover no-repeat;
+  background: url("../../../../images/1___737471___0___.jpg") right center/cover no-repeat;
   box-shadow: unset;
 }
-.sidebar>* {
+.sidebar::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0,0,0,0.85);
 }
 @media (max-width: 767px) {
@@ -2684,6 +2691,9 @@ header.header {
     width: 280px;
     left: -280px;
   }
+}
+.sidebar .sidebar-inner {
+  margin-bottom: 50px;
 }
 .post {
   margin-top: 0px;
@@ -2728,9 +2738,16 @@ header.header {
 .main>.column {
   background: url("../../../../images/1___737471___0___.jpg") center 70%/cover no-repeat;
 }
+.main>.column .header {
+  background: rgba(0,0,0,0.18);
+}
 @media (max-width: 767px) {
   .main>.column {
     background: url("../../../../images/1___4992662___0___.jpg") center/cover no-repeat;
+    background: url("../../../../images/1___737471___0___.jpg") center/cover no-repeat;
+  }
+  .main>.column .header {
+    background: rgba(0,0,0,0.5);
   }
 }
 .menu .menu-item a {
