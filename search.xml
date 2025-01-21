@@ -1,6 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Cursor AI编辑器</title>
+    <url>/zh-CN/Cursor%E7%BC%96%E8%BE%91%E5%99%A8/</url>
+    <content><![CDATA[<h5 id="Cursor"><a href="#Cursor" class="headerlink" title="Cursor"></a>Cursor</h5><p>链接地址：<a href="https://www.cursor.com/">https://www.cursor.com</a></p>
+<p>目前<u><em>v0.43.5</em></u>版本，新注册获取<code>Pro Trial</code> 15 days，到期续账号即可</p>
+<span id="more"></span>
+
+<p>途径如下</p>
+<p>1、<a href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#64;&#120;&#x78;&#x78;&#46;&#99;&#111;&#109;">&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#64;&#120;&#x78;&#x78;&#46;&#99;&#111;&#109;</a></p>
+<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#x65;&#120;&#97;&#109;&#x70;&#108;&#101;&#43;&#x31;&#64;&#120;&#x78;&#120;&#46;&#99;&#111;&#x6d;">&#x65;&#120;&#97;&#109;&#x70;&#108;&#101;&#43;&#x31;&#64;&#120;&#x78;&#120;&#46;&#99;&#111;&#x6d;</a>&#x2F;<a href="mailto:&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x2b;&#x32;&#x40;&#120;&#x78;&#120;&#x2e;&#x63;&#x6f;&#109;">&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x2b;&#x32;&#x40;&#120;&#x78;&#120;&#x2e;&#x63;&#x6f;&#109;</a>…</p>
+<h5 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h5><p><strong>Premium models   0 &#x2F; 500</strong></p>
+<p>You’ve used no requests out of your <strong>500</strong> fast requests quota.</p>
+<p><strong>gpt-4o-mini or cursor-small   0 &#x2F; No Limit</strong></p>
+<p>You’ve used <strong>0</strong> fast requests of this model. You have no monthly quota.</p>
+<ul>
+<li><h5 id="解决-Cursor-Too-many-free-trial-accounts-used-on-this-machine-Please-upgrade-to-pro"><a href="#解决-Cursor-Too-many-free-trial-accounts-used-on-this-machine-Please-upgrade-to-pro" class="headerlink" title="解决 Cursor Too many free trial accounts used on this machine. Please upgrade to pro."></a>解决 Cursor Too many free trial accounts used on this machine. Please upgrade to pro.</h5><p>同一个机器码只能试用3个账号，手动更改&#x2F;插件更改即可。提供一个插件：</p>
+<p><a href="https://github.com/bestK/cursor-fake-machine/releases/download/v0.0.1/cursor-fake-machine-0.0.1.vsix">https://github.com/bestK/cursor-fake-machine/releases/download/v0.0.1/cursor-fake-machine-0.0.1.vsix</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JSON（JavaScript Object Notation）</title>
+    <url>/zh-CN/JSON/</url>
+    <content><![CDATA[<h5 id="JSON（JavaScript-Object-Notation）"><a href="#JSON（JavaScript-Object-Notation）" class="headerlink" title="JSON（JavaScript Object Notation）"></a>JSON（JavaScript Object Notation）</h5><p>是一种轻量级的数据交换格式，因其简洁、易读、易于解析的特点，在前后端数据交互、API 设计、配置文件等领域广泛应用。下面是使用 JSON 传输数据的优缺点：</p>
+<span id="more"></span>
+
+<p>优点：</p>
+<ol>
+<li>简洁、易读：JSON 格式的数据非常简洁易读，使用起来非常方便。可以轻松地通过文本编辑器或浏览器插件进行查看、编辑、调试。</li>
+<li>易于解析：JSON 数据可以使用多种编程语言解析，支持主流的编程语言，如JavaScript、Java、Python、C#等，因此JSON数据格式具有良好的跨平台和可扩展性。</li>
+<li>结构化数据：JSON数据是一种结构化的数据格式，具有良好的扩展性和兼容性，可以非常容易地扩展、更新、维护和重用。</li>
+<li>跨域请求：JSON 支持跨域请求，允许在不同域名之间安全地传输数据。这使得使用 JSON 传输数据成为一个非常有用的选择。</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>不适合传输大文件：JSON 是基于文本的格式，传输大文件时会占用较多的带宽和时间。</li>
+<li>缺乏标准：虽然 JSON 是一种非常流行的数据交换格式，但是没有官方标准或规范，因此可能存在不同实现之间的差异性。</li>
+<li>不支持注释：JSON格式不支持注释，因此无法在数据中添加注释，这可能会导致在一些场景下的不便利。</li>
+<li>安全性：JSON 格式虽然支持跨域请求，但是如果没有正确地处理跨域请求，可能会导致安全问题。</li>
+</ol>
+<h5 id="JSON-parse-JSON-stringify-的缺点"><a href="#JSON-parse-JSON-stringify-的缺点" class="headerlink" title="JSON.parse(JSON.stringify())的缺点"></a>JSON.parse(JSON.stringify())的缺点</h5><ol>
+<li>如果obj里面有<strong>时间对象</strong>，则JSON.stringify后再JSON.parse的结果，时间将只是字符串的形式；</li>
+<li>如果obj里有<strong>RegExp</strong>(正则表达式的缩写)、Error对象，则序列化的结果将只得到空对象； </li>
+<li>如果obj里有<strong>函数、undefined</strong>，则序列化的结果会把函数或 undefined丢失；</li>
+<li>如果obj里有<strong>NaN、Infinity和-Infinity</strong>，则序列化的结果会变成null</li>
+<li>JSON.stringify()只能序列化<strong>对象的可枚举的自有属性</strong>，例如 如果obj中的对象是有构造函数生成的， 则使用JSON.parse(JSON.stringify(obj))深拷贝后，会丢弃对象的constructor；</li>
+<li>如果对象中存在<strong>循环引用</strong>的情况也无法正确实现深拷贝（可利用map结构辅助过滤）；</li>
+</ol>
+<p>综上所述，JSON 是一种非常便捷、灵活和可扩展的数据交换格式，独立于计算机各类语言，但在使用时需要注意其缺点，以确保数据的安全性和完整性。</p>
+]]></content>
+      <categories>
+        <category>Javascript</category>
+      </categories>
+      <tags>
+        <tag>JSON</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WebWorker</title>
+    <url>/zh-CN/WebWorker/</url>
+    <content><![CDATA[<p>代码示例</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export default class WorkerWrapper &#123;</span><br><span class="line">  constructor(work, options) &#123;</span><br><span class="line">    this.worker = new work();</span><br><span class="line">    this.callbacks = new Map();</span><br><span class="line">    this.worker.onmessage = (event) =&gt; &#123;</span><br><span class="line">      const &#123; id, data &#125; = event.data;</span><br><span class="line">      const callback = this.callbacks.get(id);</span><br><span class="line">      if (callback) &#123;</span><br><span class="line">        callback(data);</span><br><span class="line">        this.callbacks.delete(id);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  postMessage(data, callback) &#123;</span><br><span class="line">    const id = Math.random().toString(36).substr(2);</span><br><span class="line">    if (callback) &#123;</span><br><span class="line">      this.callbacks.set(id, callback);</span><br><span class="line">    &#125;</span><br><span class="line">    this.worker.postMessage(&#123; id, data &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // 终止进程</span><br><span class="line">  terminate() &#123;</span><br><span class="line">    this.worker.terminate();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>API</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vue SSR服务端渲染</title>
     <url>/zh-CN/SSR/</url>
     <content><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>服务器端渲染（Server-Side Rendering，简称 SSR）是指在服务器端生成 HTML 内容并发送到客户端的过程。与客户端渲染（Client-Side Rendering，简称 CSR）相比，SSR 可以提高首屏加载速度和 SEO 友好性。<br>如需更高级的集成框架可以使用nuxtjs</p>
@@ -54,84 +132,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JSON（JavaScript Object Notation）</title>
-    <url>/zh-CN/JSON/</url>
-    <content><![CDATA[<h5 id="JSON（JavaScript-Object-Notation）"><a href="#JSON（JavaScript-Object-Notation）" class="headerlink" title="JSON（JavaScript Object Notation）"></a>JSON（JavaScript Object Notation）</h5><p>是一种轻量级的数据交换格式，因其简洁、易读、易于解析的特点，在前后端数据交互、API 设计、配置文件等领域广泛应用。下面是使用 JSON 传输数据的优缺点：</p>
-<span id="more"></span>
-
-<p>优点：</p>
-<ol>
-<li>简洁、易读：JSON 格式的数据非常简洁易读，使用起来非常方便。可以轻松地通过文本编辑器或浏览器插件进行查看、编辑、调试。</li>
-<li>易于解析：JSON 数据可以使用多种编程语言解析，支持主流的编程语言，如JavaScript、Java、Python、C#等，因此JSON数据格式具有良好的跨平台和可扩展性。</li>
-<li>结构化数据：JSON数据是一种结构化的数据格式，具有良好的扩展性和兼容性，可以非常容易地扩展、更新、维护和重用。</li>
-<li>跨域请求：JSON 支持跨域请求，允许在不同域名之间安全地传输数据。这使得使用 JSON 传输数据成为一个非常有用的选择。</li>
-</ol>
-<p>缺点：</p>
-<ol>
-<li>不适合传输大文件：JSON 是基于文本的格式，传输大文件时会占用较多的带宽和时间。</li>
-<li>缺乏标准：虽然 JSON 是一种非常流行的数据交换格式，但是没有官方标准或规范，因此可能存在不同实现之间的差异性。</li>
-<li>不支持注释：JSON格式不支持注释，因此无法在数据中添加注释，这可能会导致在一些场景下的不便利。</li>
-<li>安全性：JSON 格式虽然支持跨域请求，但是如果没有正确地处理跨域请求，可能会导致安全问题。</li>
-</ol>
-<h5 id="JSON-parse-JSON-stringify-的缺点"><a href="#JSON-parse-JSON-stringify-的缺点" class="headerlink" title="JSON.parse(JSON.stringify())的缺点"></a>JSON.parse(JSON.stringify())的缺点</h5><ol>
-<li>如果obj里面有<strong>时间对象</strong>，则JSON.stringify后再JSON.parse的结果，时间将只是字符串的形式；</li>
-<li>如果obj里有<strong>RegExp</strong>(正则表达式的缩写)、Error对象，则序列化的结果将只得到空对象； </li>
-<li>如果obj里有<strong>函数、undefined</strong>，则序列化的结果会把函数或 undefined丢失；</li>
-<li>如果obj里有<strong>NaN、Infinity和-Infinity</strong>，则序列化的结果会变成null</li>
-<li>JSON.stringify()只能序列化<strong>对象的可枚举的自有属性</strong>，例如 如果obj中的对象是有构造函数生成的， 则使用JSON.parse(JSON.stringify(obj))深拷贝后，会丢弃对象的constructor；</li>
-<li>如果对象中存在<strong>循环引用</strong>的情况也无法正确实现深拷贝（可利用map结构辅助过滤）；</li>
-</ol>
-<p>综上所述，JSON 是一种非常便捷、灵活和可扩展的数据交换格式，独立于计算机各类语言，但在使用时需要注意其缺点，以确保数据的安全性和完整性。</p>
-]]></content>
-      <categories>
-        <category>Javascript</category>
-      </categories>
-      <tags>
-        <tag>JSON</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cursor AI编辑器</title>
-    <url>/zh-CN/Cursor%E7%BC%96%E8%BE%91%E5%99%A8/</url>
-    <content><![CDATA[<h5 id="Cursor"><a href="#Cursor" class="headerlink" title="Cursor"></a>Cursor</h5><p>链接地址：<a href="https://www.cursor.com/">https://www.cursor.com</a></p>
-<p>目前<u><em>v0.43.5</em></u>版本，新注册获取<code>Pro Trial</code> 15 days，到期续账号即可</p>
-<span id="more"></span>
-
-<p>途径如下</p>
-<p>1、<a href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#64;&#120;&#x78;&#120;&#46;&#x63;&#x6f;&#109;">&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#64;&#120;&#x78;&#120;&#46;&#x63;&#x6f;&#109;</a></p>
-<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#x65;&#120;&#97;&#109;&#112;&#x6c;&#x65;&#x2b;&#49;&#64;&#120;&#120;&#120;&#x2e;&#x63;&#111;&#109;">&#x65;&#120;&#97;&#109;&#112;&#x6c;&#x65;&#x2b;&#49;&#64;&#120;&#120;&#120;&#x2e;&#x63;&#111;&#109;</a>&#x2F;<a href="mailto:&#101;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#x2b;&#50;&#64;&#x78;&#x78;&#x78;&#x2e;&#99;&#111;&#109;">&#101;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#x2b;&#50;&#64;&#x78;&#x78;&#x78;&#x2e;&#99;&#111;&#109;</a>…</p>
-<h5 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h5><p><strong>Premium models   0 &#x2F; 500</strong></p>
-<p>You’ve used no requests out of your <strong>500</strong> fast requests quota.</p>
-<p><strong>gpt-4o-mini or cursor-small   0 &#x2F; No Limit</strong></p>
-<p>You’ve used <strong>0</strong> fast requests of this model. You have no monthly quota.</p>
-<ul>
-<li><h5 id="解决-Cursor-Too-many-free-trial-accounts-used-on-this-machine-Please-upgrade-to-pro"><a href="#解决-Cursor-Too-many-free-trial-accounts-used-on-this-machine-Please-upgrade-to-pro" class="headerlink" title="解决 Cursor Too many free trial accounts used on this machine. Please upgrade to pro."></a>解决 Cursor Too many free trial accounts used on this machine. Please upgrade to pro.</h5><p>同一个机器码只能试用3个账号，手动更改&#x2F;插件更改即可。提供一个插件：</p>
-<p><a href="https://github.com/bestK/cursor-fake-machine/releases/download/v0.0.1/cursor-fake-machine-0.0.1.vsix">https://github.com/bestK/cursor-fake-machine/releases/download/v0.0.1/cursor-fake-machine-0.0.1.vsix</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>WebWorker</title>
-    <url>/zh-CN/WebWorker/</url>
-    <content><![CDATA[<p>代码示例</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export default class WorkerWrapper &#123;</span><br><span class="line">  constructor(work, options) &#123;</span><br><span class="line">    this.worker = new work();</span><br><span class="line">    this.callbacks = new Map();</span><br><span class="line">    this.worker.onmessage = (event) =&gt; &#123;</span><br><span class="line">      const &#123; id, data &#125; = event.data;</span><br><span class="line">      const callback = this.callbacks.get(id);</span><br><span class="line">      if (callback) &#123;</span><br><span class="line">        callback(data);</span><br><span class="line">        this.callbacks.delete(id);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  postMessage(data, callback) &#123;</span><br><span class="line">    const id = Math.random().toString(36).substr(2);</span><br><span class="line">    if (callback) &#123;</span><br><span class="line">      this.callbacks.set(id, callback);</span><br><span class="line">    &#125;</span><br><span class="line">    this.worker.postMessage(&#123; id, data &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // 终止进程</span><br><span class="line">  terminate() &#123;</span><br><span class="line">    this.worker.terminate();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>API</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>前端BUG</title>
     <url>/zh-CN/bug/</url>
     <content><![CDATA[<ul>
@@ -177,58 +177,6 @@
       </categories>
       <tags>
         <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>移动端问题</title>
-    <url>/zh-CN/mobile/</url>
-    <content><![CDATA[<ul>
-<li><h5 id="真机测试方案"><a href="#真机测试方案" class="headerlink" title="真机测试方案"></a>真机测试方案</h5><ul>
-<li><strong>跨平台调试</strong><ul>
-<li><a href="https://github.com/Tencent/vConsole/blob/dev/README_CN.md"><strong>Vconsole</strong></a></li>
-<li><a href="https://github.com/liriliri/eruda/blob/master/doc/README_CN.md"><strong>Eruda</strong></a></li>
-</ul>
-</li>
-</ul>
-<span id="more"></span>
-
-<ul>
-<li><p><strong>window下调试 iOS-Safari</strong></p>
-<p>实现真机调试主要是使用了 remotedebug-ios-webkit-adapter</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">安装scoopeWindows 命令行安装工具</span><br><span class="line"></span><br><span class="line">Set-ExecutionPolicy RemoteSigned -scope CurrentUser</span><br><span class="line">iex (new-object net.webclient).downloadstring(&#x27;https://get.scoop.sh&#x27;)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scoop bucket add extras</span><br><span class="line">scoop install ios-webkit-debug-proxy</span><br><span class="line">npm install -g vs-libimobile</span><br><span class="line"></span><br><span class="line">npm install remotedebug-ios-webkit-adapter -g</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>进入 iPhone 中的 <em>设置 &gt; Safari 浏览器 &gt; 高级 &gt; Web 检查器</em>，开启该选项。</li>
-<li>打开 iTunes 并连接 iPhone，在 iPhone 弹框中选择信任该电脑。</li>
-<li>打开命令行，执行以下命令，启动适配器：</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">remotedebug_ios_webkit_adapter --port=9000</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>在 iPhone 中打开 Safari 浏览器，打开待调试页面。</li>
-<li>打开 Chrome 浏览器，进入 <a href="https://links.jianshu.com/go?to=chrome://inspect/%23devices">chrome:&#x2F;&#x2F;inspect&#x2F;#devices</a> 页面，在 Discover network targets 选项添加 localhost:9000 配置。刷新页面，这时页面中会出现 ‘Remote Target’ 列表，该列表展示了 iPhone 中打开的页面，点击 inspect，即可进行调试。（科学上网&#x2F;edge）</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><h5 id="h5键盘输入遮挡问题"><a href="#h5键盘输入遮挡问题" class="headerlink" title="h5键盘输入遮挡问题"></a>h5键盘输入遮挡问题</h5></li>
-</ul>
-<p>​		处理方式有 <code>scrollIntoView</code> &#x2F;<code>scrollTop</code>，原生键盘安卓、safari适用，<code>ios</code>中可能有bug，后续待更新，以下为使用<code>vant</code>为例：</p>
-<p>​		整体思路：由于键盘控件定位语底部，用<code>innerHeight</code> ,<code>getBoundingClientRect()</code>计算输入<code>DOM</code>节点与视口底部的距离，小于键盘高度则需要显示，结合<code>scrollTop</code>按需来滚动，其中需要动态添加键盘占位空元素（高度与控件保持一致，需结合布局灵活计算），撑起滚动底部区域，此方案兼容性较好</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">&quot;showKeyboard&quot;</span> <span class="attr">class</span>=<span class="string">&quot;empty-keyboard&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const scrollArea = document.querySelector(&#x27;.scroll-l&#x27;);</span><br><span class="line">const arrBottom = window.innerHeight -</span><br><span class="line">    e.target.getBoundingClientRect().y -</span><br><span class="line">    e.target.getBoundingClientRect().height;</span><br><span class="line"> if (arrBottom &lt; 260) &#123;</span><br><span class="line">   nextTick(() =&gt; &#123;</span><br><span class="line">     scrollArea.scrollTop += 260 - arrBottom;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>待更新…</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>BUG</tag>
-        <tag>移动端</tag>
       </tags>
   </entry>
   <entry>
@@ -836,6 +784,58 @@
       </tags>
   </entry>
   <entry>
+    <title>移动端问题</title>
+    <url>/zh-CN/mobile/</url>
+    <content><![CDATA[<ul>
+<li><h5 id="真机测试方案"><a href="#真机测试方案" class="headerlink" title="真机测试方案"></a>真机测试方案</h5><ul>
+<li><strong>跨平台调试</strong><ul>
+<li><a href="https://github.com/Tencent/vConsole/blob/dev/README_CN.md"><strong>Vconsole</strong></a></li>
+<li><a href="https://github.com/liriliri/eruda/blob/master/doc/README_CN.md"><strong>Eruda</strong></a></li>
+</ul>
+</li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li><p><strong>window下调试 iOS-Safari</strong></p>
+<p>实现真机调试主要是使用了 remotedebug-ios-webkit-adapter</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">安装scoopeWindows 命令行安装工具</span><br><span class="line"></span><br><span class="line">Set-ExecutionPolicy RemoteSigned -scope CurrentUser</span><br><span class="line">iex (new-object net.webclient).downloadstring(&#x27;https://get.scoop.sh&#x27;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scoop bucket add extras</span><br><span class="line">scoop install ios-webkit-debug-proxy</span><br><span class="line">npm install -g vs-libimobile</span><br><span class="line"></span><br><span class="line">npm install remotedebug-ios-webkit-adapter -g</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>进入 iPhone 中的 <em>设置 &gt; Safari 浏览器 &gt; 高级 &gt; Web 检查器</em>，开启该选项。</li>
+<li>打开 iTunes 并连接 iPhone，在 iPhone 弹框中选择信任该电脑。</li>
+<li>打开命令行，执行以下命令，启动适配器：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">remotedebug_ios_webkit_adapter --port=9000</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>在 iPhone 中打开 Safari 浏览器，打开待调试页面。</li>
+<li>打开 Chrome 浏览器，进入 <a href="https://links.jianshu.com/go?to=chrome://inspect/%23devices">chrome:&#x2F;&#x2F;inspect&#x2F;#devices</a> 页面，在 Discover network targets 选项添加 localhost:9000 配置。刷新页面，这时页面中会出现 ‘Remote Target’ 列表，该列表展示了 iPhone 中打开的页面，点击 inspect，即可进行调试。（科学上网&#x2F;edge）</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><h5 id="h5键盘输入遮挡问题"><a href="#h5键盘输入遮挡问题" class="headerlink" title="h5键盘输入遮挡问题"></a>h5键盘输入遮挡问题</h5></li>
+</ul>
+<p>​		处理方式有 <code>scrollIntoView</code> &#x2F;<code>scrollTop</code>，原生键盘安卓、safari适用，<code>ios</code>中可能有bug，后续待更新，以下为使用<code>vant</code>为例：</p>
+<p>​		整体思路：由于键盘控件定位语底部，用<code>innerHeight</code> ,<code>getBoundingClientRect()</code>计算输入<code>DOM</code>节点与视口底部的距离，小于键盘高度则需要显示，结合<code>scrollTop</code>按需来滚动，其中需要动态添加键盘占位空元素（高度与控件保持一致，需结合布局灵活计算），撑起滚动底部区域，此方案兼容性较好</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">&quot;showKeyboard&quot;</span> <span class="attr">class</span>=<span class="string">&quot;empty-keyboard&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const scrollArea = document.querySelector(&#x27;.scroll-l&#x27;);</span><br><span class="line">const arrBottom = window.innerHeight -</span><br><span class="line">    e.target.getBoundingClientRect().y -</span><br><span class="line">    e.target.getBoundingClientRect().height;</span><br><span class="line"> if (arrBottom &lt; 260) &#123;</span><br><span class="line">   nextTick(() =&gt; &#123;</span><br><span class="line">     scrollArea.scrollTop += 260 - arrBottom;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>待更新…</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>BUG</tag>
+        <tag>移动端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>el-table跨行跨列API设计</title>
     <url>/zh-CN/table/</url>
     <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>使用el-table做跨行跨列表格渲染，接口数据格式为对象数组，即需从对象中提取columns，且需要设置对应的跨行跨列关系。为此要实现一种更优雅的构造方法，即<strong>配置化跨行跨列动态渲染</strong>。<br>基于element-ui v2.4.11版本，实现对于该版本表格组件，跨行跨列的构造方法可以通过arraySpanMethod构造，由于笔者使用的是vue2写法，vue3雷同使用。</p>
@@ -873,23 +873,6 @@
       <tags>
         <tag>API</tag>
         <tag>Element-UI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>threeJs</title>
-    <url>/zh-CN/threejs/</url>
-    <content><![CDATA[<h4 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h4><ul>
-<li>地址：*<a href="http://www.webgl3d.cn/pages/aac9ab/">three.js</a>*</li>
-</ul>
-<span id="more"></span>
-
-<p>物理引擎cannon-es  <a href="https://pmndrs.github.io/cannon-es/docs/">https://pmndrs.github.io/cannon-es/docs/</a></p>
-]]></content>
-      <categories>
-        <category>webGL</category>
-      </categories>
-      <tags>
-        <tag>threeJs</tag>
       </tags>
   </entry>
   <entry>
@@ -966,45 +949,20 @@
       </tags>
   </entry>
   <entry>
-    <title>解决win10系统CPU占用过高</title>
-    <url>/zh-CN/windows/</url>
-    <content><![CDATA[<ul>
-<li><p><strong>关闭Windows Search</strong><br>控制面板–管理工具–服务- Windows Search禁用。</p>
-</li>
-<li><p><strong>禁用 Diagnostics Tracking Service和Connected User Experiences and Telemetry</strong><br>这个服务是用来服务跟踪诊断的，就是在咱们使用系统的时候不停地收集系统信息，是微软的一个搜集工具而已。在很多情况下，CPU的高占用率就是它搞的鬼。<br>win+R 运行 services.msc 进入服务，禁用Diagnostics Tracking Service ，若找不到这个服务的话那就是禁用Diagnostic Policy Service，然后禁用Connected User Experiences and Telemetry 就好。</p>
-</li>
-<li><p><strong>关闭允许后台运行的软件</strong><br>打开系统设置— 隐私 —后台应用 关闭不需要的应用即可 （大多数其实都没什么用可以直接关闭最上方按钮）</p>
-</li>
-<li><p><strong>关闭更新来自多个位置</strong><br>打开系统设置—更新和安全—Windows更新—高级选项—选择如何提供更新，将“更新来自多个位置”关闭即可</p>
-</li>
-<li><p><strong>关闭小娜</strong><br>使用组策略禁用Cortana<br>　　1、使用 Windows + R 快捷键打开「运行」— 执行 gpedit.msc 打开组策略编辑器。<br>　　2、导航到「计算机配置」—「管理模板」—「Windows <a href="https://edu.csdn.net/cloud/houjie?utm_source=highword&spm=1001.2101.3001.7020">组件</a>」—「搜索」。<br>　　3、在右侧面板中找到「允许使用 Cortana」条目，将其设置为「已禁用」即可。</p>
-<span id="more"></span>
-</li>
-<li><p><strong>修改处理器个数</strong></p>
-<p>\1. 同时按住<strong>Win+r</strong>打开运行框，输入<strong>msconfig</strong>指令，点击<strong>回车</strong>。</p>
-<p>\2. 点击<strong>引导</strong>，再点击<strong>高级选项</strong>。</p>
-<p>\3. 点击<strong>处理器个数</strong>下方的选项框，选择大的数字，再点击<strong>确定</strong>。</p>
-</li>
-<li><p><strong>更新驱动程序</strong></p>
-<p>过时的或不兼容的驱动程序可能导致CPU占用率升高。可以通过更新驱动程序来解决这个问题。可以在设备管理器中检查并更新驱动程序，或者从硬件厂商的官方网站下载新的驱动程序。</p>
-<p>\1. 右键单击<strong>“开始”</strong>菜单，然后选择<strong>“设备管理器”</strong>。</p>
-<p>\2. 选择你的硬盘，然后右键单击它并选择列表中的<strong>“更新驱动程序”</strong>。</p>
-</li>
-<li><p><strong>关闭开机时多余的启动项</strong></p>
-<p>现在很多软件安装完毕后都会自动添加到系统启动项里，开机后也会占用一部分的CPU进程，我们可以通过简单的设置关闭一些不必要的启动项目。</p>
-<p>\1. 在左下角搜索框输入<strong>任务管理器</strong>，点击<strong>回车</strong>进入任务管理器。</p>
-<img src="https://www.disktool.cn/content-center/images/images369/what-if-the-cpu-occupation-is-too-high-369/2.png" alt="进入任务管理器" style="width: 80%;" />
-
-<p>\2. 点击任务管理器窗口的<strong>启动</strong>选项，鼠标右键单击需要关闭启动的进程，在弹出的界面上点击<strong>禁用</strong>即可。</p>
-<img src="https://www.disktool.cn/content-center/images/images369/what-if-the-cpu-occupation-is-too-high-369/7.png" alt="禁用" style="width: 80%;" /></li>
+    <title>threeJs</title>
+    <url>/zh-CN/threejs/</url>
+    <content><![CDATA[<h4 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h4><ul>
+<li>地址：*<a href="http://www.webgl3d.cn/pages/aac9ab/">three.js</a>*</li>
 </ul>
-<p>如有不全，欢迎补充留言~</p>
+<span id="more"></span>
+
+<p>物理引擎cannon-es  <a href="https://pmndrs.github.io/cannon-es/docs/">https://pmndrs.github.io/cannon-es/docs/</a></p>
 ]]></content>
       <categories>
-        <category>Windows</category>
+        <category>webGL</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
+        <tag>threeJs</tag>
       </tags>
   </entry>
   <entry>
@@ -1033,38 +991,6 @@
       </categories>
       <tags>
         <tag>API</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端素材汇总</title>
-    <url>/zh-CN/%E7%B4%A0%E6%9D%90/</url>
-    <content><![CDATA[<ul>
-<li><p><em><a href="https://www.17sucai.com/">jQuery 网页特效最全网页模板和网站模板 jQuery 代码</a></em></p>
-</li>
-<li><p><em><a href="https://www.zcool.com.cn/work/ZMzI2MzUwOTY=.html">数据可视化设计 2018 总集_光影年年-站酷 ZCOOL</a></em></p>
-</li>
-</ul>
-<span id="more"></span>
-
-<h5 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h5><ul>
-<li><em><a href="https://animate.style/">animate.css</a></em> <em>+ <a href="https://github.com/graingert/wow">wowjs</a></em></li>
-</ul>
-<h5 id="图表"><a href="#图表" class="headerlink" title="图表"></a>图表</h5><ul>
-<li><p><em><a href="https://echarts.apache.org/zh/index.html">Apache ECharts</a></em></p>
-</li>
-<li><p><em><a href="https://www.makeapie.cn/echarts">makeapie echarts 社区图表可视化案例</a></em></p>
-</li>
-<li><p><em><a href="http://ppchart.com/#/">PPChart - 让图表更简单</a></em></p>
-</li>
-<li><p><em><a href="https://www.hcharts.cn/demo/highcharts">Highcharts</a></em></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>素材</tag>
       </tags>
   </entry>
   <entry>
@@ -1121,6 +1047,80 @@
       </categories>
       <tags>
         <tag>兼容性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决win10系统CPU占用过高</title>
+    <url>/zh-CN/windows/</url>
+    <content><![CDATA[<ul>
+<li><p><strong>关闭Windows Search</strong><br>控制面板–管理工具–服务- Windows Search禁用。</p>
+</li>
+<li><p><strong>禁用 Diagnostics Tracking Service和Connected User Experiences and Telemetry</strong><br>这个服务是用来服务跟踪诊断的，就是在咱们使用系统的时候不停地收集系统信息，是微软的一个搜集工具而已。在很多情况下，CPU的高占用率就是它搞的鬼。<br>win+R 运行 services.msc 进入服务，禁用Diagnostics Tracking Service ，若找不到这个服务的话那就是禁用Diagnostic Policy Service，然后禁用Connected User Experiences and Telemetry 就好。</p>
+</li>
+<li><p><strong>关闭允许后台运行的软件</strong><br>打开系统设置— 隐私 —后台应用 关闭不需要的应用即可 （大多数其实都没什么用可以直接关闭最上方按钮）</p>
+</li>
+<li><p><strong>关闭更新来自多个位置</strong><br>打开系统设置—更新和安全—Windows更新—高级选项—选择如何提供更新，将“更新来自多个位置”关闭即可</p>
+</li>
+<li><p><strong>关闭小娜</strong><br>使用组策略禁用Cortana<br>　　1、使用 Windows + R 快捷键打开「运行」— 执行 gpedit.msc 打开组策略编辑器。<br>　　2、导航到「计算机配置」—「管理模板」—「Windows <a href="https://edu.csdn.net/cloud/houjie?utm_source=highword&spm=1001.2101.3001.7020">组件</a>」—「搜索」。<br>　　3、在右侧面板中找到「允许使用 Cortana」条目，将其设置为「已禁用」即可。</p>
+<span id="more"></span>
+</li>
+<li><p><strong>修改处理器个数</strong></p>
+<p>\1. 同时按住<strong>Win+r</strong>打开运行框，输入<strong>msconfig</strong>指令，点击<strong>回车</strong>。</p>
+<p>\2. 点击<strong>引导</strong>，再点击<strong>高级选项</strong>。</p>
+<p>\3. 点击<strong>处理器个数</strong>下方的选项框，选择大的数字，再点击<strong>确定</strong>。</p>
+</li>
+<li><p><strong>更新驱动程序</strong></p>
+<p>过时的或不兼容的驱动程序可能导致CPU占用率升高。可以通过更新驱动程序来解决这个问题。可以在设备管理器中检查并更新驱动程序，或者从硬件厂商的官方网站下载新的驱动程序。</p>
+<p>\1. 右键单击<strong>“开始”</strong>菜单，然后选择<strong>“设备管理器”</strong>。</p>
+<p>\2. 选择你的硬盘，然后右键单击它并选择列表中的<strong>“更新驱动程序”</strong>。</p>
+</li>
+<li><p><strong>关闭开机时多余的启动项</strong></p>
+<p>现在很多软件安装完毕后都会自动添加到系统启动项里，开机后也会占用一部分的CPU进程，我们可以通过简单的设置关闭一些不必要的启动项目。</p>
+<p>\1. 在左下角搜索框输入<strong>任务管理器</strong>，点击<strong>回车</strong>进入任务管理器。</p>
+<img src="https://www.disktool.cn/content-center/images/images369/what-if-the-cpu-occupation-is-too-high-369/2.png" alt="进入任务管理器" style="width: 80%;" />
+
+<p>\2. 点击任务管理器窗口的<strong>启动</strong>选项，鼠标右键单击需要关闭启动的进程，在弹出的界面上点击<strong>禁用</strong>即可。</p>
+<img src="https://www.disktool.cn/content-center/images/images369/what-if-the-cpu-occupation-is-too-high-369/7.png" alt="禁用" style="width: 80%;" /></li>
+</ul>
+<p>如有不全，欢迎补充留言~</p>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端素材汇总</title>
+    <url>/zh-CN/%E7%B4%A0%E6%9D%90/</url>
+    <content><![CDATA[<ul>
+<li><p><em><a href="https://www.17sucai.com/">jQuery 网页特效最全网页模板和网站模板 jQuery 代码</a></em></p>
+</li>
+<li><p><em><a href="https://www.zcool.com.cn/work/ZMzI2MzUwOTY=.html">数据可视化设计 2018 总集_光影年年-站酷 ZCOOL</a></em></p>
+</li>
+</ul>
+<span id="more"></span>
+
+<h5 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h5><ul>
+<li><em><a href="https://animate.style/">animate.css</a></em> <em>+ <a href="https://github.com/graingert/wow">wowjs</a></em></li>
+</ul>
+<h5 id="图表"><a href="#图表" class="headerlink" title="图表"></a>图表</h5><ul>
+<li><p><em><a href="https://echarts.apache.org/zh/index.html">Apache ECharts</a></em></p>
+</li>
+<li><p><em><a href="https://www.makeapie.cn/echarts">makeapie echarts 社区图表可视化案例</a></em></p>
+</li>
+<li><p><em><a href="http://ppchart.com/#/">PPChart - 让图表更简单</a></em></p>
+</li>
+<li><p><em><a href="https://www.hcharts.cn/demo/highcharts">Highcharts</a></em></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>素材</tag>
       </tags>
   </entry>
 </search>
