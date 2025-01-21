@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Cursor AI编辑器</title>
+    <url>/zh-CN/Cursor%E7%BC%96%E8%BE%91%E5%99%A8/</url>
+    <content><![CDATA[<h5 id="Cursor"><a href="#Cursor" class="headerlink" title="Cursor"></a>Cursor</h5><p>链接地址：<a href="https://www.cursor.com/">https://www.cursor.com</a></p>
+<p>目前<u><em>v0.43.5</em></u>版本，新注册获取<code>Pro Trial</code> 15 days，到期续账号即可</p>
+<span id="more"></span>
+
+<p>途径如下</p>
+<p>1、<a href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x40;&#120;&#120;&#x78;&#x2e;&#x63;&#111;&#109;">&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x40;&#120;&#120;&#x78;&#x2e;&#x63;&#111;&#109;</a></p>
+<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#x65;&#120;&#x61;&#109;&#x70;&#x6c;&#101;&#x2b;&#49;&#x40;&#x78;&#x78;&#x78;&#46;&#x63;&#111;&#x6d;">&#x65;&#120;&#x61;&#109;&#x70;&#x6c;&#101;&#x2b;&#49;&#x40;&#x78;&#x78;&#x78;&#46;&#x63;&#111;&#x6d;</a>&#x2F;<a href="mailto:&#x65;&#120;&#x61;&#109;&#112;&#x6c;&#101;&#43;&#x32;&#64;&#120;&#x78;&#x78;&#x2e;&#99;&#111;&#x6d;">&#x65;&#120;&#x61;&#109;&#112;&#x6c;&#101;&#43;&#x32;&#64;&#120;&#x78;&#x78;&#x2e;&#99;&#111;&#x6d;</a>…</p>
+<h5 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h5><p><strong>Premium models   0 &#x2F; 500</strong></p>
+<p>You’ve used no requests out of your <strong>500</strong> fast requests quota.</p>
+<p><strong>gpt-4o-mini or cursor-small   0 &#x2F; No Limit</strong></p>
+<p>You’ve used <strong>0</strong> fast requests of this model. You have no monthly quota.</p>
+<ul>
+<li><h5 id="解决-Cursor-Too-many-free-trial-accounts-used-on-this-machine-Please-upgrade-to-pro"><a href="#解决-Cursor-Too-many-free-trial-accounts-used-on-this-machine-Please-upgrade-to-pro" class="headerlink" title="解决 Cursor Too many free trial accounts used on this machine. Please upgrade to pro."></a>解决 Cursor Too many free trial accounts used on this machine. Please upgrade to pro.</h5><p>同一个机器码只能试用3个账号，手动更改&#x2F;插件更改即可。提供一个插件：</p>
+<p><a href="https://github.com/bestK/cursor-fake-machine/releases/download/v0.0.1/cursor-fake-machine-0.0.1.vsix">https://github.com/bestK/cursor-fake-machine/releases/download/v0.0.1/cursor-fake-machine-0.0.1.vsix</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JSON（JavaScript Object Notation）</title>
     <url>/zh-CN/JSON/</url>
     <content><![CDATA[<h5 id="JSON（JavaScript-Object-Notation）"><a href="#JSON（JavaScript-Object-Notation）" class="headerlink" title="JSON（JavaScript Object Notation）"></a>JSON（JavaScript Object Notation）</h5><p>是一种轻量级的数据交换格式，因其简洁、易读、易于解析的特点，在前后端数据交互、API 设计、配置文件等领域广泛应用。下面是使用 JSON 传输数据的优缺点：</p>
@@ -38,86 +65,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Cursor AI编辑器</title>
-    <url>/zh-CN/Cursor%E7%BC%96%E8%BE%91%E5%99%A8/</url>
-    <content><![CDATA[<h5 id="Cursor"><a href="#Cursor" class="headerlink" title="Cursor"></a>Cursor</h5><p>链接地址：<a href="https://www.cursor.com/">https://www.cursor.com</a></p>
-<p>目前<u><em>v0.43.5</em></u>版本，新注册获取<code>Pro Trial</code> 15 days，到期续账号即可</p>
-<span id="more"></span>
-
-<p>途径如下</p>
-<p>1、<a href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#x40;&#120;&#x78;&#x78;&#46;&#x63;&#x6f;&#x6d;">&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#x40;&#120;&#x78;&#x78;&#46;&#x63;&#x6f;&#x6d;</a></p>
-<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#101;&#x78;&#97;&#109;&#112;&#x6c;&#101;&#x2b;&#49;&#64;&#120;&#x78;&#x78;&#x2e;&#x63;&#111;&#x6d;">&#101;&#x78;&#97;&#109;&#112;&#x6c;&#101;&#x2b;&#49;&#64;&#120;&#x78;&#x78;&#x2e;&#x63;&#111;&#x6d;</a>&#x2F;<a href="mailto:&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#43;&#x32;&#64;&#120;&#120;&#x78;&#x2e;&#99;&#111;&#109;">&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#43;&#x32;&#64;&#120;&#120;&#x78;&#x2e;&#99;&#111;&#109;</a>…</p>
-<h5 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h5><p><strong>Premium models   0 &#x2F; 500</strong></p>
-<p>You’ve used no requests out of your <strong>500</strong> fast requests quota.</p>
-<p><strong>gpt-4o-mini or cursor-small   0 &#x2F; No Limit</strong></p>
-<p>You’ve used <strong>0</strong> fast requests of this model. You have no monthly quota.</p>
-<ul>
-<li><h5 id="解决-Cursor-Too-many-free-trial-accounts-used-on-this-machine-Please-upgrade-to-pro"><a href="#解决-Cursor-Too-many-free-trial-accounts-used-on-this-machine-Please-upgrade-to-pro" class="headerlink" title="解决 Cursor Too many free trial accounts used on this machine. Please upgrade to pro."></a>解决 Cursor Too many free trial accounts used on this machine. Please upgrade to pro.</h5><p>同一个机器码只能试用3个账号，手动更改&#x2F;插件更改即可。提供一个插件：</p>
-<p><a href="https://github.com/bestK/cursor-fake-machine/releases/download/v0.0.1/cursor-fake-machine-0.0.1.vsix">https://github.com/bestK/cursor-fake-machine/releases/download/v0.0.1/cursor-fake-machine-0.0.1.vsix</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vue SSR服务端渲染</title>
-    <url>/zh-CN/SSR/</url>
-    <content><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>服务器端渲染（Server-Side Rendering，简称 SSR）是指在服务器端生成 HTML 内容并发送到客户端的过程。与客户端渲染（Client-Side Rendering，简称 CSR）相比，SSR 可以提高首屏加载速度和 SEO 友好性。<br>如需更高级的集成框架可以使用nuxtjs</p>
-<h3 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">my-ssr-app/</span><br><span class="line">├── dist/                      # 构建输出目录</span><br><span class="line">├── public/                    # 公共资源目录</span><br><span class="line">│   └── index.html             # HTML 模板</span><br><span class="line">├── src/                       # 源代码目录</span><br><span class="line">│   ├── entry-client.js        # 客户端入口文件</span><br><span class="line">│   ├── entry-server.js        # 服务器端入口文件</span><br><span class="line">|   └── main.js</span><br><span class="line">├── package.json               # 项目配置文件</span><br><span class="line">├── server.js                  # Express 服务器配置</span><br><span class="line">└── vue.config.js   					 # Webpack 服务器端配置</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h2 id="构造流程"><a href="#构造流程" class="headerlink" title="构造流程"></a>构造流程</h2><h3 id="1-安装必要的依赖"><a href="#1-安装必要的依赖" class="headerlink" title="1. 安装必要的依赖"></a>1. 安装必要的依赖</h3><p>SSR 需要一些额外的依赖包，如 <code>@vue/server-renderer</code> 和 <code>express</code>。在项目根目录下运行以下命令安装这些依赖：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install @vue/server-renderer express webpack-manifest-plugin webpack-node-externals --save-dev</span><br></pre></td></tr></table></figure>
-
-<p>相关版本：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;@vue/cli-service&quot;: &quot;~5.0.0&quot;,</span><br><span class="line">&quot;express&quot;: &quot;^4.21.2&quot;,</span><br><span class="line">&quot;@vue/server-renderer&quot;: &quot;^3.5.13&quot;,</span><br><span class="line">&quot;webpack-manifest-plugin&quot;: &quot;^5.0.0&quot;,</span><br><span class="line">&quot;webpack-node-externals&quot;: &quot;^3.0.0&quot;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-配置-Webpack"><a href="#2-配置-Webpack" class="headerlink" title="2. 配置 Webpack"></a>2. 配置 Webpack</h3><p>SSR 需要两个 Webpack 配置：一个用于客户端打包，另一个用于服务器端打包。服务器端需要输出node环境的编译输出，为了拿到对应入口的路径，需要借助WebpackManifestPlugin形成映射表。</p>
-<h4 id="vue-config-js"><a href="#vue-config-js" class="headerlink" title="vue.config.js"></a>vue.config.js</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const path = require(&quot;path&quot;);</span><br><span class="line">const webpackNodeExternals = require(&quot;webpack-node-externals&quot;);</span><br><span class="line">const &#123; CleanWebpackPlugin &#125; = require(&quot;clean-webpack-plugin&quot;);</span><br><span class="line">const &#123; WebpackManifestPlugin &#125; = require(&quot;webpack-manifest-plugin&quot;);</span><br><span class="line"></span><br><span class="line">let SSR = process.env.SSR;</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  outputDir: SSR ? &quot;dist/server&quot; : &quot;dist/client&quot;,</span><br><span class="line">  configureWebpack: (config) =&gt; &#123;</span><br><span class="line">    if (SSR) &#123;</span><br><span class="line">      // 服务器端打包配置</span><br><span class="line">      return &#123;</span><br><span class="line">        entry: &quot;./src/entry-server.js&quot;,</span><br><span class="line">        target: &quot;node&quot;,</span><br><span class="line">        output: &#123;</span><br><span class="line">          libraryTarget: &quot;commonjs2&quot;,</span><br><span class="line">        &#125;,</span><br><span class="line">        externals: [webpackNodeExternals(&#123; allowlist: /\.(css|vue)$/ &#125;)],</span><br><span class="line">        plugins: [</span><br><span class="line">          new CleanWebpackPlugin(),</span><br><span class="line">          new WebpackManifestPlugin(&#123; fileName: &quot;ssr-manifest.json&quot; &#125;),</span><br><span class="line">        ],</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      // 客户端打包配置</span><br><span class="line">      return &#123;</span><br><span class="line">        entry: &quot;./src/entry-client.js&quot;,</span><br><span class="line">        plugins: [</span><br><span class="line">          new CleanWebpackPlugin(),</span><br><span class="line">        ],</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-改造main-js"><a href="#3-改造main-js" class="headerlink" title="3.  改造main.js"></a>3.  改造main.js</h3><p>main文件不再直接挂载vue实例，改造为方法提供给客户端、服务端渲染调用。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123; createSSRApp &#125; from &quot;vue&quot;;</span><br><span class="line">import App from &quot;./App.vue&quot;;</span><br><span class="line">import &#123; createRouter, createWebHistory, createMemoryHistory &#125; from &quot;vue-router&quot;;</span><br><span class="line">import routes from &quot;./router&quot;;</span><br><span class="line">import &#123; createStoreInstance &#125; from &quot;./store&quot;;</span><br><span class="line"></span><br><span class="line">export function createApp() &#123;</span><br><span class="line">  const SSR = typeof window === &quot;undefined&quot;;</span><br><span class="line">  const history = SSR ? createMemoryHistory() : createWebHistory();</span><br><span class="line">  const router = createRouter(&#123; history, routes &#125;);</span><br><span class="line">  const store = createStoreInstance();</span><br><span class="line"></span><br><span class="line">  const app = createSSRApp(App);</span><br><span class="line">  app.use(router);</span><br><span class="line">  app.use(store);</span><br><span class="line"></span><br><span class="line">  return &#123; app, router, store &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-创建入口文件"><a href="#4-创建入口文件" class="headerlink" title="4. 创建入口文件"></a>4. 创建入口文件</h3><p>创建两个入口文件：<code>entry-client.js</code> 和 <code>entry-server.js</code>。</p>
-<h4 id="entry-client-js"><a href="#entry-client-js" class="headerlink" title="entry-client.js"></a>entry-client.js</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123; createApp &#125; from &quot;./main&quot;;</span><br><span class="line"></span><br><span class="line">const &#123; app, router, store &#125; = createApp();</span><br><span class="line"></span><br><span class="line">if (window.__INITIAL_STATE__) &#123;</span><br><span class="line">  store.replaceState(window.__INITIAL_STATE__);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">router.isReady().then(() =&gt; &#123;</span><br><span class="line">  app.mount(&quot;#app&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h4 id="entry-server-js"><a href="#entry-server-js" class="headerlink" title="entry-server.js"></a>entry-server.js</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123; createApp &#125; from &quot;./main&quot;;</span><br><span class="line"></span><br><span class="line">export default function render () &#123;</span><br><span class="line">  const &#123; app, router, store &#125; = createApp();</span><br><span class="line"></span><br><span class="line">  return &#123;</span><br><span class="line">    app,</span><br><span class="line">    router,</span><br><span class="line">    store,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-创建服务器"><a href="#5-创建服务器" class="headerlink" title="5. 创建服务器"></a>5. 创建服务器</h3><p>创建 <code>server.js</code> 文件，用于设置 Express 服务器：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const express = require(&quot;express&quot;);</span><br><span class="line">const fs = require(&quot;fs&quot;);</span><br><span class="line">const path = require(&quot;path&quot;);</span><br><span class="line">const &#123; renderToString &#125; = require(&quot;@vue/server-renderer&quot;);</span><br><span class="line">const manifest = require(&quot;./dist/server/ssr-manifest.json&quot;);</span><br><span class="line"></span><br><span class="line">const server = express();</span><br><span class="line">const entry = path.join(__dirname, &quot;./dist&quot;, &quot;server&quot;, manifest[&quot;main.js&quot;]);</span><br><span class="line">const render = require(entry).default;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 1.使用 server.use(express.static(path.join(__dirname, &#x27;./dist/client&#x27;))); 会导致所有请求路径都被静态文件中间件处理，从而可能跳过服务器端渲染逻辑。</span><br><span class="line"> * 2.通过细粒度的静态文件服务配置，或者在配置静态文件服务时排除应用程序的路由，可以确保服务器端渲染逻辑（包括 asyncData 的触发）能够正常工作。</span><br><span class="line"> */</span><br><span class="line">server.use(</span><br><span class="line">  &quot;/img&quot;,</span><br><span class="line">  express.static(path.join(__dirname, &quot;./dist/client&quot;, &quot;img&quot;))</span><br><span class="line">);</span><br><span class="line">server.use(&quot;/js&quot;, express.static(path.join(__dirname, &quot;./dist/client&quot;, &quot;js&quot;)));</span><br><span class="line">server.use(</span><br><span class="line">  &quot;/css&quot;,</span><br><span class="line">  express.static(path.join(__dirname, &quot;./dist/client&quot;, &quot;css&quot;))</span><br><span class="line">);</span><br><span class="line">server.use(</span><br><span class="line">  &quot;/favicon.ico&quot;,</span><br><span class="line">  express.static(path.join(__dirname, &quot;./dist/client&quot;, &quot;favicon.ico&quot;))</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">server.get(&quot;*&quot;, async (req, res) =&gt; &#123;</span><br><span class="line">  const &#123; app, router, store &#125; = render();</span><br><span class="line">  router.push(req.url);</span><br><span class="line">  await router.isReady();</span><br><span class="line"></span><br><span class="line">  try &#123;</span><br><span class="line">    const matchedComponents = router.currentRoute.value.matched;</span><br><span class="line">    // console.log(1, matchedComponents);</span><br><span class="line">    // 主动触发所有匹配组件的 asyncData 函数</span><br><span class="line">    await Promise.all(</span><br><span class="line">      matchedComponents.map((Component) =&gt; &#123;</span><br><span class="line">        console.log(2, Component);</span><br><span class="line">        if (Component.components.default.methods.asyncData) &#123;</span><br><span class="line">          return Component.components.default.methods.asyncData(&#123;</span><br><span class="line">            app,</span><br><span class="line">            router,</span><br><span class="line">            store,</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    const appContent = await renderToString(app);</span><br><span class="line"></span><br><span class="line">    fs.readFile(</span><br><span class="line">      path.join(__dirname, &quot;./dist/client/index.html&quot;),</span><br><span class="line">      (err, html) =&gt; &#123;</span><br><span class="line">        if (err) &#123;</span><br><span class="line">          throw err;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        html = html</span><br><span class="line">          .toString()</span><br><span class="line">          .replace(&#x27;&lt;div id=&quot;app&quot;&gt;&#x27;, `&lt;div id=&quot;app&quot;&gt;$&#123;appContent&#125;`)</span><br><span class="line">          .replace(</span><br><span class="line">            &quot;&lt;/script&gt;&quot;,</span><br><span class="line">            `&lt;/script&gt;&lt;script type=&quot;application/javascript&quot;&gt;window.__INITIAL_STATE__=$&#123;JSON.stringify(</span><br><span class="line">              store.state</span><br><span class="line">            )&#125;&lt;/script&gt;`</span><br><span class="line">          );</span><br><span class="line">        res.setHeader(&quot;Content-Type&quot;, &quot;text/html&quot;);</span><br><span class="line">        res.send(html);</span><br><span class="line">      &#125;</span><br><span class="line">    );</span><br><span class="line">  &#125; catch (err) &#123;</span><br><span class="line">    if (err.code === 404) &#123;</span><br><span class="line">      res.status(404).end(&quot;Page not found&quot;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      res.status(500).end(&quot;Internal Server Error&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.listen(8080, () =&gt; &#123;</span><br><span class="line">  console.log(&quot;Server is running at http://localhost:8080&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-构建和运行"><a href="#6-构建和运行" class="headerlink" title="6. 构建和运行"></a>6. 构建和运行</h3><p>在 <code>package.json</code> 中添加构建和启动脚本：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;build:client&quot;: &quot;vue-cli-service build&quot;,</span><br><span class="line">    &quot;build:server&quot;: &quot;cross-env SSR=1 vue-cli-service build&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;npm run build:client &amp;&amp; npm run build:server&quot;,</span><br><span class="line">    &quot;start&quot;: &quot;node server.js&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行以下命令构建项目并启动服务器：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm run build</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
-
-<p>访问 <code>http://localhost:8080</code>，你将看到服务器端渲染的 Vue 应用。</p>
-<h2 id="SSR优缺点"><a href="#SSR优缺点" class="headerlink" title="SSR优缺点"></a>SSR优缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol>
-<li><strong>更快的首屏加载速度</strong>：SSR 可以在服务器端生成完整的 HTML 页面，减少客户端渲染的时间，从而提高首屏加载速度。</li>
-<li><strong>更好的 SEO</strong>：搜索引擎可以更好地抓取和索引服务器端渲染的内容，从而提高 SEO 友好性。</li>
-<li><strong>更好的用户体验</strong>：SSR 可以在用户请求页面时立即返回完整的 HTML 内容，减少白屏时间，提高用户体验。</li>
-</ol>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ol>
-<li><strong>更复杂的配置</strong>：SSR 需要额外的 Webpack 配置和服务器端代码，增加了项目的复杂性。</li>
-<li><strong>更高的服务器负载</strong>：服务器需要处理更多的渲染任务，可能会增加服务器的负载。</li>
-<li><strong>开发调试困难</strong>：SSR 的调试和开发相对复杂，需要处理更多的边界情况和错误。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>vue</category>
-      </categories>
-      <tags>
-        <tag>SSR</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>WebWorker</title>
     <url>/zh-CN/WebWorker/</url>
     <content><![CDATA[<p>代码示例</p>
@@ -152,31 +99,6 @@
       </categories>
       <tags>
         <tag>BUG</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSS样式效果</title>
-    <url>/zh-CN/css/</url>
-    <content><![CDATA[<ul>
-<li><h5 id="background-渐变色、图片叠加"><a href="#background-渐变色、图片叠加" class="headerlink" title="background 渐变色、图片叠加"></a>background 渐变色、图片叠加</h5><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 使用,间隔 需要渐变色置后</span><br><span class="line"><span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">static/images/xxx.png</span>) no-repeat center center, <span class="built_in">linear-gradient</span>(<span class="number">105deg</span>, <span class="number">#F8FCFF</span> <span class="number">0%</span>, <span class="number">#C4CBD5</span> <span class="number">100%</span>);</span><br></pre></td></tr></table></figure></li>
-</ul>
-<span id="more"></span>
-
-<ul>
-<li><h5 id="断线边框动画"><a href="#断线边框动画" class="headerlink" title="断线边框动画"></a>断线边框动画</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> run &#123;</span><br><span class="line">  <span class="number">0%</span>,</span><br><span class="line">  <span class="number">100%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0px</span>, <span class="number">220px</span>, <span class="number">2px</span>, <span class="number">0px</span>);</span><br><span class="line">    <span class="comment">/*初始和结束状态:上边线条*/</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="number">25%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0px</span>, <span class="number">2px</span>, <span class="number">220px</span>, <span class="number">0px</span>);</span><br><span class="line">    <span class="comment">/*左边线条*/</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="number">50%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">218px</span>, <span class="number">220px</span>, <span class="number">220px</span>, <span class="number">0px</span>);</span><br><span class="line">    <span class="comment">/*底边线条*/</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="number">75%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0px</span>, <span class="number">220px</span>, <span class="number">220px</span>, <span class="number">218px</span>);</span><br><span class="line">    <span class="comment">/*右边线条*/</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">10</span>, <span class="number">150</span>, <span class="number">220</span>, <span class="number">1</span>);</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">50px</span> auto;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">&amp;</span><span class="selector-pseudo">::after</span>,</span><br><span class="line">  <span class="selector-tag">&amp;</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">220px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">220px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>);</span><br><span class="line">    <span class="comment">/*内阴影 inset*/</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: -<span class="number">10px</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设计CLIP:</span></span><br><span class="line">    <span class="comment">//  clip:rect(上边起始的距离 ,  自左道右的距离,  自上到下的距离,  左边起始的距离)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 开始0% ： 裁剪保留上边部分*/</span></span><br><span class="line">    <span class="comment">/* clip: rect(0px, 220px, 2px, 0px); */</span></span><br><span class="line">    <span class="comment">/* 25% ： 裁剪保留左边部分*/</span></span><br><span class="line">    <span class="comment">/* clip: rect(0px, 2px, 220px, 0px); */</span></span><br><span class="line">    <span class="comment">/* 50% ： 裁剪保留底边部分*/</span></span><br><span class="line">    <span class="comment">/* clip: rect(218px, 220px, 220px, 0px); */</span></span><br><span class="line">    <span class="comment">/*  75% ： 裁剪保留右边部分 */</span></span><br><span class="line">    <span class="comment">/* clip: rect(0px, 220px, 220px, 218px); */</span></span><br><span class="line">    <span class="comment">/* 结束100% ： 回到原点 裁剪保留上边部分*/</span></span><br><span class="line">    <span class="comment">/* clip: rect(0px, 220px, 2px, 0px); */</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">animation</span>: run <span class="number">6s</span> linear infinite;</span><br><span class="line">    <span class="comment">/*应用动画run 匀速运动  重复执行*/</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">&amp;</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">animation-delay</span>: <span class="number">3s</span>;</span><br><span class="line">    <span class="comment">/*让before 比after 慢3秒,总时间6秒,这样就形成对角线动画效果*/</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><h5 id="滚动显示"><a href="#滚动显示" class="headerlink" title="滚动显示"></a>滚动显示</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;clip-txt&quot;</span>&gt;</span>稍等~稍等等~~稍等~~~~马上出现！ -done！<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> clipTxt &#123;</span><br><span class="line">  <span class="number">0%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0px</span>, <span class="number">0px</span>, <span class="number">30px</span>, <span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">100%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0px</span>, <span class="number">200px</span>, <span class="number">30px</span>, <span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clip-txt</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>);</span><br><span class="line">  <span class="attribute">animation</span>: clipTxt <span class="number">5s</span> infinite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
@@ -554,6 +476,31 @@
       </tags>
   </entry>
   <entry>
+    <title>CSS样式效果</title>
+    <url>/zh-CN/css/</url>
+    <content><![CDATA[<ul>
+<li><h5 id="background-渐变色、图片叠加"><a href="#background-渐变色、图片叠加" class="headerlink" title="background 渐变色、图片叠加"></a>background 渐变色、图片叠加</h5><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 使用,间隔 需要渐变色置后</span><br><span class="line"><span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">static/images/xxx.png</span>) no-repeat center center, <span class="built_in">linear-gradient</span>(<span class="number">105deg</span>, <span class="number">#F8FCFF</span> <span class="number">0%</span>, <span class="number">#C4CBD5</span> <span class="number">100%</span>);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li><h5 id="断线边框动画"><a href="#断线边框动画" class="headerlink" title="断线边框动画"></a>断线边框动画</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> run &#123;</span><br><span class="line">  <span class="number">0%</span>,</span><br><span class="line">  <span class="number">100%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0px</span>, <span class="number">220px</span>, <span class="number">2px</span>, <span class="number">0px</span>);</span><br><span class="line">    <span class="comment">/*初始和结束状态:上边线条*/</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="number">25%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0px</span>, <span class="number">2px</span>, <span class="number">220px</span>, <span class="number">0px</span>);</span><br><span class="line">    <span class="comment">/*左边线条*/</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="number">50%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">218px</span>, <span class="number">220px</span>, <span class="number">220px</span>, <span class="number">0px</span>);</span><br><span class="line">    <span class="comment">/*底边线条*/</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="number">75%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0px</span>, <span class="number">220px</span>, <span class="number">220px</span>, <span class="number">218px</span>);</span><br><span class="line">    <span class="comment">/*右边线条*/</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">10</span>, <span class="number">150</span>, <span class="number">220</span>, <span class="number">1</span>);</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">50px</span> auto;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">&amp;</span><span class="selector-pseudo">::after</span>,</span><br><span class="line">  <span class="selector-tag">&amp;</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">220px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">220px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>);</span><br><span class="line">    <span class="comment">/*内阴影 inset*/</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: -<span class="number">10px</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设计CLIP:</span></span><br><span class="line">    <span class="comment">//  clip:rect(上边起始的距离 ,  自左道右的距离,  自上到下的距离,  左边起始的距离)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* 开始0% ： 裁剪保留上边部分*/</span></span><br><span class="line">    <span class="comment">/* clip: rect(0px, 220px, 2px, 0px); */</span></span><br><span class="line">    <span class="comment">/* 25% ： 裁剪保留左边部分*/</span></span><br><span class="line">    <span class="comment">/* clip: rect(0px, 2px, 220px, 0px); */</span></span><br><span class="line">    <span class="comment">/* 50% ： 裁剪保留底边部分*/</span></span><br><span class="line">    <span class="comment">/* clip: rect(218px, 220px, 220px, 0px); */</span></span><br><span class="line">    <span class="comment">/*  75% ： 裁剪保留右边部分 */</span></span><br><span class="line">    <span class="comment">/* clip: rect(0px, 220px, 220px, 218px); */</span></span><br><span class="line">    <span class="comment">/* 结束100% ： 回到原点 裁剪保留上边部分*/</span></span><br><span class="line">    <span class="comment">/* clip: rect(0px, 220px, 2px, 0px); */</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">animation</span>: run <span class="number">6s</span> linear infinite;</span><br><span class="line">    <span class="comment">/*应用动画run 匀速运动  重复执行*/</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="selector-tag">&amp;</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">animation-delay</span>: <span class="number">3s</span>;</span><br><span class="line">    <span class="comment">/*让before 比after 慢3秒,总时间6秒,这样就形成对角线动画效果*/</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="滚动显示"><a href="#滚动显示" class="headerlink" title="滚动显示"></a>滚动显示</h5><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;clip-txt&quot;</span>&gt;</span>稍等~稍等等~~稍等~~~~马上出现！ -done！<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> clipTxt &#123;</span><br><span class="line">  <span class="number">0%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0px</span>, <span class="number">0px</span>, <span class="number">30px</span>, <span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="number">100%</span> &#123;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0px</span>, <span class="number">200px</span>, <span class="number">30px</span>, <span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clip-txt</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>);</span><br><span class="line">  <span class="attribute">animation</span>: clipTxt <span class="number">5s</span> infinite;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>移动端问题</title>
     <url>/zh-CN/mobile/</url>
     <content><![CDATA[<ul>
@@ -836,6 +783,23 @@
       </tags>
   </entry>
   <entry>
+    <title>threeJs</title>
+    <url>/zh-CN/threejs/</url>
+    <content><![CDATA[<h4 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h4><ul>
+<li>地址：*<a href="http://www.webgl3d.cn/pages/aac9ab/">three.js</a>*</li>
+</ul>
+<span id="more"></span>
+
+<p>物理引擎cannon-es  <a href="https://pmndrs.github.io/cannon-es/docs/">https://pmndrs.github.io/cannon-es/docs/</a></p>
+]]></content>
+      <categories>
+        <category>webGL</category>
+      </categories>
+      <tags>
+        <tag>threeJs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>el-table跨行跨列API设计</title>
     <url>/zh-CN/table/</url>
     <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>使用el-table做跨行跨列表格渲染，接口数据格式为对象数组，即需从对象中提取columns，且需要设置对应的跨行跨列关系。为此要实现一种更优雅的构造方法，即<strong>配置化跨行跨列动态渲染</strong>。<br>基于element-ui v2.4.11版本，实现对于该版本表格组件，跨行跨列的构造方法可以通过arraySpanMethod构造，由于笔者使用的是vue2写法，vue3雷同使用。</p>
@@ -873,23 +837,6 @@
       <tags>
         <tag>API</tag>
         <tag>Element-UI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>threeJs</title>
-    <url>/zh-CN/threejs/</url>
-    <content><![CDATA[<h4 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h4><ul>
-<li>地址：*<a href="http://www.webgl3d.cn/pages/aac9ab/">three.js</a>*</li>
-</ul>
-<span id="more"></span>
-
-<p>物理引擎cannon-es  <a href="https://pmndrs.github.io/cannon-es/docs/">https://pmndrs.github.io/cannon-es/docs/</a></p>
-]]></content>
-      <categories>
-        <category>webGL</category>
-      </categories>
-      <tags>
-        <tag>threeJs</tag>
       </tags>
   </entry>
   <entry>
@@ -994,38 +941,6 @@
       </tags>
   </entry>
   <entry>
-    <title>前端兼容性问题</title>
-    <url>/zh-CN/%E7%A7%BB%E5%8A%A8%E7%AB%AF/</url>
-    <content><![CDATA[<ul>
-<li><code>Autoprefixer</code>自动添加浏览器前缀插件，属于后处理程序，不像 Sass 以及 Stylus 之类的预处理器。它适用于普通的 CSS，可以实现css3代码自动补全。也可以轻松跟 Sass，LESS及Stylus集成，在CSS编译前或编译后运行。</li>
-</ul>
-<span id="more"></span>
-
-<ul>
-<li><p>ant-design table树结构折叠图标火狐浏览器内显示错误</p>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这种写法仅火狐识别</span></span><br><span class="line"><span class="variable">@-moz-document</span> <span class="built_in">url-prefix</span>() &#123;</span><br><span class="line">  <span class="selector-class">.surely-table-row-expand-icon</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><h5 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a><a href="https://www.chromium.org/">Chromium</a></h5><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*滚动条整体粗细样式*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="comment">/*高宽分别对应横竖滚动条的尺寸*/</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条里面小方块*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="comment">/* 颜色 */</span></span><br><span class="line">  <span class="comment">/* background:#b6b6b6!important; */</span></span><br><span class="line">  <span class="comment">/* 线性渐变背景 */</span></span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(</span><br><span class="line">    <span class="number">45deg</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">25%</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">25%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">25%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">50%</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">50%</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">75%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">75%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">100%</span></span><br><span class="line">  ) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#1175c2</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条轨道*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-track</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#ededed</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条角落*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-corner</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h5><p>scrollbar-width</p>
-<p>scrollbar-color</p>
-<h5 id="IE"><a href="#IE" class="headerlink" title="IE"></a>IE</h5><p>scrollbar-base-color</p>
-<p>scrollbar-track-color</p>
-<p>scrollbar-arrow-color</p>
-<p>scrollbar-3dlight-color</p>
-<p>scrollbar-shadow-color</p>
-<p>scrollbar-highlight-color</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>兼容性</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决win10系统CPU占用过高</title>
     <url>/zh-CN/windows/</url>
     <content><![CDATA[<ul>
@@ -1065,6 +980,91 @@
       </categories>
       <tags>
         <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue SSR服务端渲染</title>
+    <url>/zh-CN/SSR/</url>
+    <content><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>服务器端渲染（Server-Side Rendering，简称 SSR）是指在服务器端生成 HTML 内容并发送到客户端的过程。与客户端渲染（Client-Side Rendering，简称 CSR）相比，SSR 可以提高首屏加载速度和 SEO 友好性。<br>如需更高级的集成框架可以使用nuxtjs</p>
+<h3 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">my-ssr-app/</span><br><span class="line">├── dist/                      # 构建输出目录</span><br><span class="line">├── public/                    # 公共资源目录</span><br><span class="line">│   └── index.html             # HTML 模板</span><br><span class="line">├── src/                       # 源代码目录</span><br><span class="line">│   ├── entry-client.js        # 客户端入口文件</span><br><span class="line">│   ├── entry-server.js        # 服务器端入口文件</span><br><span class="line">|   └── main.js</span><br><span class="line">├── package.json               # 项目配置文件</span><br><span class="line">├── server.js                  # Express 服务器配置</span><br><span class="line">└── vue.config.js   					 # Webpack 服务器端配置</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="构造流程"><a href="#构造流程" class="headerlink" title="构造流程"></a>构造流程</h2><h3 id="1-安装必要的依赖"><a href="#1-安装必要的依赖" class="headerlink" title="1. 安装必要的依赖"></a>1. 安装必要的依赖</h3><p>SSR 需要一些额外的依赖包，如 <code>@vue/server-renderer</code> 和 <code>express</code>。在项目根目录下运行以下命令安装这些依赖：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install @vue/server-renderer express webpack-manifest-plugin webpack-node-externals --save-dev</span><br></pre></td></tr></table></figure>
+
+<p>相关版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;@vue/cli-service&quot;: &quot;~5.0.0&quot;,</span><br><span class="line">&quot;express&quot;: &quot;^4.21.2&quot;,</span><br><span class="line">&quot;@vue/server-renderer&quot;: &quot;^3.5.13&quot;,</span><br><span class="line">&quot;webpack-manifest-plugin&quot;: &quot;^5.0.0&quot;,</span><br><span class="line">&quot;webpack-node-externals&quot;: &quot;^3.0.0&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-配置-Webpack"><a href="#2-配置-Webpack" class="headerlink" title="2. 配置 Webpack"></a>2. 配置 Webpack</h3><p>SSR 需要两个 Webpack 配置：一个用于客户端打包，另一个用于服务器端打包。服务器端需要输出node环境的编译输出，为了拿到对应入口的路径，需要借助WebpackManifestPlugin形成映射表。</p>
+<h4 id="vue-config-js"><a href="#vue-config-js" class="headerlink" title="vue.config.js"></a>vue.config.js</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const path = require(&quot;path&quot;);</span><br><span class="line">const webpackNodeExternals = require(&quot;webpack-node-externals&quot;);</span><br><span class="line">const &#123; CleanWebpackPlugin &#125; = require(&quot;clean-webpack-plugin&quot;);</span><br><span class="line">const &#123; WebpackManifestPlugin &#125; = require(&quot;webpack-manifest-plugin&quot;);</span><br><span class="line"></span><br><span class="line">let SSR = process.env.SSR;</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  outputDir: SSR ? &quot;dist/server&quot; : &quot;dist/client&quot;,</span><br><span class="line">  configureWebpack: (config) =&gt; &#123;</span><br><span class="line">    if (SSR) &#123;</span><br><span class="line">      // 服务器端打包配置</span><br><span class="line">      return &#123;</span><br><span class="line">        entry: &quot;./src/entry-server.js&quot;,</span><br><span class="line">        target: &quot;node&quot;,</span><br><span class="line">        output: &#123;</span><br><span class="line">          libraryTarget: &quot;commonjs2&quot;,</span><br><span class="line">        &#125;,</span><br><span class="line">        externals: [webpackNodeExternals(&#123; allowlist: /\.(css|vue)$/ &#125;)],</span><br><span class="line">        plugins: [</span><br><span class="line">          new CleanWebpackPlugin(),</span><br><span class="line">          new WebpackManifestPlugin(&#123; fileName: &quot;ssr-manifest.json&quot; &#125;),</span><br><span class="line">        ],</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      // 客户端打包配置</span><br><span class="line">      return &#123;</span><br><span class="line">        entry: &quot;./src/entry-client.js&quot;,</span><br><span class="line">        plugins: [</span><br><span class="line">          new CleanWebpackPlugin(),</span><br><span class="line">        ],</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-改造main-js"><a href="#3-改造main-js" class="headerlink" title="3.  改造main.js"></a>3.  改造main.js</h3><p>main文件不再直接挂载vue实例，改造为方法提供给客户端、服务端渲染调用。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123; createSSRApp &#125; from &quot;vue&quot;;</span><br><span class="line">import App from &quot;./App.vue&quot;;</span><br><span class="line">import &#123; createRouter, createWebHistory, createMemoryHistory &#125; from &quot;vue-router&quot;;</span><br><span class="line">import routes from &quot;./router&quot;;</span><br><span class="line">import &#123; createStoreInstance &#125; from &quot;./store&quot;;</span><br><span class="line"></span><br><span class="line">export function createApp() &#123;</span><br><span class="line">  const SSR = typeof window === &quot;undefined&quot;;</span><br><span class="line">  const history = SSR ? createMemoryHistory() : createWebHistory();</span><br><span class="line">  const router = createRouter(&#123; history, routes &#125;);</span><br><span class="line">  const store = createStoreInstance();</span><br><span class="line"></span><br><span class="line">  const app = createSSRApp(App);</span><br><span class="line">  app.use(router);</span><br><span class="line">  app.use(store);</span><br><span class="line"></span><br><span class="line">  return &#123; app, router, store &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-创建入口文件"><a href="#4-创建入口文件" class="headerlink" title="4. 创建入口文件"></a>4. 创建入口文件</h3><p>创建两个入口文件：<code>entry-client.js</code> 和 <code>entry-server.js</code>。</p>
+<h4 id="entry-client-js"><a href="#entry-client-js" class="headerlink" title="entry-client.js"></a>entry-client.js</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123; createApp &#125; from &quot;./main&quot;;</span><br><span class="line"></span><br><span class="line">const &#123; app, router, store &#125; = createApp();</span><br><span class="line"></span><br><span class="line">if (window.__INITIAL_STATE__) &#123;</span><br><span class="line">  store.replaceState(window.__INITIAL_STATE__);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">router.isReady().then(() =&gt; &#123;</span><br><span class="line">  app.mount(&quot;#app&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="entry-server-js"><a href="#entry-server-js" class="headerlink" title="entry-server.js"></a>entry-server.js</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &#123; createApp &#125; from &quot;./main&quot;;</span><br><span class="line"></span><br><span class="line">export default function render () &#123;</span><br><span class="line">  const &#123; app, router, store &#125; = createApp();</span><br><span class="line"></span><br><span class="line">  return &#123;</span><br><span class="line">    app,</span><br><span class="line">    router,</span><br><span class="line">    store,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-创建服务器"><a href="#5-创建服务器" class="headerlink" title="5. 创建服务器"></a>5. 创建服务器</h3><p>创建 <code>server.js</code> 文件，用于设置 Express 服务器：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const express = require(&quot;express&quot;);</span><br><span class="line">const fs = require(&quot;fs&quot;);</span><br><span class="line">const path = require(&quot;path&quot;);</span><br><span class="line">const &#123; renderToString &#125; = require(&quot;@vue/server-renderer&quot;);</span><br><span class="line">const manifest = require(&quot;./dist/server/ssr-manifest.json&quot;);</span><br><span class="line"></span><br><span class="line">const server = express();</span><br><span class="line">const entry = path.join(__dirname, &quot;./dist&quot;, &quot;server&quot;, manifest[&quot;main.js&quot;]);</span><br><span class="line">const render = require(entry).default;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 1.使用 server.use(express.static(path.join(__dirname, &#x27;./dist/client&#x27;))); 会导致所有请求路径都被静态文件中间件处理，从而可能跳过服务器端渲染逻辑。</span><br><span class="line"> * 2.通过细粒度的静态文件服务配置，或者在配置静态文件服务时排除应用程序的路由，可以确保服务器端渲染逻辑（包括 asyncData 的触发）能够正常工作。</span><br><span class="line"> */</span><br><span class="line">server.use(</span><br><span class="line">  &quot;/img&quot;,</span><br><span class="line">  express.static(path.join(__dirname, &quot;./dist/client&quot;, &quot;img&quot;))</span><br><span class="line">);</span><br><span class="line">server.use(&quot;/js&quot;, express.static(path.join(__dirname, &quot;./dist/client&quot;, &quot;js&quot;)));</span><br><span class="line">server.use(</span><br><span class="line">  &quot;/css&quot;,</span><br><span class="line">  express.static(path.join(__dirname, &quot;./dist/client&quot;, &quot;css&quot;))</span><br><span class="line">);</span><br><span class="line">server.use(</span><br><span class="line">  &quot;/favicon.ico&quot;,</span><br><span class="line">  express.static(path.join(__dirname, &quot;./dist/client&quot;, &quot;favicon.ico&quot;))</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">server.get(&quot;*&quot;, async (req, res) =&gt; &#123;</span><br><span class="line">  const &#123; app, router, store &#125; = render();</span><br><span class="line">  router.push(req.url);</span><br><span class="line">  await router.isReady();</span><br><span class="line"></span><br><span class="line">  try &#123;</span><br><span class="line">    const matchedComponents = router.currentRoute.value.matched;</span><br><span class="line">    // console.log(1, matchedComponents);</span><br><span class="line">    // 主动触发所有匹配组件的 asyncData 函数</span><br><span class="line">    await Promise.all(</span><br><span class="line">      matchedComponents.map((Component) =&gt; &#123;</span><br><span class="line">        console.log(2, Component);</span><br><span class="line">        if (Component.components.default.methods.asyncData) &#123;</span><br><span class="line">          return Component.components.default.methods.asyncData(&#123;</span><br><span class="line">            app,</span><br><span class="line">            router,</span><br><span class="line">            store,</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    const appContent = await renderToString(app);</span><br><span class="line"></span><br><span class="line">    fs.readFile(</span><br><span class="line">      path.join(__dirname, &quot;./dist/client/index.html&quot;),</span><br><span class="line">      (err, html) =&gt; &#123;</span><br><span class="line">        if (err) &#123;</span><br><span class="line">          throw err;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        html = html</span><br><span class="line">          .toString()</span><br><span class="line">          .replace(&#x27;&lt;div id=&quot;app&quot;&gt;&#x27;, `&lt;div id=&quot;app&quot;&gt;$&#123;appContent&#125;`)</span><br><span class="line">          .replace(</span><br><span class="line">            &quot;&lt;/script&gt;&quot;,</span><br><span class="line">            `&lt;/script&gt;&lt;script type=&quot;application/javascript&quot;&gt;window.__INITIAL_STATE__=$&#123;JSON.stringify(</span><br><span class="line">              store.state</span><br><span class="line">            )&#125;&lt;/script&gt;`</span><br><span class="line">          );</span><br><span class="line">        res.setHeader(&quot;Content-Type&quot;, &quot;text/html&quot;);</span><br><span class="line">        res.send(html);</span><br><span class="line">      &#125;</span><br><span class="line">    );</span><br><span class="line">  &#125; catch (err) &#123;</span><br><span class="line">    if (err.code === 404) &#123;</span><br><span class="line">      res.status(404).end(&quot;Page not found&quot;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      res.status(500).end(&quot;Internal Server Error&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.listen(8080, () =&gt; &#123;</span><br><span class="line">  console.log(&quot;Server is running at http://localhost:8080&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-构建和运行"><a href="#6-构建和运行" class="headerlink" title="6. 构建和运行"></a>6. 构建和运行</h3><p>在 <code>package.json</code> 中添加构建和启动脚本：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;build:client&quot;: &quot;vue-cli-service build&quot;,</span><br><span class="line">    &quot;build:server&quot;: &quot;cross-env SSR=1 vue-cli-service build&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;npm run build:client &amp;&amp; npm run build:server&quot;,</span><br><span class="line">    &quot;start&quot;: &quot;node server.js&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行以下命令构建项目并启动服务器：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm run build</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
+
+<p>访问 <code>http://localhost:8080</code>，你将看到服务器端渲染的 Vue 应用。</p>
+<h2 id="SSR优缺点"><a href="#SSR优缺点" class="headerlink" title="SSR优缺点"></a>SSR优缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol>
+<li><strong>更快的首屏加载速度</strong>：SSR 可以在服务器端生成完整的 HTML 页面，减少客户端渲染的时间，从而提高首屏加载速度。</li>
+<li><strong>更好的 SEO</strong>：搜索引擎可以更好地抓取和索引服务器端渲染的内容，从而提高 SEO 友好性。</li>
+<li><strong>更好的用户体验</strong>：SSR 可以在用户请求页面时立即返回完整的 HTML 内容，减少白屏时间，提高用户体验。</li>
+</ol>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ol>
+<li><strong>更复杂的配置</strong>：SSR 需要额外的 Webpack 配置和服务器端代码，增加了项目的复杂性。</li>
+<li><strong>更高的服务器负载</strong>：服务器需要处理更多的渲染任务，可能会增加服务器的负载。</li>
+<li><strong>开发调试困难</strong>：SSR 的调试和开发相对复杂，需要处理更多的边界情况和错误。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>SSR</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端兼容性问题</title>
+    <url>/zh-CN/%E7%A7%BB%E5%8A%A8%E7%AB%AF/</url>
+    <content><![CDATA[<ul>
+<li><code>Autoprefixer</code>自动添加浏览器前缀插件，属于后处理程序，不像 Sass 以及 Stylus 之类的预处理器。它适用于普通的 CSS，可以实现css3代码自动补全。也可以轻松跟 Sass，LESS及Stylus集成，在CSS编译前或编译后运行。</li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li><p>ant-design table树结构折叠图标火狐浏览器内显示错误</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这种写法仅火狐识别</span></span><br><span class="line"><span class="variable">@-moz-document</span> <span class="built_in">url-prefix</span>() &#123;</span><br><span class="line">  <span class="selector-class">.surely-table-row-expand-icon</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a><a href="https://www.chromium.org/">Chromium</a></h5><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*滚动条整体粗细样式*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="comment">/*高宽分别对应横竖滚动条的尺寸*/</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条里面小方块*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="comment">/* 颜色 */</span></span><br><span class="line">  <span class="comment">/* background:#b6b6b6!important; */</span></span><br><span class="line">  <span class="comment">/* 线性渐变背景 */</span></span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(</span><br><span class="line">    <span class="number">45deg</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">25%</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">25%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">25%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">50%</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">50%</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">75%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">75%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">100%</span></span><br><span class="line">  ) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#1175c2</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条轨道*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-track</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#ededed</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条角落*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-corner</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h5><p>scrollbar-width</p>
+<p>scrollbar-color</p>
+<h5 id="IE"><a href="#IE" class="headerlink" title="IE"></a>IE</h5><p>scrollbar-base-color</p>
+<p>scrollbar-track-color</p>
+<p>scrollbar-arrow-color</p>
+<p>scrollbar-3dlight-color</p>
+<p>scrollbar-shadow-color</p>
+<p>scrollbar-highlight-color</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>兼容性</tag>
       </tags>
   </entry>
   <entry>
