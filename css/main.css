@@ -2609,7 +2609,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #7450ff;
+  background: #ffbba1;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2673,7 +2673,7 @@ header.header {
 }
 .sidebar {
   background: linear-gradient(45deg, #222, #000, #3b0606);
-  background: url("../../../../images/1___737471___0___.jpg") right center/cover no-repeat;
+  background: url("../../../../images/tuo.jpg") center/cover no-repeat;
   box-shadow: unset;
 }
 .sidebar::before {
@@ -2684,7 +2684,7 @@ header.header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.8);
 }
 @media (max-width: 767px) {
   .sidebar {
@@ -2736,7 +2736,7 @@ header.header {
   text-align: center;
 }
 .main>.column {
-  background: url("../../../../images/1___737471___0___.jpg") center 70%/cover no-repeat;
+  background: url("../../../../images/tuo.jpg") center center/cover no-repeat;
 }
 .main>.column .header {
   background: rgba(0,0,0,0.18);
@@ -2744,10 +2744,10 @@ header.header {
 @media (max-width: 767px) {
   .main>.column {
     background: url("../../../../images/1___4992662___0___.jpg") center/cover no-repeat;
-    background: url("../../../../images/1___737471___0___.jpg") center/cover no-repeat;
+    background: url("../../../../images/tuo.jpg") center/cover no-repeat;
   }
   .main>.column .header {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.3);
   }
 }
 .menu .menu-item a {

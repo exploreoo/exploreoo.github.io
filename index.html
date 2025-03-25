@@ -153,18 +153,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-count">19</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -189,23 +189,23 @@
           
           
             <li class="recent_posts_li">
+              <a href="/zh-CN/%E5%B9%BD%E7%81%B5%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/" title="幽灵依赖（Phantom Dependency）问题" target="_blank">幽灵依赖（Phantom Dependency）问题</a>
+            </li>
+          
+            <li class="recent_posts_li">
+              <a href="/zh-CN/%E8%A7%A3%E5%86%B3win10%E5%8D%A1%E9%A1%BF/" title="解决win10系统CPU占用过高" target="_blank">解决win10系统CPU占用过高</a>
+            </li>
+          
+            <li class="recent_posts_li">
               <a href="/zh-CN/Cursor%E7%BC%96%E8%BE%91%E5%99%A8/" title="Cursor AI编辑器" target="_blank">Cursor AI编辑器</a>
             </li>
           
             <li class="recent_posts_li">
-              <a href="/zh-CN/table/" title="El-table跨行列设计" target="_blank">El-table跨行列设计</a>
+              <a href="/zh-CN/SSR/" title="vue SSR服务端渲染" target="_blank">vue SSR服务端渲染</a>
             </li>
           
             <li class="recent_posts_li">
-              <a href="/zh-CN/WebWorker/" title="webWorker hook" target="_blank">webWorker hook</a>
-            </li>
-          
-            <li class="recent_posts_li">
-              <a href="/zh-CN/threejs/" title="threeJs" target="_blank">threeJs</a>
-            </li>
-          
-            <li class="recent_posts_li">
-              <a href="/zh-CN/upload/" title="分片上传控件" target="_blank">分片上传控件</a>
+              <a href="/zh-CN/Untils%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/" title="Untils工具合集" target="_blank">Untils工具合集</a>
             </li>
           
         </ul>
@@ -232,6 +232,224 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/%E5%B9%BD%E7%81%B5%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E6%9D%82%E5%BF%97%E6%8F%92%E5%9B%BE%E6%80%92%E7%81%AB.png">
+      <meta itemprop="name" content="Chanceux.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHANCEUX">
+      <meta itemprop="description" content="奔赴山海，保持热爱">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | CHANCEUX">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/zh-CN/%E5%B9%BD%E7%81%B5%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">幽灵依赖（Phantom Dependency）问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-12 22:35:05" itemprop="dateCreated datePublished" datetime="2025-01-12T22:35:05+08:00">2025-01-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>幽灵依赖指的是：一个包可以使用它的祖先依赖（祖先的 node_modules 里的包），即使它自己没有在 package.json 中声明该依赖。</p>
+<p>这种情况通常发生在 npm 和 yarn 采用的<strong>Hoisting（依赖提升）</strong>策略下，导致某些包在 node_modules 目录中可访问，但其实不应该被访问。</p>
+<p>⸻</p>
+<h4 id="1-为什么会产生幽灵依赖？"><a href="#1-为什么会产生幽灵依赖？" class="headerlink" title="1. 为什么会产生幽灵依赖？"></a>1. 为什么会产生幽灵依赖？</h4><p>在 npm 和 yarn 的默认 node_modules 结构中，依赖会被“提升”（hoist）到上级目录的 node_modules 中，以减少重复安装。例如：</p>
+<p>示例</p>
+<p>假设 package.json 这样定义：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;A&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">    &quot;B&quot;: &quot;^1.0.0&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	•	A 依赖于 lodash，但 B 并不依赖 lodash。<br>​	•	在 npm 或 yarn 的 hoisting 机制下，可能会将 lodash 提升到 node_modules&#x2F; 目录的根目录。</p>
+<p>目录结构可能变成这样：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/node_modules</span><br><span class="line">  /A</span><br><span class="line">    /node_modules</span><br><span class="line">      lodash/  (← 可能不会出现在这里)</span><br><span class="line">  /B</span><br><span class="line">  lodash/  (← 被提升到顶层)</span><br></pre></td></tr></table></figure>
+
+<p>问题：</p>
+<p>B 本来没有依赖 lodash，但它仍然可以直接 require(‘lodash’)，因为 lodash 被提升到了顶层 node_modules&#x2F;，而 Node.js 依赖解析规则会向上查找。</p>
+<p>⸻</p>
+<h4 id="2-为什么幽灵依赖是个问题？"><a href="#2-为什么幽灵依赖是个问题？" class="headerlink" title="2. 为什么幽灵依赖是个问题？"></a>2. 为什么幽灵依赖是个问题？</h4><p>幽灵依赖会导致代码在某些环境下正常运行，在其他环境下报错，因为依赖项的可用性取决于 node_modules 的结构，而 node_modules 的结构可能因不同的安装方式而变化。</p>
+<p>主要风险：<br>    •	代码不可预测：依赖项不是显式声明的，某些机器上可能找得到，某些机器上可能找不到。<br>    •	团队协作问题：如果一个开发者无意中使用了幽灵依赖，其他开发者（或 CI&#x2F;CD 服务器）可能会遇到 Cannot find module 错误。<br>    •	升级破坏性：如果 A 更新了，可能 lodash 版本变化或者不再依赖 lodash，但 B 仍然错误地依赖它，导致 B 在某些情况下崩溃。</p>
+<p>⸻</p>
+<h4 id="3-如何避免幽灵依赖？"><a href="#3-如何避免幽灵依赖？" class="headerlink" title="3. 如何避免幽灵依赖？"></a>3. 如何避免幽灵依赖？</h4><p>✅ 方法 1：使用 pnpm</p>
+<p>pnpm 不会 hoist 依赖，它使用严格的模块隔离，每个包只能访问自己的依赖。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/node_modules</span><br><span class="line">  /.pnpm</span><br><span class="line">    A@1.0.0/</span><br><span class="line">      node_modules/</span><br><span class="line">        lodash/</span><br><span class="line">    B@1.0.0/</span><br></pre></td></tr></table></figure>
+
+<p>在 pnpm 下，B 无法 访问 lodash，如果 B 试图 require(‘lodash’)，会报错，除非它自己显式安装 lodash。</p>
+<p>⸻</p>
+<p>✅ 方法 2：在 package.json 显式声明所有依赖</p>
+<p>如果一个包需要 lodash，就应该在自己的 package.json 中添加：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;lodash&quot;: &quot;^4.17.21&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样无论 npm 还是 yarn，都不会依赖提升带来的不确定性。</p>
+<p>⸻</p>
+<p>✅ 方法 3：使用 –strict-peer-deps 选项</p>
+<p>在 npm 或 yarn 里，你可以使用：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --strict-peer-deps</span><br><span class="line">yarn install --check-files</span><br></pre></td></tr></table></figure>
+
+<p>这样如果有未声明的依赖，安装时就会报错。</p>
+<p>⸻</p>
+<p>✅ 方法 4：使用 npm dedupe 或 yarn-deduplicate</p>
+<p>如果怀疑 node_modules 里有幽灵依赖，可以运行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm dedupe</span><br></pre></td></tr></table></figure>
+
+<p>或者：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn-deduplicate</span><br></pre></td></tr></table></figure>
+
+<p>清理依赖，重新安装。</p>
+<p>⸻</p>
+<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4><p>​	•	npm 和 yarn 默认可能会导致幽灵依赖，因为它们的 hoisting 机制可能让某些包“意外可用”。<br>​	•	pnpm 不会出现幽灵依赖，因为它有严格的依赖隔离。<br>​	•	避免幽灵依赖的最佳做法是显式声明所有依赖，并使用 –strict-peer-deps 或 pnpm 进行严格管理。</p>
+<p>如果团队经常遇到幽灵依赖问题，建议迁移到 pnpm。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/%E8%A7%A3%E5%86%B3win10%E5%8D%A1%E9%A1%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E6%9D%82%E5%BF%97%E6%8F%92%E5%9B%BE%E6%80%92%E7%81%AB.png">
+      <meta itemprop="name" content="Chanceux.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHANCEUX">
+      <meta itemprop="description" content="奔赴山海，保持热爱">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | CHANCEUX">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/zh-CN/%E8%A7%A3%E5%86%B3win10%E5%8D%A1%E9%A1%BF/" class="post-title-link" itemprop="url">解决win10系统CPU占用过高</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-12-12 22:35:05" itemprop="dateCreated datePublished" datetime="2024-12-12T22:35:05+08:00">2024-12-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ul>
+<li><p><strong>关闭Windows Search</strong><br>控制面板–管理工具–服务- Windows Search禁用。</p>
+</li>
+<li><p><strong>禁用 Diagnostics Tracking Service和Connected User Experiences and Telemetry</strong><br>这个服务是用来服务跟踪诊断的，就是在咱们使用系统的时候不停地收集系统信息，是微软的一个搜集工具而已。在很多情况下，CPU的高占用率就是它搞的鬼。<br>win+R 运行 services.msc 进入服务，禁用Diagnostics Tracking Service ，若找不到这个服务的话那就是禁用Diagnostic Policy Service，然后禁用Connected User Experiences and Telemetry 就好。</p>
+</li>
+<li><p><strong>关闭允许后台运行的软件</strong><br>打开系统设置— 隐私 —后台应用 关闭不需要的应用即可 （大多数其实都没什么用可以直接关闭最上方按钮）</p>
+</li>
+<li><p><strong>关闭更新来自多个位置</strong><br>打开系统设置—更新和安全—Windows更新—高级选项—选择如何提供更新，将“更新来自多个位置”关闭即可</p>
+</li>
+<li><p><strong>关闭小娜</strong><br>使用组策略禁用Cortana<br>　　1、使用 Windows + R 快捷键打开「运行」— 执行 gpedit.msc 打开组策略编辑器。<br>　　2、导航到「计算机配置」—「管理模板」—「Windows <a target="_blank" rel="noopener" href="https://edu.csdn.net/cloud/houjie?utm_source=highword&spm=1001.2101.3001.7020">组件</a>」—「搜索」。<br>　　3、在右侧面板中找到「允许使用 Cortana」条目，将其设置为「已禁用」即可。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/zh-CN/%E8%A7%A3%E5%86%B3win10%E5%8D%A1%E9%A1%BF/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -270,7 +488,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-12-05 12:35:05" itemprop="dateCreated datePublished" datetime="2024-12-05T12:35:05+08:00">2024-12-05</time>
+      <time title="创建时间：2024-12-11 12:35:05" itemprop="dateCreated datePublished" datetime="2024-12-11T12:35:05+08:00">2024-12-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -292,8 +510,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h5 id="Cursor"><a href="#Cursor" class="headerlink" title="Cursor"></a>Cursor</h5><p>链接地址：<a target="_blank" rel="noopener" href="https://www.cursor.com/">https://www.cursor.com</a></p>
-<p>目前<u><em>v0.43.5</em></u>版本，新注册获取<code>Pro Trial</code> 15 days，到期续账号即可</p>
+          <p>链接地址：<a target="_blank" rel="noopener" href="https://www.cursor.com/">https://www.cursor.com</a></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/zh-CN/Cursor%E7%BC%96%E8%BE%91%E5%99%A8/#more" rel="contents">
@@ -327,7 +544,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/table/">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/SSR/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%E6%9D%82%E5%BF%97%E6%8F%92%E5%9B%BE%E6%80%92%E7%81%AB.png">
@@ -345,7 +562,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/table/" class="post-title-link" itemprop="url">El-table跨行列设计</a>
+          <a href="/zh-CN/SSR/" class="post-title-link" itemprop="url">vue SSR服务端渲染</a>
         </h2>
 
         <div class="post-meta-container">
@@ -356,7 +573,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-07-16 22:35:05" itemprop="dateCreated datePublished" datetime="2024-07-16T22:35:05+08:00">2024-07-16</time>
+      <time title="创建时间：2023-12-31 22:35:05" itemprop="dateCreated datePublished" datetime="2023-12-31T22:35:05+08:00">2023-12-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -378,12 +595,127 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>使用el-table做跨行跨列表格渲染，接口数据格式为对象数组，即需从对象中提取columns，且需要设置对应的跨行跨列关系。为此要实现一种更优雅的构造方法，即<strong>配置化跨行跨列动态渲染</strong>。<br>基于element-ui v2.4.11版本，实现对于该版本表格组件，跨行跨列的构造方法可以通过arraySpanMethod构造，由于笔者使用的是vue2写法，vue3雷同使用。</p>
-<p>传送门：<a target="_blank" rel="noopener" href="https://element.eleme.cn/2.4/#/zh-CN/component/table">https://element.eleme.cn/2.4/#/zh-CN/component/table</a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="title function_">arraySpanMethod</span>(<span class="params">&#123; row, column, rowIndex, columnIndex &#125;</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (rowIndex % <span class="number">2</span> === <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (columnIndex === <span class="number">0</span>) &#123;</span><br><span class="line">              </span><br><span class="line">                <span class="keyword">return</span> [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (columnIndex === <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> [<span class="number">0</span>, <span class="number">0</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>服务器端渲染（Server-Side Rendering，简称 SSR）是指在服务器端生成 HTML 内容并发送到客户端的过程。与客户端渲染（Client-Side Rendering，简称 CSR）相比，SSR 可以提高首屏加载速度和 SEO 友好性。<br>如需更高级的集成框架可以使用nuxtjs</p>
+<h3 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">my-ssr-app/</span><br><span class="line">├── dist/                      # 构建输出目录</span><br><span class="line">├── public/                    # 公共资源目录</span><br><span class="line">│   └── index.html             # HTML 模板</span><br><span class="line">├── src/                       # 源代码目录</span><br><span class="line">│   ├── entry-client.js        # 客户端入口文件</span><br><span class="line">│   ├── entry-server.js        # 服务器端入口文件</span><br><span class="line">|   └── main.js</span><br><span class="line">├── package.json               # 项目配置文件</span><br><span class="line">├── server.js                  # Express 服务器配置</span><br><span class="line">└── vue.config.js   					 # Webpack 服务器端配置</span><br></pre></td></tr></table></figure>
+
+<h2 id="构造流程"><a href="#构造流程" class="headerlink" title="构造流程"></a>构造流程</h2><h3 id="1-安装必要的依赖"><a href="#1-安装必要的依赖" class="headerlink" title="1. 安装必要的依赖"></a>1. 安装必要的依赖</h3><p>SSR 需要一些额外的依赖包，如 <code>@vue/server-renderer</code> 和 <code>express</code>。在项目根目录下运行以下命令安装这些依赖：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @vue/server-renderer express webpack-manifest-plugin webpack-node-externals --save-dev</span><br></pre></td></tr></table></figure>
+
+<p>相关版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;@vue/cli-service&quot;: &quot;~5.0.0&quot;,</span><br><span class="line">&quot;express&quot;: &quot;^4.21.2&quot;,</span><br><span class="line">&quot;@vue/server-renderer&quot;: &quot;^3.5.13&quot;,</span><br><span class="line">&quot;webpack-manifest-plugin&quot;: &quot;^5.0.0&quot;,</span><br><span class="line">&quot;webpack-node-externals&quot;: &quot;^3.0.0&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-配置-Webpack"><a href="#2-配置-Webpack" class="headerlink" title="2. 配置 Webpack"></a>2. 配置 Webpack</h3><p>SSR 需要两个 Webpack 配置：一个用于客户端打包，另一个用于服务器端打包。服务器端需要输出node环境的编译输出，为了拿到对应入口的路径，需要借助WebpackManifestPlugin形成映射表。</p>
+<h4 id="vue-config-js"><a href="#vue-config-js" class="headerlink" title="vue.config.js"></a>vue.config.js</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">const path = require(&quot;path&quot;);</span><br><span class="line">const webpackNodeExternals = require(&quot;webpack-node-externals&quot;);</span><br><span class="line">const &#123; CleanWebpackPlugin &#125; = require(&quot;clean-webpack-plugin&quot;);</span><br><span class="line">const &#123; WebpackManifestPlugin &#125; = require(&quot;webpack-manifest-plugin&quot;);</span><br><span class="line"></span><br><span class="line">let SSR = process.env.SSR;</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  outputDir: SSR ? &quot;dist/server&quot; : &quot;dist/client&quot;,</span><br><span class="line">  configureWebpack: (config) =&gt; &#123;</span><br><span class="line">    if (SSR) &#123;</span><br><span class="line">      // 服务器端打包配置</span><br><span class="line">      return &#123;</span><br><span class="line">        entry: &quot;./src/entry-server.js&quot;,</span><br><span class="line">        target: &quot;node&quot;,</span><br><span class="line">        output: &#123;</span><br><span class="line">          libraryTarget: &quot;commonjs2&quot;,</span><br><span class="line">        &#125;,</span><br><span class="line">        externals: [webpackNodeExternals(&#123; allowlist: /\.(css|vue)$/ &#125;)],</span><br><span class="line">        plugins: [</span><br><span class="line">          new CleanWebpackPlugin(),</span><br><span class="line">          new WebpackManifestPlugin(&#123; fileName: &quot;ssr-manifest.json&quot; &#125;),</span><br><span class="line">        ],</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      // 客户端打包配置</span><br><span class="line">      return &#123;</span><br><span class="line">        entry: &quot;./src/entry-client.js&quot;,</span><br><span class="line">        plugins: [</span><br><span class="line">          new CleanWebpackPlugin(),</span><br><span class="line">        ],</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-改造main-js"><a href="#3-改造main-js" class="headerlink" title="3.  改造main.js"></a>3.  改造main.js</h3><p>main文件不再直接挂载vue实例，改造为方法提供给客户端、服务端渲染调用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createSSRApp &#125; from &quot;vue&quot;;</span><br><span class="line">import App from &quot;./App.vue&quot;;</span><br><span class="line">import &#123; createRouter, createWebHistory, createMemoryHistory &#125; from &quot;vue-router&quot;;</span><br><span class="line">import routes from &quot;./router&quot;;</span><br><span class="line">import &#123; createStoreInstance &#125; from &quot;./store&quot;;</span><br><span class="line"></span><br><span class="line">export function createApp() &#123;</span><br><span class="line">  const SSR = typeof window === &quot;undefined&quot;;</span><br><span class="line">  const history = SSR ? createMemoryHistory() : createWebHistory();</span><br><span class="line">  const router = createRouter(&#123; history, routes &#125;);</span><br><span class="line">  const store = createStoreInstance();</span><br><span class="line"></span><br><span class="line">  const app = createSSRApp(App);</span><br><span class="line">  app.use(router);</span><br><span class="line">  app.use(store);</span><br><span class="line"></span><br><span class="line">  return &#123; app, router, store &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-创建入口文件"><a href="#4-创建入口文件" class="headerlink" title="4. 创建入口文件"></a>4. 创建入口文件</h3><p>创建两个入口文件：<code>entry-client.js</code> 和 <code>entry-server.js</code>。</p>
+<h4 id="entry-client-js"><a href="#entry-client-js" class="headerlink" title="entry-client.js"></a>entry-client.js</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createApp &#125; from &quot;./main&quot;;</span><br><span class="line"></span><br><span class="line">const &#123; app, router, store &#125; = createApp();</span><br><span class="line"></span><br><span class="line">if (window.__INITIAL_STATE__) &#123;</span><br><span class="line">  store.replaceState(window.__INITIAL_STATE__);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">router.isReady().then(() =&gt; &#123;</span><br><span class="line">  app.mount(&quot;#app&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="entry-server-js"><a href="#entry-server-js" class="headerlink" title="entry-server.js"></a>entry-server.js</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createApp &#125; from &quot;./main&quot;;</span><br><span class="line"></span><br><span class="line">export default function render () &#123;</span><br><span class="line">  const &#123; app, router, store &#125; = createApp();</span><br><span class="line"></span><br><span class="line">  return &#123;</span><br><span class="line">    app,</span><br><span class="line">    router,</span><br><span class="line">    store,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-创建服务器"><a href="#5-创建服务器" class="headerlink" title="5. 创建服务器"></a>5. 创建服务器</h3><p>创建 <code>server.js</code> 文件，用于设置 Express 服务器：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line">const express = require(&quot;express&quot;);</span><br><span class="line">const fs = require(&quot;fs&quot;);</span><br><span class="line">const path = require(&quot;path&quot;);</span><br><span class="line">const &#123; renderToString &#125; = require(&quot;@vue/server-renderer&quot;);</span><br><span class="line">const manifest = require(&quot;./dist/server/ssr-manifest.json&quot;);</span><br><span class="line"></span><br><span class="line">const server = express();</span><br><span class="line">const entry = path.join(__dirname, &quot;./dist&quot;, &quot;server&quot;, manifest[&quot;main.js&quot;]);</span><br><span class="line">const render = require(entry).default;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 1.使用 server.use(express.static(path.join(__dirname, &#x27;./dist/client&#x27;))); 会导致所有请求路径都被静态文件中间件处理，从而可能跳过服务器端渲染逻辑。</span><br><span class="line"> * 2.通过细粒度的静态文件服务配置，或者在配置静态文件服务时排除应用程序的路由，可以确保服务器端渲染逻辑（包括 asyncData 的触发）能够正常工作。</span><br><span class="line"> */</span><br><span class="line">server.use(</span><br><span class="line">  &quot;/img&quot;,</span><br><span class="line">  express.static(path.join(__dirname, &quot;./dist/client&quot;, &quot;img&quot;))</span><br><span class="line">);</span><br><span class="line">server.use(&quot;/js&quot;, express.static(path.join(__dirname, &quot;./dist/client&quot;, &quot;js&quot;)));</span><br><span class="line">server.use(</span><br><span class="line">  &quot;/css&quot;,</span><br><span class="line">  express.static(path.join(__dirname, &quot;./dist/client&quot;, &quot;css&quot;))</span><br><span class="line">);</span><br><span class="line">server.use(</span><br><span class="line">  &quot;/favicon.ico&quot;,</span><br><span class="line">  express.static(path.join(__dirname, &quot;./dist/client&quot;, &quot;favicon.ico&quot;))</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">server.get(&quot;*&quot;, async (req, res) =&gt; &#123;</span><br><span class="line">  const &#123; app, router, store &#125; = render();</span><br><span class="line">  router.push(req.url);</span><br><span class="line">  await router.isReady();</span><br><span class="line"></span><br><span class="line">  try &#123;</span><br><span class="line">    const matchedComponents = router.currentRoute.value.matched;</span><br><span class="line">    // console.log(1, matchedComponents);</span><br><span class="line">    // 主动触发所有匹配组件的 asyncData 函数</span><br><span class="line">    await Promise.all(</span><br><span class="line">      matchedComponents.map((Component) =&gt; &#123;</span><br><span class="line">        console.log(2, Component);</span><br><span class="line">        if (Component.components.default.methods.asyncData) &#123;</span><br><span class="line">          return Component.components.default.methods.asyncData(&#123;</span><br><span class="line">            app,</span><br><span class="line">            router,</span><br><span class="line">            store,</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    const appContent = await renderToString(app);</span><br><span class="line"></span><br><span class="line">    fs.readFile(</span><br><span class="line">      path.join(__dirname, &quot;./dist/client/index.html&quot;),</span><br><span class="line">      (err, html) =&gt; &#123;</span><br><span class="line">        if (err) &#123;</span><br><span class="line">          throw err;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        html = html</span><br><span class="line">          .toString()</span><br><span class="line">          .replace(&#x27;&lt;div id=&quot;app&quot;&gt;&#x27;, `&lt;div id=&quot;app&quot;&gt;$&#123;appContent&#125;`)</span><br><span class="line">          .replace(</span><br><span class="line">            &quot;&lt;/script&gt;&quot;,</span><br><span class="line">            `&lt;/script&gt;&lt;script type=&quot;application/javascript&quot;&gt;window.__INITIAL_STATE__=$&#123;JSON.stringify(</span><br><span class="line">              store.state</span><br><span class="line">            )&#125;&lt;/script&gt;`</span><br><span class="line">          );</span><br><span class="line">        res.setHeader(&quot;Content-Type&quot;, &quot;text/html&quot;);</span><br><span class="line">        res.send(html);</span><br><span class="line">      &#125;</span><br><span class="line">    );</span><br><span class="line">  &#125; catch (err) &#123;</span><br><span class="line">    if (err.code === 404) &#123;</span><br><span class="line">      res.status(404).end(&quot;Page not found&quot;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      res.status(500).end(&quot;Internal Server Error&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">server.listen(8080, () =&gt; &#123;</span><br><span class="line">  console.log(&quot;Server is running at http://localhost:8080&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-构建和运行"><a href="#6-构建和运行" class="headerlink" title="6. 构建和运行"></a>6. 构建和运行</h3><p>在 <code>package.json</code> 中添加构建和启动脚本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;build:client&quot;: &quot;vue-cli-service build&quot;,</span><br><span class="line">    &quot;build:server&quot;: &quot;cross-env SSR=1 vue-cli-service build&quot;,</span><br><span class="line">    &quot;build&quot;: &quot;npm run build:client &amp;&amp; npm run build:server&quot;,</span><br><span class="line">    &quot;start&quot;: &quot;node server.js&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行以下命令构建项目并启动服务器：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
+
+<p>访问 <code>http://localhost:8080</code>，你将看到服务器端渲染的 Vue 应用。</p>
+<h2 id="SSR优缺点"><a href="#SSR优缺点" class="headerlink" title="SSR优缺点"></a>SSR优缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol>
+<li><strong>更快的首屏加载速度</strong>：SSR 可以在服务器端生成完整的 HTML 页面，减少客户端渲染的时间，从而提高首屏加载速度。</li>
+<li><strong>更好的 SEO</strong>：搜索引擎可以更好地抓取和索引服务器端渲染的内容，从而提高 SEO 友好性。</li>
+<li><strong>更好的用户体验</strong>：SSR 可以在用户请求页面时立即返回完整的 HTML 内容，减少白屏时间，提高用户体验。</li>
+</ol>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ol>
+<li><strong>更复杂的配置</strong>：SSR 需要额外的 Webpack 配置和服务器端代码，增加了项目的复杂性。</li>
+<li><strong>更高的服务器负载</strong>：服务器需要处理更多的渲染任务，可能会增加服务器的负载。</li>
+<li><strong>开发调试困难</strong>：SSR 的调试和开发相对复杂，需要处理更多的边界情况和错误。</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/Untils%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E6%9D%82%E5%BF%97%E6%8F%92%E5%9B%BE%E6%80%92%E7%81%AB.png">
+      <meta itemprop="name" content="Chanceux.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHANCEUX">
+      <meta itemprop="description" content="奔赴山海，保持热爱">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | CHANCEUX">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/zh-CN/Untils%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/" class="post-title-link" itemprop="url">Untils工具合集</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-12-06 11:20:00" itemprop="dateCreated datePublished" datetime="2023-12-06T11:20:00+08:00">2023-12-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h5 id="全排列算法"><a href="#全排列算法" class="headerlink" title="全排列算法"></a>全排列算法</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">func</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> len = arr.<span class="property">length</span>, res = []; </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 【全排列算法】</span></span><br><span class="line"><span class="comment">   * 说明：arrange用来对arr中的元素进行排列组合，将排列好的各个结果存在新数组中</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> tempArr：排列好的元素</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> leftArr：待排列元素</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">let</span> <span class="title function_">arrange</span> = (<span class="params">tempArr, leftArr</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (tempArr.<span class="property">length</span> === len) &#123; <span class="comment">// 这里就是递归结束的地方</span></span><br><span class="line">      <span class="comment">// res.push(tempArr) // 得到全排列的每个元素都是数组</span></span><br><span class="line">      res.<span class="title function_">push</span>(tempArr.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>)) <span class="comment">// 得到全排列的每个元素都是字符串</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      leftArr.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> temp = [].<span class="title function_">concat</span>(leftArr)</span><br><span class="line">        temp.<span class="title function_">splice</span>(index, <span class="number">1</span>)</span><br><span class="line">        <span class="comment">// 此时，第一个参数是当前分离出的元素所在数组；第二个参数temp是传入的leftArr去掉第一个后的结果</span></span><br><span class="line">        <span class="title function_">arrange</span>(tempArr.<span class="title function_">concat</span>(item), temp) <span class="comment">// 这里使用了递归</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">arrange</span>([], arr)</span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/zh-CN/table/#more" rel="contents">
+              <a class="btn" href="/zh-CN/Untils%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -414,7 +746,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/WebWorker/">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/%E5%88%86%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8E%A7%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%E6%9D%82%E5%BF%97%E6%8F%92%E5%9B%BE%E6%80%92%E7%81%AB.png">
@@ -432,7 +764,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/WebWorker/" class="post-title-link" itemprop="url">webWorker hook</a>
+          <a href="/zh-CN/%E5%88%86%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8E%A7%E4%BB%B6/" class="post-title-link" itemprop="url">分片上传控件</a>
         </h2>
 
         <div class="post-meta-container">
@@ -443,174 +775,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-07-02 22:35:05" itemprop="dateCreated datePublished" datetime="2023-07-02T22:35:05+08:00">2023-07-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>代码示例</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">export default class WorkerWrapper &#123;</span><br><span class="line">  constructor(work, options) &#123;</span><br><span class="line">    this.worker = new work();</span><br><span class="line">    this.callbacks = new Map();</span><br><span class="line">    this.worker.onmessage = (event) =&gt; &#123;</span><br><span class="line">      const &#123; id, data &#125; = event.data;</span><br><span class="line">      const callback = this.callbacks.get(id);</span><br><span class="line">      if (callback) &#123;</span><br><span class="line">        callback(data);</span><br><span class="line">        this.callbacks.delete(id);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  postMessage(data, callback) &#123;</span><br><span class="line">    const id = Math.random().toString(36).substr(2);</span><br><span class="line">    if (callback) &#123;</span><br><span class="line">      this.callbacks.set(id, callback);</span><br><span class="line">    &#125;</span><br><span class="line">    this.worker.postMessage(&#123; id, data &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // 终止进程</span><br><span class="line">  terminate() &#123;</span><br><span class="line">    this.worker.terminate();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/threejs/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E6%9D%82%E5%BF%97%E6%8F%92%E5%9B%BE%E6%80%92%E7%81%AB.png">
-      <meta itemprop="name" content="Chanceux.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CHANCEUX">
-      <meta itemprop="description" content="奔赴山海，保持热爱">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | CHANCEUX">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/threejs/" class="post-title-link" itemprop="url">threeJs</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-07-02 22:35:05" itemprop="dateCreated datePublished" datetime="2023-07-02T22:35:05+08:00">2023-07-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/webGL/" itemprop="url" rel="index"><span itemprop="name">webGL</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4 id="threeJS"><a href="#threeJS" class="headerlink" title="threeJS"></a>threeJS</h4><ul>
-<li>地址：*<a target="_blank" rel="noopener" href="http://www.webgl3d.cn/pages/aac9ab/">three.js</a>*</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/zh-CN/threejs/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/upload/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E6%9D%82%E5%BF%97%E6%8F%92%E5%9B%BE%E6%80%92%E7%81%AB.png">
-      <meta itemprop="name" content="Chanceux.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CHANCEUX">
-      <meta itemprop="description" content="奔赴山海，保持热爱">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | CHANCEUX">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/upload/" class="post-title-link" itemprop="url">分片上传控件</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-07-02 22:35:05" itemprop="dateCreated datePublished" datetime="2023-07-02T22:35:05+08:00">2023-07-02</time>
+      <time title="创建时间：2023-11-19 22:35:05" itemprop="dateCreated datePublished" datetime="2023-11-19T22:35:05+08:00">2023-11-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -675,7 +840,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/SSR/">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/El-table%E8%B7%A8%E8%A1%8C%E5%88%97%E8%AE%BE%E8%AE%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%E6%9D%82%E5%BF%97%E6%8F%92%E5%9B%BE%E6%80%92%E7%81%AB.png">
@@ -693,7 +858,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/SSR/" class="post-title-link" itemprop="url">vue SSR服务端渲染</a>
+          <a href="/zh-CN/El-table%E8%B7%A8%E8%A1%8C%E5%88%97%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">El-table跨行列设计</a>
         </h2>
 
         <div class="post-meta-container">
@@ -704,7 +869,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2022-12-31 22:35:05" itemprop="dateCreated datePublished" datetime="2022-12-31T22:35:05+08:00">2022-12-31</time>
+      <time title="创建时间：2023-10-16 22:35:05" itemprop="dateCreated datePublished" datetime="2023-10-16T22:35:05+08:00">2023-10-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -712,7 +877,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
         </span>
     </span>
 
@@ -726,11 +891,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>服务器端渲染（Server-Side Rendering，简称 SSR）是指在服务器端生成 HTML 内容并发送到客户端的过程。与客户端渲染（Client-Side Rendering，简称 CSR）相比，SSR 可以提高首屏加载速度和 SEO 友好性。<br>如需更高级的集成框架可以使用nuxtjs</p>
-<h3 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">my-ssr-app/</span><br><span class="line">├── dist/                      # 构建输出目录</span><br><span class="line">├── public/                    # 公共资源目录</span><br><span class="line">│   └── index.html             # HTML 模板</span><br><span class="line">├── src/                       # 源代码目录</span><br><span class="line">│   ├── entry-client.js        # 客户端入口文件</span><br><span class="line">│   ├── entry-server.js        # 服务器端入口文件</span><br><span class="line">|   └── main.js</span><br><span class="line">├── package.json               # 项目配置文件</span><br><span class="line">├── server.js                  # Express 服务器配置</span><br><span class="line">└── vue.config.js   					 # Webpack 服务器端配置</span><br></pre></td></tr></table></figure>
+          <h5 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h5><p>使用el-table做跨行跨列表格渲染，接口数据格式为对象数组，即需从对象中提取columns，且需要设置对应的跨行跨列关系。为此要实现一种更优雅的构造方法，即<strong>配置化跨行跨列动态渲染</strong>。<br>基于element-ui v2.4.11版本，实现对于该版本表格组件，跨行跨列的构造方法可以通过arraySpanMethod构造，由于笔者使用的是vue2写法，vue3雷同使用。</p>
+<p>传送门：<a target="_blank" rel="noopener" href="https://element.eleme.cn/2.4/#/zh-CN/component/table">https://element.eleme.cn/2.4/#/zh-CN/component/table</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="title function_">arraySpanMethod</span>(<span class="params">&#123; row, column, rowIndex, columnIndex &#125;</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (rowIndex % <span class="number">2</span> === <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (columnIndex === <span class="number">0</span>) &#123;</span><br><span class="line">              </span><br><span class="line">                <span class="keyword">return</span> [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (columnIndex === <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> [<span class="number">0</span>, <span class="number">0</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/zh-CN/SSR/#more" rel="contents">
+              <a class="btn" href="/zh-CN/El-table%E8%B7%A8%E8%A1%8C%E5%88%97%E8%AE%BE%E8%AE%A1/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -761,7 +927,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/windows/">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%E6%9D%82%E5%BF%97%E6%8F%92%E5%9B%BE%E6%80%92%E7%81%AB.png">
@@ -779,7 +945,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/windows/" class="post-title-link" itemprop="url">解决win10系统CPU占用过高</a>
+          <a href="/zh-CN/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/" class="post-title-link" itemprop="url">浏览器渲染原理</a>
         </h2>
 
         <div class="post-meta-container">
@@ -790,7 +956,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2022-12-12 22:35:05" itemprop="dateCreated datePublished" datetime="2022-12-12T22:35:05+08:00">2022-12-12</time>
+      <time title="创建时间：2023-07-25 22:35:05" itemprop="dateCreated datePublished" datetime="2023-07-25T22:35:05+08:00">2023-07-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -798,7 +964,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a>
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
         </span>
     </span>
 
@@ -812,24 +978,103 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <ul>
-<li><p><strong>关闭Windows Search</strong><br>控制面板–管理工具–服务- Windows Search禁用。</p>
+          <h3 id="1、JS的异步"><a href="#1、JS的异步" class="headerlink" title="1、JS的异步"></a>1、JS的异步</h3><p>js是单线程的语言，它运行在浏览器的渲染主线程中，而渲染主线程只有一个。</p>
+<p>渲染主线程承担着诸多工作，例如解析、渲染页面、执行js都在其中，如果使用同步会极有可能产生阻塞，从而导致消息队列中许多其他任务无法得到执行，<strong>造成1主线程白白的消耗时间 2页面无法及时更新，产生页面卡死现象</strong>。</p>
+<p>所以浏览器采用异步的方式来解决，具体做法是（<strong>事件循环</strong>）当某些任务发生时，例如计时器、网络、事件监听，主线程将其交给其他线程处理，自身继续执行后续代码，当其他线程结束后，将<strong>事先传递的回调函数包装成任务加入到消息队列末尾，等待主线程的调度执行</strong>。</p>
+<p>在这种异步模式下，浏览器永不阻塞，最大限度的保证了单线程的流畅运行。</p>
+<h3 id="2、事件循环"><a href="#2、事件循环" class="headerlink" title="2、事件循环"></a>2、事件循环</h3><p>事件循环又称<strong>消息循环，是浏览器渲染主进程的工作方式</strong>。</p>
+<p>在Chrome的源码中，它开启一个不会结束的for循环，每次循环从消息队列中取出第一个任务执行，其他线程只需要在合适的时候将任务加入到消息队列的末尾中即可。</p>
+<p>早期把消息队列分为宏任务和微任务，这种说法已经无法满足复杂的浏览器环境，取而代之的是一种更灵活的方式，例如交互队列、延时队列、事件，根据w3c的解释，每个任务都有不同的类型，同类型的任务必须在同一个队列中，不同的任务可以属于不同的队列。不同的任务队列有不同的优先级，<strong>在一次事件循环中，有浏览器自行决定取哪一个队列的任务，但必须有一个微队列，并且优先级最高</strong>。</p>
+<h5 id="js计时器能否精确计时？"><a href="#js计时器能否精确计时？" class="headerlink" title="js计时器能否精确计时？"></a>js计时器能否精确计时？</h5><p>不行，原因：</p>
+<ol>
+<li><p>计算机硬件没有原子钟，无法做到精确计时</p>
 </li>
-<li><p><strong>禁用 Diagnostics Tracking Service和Connected User Experiences and Telemetry</strong><br>这个服务是用来服务跟踪诊断的，就是在咱们使用系统的时候不停地收集系统信息，是微软的一个搜集工具而已。在很多情况下，CPU的高占用率就是它搞的鬼。<br>win+R 运行 services.msc 进入服务，禁用Diagnostics Tracking Service ，若找不到这个服务的话那就是禁用Diagnostic Policy Service，然后禁用Connected User Experiences and Telemetry 就好。</p>
+<li><p>操作系统的计时函数本身就有少量偏差，由于js的计时器最终是调用操作系统的函数，也就有携带偏差</p>
 </li>
-<li><p><strong>关闭允许后台运行的软件</strong><br>打开系统设置— 隐私 —后台应用 关闭不需要的应用即可 （大多数其实都没什么用可以直接关闭最上方按钮）</p>
+<li><p>根据w3c的标准，浏览器实现计时器时，如果嵌套层级超过5层，会产生最少4毫秒的增量</p>
 </li>
-<li><p><strong>关闭更新来自多个位置</strong><br>打开系统设置—更新和安全—Windows更新—高级选项—选择如何提供更新，将“更新来自多个位置”关闭即可</p>
+<li><p>事件循环会影响计时，计时器的回调函数只会在主线程空闲时运行，从而带来偏差</p>
 </li>
-<li><p><strong>关闭小娜</strong><br>使用组策略禁用Cortana<br>　　1、使用 Windows + R 快捷键打开「运行」— 执行 gpedit.msc 打开组策略编辑器。<br>　　2、导航到「计算机配置」—「管理模板」—「Windows <a target="_blank" rel="noopener" href="https://edu.csdn.net/cloud/houjie?utm_source=highword&spm=1001.2101.3001.7020">组件</a>」—「搜索」。<br>　　3、在右侧面板中找到「允许使用 Cortana」条目，将其设置为「已禁用」即可。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/zh-CN/windows/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+</ol>
+<h3 id="3、HTTP请求过程"><a href="#3、HTTP请求过程" class="headerlink" title="3、HTTP请求过程"></a>3、HTTP请求过程</h3><p>HTTP（HyperText Transfer Protocol）请求是客户端与服务器之间进行通信的基础。理解HTTP请求的流程有助于更好地开发和调试Web应用程序。以下是HTTP请求的详细流程：</p>
+<h4 id="1-DNS解析"><a href="#1-DNS解析" class="headerlink" title="1. DNS解析"></a>1. DNS解析</h4><p>当客户端（通常是浏览器）需要访问一个URL时，首先需要将域名解析为IP地址。这一步通过DNS（Domain Name System）完成。DNS解析的过程如下：</p>
+<ol>
+<li>浏览器检查本地缓存是否有该域名的IP地址。</li>
+<li>如果本地缓存没有，浏览器会向本地DNS服务器发送查询请求。</li>
+<li>本地DNS服务器检查其缓存，如果没有找到，会向上级DNS服务器查询，直到找到对应的IP地址。</li>
+<li>找到IP地址后，返回给浏览器。</li>
+</ol>
+<h4 id="2-建立TCP连接"><a href="#2-建立TCP连接" class="headerlink" title="2. 建立TCP连接"></a>2. 建立TCP连接</h4><p>一旦获得了服务器的IP地址，客户端需要与服务器建立TCP连接。这个过程通常通过三次握手（Three-Way Handshake）完成：</p>
+<ol>
+<li><strong>客户端发送SYN包</strong>：客户端向服务器发送一个SYN（synchronize）包，请求建立连接。</li>
+<li><strong>服务器回应SYN-ACK包</strong>：服务器收到SYN包后，回应一个SYN-ACK（synchronize-acknowledge）包，表示同意建立连接。</li>
+<li><strong>客户端发送ACK包</strong>：客户端收到SYN-ACK包后，发送一个ACK（acknowledge）包，确认连接建立。</li>
+</ol>
+<h4 id="3-发送HTTP请求"><a href="#3-发送HTTP请求" class="headerlink" title="3. 发送HTTP请求"></a>3. 发送HTTP请求</h4><p>TCP连接建立后，客户端可以发送HTTP请求。一个典型的HTTP请求包括以下部分：</p>
+<ol>
+<li><p>请求行</p>
+<p>：包括请求方法（如GET、POST）、请求URL和HTTP版本。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">复制代码GET /index.html HTTP/1.1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>请求头</p>
+<p>：包含请求的元数据，如Host、User-Agent、Accept等。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">复制代码Host: www.example.com</span><br><span class="line">User-Agent: Mozilla/5.0</span><br><span class="line">Accept: text/html</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>空行</strong>：用于分隔请求头和请求体。</p>
+</li>
+<li><p><strong>请求体</strong>：在POST请求中，包含要发送的数据（如表单数据、JSON等）。</p>
+</li>
+</ol>
+<h4 id="4-服务器处理请求"><a href="#4-服务器处理请求" class="headerlink" title="4. 服务器处理请求"></a>4. 服务器处理请求</h4><p>服务器接收到HTTP请求后，会进行以下处理：</p>
+<ol>
+<li><strong>解析请求</strong>：服务器解析请求行、请求头和请求体，提取出所需的信息。</li>
+<li><strong>处理请求</strong>：根据请求方法和URL，服务器执行相应的操作，如读取文件、查询数据库、执行业务逻辑等。</li>
+<li><strong>生成响应</strong>：服务器生成HTTP响应，包括状态行、响应头和响应体。</li>
+</ol>
+<h4 id="5-发送HTTP响应"><a href="#5-发送HTTP响应" class="headerlink" title="5. 发送HTTP响应"></a>5. 发送HTTP响应</h4><p>服务器处理完请求后，将HTTP响应发送回客户端。一个典型的HTTP响应包括以下部分：</p>
+<ol>
+<li><p>状态行</p>
+<p>：包括HTTP版本、状态码和状态描述。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">复制代码HTTP/1.1 200 OK</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>响应头</p>
+<p>：包含响应的元数据，如Content-Type、Content-Length、Set-Cookie等。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">复制代码Content-Type: text/html</span><br><span class="line">Content-Length: 1234</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>空行</strong>：用于分隔响应头和响应体。</p>
+</li>
+<li><p><strong>响应体</strong>：包含实际的响应数据，如HTML文档、JSON数据、图片等。</p>
+</li>
+</ol>
+<h4 id="6-关闭连接"><a href="#6-关闭连接" class="headerlink" title="6. 关闭连接"></a>6. 关闭连接</h4><p>根据HTTP版本和请求头中的Connection字段，决定是否关闭TCP连接：</p>
+<ol>
+<li><strong>HTTP&#x2F;1.0</strong>：默认在每次请求后关闭连接，除非请求头中包含<code>Connection: keep-alive</code>。</li>
+<li><strong>HTTP&#x2F;1.1</strong>：默认保持连接，除非请求头中包含<code>Connection: close</code>。</li>
+</ol>
+<p>如果需要关闭连接，客户端和服务器会通过四次挥手（Four-Way Handshake）来关闭TCP连接：</p>
+<ol>
+<li><strong>客户端发送FIN包</strong>：客户端向服务器发送一个FIN（finish）包，请求关闭连接。</li>
+<li><strong>服务器回应ACK包</strong>：服务器收到FIN包后，回应一个ACK包，确认关闭请求。</li>
+<li><strong>服务器发送FIN包</strong>：服务器发送一个FIN包，表示同意关闭连接。</li>
+<li><strong>客户端回应ACK包</strong>：客户端收到FIN包后，回应一个ACK包，确认连接关闭。</li>
+</ol>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>HTTP请求的流程包括DNS解析、建立TCP连接、发送HTTP请求、服务器处理请求、发送HTTP响应和关闭连接。理解这些步骤有助于更好地开发和调试Web应用程序，优化网络性能和用户体验。</p>
+<h3 id="4、浏览器的渲染过程"><a href="#4、浏览器的渲染过程" class="headerlink" title="4、浏览器的渲染过程"></a>4、浏览器的渲染过程</h3><p>整个渲染过程分为多个阶段，分别是：html解析、样式计算、布局、分层、生成绘制指令、分块、光栅化、绘制。</p>
+<h5 id="解析html"><a href="#解析html" class="headerlink" title="解析html"></a>解析html</h5><p>解析过程遇到css解析css，遇到js执行js，为了提高效率，浏览器在解析之前启动一个预解析的线程，率先下载html中外部css和外部js文件。</p>
+<p>如果主线程解析到link位置，此时外部的css文件还没有下载解析好，主线程会继续执行后续html。因为下载和解析css的工作是处于预解析线程中进行，这就是css不会阻塞html的根本原因。</p>
+<p>如果解析到script位置，会停止html而等待script下载好，并全局代码执行完毕后再继续执行html。因为js的执行可能会改变当前dom树，所以dom树的生成必须暂停，这就是js会阻塞html解析的根本原因。</p>
+<p>会形成dom树和cssom树，浏览器的默认样式、内部样式、外部样式、行内样式都会包含在cssom树中。</p>
+<h5 id="样式计算"><a href="#样式计算" class="headerlink" title="样式计算"></a>样式计算</h5><p>主线程会遍历得到dom树，依次为树中每个节点计算出它的最终样式，称之为computed style。</p>
+<p><strong>回流reflow</strong>会从此重新计算布局树，为了避免多次reflow导致反复计算，浏览器会合并这些操作，当js代码全部完成再进行统一的计算，所以改动造成的reflow是异步的。为了保证获取到最新的布局信息，在获取属性时则立即reflow。</p>
+<h5 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h5><p>依次遍历每一个dom树节点，计算每个节点的几何信息，形成布局树，例如节点的宽高，相对包含块的位置。大部分时候布局树和dom树并非一一对应，例如display: none的节点没有几何信息，不会生成到布局树中；伪元素不存在于dom树中，会拥有几何信息，生成到布局树中；其他还有匿名行盒、匿名块盒等。</p>
+<h5 id="分层"><a href="#分层" class="headerlink" title="分层"></a>分层</h5><p>主线程会使用一套复杂策略对布局树分层，好处在于将来改变一个层后，不会影响到其他层，提升效率。滚动条、堆叠上下文、transform、opacity、等样式或多或少会影响分层结果，will-change更大程度影响结果。</p>
+<h5 id="绘制"><a href="#绘制" class="headerlink" title="绘制"></a>绘制</h5><p>主线程会为每个分层产生绘制指令集，用于描述如何绘制。<strong>绘制主线程到此结束，剩余工作由合成线程完成</strong>。</p>
+<p><strong>重绘repaint</strong>会从此重新计算绘制指令</p>
+<h5 id="分块"><a href="#分块" class="headerlink" title="分块"></a>分块</h5><p>合成线程会对每个图层分块，划分成更小的区域，它会从线程池中取多个线程完成分块工作。</p>
+<h5 id="光栅化"><a href="#光栅化" class="headerlink" title="光栅化"></a>光栅化</h5><p>合成线程会将分块信息交给GPU进程完成光栅化，形成一块块位图，优先处理视口区域内的块。</p>
+<h5 id="绘制-1"><a href="#绘制-1" class="headerlink" title="绘制"></a>绘制</h5><p>合成线程拿到每一个位图后，生成一个个指引信息，提交给GPU进程，进而提交给GPU显卡硬件，完成屏幕成像。</p>
+<p>变形发生在合成线程，与渲染主线程无关，不会影响布局也不会影响绘制指令，这就是<strong>transform效率高</strong>的本质原因。</p>
+
       
     </div>
 
@@ -855,7 +1100,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/JSON/">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/threejs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%E6%9D%82%E5%BF%97%E6%8F%92%E5%9B%BE%E6%80%92%E7%81%AB.png">
@@ -873,7 +1118,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/JSON/" class="post-title-link" itemprop="url">JSON（JavaScript Object Notation）</a>
+          <a href="/zh-CN/threejs/" class="post-title-link" itemprop="url">threeJs</a>
         </h2>
 
         <div class="post-meta-container">
@@ -884,7 +1129,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2022-07-02 22:35:05" itemprop="dateCreated datePublished" datetime="2022-07-02T22:35:05+08:00">2022-07-02</time>
+      <time title="创建时间：2023-07-02 22:35:05" itemprop="dateCreated datePublished" datetime="2023-07-02T22:35:05+08:00">2023-07-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -892,7 +1137,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
         </span>
     </span>
 
@@ -906,15 +1151,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h5 id="JSON（JavaScript-Object-Notation）"><a href="#JSON（JavaScript-Object-Notation）" class="headerlink" title="JSON（JavaScript Object Notation）"></a>JSON（JavaScript Object Notation）</h5><p>是一种轻量级的数据交换格式，因其简洁、易读、易于解析的特点，在前后端数据交互、API 设计、配置文件等领域广泛应用。下面是使用 JSON 传输数据的优缺点：</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/zh-CN/JSON/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>物理引擎cannon-es  <a target="_blank" rel="noopener" href="https://pmndrs.github.io/cannon-es/docs/">https://pmndrs.github.io/cannon-es/docs/</a></p>
+
       
     </div>
 
@@ -940,7 +1178,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/optimize/">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%E6%9D%82%E5%BF%97%E6%8F%92%E5%9B%BE%E6%80%92%E7%81%AB.png">
@@ -958,7 +1196,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/optimize/" class="post-title-link" itemprop="url">前端性能优化</a>
+          <a href="/zh-CN/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="post-title-link" itemprop="url">前端性能优化</a>
         </h2>
 
         <div class="post-meta-container">
@@ -969,7 +1207,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2022-07-02 22:35:05" itemprop="dateCreated datePublished" datetime="2022-07-02T22:35:05+08:00">2022-07-02</time>
+      <time title="创建时间：2023-07-02 22:35:05" itemprop="dateCreated datePublished" datetime="2023-07-02T22:35:05+08:00">2023-07-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1003,106 +1241,214 @@
 <li><p><code>lighthouse</code> 面板（网站整体评估) </p>
 </li>
 <li><p><code>webPageTest</code>、 <code>webpack-bundle-analyze</code>（依赖打包构建图）、 <code>speed-measure-webpack-plugin</code>（构建费时分析）</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/zh-CN/optimize/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/mobile/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E6%9D%82%E5%BF%97%E6%8F%92%E5%9B%BE%E6%80%92%E7%81%AB.png">
-      <meta itemprop="name" content="Chanceux.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CHANCEUX">
-      <meta itemprop="description" content="奔赴山海，保持热爱">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | CHANCEUX">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/mobile/" class="post-title-link" itemprop="url">移动端问题</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-07-02 22:35:05" itemprop="dateCreated datePublished" datetime="2022-07-02T22:35:05+08:00">2022-07-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ul>
-<li><h5 id="真机测试方案"><a href="#真机测试方案" class="headerlink" title="真机测试方案"></a>真机测试方案</h5><ul>
-<li><strong>跨平台调试</strong><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/Tencent/vConsole/blob/dev/README_CN.md"><strong>Vconsole</strong></a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/liriliri/eruda/blob/master/doc/README_CN.md"><strong>Eruda</strong></a></li>
+</li>
+</ul>
+<h4 id="性能指标数据收集"><a href="#性能指标数据收集" class="headerlink" title="性能指标数据收集"></a>性能指标数据收集</h4><ul>
+<li><p><code>performance API</code></p>
+<p>浏览器端的全局对象 <code>window</code> 上有一个名为 <code>performance</code> 的属性，它是一个用于支持 <code>IE9</code> 以上及 <code>webkit</code> 内核浏览器中用于记录页面 <strong>加载</strong> 和 <strong>解析</strong> 过程中关键时间点的机制</p>
+</li>
+<li><p><code>Web Vitals</code> 模块化库</p>
+</li>
+</ul>
+<h4 id="常规性能指标"><a href="#常规性能指标" class="headerlink" title="常规性能指标"></a>常规性能指标</h4><p><code>Google</code> 为前端页面性能的评估提出了 <code>RAIL</code> 模型，核心内容如下：</p>
+<ul>
+<li><p><strong><code>Response</code> 响应</strong></p>
+</li>
+<li><p><strong><code>Animation</code> 动画</strong></p>
+</li>
+<li><p><strong><code>Idle</code> 空闲</strong></p>
+</li>
+<li><p><strong><code>Load</code> 加载</strong></p>
+<hr>
+<p><strong>首次绘制（<code>First Paint，FP</code>）</strong></p>
+<ul>
+<li>在渲染进程确认要渲染当前响应资源后，渲染进程会先创建一个空白页面，通常把创建空白页面的这个时间点称为 <code>First Paint</code>，简称 <code>FP</code></li>
+<li>所谓的 <strong>白屏时间</strong> 其实指的就是创建这个空白页面到浏览器开始渲染非空白内容的时间，比如页面背景发生变化等</li>
+</ul>
+<p><strong>首次内容绘制（<code>First Contentful Paint，FCP</code>）</strong></p>
+<ul>
+<li>当用户看见一些 “内容” 元素被绘制在页面上的时间点，和白屏是不一样，它可以是 <strong><code>文本</code></strong> 首次绘制，或 <code>SVG</code> 首次出现，或 <code>Canvas</code> 首次绘制等，即当页面中绘制了第一个 <strong>像素</strong> 时，这个时间点称为 <code>First Content Paint</code>，简称 <code>FCP</code></li>
+</ul>
+<p><strong>首屏时间 &#x2F; 最大内容绘制（<code>Largest Contentful Paint, LCP</code>）</strong></p>
+<ul>
+<li><code>LCP</code> 是一种新的性能度量标准，<code>LCP</code> 侧重于用户体验的性能度量标准，与现有度量标准相比，更容易理解与推理，当首屏内容完全绘制完成时，这个时间点称为 <code>Largest Content Paint</code>，简称 <code>LCP</code></li>
+<li><strong>最大内容绘制应在 <code>2.5s</code> 内完成</strong></li>
+</ul>
+<p><strong>首次输入延迟（<code>First Input Delay, FID</code>）</strong></p>
+<ul>
+<li><code>FID</code> 测量的是当用户第一次在页面上交互的时候（<strong>点击链接</strong>、<strong>点击按钮</strong> 或 <strong>自定义基于 <code>js</code> 的事件</strong>），到浏览器实际开始处理这个事件的时间</li>
+<li><strong>首次输入延迟应在 <code>100ms</code> 内完成</strong></li>
+</ul>
+<p><strong>累积布局偏移（<code>Cumulative Layout Shift, CLS</code>)</strong></p>
+<ul>
+<li><code>CLS</code> 是为了测量 <strong>视觉稳定性</strong>，以便提供良好的用户体验</li>
+<li><strong>累积布局偏移应保持在 <code>0.1</code> 或更少</strong></li>
+</ul>
+<p><strong>首字节达到时间（<code>Time to First Byte，TTFB</code>）</strong></p>
+<ul>
+<li>指的是浏览器开始收到服务器响应数据的时间（<strong>后台处理时间 + 重定向时间</strong>），是反映服务端响应速度的重要指标</li>
+<li><code>TTFB</code> 时间如果超过 <code>500ms</code>，用户在打开网页的时就会感觉到明显的等待</li>
 </ul>
 </li>
 </ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/zh-CN/mobile/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<h4 id="保证资源更快的加载速度"><a href="#保证资源更快的加载速度" class="headerlink" title="保证资源更快的加载速度"></a>保证资源更快的加载速度</h4><ul>
+<li><h5 id="使用-dns-prefetch-减少-DNS-的查询时间"><a href="#使用-dns-prefetch-减少-DNS-的查询时间" class="headerlink" title="使用 dns-prefetch 减少 DNS 的查询时间"></a><strong>使用 <code>dns-prefetch</code> 减少 DNS 的查询时间</strong></h5><p><code>dns-prefetch</code> 能够 <strong>提前解析</strong> 后续可能会用到的 <strong>不同域的域名</strong>，使解析结果 <strong>缓存到系统缓存</strong> 中，缩短 <code>DNS</code> 解析时间以提高网站的访问速度。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;dns-prefetch&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//api.xxx1.cn&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;dns-prefetch&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//api.xxx2.cn&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;dns-prefetch&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//api.xxx3.cn&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="使用-preconnect-提前建立连接"><a href="#使用-preconnect-提前建立连接" class="headerlink" title="使用 preconnect 提前建立连接"></a><strong>使用 <code>preconnect</code> 提前建立连接</strong></h5><p><code>preconnect</code> 的作用是提前和第三方资源建立连接，设置了它浏览器就会做好早期的连接工作，但这个连接通常只会维持 <code>10 s</code>。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;preconnect&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//xxx.com&quot;</span> &gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="使用-preload-prefetch-预先加载资源"><a href="#使用-preload-prefetch-预先加载资源" class="headerlink" title="使用 preload / prefetch 预先加载资源"></a><strong>使用 <code>preload / prefetch</code> 预先加载资源</strong></h5><ul>
+<li><p><code>preload</code> 的作用是提前加载页面对应的 <strong>关键资源</strong> 加快页面的渲染，<code>preload</code> 的优先级顺序和 <code>as</code> 属性相关</p>
+<p><code>preload</code> 是对资源的预加载，它虽提前加载但只在需要执行时执行，即这个资源一定是当前页面所需要的资源</p>
+<p>不会阻塞 <code>onload</code> 事件，<code>preload</code> 加载的<code>JS</code>脚本其加载和执行的过程是分离的，即 <code>preload</code> 会预加载相应的脚本代码，待到需要时自行调用</p>
+</li>
+<li><p>如果是需要为下一个页面提前加载资源，那么应该使用 <code>prefetch</code>，它会在 <strong>浏览器空闲时</strong> 下载资源。</p>
+</li>
+</ul>
+<p><code>v-cli</code>默认有配置 <code>preload / prefetch</code> </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// as 属性一定要设置，除了上面提到的设置优先级外，还涉及到浏览识别的问题：如果没有设置 as 属性，后续遇到该请求就会被作为一个 XHR 请求，把意味着资源预加载的功能可能会失效，因为可能会每次都发起新的请求获取</span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;preload&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//xxx.com&quot;</span> <span class="attr">as</span>=<span class="string">&quot;script&quot;</span> &gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="压缩资源体积"><a href="#压缩资源体积" class="headerlink" title="压缩资源体积"></a><strong>压缩资源体积</strong></h5><p>资源是需要通过 <code>http</code> 数据包的方式在网络中进行传输的，那么只要能减少传输数据包的体积，也是能够使得资源更快到达客户端，这也是压缩资源体积的核心目的。</p>
+<ul>
+<li><p><strong>HTTP 压缩</strong></p>
+<ul>
+<li><code>gzip</code></li>
+</ul>
+</li>
+<li><p><strong>Webpack 压缩</strong></p>
+<ul>
+<li>使用 <code>CompressionPlugin</code> 压缩文件</li>
+<li>使用 <code>HtmlWebpackPlugin</code> 压缩 <code>HTML</code> 文件</li>
+<li>使用 <code>MiniCssExtractPlugin</code> 抽离和压缩 <code>CSS</code></li>
+<li>使用 <code>ImageMinimizerWebpackPlugin</code> 压缩图片资源</li>
+<li>使用 <code>SplitChunksPlugin</code> 自定义分包策略</li>
+<li>通过 <code>Tree Shaking</code> 移除无用代码</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h5 id="减少-http-请求数量"><a href="#减少-http-请求数量" class="headerlink" title="减少 http 请求数量"></a><strong>减少 http 请求数量</strong></h5><ul>
+<li>合并公共资源，如 雪碧图 等</li>
+<li>内置模块资源，如 生成 <code>base64</code> 图片、通过 <code>symbol</code> 引用 <code>svg</code> 等</li>
+<li>合并代码块，如构建工具分包策略配合 公共组件封装、组件复用逻辑抽离 等</li>
+<li>按需加载资源，如 路由懒加载、图片懒加载、上拉加载、分页加载 等</li>
+</ul>
+</li>
+<li><h5 id="减少不必要的-cookie"><a href="#减少不必要的-cookie" class="headerlink" title="减少不必要的 cookie"></a><strong>减少不必要的 cookie</strong></h5><p>不必要的 <code>cookie</code> 来回传输会造成带宽浪费：</p>
+<ul>
+<li>减少 <code>cookie</code> 存储的内容</li>
+<li>对于静态资源采用 <code>CDN</code> 托管（即非同域），不同域名默认不携带 <code>cookie</code></li>
+</ul>
+</li>
+<li><h5 id="CDN-托管静态资源加速-HTTP-缓存"><a href="#CDN-托管静态资源加速-HTTP-缓存" class="headerlink" title="CDN 托管静态资源加速 + HTTP 缓存"></a><strong>CDN 托管静态资源加速 + HTTP 缓存</strong></h5><ul>
+<li><p>强缓存、协商缓存</p>
+</li>
+<li><p><code>keep-alive</code>、<code>v-once</code>、<code>v-memo</code></p>
+</li>
+</ul>
+</li>
+<li><h5 id="协议升级为-Http2-0"><a href="#协议升级为-Http2-0" class="headerlink" title="协议升级为 Http2.0"></a><strong>协议升级为 Http2.0</strong></h5><p><code>http1.0</code> 中使用的是 <strong>短连接</strong>，即 <strong>一次请求&#x2F;响应</strong> 结束后就会断开连接，这个过程比较耗时</p>
+<p><code>http1.1</code> 中使用的是 <strong>长连接</strong>，在 <strong>请求&#x2F;响应头</strong> 中设置 <code>Connection: keep-alive</code> 即可开启，优点是 <strong>长连接</strong> 允许多个请求共用一个 <code>TCP</code> 连接，缺点是带来了 <strong>队头阻塞</strong>：</p>
+<ul>
+<li>每个 <code>TCP</code> 连接中的多个请求，需要进行排队，只有队头的请求被响应，才能继续处理下一个请求</li>
+<li>其中一个缓解方案就是如果当前 <code>TCP</code> 连接中发生 <strong>队头阻塞</strong>，那就将部分请求放到其他 <code>TCP</code> 连接中</li>
+<li>浏览器一般会限制同一个域名建立 <code>6-8</code> 个 <code>TCP</code> 链接，这也就是为什么需要为应用划分子域名、静态资源托管 <code>CDN</code> 的原因之一</li>
+</ul>
+<p><code>http1.x</code> 中 <code>header</code> 部分的内容可能会很大，而且每一个请求可能都需要携带大量 <strong>重复</strong> <code>header</code> 的 <strong>文本内容</strong>，而这些也是导致 <strong>请求&#x2F;响应</strong> 慢的原因之一</p>
+<p><code>http2.0</code>基于<code>https</code>协议，采用<strong>头部压缩、二进制传输、多路复用</strong>，避免浏览器请求拥堵导致耗时。</p>
+</li>
+</ul>
+<h4 id="保证视图更快的渲染和交互"><a href="#保证视图更快的渲染和交互" class="headerlink" title="保证视图更快的渲染和交互"></a>保证视图更快的渲染和交互</h4><ul>
+<li><h5 id="渲染层面"><a href="#渲染层面" class="headerlink" title="渲染层面"></a><strong>渲染层面</strong></h5><ul>
+<li><h6 id="减少阻塞渲染的因素"><a href="#减少阻塞渲染的因素" class="headerlink" title="减少阻塞渲染的因素"></a><strong>减少阻塞渲染的因素</strong></h6><p>真正渲染视图之前，必然要生成 <strong><code>DOM Tree</code></strong> 和 **<code>CSSOM</code>**，因此必须保证 <strong>HTML 解释器</strong> 和 <strong>CSS 解释器</strong> 都尽早处理完成，同时 <strong><code>JavaScript</code></strong> 的加载和执行可能会阻塞这个过程：</p>
+<ul>
+<li><code>HTML</code> 文档中首次渲染的节点数量要尽量少，避免深层次的嵌套结构，避免大量使用慢标签（如：<code>iframe</code>）等</li>
+<li><code>CSS</code> 资源放文档头部，降低 <code>CSS</code> 复杂度，比如 合理使用 <code>CSS</code> 选择器</li>
+<li><code>JavaScript</code> 资源放文档底部，合理使用 <strong><code>defer、async</code></strong> 的加载方式</li>
+</ul>
+</li>
+<li><h6 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a><strong>懒加载</strong></h6><p>懒加载主要是针对数量大、资源加载慢的情况，比如图片资源、大量列表数据展示等：</p>
+<ul>
+<li><p><strong>图片资源</strong>：优先加载在可视区范围内的图片，可视区外的图片 **<code>延后加载</code>**，或者说当移入的可视区时再加载</p>
+</li>
+<li><p><strong>列表数据</strong>：列表数据通常数据里量大，不可能一次渲染完所有数据，一般通过 <strong><code>分页加载、上拉加载</code></strong> 等方式分批次渲染</p>
+</li>
+<li><p><strong>路由懒加载</strong></p>
+<p><code>webpackChunkName</code> 作用是 <code>webpack</code> 在打包的时候，对异步引入的库代码（<code>lodash</code>）进行代码分割时，设置代码块的名字。<code>webpack</code>会将任何一个异步模块与相同的块名称组合到相同的异步块中。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过webpackChunkName设置分割后代码块的名字</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">Home</span> = (<span class="params"></span>) =&gt; <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: &quot;home&quot; */</span> <span class="string">&quot;@/views/home/index.vue&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">MetricGroup</span> = (<span class="params"></span>) =&gt; <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: &quot;metricGroup&quot; */</span> <span class="string">&quot;@/views/metricGroup/index.vue&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> routes = [</span><br><span class="line">    &#123;</span><br><span class="line">       <span class="attr">path</span>: <span class="string">&quot;/&quot;</span>,</span><br><span class="line">       <span class="attr">name</span>: <span class="string">&quot;home&quot;</span>,</span><br><span class="line">       <span class="attr">component</span>: <span class="title class_">Home</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">       <span class="attr">path</span>: <span class="string">&quot;/metricGroup&quot;</span>,</span><br><span class="line">       <span class="attr">name</span>: <span class="string">&quot;metricGroup&quot;</span>,</span><br><span class="line">       <span class="attr">component</span>: <span class="title class_">MetricGroup</span></span><br><span class="line">    &#125;,</span><br><span class="line"> ]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>组件懒加载</strong></p>
+<p>组件懒加载 <em>基于动态<code>import</code></em> &#x2F; ***<code>defineAsyncComponent</code>***，有时资源拆分的过细也不好，可能会造成浏览器 <code>http</code> 请求的增多。</p>
+<p>总结出三种适合组件懒加载的场景：</p>
+<p>1）该页面的 JS 文件体积大，导致页面打开慢，可以通过组件懒加载进行资源拆分，利用浏览器并行下载资源，提升下载速度（比如首页）</p>
+<p>2）该组件不是一进入页面就展示，需要一定条件下才触发（比如弹框组件）</p>
+<p>3）该组件复用性高，很多页面都有引入，利用组件懒加载抽离出该组件，一方面可以很好利用缓存，同时也可以减少页面的 JS 文件大小（比如表格组件、图形组件等）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">dialogInfo</span> = (<span class="params"></span>) =&gt; <span class="keyword">import</span>(<span class="comment">/* webpackChunkName: &quot;dialogInfo&quot; */</span> <span class="string">&#x27;@/components/dialogInfo&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;homeView&#x27;</span>,</span><br><span class="line">  <span class="attr">components</span>: &#123;</span><br><span class="line">    dialogInfo</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><h6 id="白屏优化"><a href="#白屏优化" class="headerlink" title="白屏优化"></a><strong>白屏优化</strong></h6><p>白屏是由于 <code>SPA</code> 应用需要等待 <code>JavaScript</code> 加载并执行完成后才会生成具体的页面结构内容导致的，即初始化模板中没有任何有意义需要被渲染的 <code>HTML</code> 结构：</p>
+<ul>
+<li>添加 **白屏 <code>loading</code>**，可在模板中添加默认的 <code>loading</code> 效果，等到真正页面内容被渲染就可以替换 <code>loading</code> 内容</li>
+<li>添加 <strong>骨架屏</strong>，和上述方案一致，在真正页面内容展示出来之前，先展示默认的视图内容，避免白屏</li>
+</ul>
+</li>
+<li><h6 id="服务端渲染（SSR）"><a href="#服务端渲染（SSR）" class="headerlink" title="服务端渲染（SSR）"></a><strong>服务端渲染（SSR）</strong></h6></li>
+<li><h6 id="预渲染（prerender）"><a href="#预渲染（prerender）" class="headerlink" title="预渲染（prerender）"></a><strong>预渲染（prerender）</strong></h6><p>上述 <strong>服务端渲染（server-side rendering，SSR）</strong> 虽然能够解决一些客户端存在的问题，但它也带来了别的问题：</p>
+<ul>
+<li>**<code>需要保证开发一致性</code>**，比如 <strong>服务端</strong> 和 <strong>客户端</strong> 能够执行的组件生命周期钩子不同，一些外部库在 <strong>服务端渲染</strong> 应用中可能需要经过特殊处理</li>
+<li>**<code>需要更多的构建设定和部署要求</code>**，一个完全静态的 <strong>SPA</strong> 可以部署在任意的静态文件服务器，但服务端渲染应用需要一个能够运行 <strong>Node.js</strong> 服务器的环境</li>
+<li>**<code>更多的服务端负载</code>**，在 <strong>Node.js</strong> 中渲染一个完整的应用，会比仅供应静态文件产生更密集的 <strong>CPU</strong> 运算，并且需要考虑访问流量过大的情况等</li>
+</ul>
+<p>因此，并不是所有应用都合适 <strong>服务端渲染</strong>，如果只是希望通过 <strong>SSR</strong> 来改善一些 <strong>推广页面</strong> (如 <code>/</code>、<code>/about</code>、<code>/contact</code> 等) 的 <strong>SEO</strong>，那么应该优先考虑 <strong>预渲染</strong> 的方式：</p>
+<ul>
+<li><strong>预渲染</strong> 是在打包构建过程中（离屏状态），针对对应的 <code>routes</code> 路由预先生成对应的页面内容</li>
+<li><strong>预渲染</strong> 需要和 <strong>打包构建工具（webpack、rollup 等）</strong> 进行配合，如 <a href="https://link.juejin.cn/?target=https://webpack.js.org/"><strong><code>webpack</code></strong></a>，就可通过 <a href="https://link.juejin.cn/?target=https://github.com/chrisvfritz/prerender-spa-plugin"><strong><code>prerender-spa-plugin</code></strong></a> 来支持 <strong>预渲染</strong></li>
+</ul>
+</li>
+<li><h6 id="requestAnimationFrame-制作动画"><a href="#requestAnimationFrame-制作动画" class="headerlink" title="requestAnimationFrame 制作动画"></a><code>requestAnimationFrame</code> 制作动画</h6><p><code>requestAnimationFrame</code> 是浏览器专门为动画提供的<code> API</code>，属于GUI引擎，它的刷新频率与显示器的频率保持一致，使用该 <code>api</code> 可以解决用 <code>setTimeout/setInterval</code> 制作动画卡顿的情况。</p>
+</li>
+</ul>
+</li>
+<li><h5 id="交互层面"><a href="#交互层面" class="headerlink" title="交互层面"></a><strong>交互层面</strong></h5><ul>
+<li><h6 id="减少回流-x2F-重绘"><a href="#减少回流-x2F-重绘" class="headerlink" title="减少回流&#x2F;重绘"></a><strong>减少回流&#x2F;重绘</strong></h6><ul>
+<li>避免对 <code>css</code> 进行单个修改，如在 <code>JavaScript</code> 修改多个样式时，尽量使用 <code>css</code> 选择器实现样式的集中变更</li>
+<li>使用定位，利用<code>GPU</code>加速 <code>transform</code>、<code>opacity</code>、<code>filter</code>、<code>will-change</code>…，使用 <code>will-change</code> 开启 <code>GPU</code> 加速，<code>will-change</code> 指定的属性使得浏览器可在元素属性真正发生变化之前提前做好对应的优化</li>
+<li>预先设定图片尺寸，避免图片资源加载完成后引发回流</li>
+</ul>
+</li>
+<li><h6 id="防抖-x2F-节流"><a href="#防抖-x2F-节流" class="headerlink" title="防抖&#x2F;节流"></a><strong>防抖&#x2F;节流</strong></h6><p><strong>防抖</strong>：多次频繁触发执行操作，以 <strong>最后一次</strong> 为准，忽略中间过程</p>
+<p><strong>节流</strong>：在指定的时间间隔内，<strong>只允许</strong> 执行一次对应的操作</p>
+<p>合理使用 <strong><code>防抖/节流</code></strong> 优化应用中的操作，比如 <strong><code>节流</code></strong> 可用于优化 滚动事件、模糊搜索等，**<code>防抖</code>** 可用于优化一些按钮点击操作等。</p>
+</li>
+<li><h6 id="Web-Worker"><a href="#Web-Worker" class="headerlink" title="Web Worker"></a><strong>Web Worker</strong></h6><p><code>JavaScript</code> 是单线程的，如果存在需要大量计算的场景（如视频解码），<code>UI</code> 线程就会被阻塞，甚至浏览器直接卡死。</p>
+<p><code>Web Worker</code> 可以使脚本运行在新的线程中，它们独立于主线程，可以进行大量的计算活动，而不会影响主线程的 <code>UI</code> 渲染，但不能滥用 <code>Web Worker</code> 。</p>
+<p>由于浏览器 <code>GUI</code> 渲染线程与 <code>JS</code> 引擎线程是互斥的关系，当页面中有很多长任务时，会造成页面 <code>UI</code> 阻塞，出现界面卡顿、掉帧等情况，<u><strong>当任务的运算时长 - 通信时长 &gt; <code>50ms</code>，推荐使用Web Worker</strong></u>。并不是执行时间超过 <code>50ms</code> 的任务，就可以使用 Web Worker，还要先考虑<code>通信时长</code>的问题，假如一个运算执行时长为 <code>100ms</code>，但是通信时长为 <code>300ms</code>， 用了 Web Worker可能会更慢。</p>
+</li>
+<li><h6 id="虚拟列表"><a href="#虚拟列表" class="headerlink" title="虚拟列表"></a><strong>虚拟列表</strong></h6><p>比如<code> vue-virtual-scroller</code>、<code>vue-virtual-scroll-list</code>、<code>react-tiny-virtual-list</code>、<code>react-virtualized</code> 等</p>
+<p><code> vue-virtual-scroller</code>示例</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 安装插件</span></span><br><span class="line">npm install vue-virtual-scroller</span><br><span class="line"></span><br><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">VueVirtualScroller</span> <span class="keyword">from</span> <span class="string">&#x27;vue-virtual-scroller&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;vue-virtual-scroller/dist/vue-virtual-scroller.css&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">use</span>(<span class="title class_">VueVirtualScroller</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line">&lt;template&gt; </span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">RecycleScroller</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">class</span>=<span class="string">&quot;scroller&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">:items</span>=<span class="string">&quot;list&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">:item-size</span>=<span class="string">&quot;32&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">key-field</span>=<span class="string">&quot;id&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">v-slot</span>=<span class="string">&quot;&#123; item &#125;&quot;</span>&gt;</span> </span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;user&quot;</span>&gt;</span> &#123;&#123; item.name &#125;&#125; <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">RecycleScroller</span>&gt;</span></span> </span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+<li><h6 id="大文件分片上传"><a href="#大文件分片上传" class="headerlink" title="大文件分片上传"></a><strong>大文件分片上传</strong></h6></li>
+<li><h6 id="Excel-导入-x2F-导出"><a href="#Excel-导入-x2F-导出" class="headerlink" title="Excel 导入&#x2F;导出"></a><strong>Excel 导入&#x2F;导出</strong></h6></li>
+<li><h6 id="Vue-项目的优化"><a href="#Vue-项目的优化" class="headerlink" title="Vue 项目的优化"></a><strong>Vue 项目的优化</strong></h6><p>简单列举一些内容（包括但不限于）：</p>
+<ul>
+<li>减少响应式数据的生成，对于纯展示、又需要使用在 <code>template</code> 模板中使用的数据，可使用 <code>Object.freeze()</code> 进行冻结，避免被转为 <strong>不必要的响应式数据</strong></li>
+<li><code>Vue</code> 组件初始化是比较损耗性能的，使用 <strong>函数式组件</strong> 减少组件初始化的过程，适用于实现没有业务逻辑只展示内容的简单组件</li>
+<li>合理使用 <code>v-show</code> 和 <code>v-if</code>、为 <code>v-for</code> 组件设定唯一 <code>key</code>（非 <code>index</code>）、<code>v-for</code> 和 <code>v-if</code> 不要一起使用等</li>
+<li>使用 <code>KeepAlive</code> 复用组件，避免组件重复的创建、销毁带来的性能损耗</li>
+<li>使用 <code>() =&gt; import(xxx)</code> 方式实现路由懒加载</li>
+<li>使用 <code>ESM</code> 的方式封装自定义工具库等</li>
+<li>针对第三方库做到按需引入</li>
+<li>合理使用闭包，避免造成内存泄漏</li>
+<li>及时清除组件中的副作用，比如 <code>setTimeout、setInterval、addEventListener</code> 等</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
 
@@ -1121,7 +1467,7 @@
 
 
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
