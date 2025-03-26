@@ -2609,7 +2609,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ffbba1;
+  background: #17ffff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2673,7 +2673,7 @@ header.header {
 }
 .sidebar {
   background: linear-gradient(45deg, #222, #000, #3b0606);
-  background: url("../../../../images/tuo.jpg") center/cover no-repeat;
+  background: url("../images/tuo.jpg") center/cover no-repeat;
   box-shadow: unset;
 }
 .sidebar::before {
@@ -2736,18 +2736,18 @@ header.header {
   text-align: center;
 }
 .main>.column {
-  background: url("../../../../images/tuo.jpg") center center/cover no-repeat;
+  background: url("../images/tuo.jpg") center center/cover no-repeat;
 }
 .main>.column .header {
-  background: rgba(0,0,0,0.18);
+  background: rgba(0,0,0,0);
 }
 @media (max-width: 767px) {
   .main>.column {
-    background: url("../../../../images/1___4992662___0___.jpg") center/cover no-repeat;
-    background: url("../../../../images/tuo.jpg") center/cover no-repeat;
+    background: url("../images/1___4992662___0___.jpg") center/cover no-repeat;
+    background: url("../images/tuo.jpg") center/cover no-repeat;
   }
   .main>.column .header {
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0);
   }
 }
 .menu .menu-item a {
@@ -2757,21 +2757,12 @@ header.header {
   color: #ffa100;
   background: transparent;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(255,165,0,0.88);
-  mix-blend-mode: screen; /*关键 screen混合模式*/
-}
-@media (max-width: 767px) {
-  .site-meta .brand {
-    color: rgba(0,255,69,0.761);
-    background: transparent;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(38,180,0,0.88);
-    mix-blend-mode: screen;
-  }
+  -webkit-text-stroke: 1px rgba(236,255,99,0.878);
+  mix-blend-mode: screen;
 }
 .site-meta .site-subtitle {
   font-family: serif;
-  color: #b0c4de;
+  color: #e3c654;
 }
 .links-of-blogroll-title {
   color: #cea916;

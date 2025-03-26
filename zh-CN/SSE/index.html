@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="green"><meta name="generator" content="Hexo 7.0.0-rc1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="green">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/green/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"exploreoo.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"hide","padding":15,"offset":6},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="简介服务器向客户端推送数据，有很多解决方案。除了“轮询” 和 WebSocket，HTML 5 还提供了 Server-Sent Events（以下简称 SSE）。 一般来说，HTTP 协议只能客户端向服务器发起请求，服务器不能主动向客户端推送。但是有一种特殊情况，就是服务器向客户端声明，接下来要发送的是流信息（streaming）。也就是说，发送的不是一次性的数据包，而是一个数据流，会连续不断地">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Server-Sent Events（SSE）">
+<meta property="og:url" content="https://exploreoo.github.io/zh-CN/SSE/index.html">
+<meta property="og:site_name" content="WS的博客日志">
+<meta property="og:description" content="简介服务器向客户端推送数据，有很多解决方案。除了“轮询” 和 WebSocket，HTML 5 还提供了 Server-Sent Events（以下简称 SSE）。 一般来说，HTTP 协议只能客户端向服务器发起请求，服务器不能主动向客户端推送。但是有一种特殊情况，就是服务器向客户端声明，接下来要发送的是流信息（streaming）。也就是说，发送的不是一次性的数据包，而是一个数据流，会连续不断地">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-02-13T14:35:05.000Z">
+<meta property="article:modified_time" content="2025-03-26T13:48:40.160Z">
+<meta property="article:author" content="CHANCEUX">
+<meta property="article:tag" content="WEB-API">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://exploreoo.github.io/zh-CN/SSE/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://exploreoo.github.io/zh-CN/SSE/","path":"zh-CN/SSE/","title":"Server-Sent Events（SSE）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Server-Sent Events（SSE） | WS的博客日志</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">WS的博客日志</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">奔赴山海，保持热爱</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-xmark"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8E-WebSocket-%E7%9A%84%E6%AF%94%E8%BE%83"><span class="nav-number"></span> <span class="nav-text">与 WebSocket 的比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF-API"><span class="nav-number"></span> <span class="nav-text">客户端 API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#EventSource-%E5%AF%B9%E8%B1%A1"><span class="nav-number"></span> <span class="nav-text">EventSource 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#readyState-%E5%B1%9E%E6%80%A7"><span class="nav-number"></span> <span class="nav-text">readyState 属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#url-%E5%B1%9E%E6%80%A7"><span class="nav-number"></span> <span class="nav-text">url 属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#withCredentials-%E5%B1%9E%E6%80%A7"><span class="nav-number"></span> <span class="nav-text">withCredentials 属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#onopen-%E5%B1%9E%E6%80%A7"><span class="nav-number"></span> <span class="nav-text">onopen 属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#onmessage-%E5%B1%9E%E6%80%A7"><span class="nav-number"></span> <span class="nav-text">onmessage 属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#onerror-%E5%B1%9E%E6%80%A7"><span class="nav-number"></span> <span class="nav-text">onerror 属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6"><span class="nav-number"></span> <span class="nav-text">自定义事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#close-%E6%96%B9%E6%B3%95"><span class="nav-number"></span> <span class="nav-text">close() 方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%9E%E7%8E%B0"><span class="nav-number"></span> <span class="nav-text">服务器实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F"><span class="nav-number"></span> <span class="nav-text">数据格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#data-%E5%AD%97%E6%AE%B5"><span class="nav-number"></span> <span class="nav-text">data 字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#id-%E5%AD%97%E6%AE%B5"><span class="nav-number"></span> <span class="nav-text">id 字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#event-%E5%AD%97%E6%AE%B5"><span class="nav-number"></span> <span class="nav-text">event 字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#retry-%E5%AD%97%E6%AE%B5"><span class="nav-number"></span> <span class="nav-text">retry 字段</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%9E%E4%BE%8B"><span class="nav-number"></span> <span class="nav-text">Node 服务器实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="nav-number"></span> <span class="nav-text">参考链接</span></a></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="CHANCEUX"
+      src="/images/1___6779236___0___.jpg">
+  <p class="site-author-name" itemprop="name">CHANCEUX</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    
+      <div class="links-of-blogroll motion-element links-of-blogroll-block">
+        <div class="links-of-blogroll-title">
+          <!-- modify icon to fire by szw -->
+          <i class="fa fa-history fa-" aria-hidden="true"></i>
+          近期文章
+        </div>
+        <ul class="links-of-blogroll-list">
+          
+          
+            <li class="recent_posts_li">
+              <a href="/zh-CN/Page%20Visibility%20API/" title="Page Visibility API" target="_blank">Page Visibility API</a>
+            </li>
+          
+            <li class="recent_posts_li">
+              <a href="/zh-CN/SSE/" title="Server-Sent Events（SSE）" target="_blank">Server-Sent Events（SSE）</a>
+            </li>
+          
+            <li class="recent_posts_li">
+              <a href="/zh-CN/%E5%B9%BD%E7%81%B5%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/" title="幽灵依赖（Phantom Dependency）问题" target="_blank">幽灵依赖（Phantom Dependency）问题</a>
+            </li>
+          
+            <li class="recent_posts_li">
+              <a href="/zh-CN/%E8%A7%A3%E5%86%B3win10%E5%8D%A1%E9%A1%BF/" title="解决win10系统CPU占用过高" target="_blank">解决win10系统CPU占用过高</a>
+            </li>
+          
+            <li class="recent_posts_li">
+              <a href="/zh-CN/Cursor%E7%BC%96%E8%BE%91%E5%99%A8/" title="Cursor AI编辑器" target="_blank">Cursor AI编辑器</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/" title="https:&#x2F;&#x2F;github.com&#x2F;" rel="noopener" target="_blank">GitHub</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/SSE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1___6779236___0___.jpg">
+      <meta itemprop="name" content="CHANCEUX">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WS的博客日志">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Server-Sent Events（SSE） | WS的博客日志">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Server-Sent Events（SSE）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-02-13 22:35:05" itemprop="dateCreated datePublished" datetime="2025-02-13T22:35:05+08:00">2025-02-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>服务器向客户端推送数据，有很多解决方案。除了“轮询” 和 WebSocket，HTML 5 还提供了 Server-Sent Events（以下简称 SSE）。</p>
+<p>一般来说，HTTP 协议只能客户端向服务器发起请求，服务器不能主动向客户端推送。但是有一种特殊情况，就是服务器向客户端声明，接下来要发送的是流信息（streaming）。也就是说，发送的不是一次性的数据包，而是一个数据流，会连续不断地发送过来。这时，客户端不会关闭连接，会一直等着服务器发过来的新的数据流。本质上，这种通信就是以流信息的方式，完成一次用时很长的下载。</p>
+<p>SSE 就是利用这种机制，使用流信息向浏览器推送信息。它基于 HTTP 协议，目前除了 IE&#x2F;Edge，其他浏览器都支持。</p>
+<h2 id="与-WebSocket-的比较"><a href="#与-WebSocket-的比较" class="headerlink" title="与 WebSocket 的比较"></a>与 WebSocket 的比较</h2><p>SSE 与 WebSocket 作用相似，都是建立浏览器与服务器之间的通信渠道，然后服务器向浏览器推送信息。</p>
+<p>总体来说，WebSocket 更强大和灵活。因为它是全双工通道，可以双向通信；SSE 是单向通道，只能服务器向浏览器发送，因为 streaming 本质上就是下载。如果浏览器向服务器发送信息，就变成了另一次 HTTP 请求。</p>
+<p>但是，SSE 也有自己的优点。</p>
+<ul>
+<li>SSE 使用 HTTP 协议，现有的服务器软件都支持。WebSocket 是一个独立协议。</li>
+<li>SSE 属于轻量级，使用简单；WebSocket 协议相对复杂。</li>
+<li>SSE 默认支持断线重连，WebSocket 需要自己实现断线重连。</li>
+<li>SSE 一般只用来传送文本，二进制数据需要编码后传送，WebSocket 默认支持传送二进制数据。</li>
+<li>SSE 支持自定义发送的消息类型。</li>
+</ul>
+<p>因此，两者各有特点，适合不同的场合。</p>
+<h2 id="客户端-API"><a href="#客户端-API" class="headerlink" title="客户端 API"></a>客户端 API</h2><h3 id="EventSource-对象"><a href="#EventSource-对象" class="headerlink" title="EventSource 对象"></a>EventSource 对象</h3><p>SSE 的客户端 API 部署在<code>EventSource</code>对象上。下面的代码可以检测浏览器是否支持 SSE。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if (&#x27;EventSource&#x27; in window) &#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用 SSE 时，浏览器首先生成一个<code>EventSource</code>实例，向服务器发起连接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var source = new EventSource(url);</span><br></pre></td></tr></table></figure>
+
+<p>上面的<code>url</code>可以与当前网址同域，也可以跨域。跨域时，可以指定第二个参数，打开<code>withCredentials</code>属性，表示是否一起发送 Cookie。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var source = new EventSource(url, &#123; withCredentials: true &#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="readyState-属性"><a href="#readyState-属性" class="headerlink" title="readyState 属性"></a>readyState 属性</h3><p><code>EventSource</code>实例的<code>readyState</code>属性，表明连接的当前状态。该属性只读，可以取以下值。</p>
+<ul>
+<li>0：相当于常量<code>EventSource.CONNECTING</code>，表示连接还未建立，或者断线正在重连。</li>
+<li>1：相当于常量<code>EventSource.OPEN</code>，表示连接已经建立，可以接受数据。</li>
+<li>2：相当于常量<code>EventSource.CLOSED</code>，表示连接已断，且不会重连。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var source = new EventSource(url);</span><br><span class="line">console.log(source.readyState);</span><br></pre></td></tr></table></figure>
+
+<h3 id="url-属性"><a href="#url-属性" class="headerlink" title="url 属性"></a>url 属性</h3><p><code>EventSource</code>实例的<code>url</code>属性返回连接的网址，该属性只读。</p>
+<h3 id="withCredentials-属性"><a href="#withCredentials-属性" class="headerlink" title="withCredentials 属性"></a>withCredentials 属性</h3><p><code>EventSource</code>实例的<code>withCredentials</code>属性返回一个布尔值，表示当前实例是否开启 CORS 的<code>withCredentials</code>。该属性只读，默认是<code>false</code>。</p>
+<h3 id="onopen-属性"><a href="#onopen-属性" class="headerlink" title="onopen 属性"></a>onopen 属性</h3><p>连接一旦建立，就会触发<code>open</code>事件，可以在<code>onopen</code>属性定义回调函数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">source.onopen = function (event) &#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 另一种写法</span><br><span class="line">source.addEventListener(&#x27;open&#x27;, function (event) &#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;, false);</span><br></pre></td></tr></table></figure>
+
+<h3 id="onmessage-属性"><a href="#onmessage-属性" class="headerlink" title="onmessage 属性"></a>onmessage 属性</h3><p>客户端收到服务器发来的数据，就会触发<code>message</code>事件，可以在<code>onmessage</code>属性定义回调函数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">source.onmessage = function (event) &#123;</span><br><span class="line">  var data = event.data;</span><br><span class="line">  var origin = event.origin;</span><br><span class="line">  var lastEventId = event.lastEventId;</span><br><span class="line">  // handle message</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 另一种写法</span><br><span class="line">source.addEventListener(&#x27;message&#x27;, function (event) &#123;</span><br><span class="line">  var data = event.data;</span><br><span class="line">  var origin = event.origin;</span><br><span class="line">  var lastEventId = event.lastEventId;</span><br><span class="line">  // handle message</span><br><span class="line">&#125;, false);</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，参数对象<code>event</code>有如下属性。</p>
+<ul>
+<li><code>data</code>：服务器端传回的数据（文本格式）。</li>
+<li><code>origin</code>： 服务器 URL 的域名部分，即协议、域名和端口，表示消息的来源。</li>
+<li><code>lastEventId</code>：数据的编号，由服务器端发送。如果没有编号，这个属性为空。</li>
+</ul>
+<h3 id="onerror-属性"><a href="#onerror-属性" class="headerlink" title="onerror 属性"></a>onerror 属性</h3><p>如果发生通信错误（比如连接中断），就会触发<code>error</code>事件，可以在<code>onerror</code>属性定义回调函数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">source.onerror = function (event) &#123;</span><br><span class="line">  // handle error event</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 另一种写法</span><br><span class="line">source.addEventListener(&#x27;error&#x27;, function (event) &#123;</span><br><span class="line">  // handle error event</span><br><span class="line">&#125;, false);</span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h3><p>默认情况下，服务器发来的数据，总是触发浏览器<code>EventSource</code>实例的<code>message</code>事件。开发者还可以自定义 SSE 事件，这种情况下，发送回来的数据不会触发<code>message</code>事件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">source.addEventListener(&#x27;foo&#x27;, function (event) &#123;</span><br><span class="line">  var data = event.data;</span><br><span class="line">  var origin = event.origin;</span><br><span class="line">  var lastEventId = event.lastEventId;</span><br><span class="line">  // handle message</span><br><span class="line">&#125;, false);</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，浏览器对 SSE 的<code>foo</code>事件进行监听。如何实现服务器发送<code>foo</code>事件，请看下文。</p>
+<h3 id="close-方法"><a href="#close-方法" class="headerlink" title="close() 方法"></a>close() 方法</h3><p><code>close</code>方法用于关闭 SSE 连接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source.close();</span><br></pre></td></tr></table></figure>
+
+<h2 id="服务器实现"><a href="#服务器实现" class="headerlink" title="服务器实现"></a>服务器实现</h2><h3 id="数据格式"><a href="#数据格式" class="headerlink" title="数据格式"></a>数据格式</h3><p>服务器向浏览器发送的 SSE 数据，必须是 UTF-8 编码的文本，具有如下的 HTTP 头信息。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Content-Type: text/event-stream</span><br><span class="line">Cache-Control: no-cache</span><br><span class="line">Connection: keep-alive</span><br></pre></td></tr></table></figure>
+
+<p>上面三行之中，第一行的<code>Content-Type</code>必须指定 MIME 类型为<code>event-steam</code>。</p>
+<p>每一次发送的信息，由若干个<code>message</code>组成，每个<code>message</code>之间用<code>\n\n</code>分隔。每个<code>message</code>内部由若干行组成，每一行都是如下格式。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[field]: value\n</span><br></pre></td></tr></table></figure>
+
+<p>上面的<code>field</code>可以取四个值。</p>
+<ul>
+<li>data</li>
+<li>event</li>
+<li>id</li>
+<li>retry</li>
+</ul>
+<p>此外，还可以有冒号开头的行，表示注释。通常，服务器每隔一段时间就会向浏览器发送一个注释，保持连接不中断。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">: This is a comment</span><br></pre></td></tr></table></figure>
+
+<p>下面是一个例子。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">: this is a test stream\n\n</span><br><span class="line"></span><br><span class="line">data: some text\n\n</span><br><span class="line"></span><br><span class="line">data: another message\n</span><br><span class="line">data: with two lines \n\n</span><br></pre></td></tr></table></figure>
+
+<h3 id="data-字段"><a href="#data-字段" class="headerlink" title="data 字段"></a>data 字段</h3><p>数据内容用<code>data</code>字段表示。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data:  message\n\n</span><br></pre></td></tr></table></figure>
+
+<p>如果数据很长，可以分成多行，最后一行用<code>\n\n</code>结尾，前面行都用<code>\n</code>结尾。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data: begin message\n</span><br><span class="line">data: continue message\n\n</span><br></pre></td></tr></table></figure>
+
+<p>下面是一个发送 JSON 数据的例子。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;\n</span><br><span class="line">data: &quot;foo&quot;: &quot;bar&quot;,\n</span><br><span class="line">data: &quot;baz&quot;, 555\n</span><br><span class="line">data: &#125;\n\n</span><br></pre></td></tr></table></figure>
+
+<h3 id="id-字段"><a href="#id-字段" class="headerlink" title="id 字段"></a>id 字段</h3><p>数据标识符用<code>id</code>字段表示，相当于每一条数据的编号。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">id: msg1\n</span><br><span class="line">data: message\n\n</span><br></pre></td></tr></table></figure>
+
+<p>浏览器用<code>lastEventId</code>属性读取这个值。一旦连接断线，浏览器会发送一个 HTTP 头，里面包含一个特殊的<code>Last-Event-ID</code>头信息，将这个值发送回来，用来帮助服务器端重建连接。因此，这个头信息可以被视为一种同步机制。</p>
+<h3 id="event-字段"><a href="#event-字段" class="headerlink" title="event 字段"></a>event 字段</h3><p><code>event</code>字段表示自定义的事件类型，默认是<code>message</code>事件。浏览器可以用<code>addEventListener()</code>监听该事件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">event: foo\n</span><br><span class="line">data: a foo event\n\n</span><br><span class="line"></span><br><span class="line">data: an unnamed event\n\n</span><br><span class="line"></span><br><span class="line">event: bar\n</span><br><span class="line">data: a bar event\n\n</span><br></pre></td></tr></table></figure>
+
+<p>上面的代码创造了三条信息。第一条的名字是<code>foo</code>，触发浏览器的<code>foo</code>事件；第二条未取名，表示默认类型，触发浏览器的<code>message</code>事件；第三条是<code>bar</code>，触发浏览器的<code>bar</code>事件。</p>
+<p>下面是另一个例子。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">event: userconnect</span><br><span class="line">data: &#123;&quot;username&quot;: &quot;bobby&quot;, &quot;time&quot;: &quot;02:33:48&quot;&#125;</span><br><span class="line"></span><br><span class="line">event: usermessage</span><br><span class="line">data: &#123;&quot;username&quot;: &quot;bobby&quot;, &quot;time&quot;: &quot;02:34:11&quot;, &quot;text&quot;: &quot;Hi everyone.&quot;&#125;</span><br><span class="line"></span><br><span class="line">event: userdisconnect</span><br><span class="line">data: &#123;&quot;username&quot;: &quot;bobby&quot;, &quot;time&quot;: &quot;02:34:23&quot;&#125;</span><br><span class="line"></span><br><span class="line">event: usermessage</span><br><span class="line">data: &#123;&quot;username&quot;: &quot;sean&quot;, &quot;time&quot;: &quot;02:34:36&quot;, &quot;text&quot;: &quot;Bye, bobby.&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="retry-字段"><a href="#retry-字段" class="headerlink" title="retry 字段"></a>retry 字段</h3><p>服务器可以用<code>retry</code>字段，指定浏览器重新发起连接的时间间隔。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">retry: 10000\n</span><br></pre></td></tr></table></figure>
+
+<p>两种情况会导致浏览器重新发起连接：一种是时间间隔到期，二是由于网络错误等原因，导致连接出错。</p>
+<h2 id="Node-服务器实例"><a href="#Node-服务器实例" class="headerlink" title="Node 服务器实例"></a>Node 服务器实例</h2><p>SSE 要求服务器与浏览器保持连接。对于不同的服务器软件来说，所消耗的资源是不一样的。Apache 服务器，每个连接就是一个线程，如果要维持大量连接，势必要消耗大量资源。Node 则是所有连接都使用同一个线程，因此消耗的资源会小得多，但是这要求每个连接不能包含很耗时的操作，比如磁盘的 IO 读写。</p>
+<p>下面是 Node 的 SSE 服务器<a target="_blank" rel="noopener" href="http://cjihrig.com/blog/server-sent-events-in-node-js/">实例</a>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">var http = require(&quot;http&quot;);</span><br><span class="line"></span><br><span class="line">http.createServer(function (req, res) &#123;</span><br><span class="line">  var fileName = &quot;.&quot; + req.url;</span><br><span class="line"></span><br><span class="line">  if (fileName === &quot;./stream&quot;) &#123;</span><br><span class="line">    res.writeHead(200, &#123;</span><br><span class="line">      &quot;Content-Type&quot;:&quot;text/event-stream&quot;,</span><br><span class="line">      &quot;Cache-Control&quot;:&quot;no-cache&quot;,</span><br><span class="line">      &quot;Connection&quot;:&quot;keep-alive&quot;,</span><br><span class="line">      &quot;Access-Control-Allow-Origin&quot;: &#x27;*&#x27;,</span><br><span class="line">    &#125;);</span><br><span class="line">    res.write(&quot;retry: 10000\n&quot;);</span><br><span class="line">    res.write(&quot;event: connecttime\n&quot;);</span><br><span class="line">    res.write(&quot;data: &quot; + (new Date()) + &quot;\n\n&quot;);</span><br><span class="line">    res.write(&quot;data: &quot; + (new Date()) + &quot;\n\n&quot;);</span><br><span class="line"></span><br><span class="line">    interval = setInterval(function () &#123;</span><br><span class="line">      res.write(&quot;data: &quot; + (new Date()) + &quot;\n\n&quot;);</span><br><span class="line">    &#125;, 1000);</span><br><span class="line"></span><br><span class="line">    req.connection.addListener(&quot;close&quot;, function () &#123;</span><br><span class="line">      clearInterval(interval);</span><br><span class="line">    &#125;, false);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;).listen(8844, &quot;127.0.0.1&quot;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li>Colin Ihrig, <a target="_blank" rel="noopener" href="http://jspro.com/apis/implementing-push-technology-using-server-sent-events/">Implementing Push Technology Using Server-Sent Events</a></li>
+<li>Colin Ihrig，<a target="_blank" rel="noopener" href="http://cjihrig.com/blog/the-server-side-of-server-sent-events/">The Server Side of Server-Sent Events</a></li>
+<li>Eric Bidelman, <a target="_blank" rel="noopener" href="http://www.html5rocks.com/en/tutorials/eventsource/basics/">Stream Updates with Server-Sent Events</a></li>
+<li>MDN，<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Server-sent_events/Using_server-sent_events">Using server-sent events</a></li>
+<li>Segment.io, <a target="_blank" rel="noopener" href="https://segment.io/blog/2014-04-03-server-sent-events-the-simplest-realtime-browser-spec/">Server-Sent Events: The simplest realtime browser spec</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>不如来一杯咖啡吧~</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/1___6779236___0___.jpg" alt="CHANCEUX 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/1___6779236___0___.jpg" alt="CHANCEUX 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>CHANCEUX
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://exploreoo.github.io/zh-CN/SSE/" title="Server-Sent Events（SSE）">https://exploreoo.github.io/zh-CN/SSE/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_skype"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/zh-CN/%E5%B9%BD%E7%81%B5%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/" rel="prev" title="幽灵依赖（Phantom Dependency）问题">
+                  <i class="fa fa-chevron-left"></i> 幽灵依赖（Phantom Dependency）问题
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/zh-CN/Page%20Visibility%20API/" rel="next" title="Page Visibility API">
+                  Page Visibility API <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-mug-saucer"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">CHANCEUX</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <!-- <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div> -->
+
+
+<!-- 网站运行时间的设置 -->
+<div class="run-date">
+  <span id="timeDate">载入天数...</span>
+  <span id="times">载入时分秒...</span>
+</div>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/01/2020 10:00:00"); //此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "Safely Running: "+dnum+"天 ";
+        document.getElementById("times").innerHTML = hnum + "时" + mnum + "分" + snum + "秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  <script src="/js/third-party/addtoany.js"></script>
+
+  
+  <script defer src="https://vercount.one/js"></script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '120px',
+  right: '46px',
+  left: 'unset',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"exploreoo","repo":"exploreoo.github.io","client_id":"Ov23liHNlcDBsZV2oXR4","client_secret":"48d9e04c96efd73c5756e2566791c80d6484bd39","admin_user":"exploreoo","distraction_free_mode":false,"proxy":"https://benevolent-fudge-eddfe7.netlify.app/github_access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"22d04cef181fc77998abd2b56ebc1070"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":120,"height":240},"mobile":{"show":true}});</script></body>
+</html>

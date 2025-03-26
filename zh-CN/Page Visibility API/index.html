@@ -21,28 +21,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"exploreoo.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"hide","padding":15,"offset":6},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="前言幽灵依赖指的是：一个包可以使用它的祖先依赖（祖先的 node_modules 里的包），即使它自己没有在 package.json 中声明该依赖。 这种情况通常发生在 npm 和 yarn 采用的Hoisting（依赖提升）策略下，导致某些包在 node_modules 目录中可访问，但其实不应该被访问。 ⸻ 1. 为什么会产生幽灵依赖？在 npm 和 yarn 的默认 node_module">
+    <meta name="description" content="简介有时候，开发者需要知道，用户正在离开页面。常用的方法是监听下面三个事件。   pagehide beforeunload unload   但是，这些事件在手机上可能不会触发，页面就直接关闭了。因为手机系统可以将一个进程直接转入后台，然后杀死。   用户点击了一条系统通知，切换到另一个 App。 用户进入任务切换窗口，切换到另一个 App。 用户点击了 Home 按钮，切换回主屏幕。 操作系统">
 <meta property="og:type" content="article">
-<meta property="og:title" content="幽灵依赖（Phantom Dependency）问题">
-<meta property="og:url" content="https://exploreoo.github.io/zh-CN/%E5%B9%BD%E7%81%B5%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="Page Visibility API">
+<meta property="og:url" content="https://exploreoo.github.io/zh-CN/Page%20Visibility%20API/index.html">
 <meta property="og:site_name" content="WS的博客日志">
-<meta property="og:description" content="前言幽灵依赖指的是：一个包可以使用它的祖先依赖（祖先的 node_modules 里的包），即使它自己没有在 package.json 中声明该依赖。 这种情况通常发生在 npm 和 yarn 采用的Hoisting（依赖提升）策略下，导致某些包在 node_modules 目录中可访问，但其实不应该被访问。 ⸻ 1. 为什么会产生幽灵依赖？在 npm 和 yarn 的默认 node_module">
+<meta property="og:description" content="简介有时候，开发者需要知道，用户正在离开页面。常用的方法是监听下面三个事件。   pagehide beforeunload unload   但是，这些事件在手机上可能不会触发，页面就直接关闭了。因为手机系统可以将一个进程直接转入后台，然后杀死。   用户点击了一条系统通知，切换到另一个 App。 用户进入任务切换窗口，切换到另一个 App。 用户点击了 Home 按钮，切换回主屏幕。 操作系统">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-01-12T14:35:05.000Z">
-<meta property="article:modified_time" content="2025-03-26T13:48:40.163Z">
+<meta property="article:published_time" content="2025-02-15T14:35:05.000Z">
+<meta property="article:modified_time" content="2025-03-26T13:48:40.160Z">
 <meta property="article:author" content="CHANCEUX">
-<meta property="article:tag" content="前端工程化">
+<meta property="article:tag" content="WEB-API">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://exploreoo.github.io/zh-CN/%E5%B9%BD%E7%81%B5%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/">
+<link rel="canonical" href="https://exploreoo.github.io/zh-CN/Page%20Visibility%20API/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://exploreoo.github.io/zh-CN/%E5%B9%BD%E7%81%B5%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/","path":"zh-CN/幽灵依赖问题/","title":"幽灵依赖（Phantom Dependency）问题"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://exploreoo.github.io/zh-CN/Page%20Visibility%20API/","path":"zh-CN/Page Visibility API/","title":"Page Visibility API"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>幽灵依赖（Phantom Dependency）问题 | WS的博客日志</title>
+<title>Page Visibility API | WS的博客日志</title>
   
 
 
@@ -142,7 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E4%BA%A7%E7%94%9F%E5%B9%BD%E7%81%B5%E4%BE%9D%E8%B5%96%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">1. 为什么会产生幽灵依赖？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%B9%BD%E7%81%B5%E4%BE%9D%E8%B5%96%E6%98%AF%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">2. 为什么幽灵依赖是个问题？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E5%B9%BD%E7%81%B5%E4%BE%9D%E8%B5%96%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">3. 如何避免幽灵依赖？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-number">5.</span> <span class="nav-text">结论</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-visibilityState"><span class="nav-number">2.</span> <span class="nav-text">document.visibilityState</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-hidden"><span class="nav-number">3.</span> <span class="nav-text">document.hidden</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#visibilitychange-%E4%BA%8B%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">visibilitychange 事件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E5%8D%B8%E8%BD%BD"><span class="nav-number">5.</span> <span class="nav-text">页面卸载</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -246,7 +246,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/%E5%B9%BD%E7%81%B5%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/Page%20Visibility%20API/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1___6779236___0___.jpg">
@@ -259,12 +259,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="幽灵依赖（Phantom Dependency）问题 | WS的博客日志">
+      <meta itemprop="name" content="Page Visibility API | WS的博客日志">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          幽灵依赖（Phantom Dependency）问题
+          Page Visibility API
         </h1>
 
         <div class="post-meta-container">
@@ -275,7 +275,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2025-01-12 22:35:05" itemprop="dateCreated datePublished" datetime="2025-01-12T22:35:05+08:00">2025-01-12</time>
+      <time title="创建时间：2025-02-15 22:35:05" itemprop="dateCreated datePublished" datetime="2025-02-15T22:35:05+08:00">2025-02-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -303,55 +303,76 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>幽灵依赖指的是：一个包可以使用它的祖先依赖（祖先的 node_modules 里的包），即使它自己没有在 package.json 中声明该依赖。</p>
-<p>这种情况通常发生在 npm 和 yarn 采用的<strong>Hoisting（依赖提升）</strong>策略下，导致某些包在 node_modules 目录中可访问，但其实不应该被访问。</p>
-<p>⸻</p>
-<h4 id="1-为什么会产生幽灵依赖？"><a href="#1-为什么会产生幽灵依赖？" class="headerlink" title="1. 为什么会产生幽灵依赖？"></a>1. 为什么会产生幽灵依赖？</h4><p>在 npm 和 yarn 的默认 node_modules 结构中，依赖会被“提升”（hoist）到上级目录的 node_modules 中，以减少重复安装。例如：</p>
-<p>示例</p>
-<p>假设 package.json 这样定义：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;A&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">    &quot;B&quot;: &quot;^1.0.0&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>有时候，开发者需要知道，用户正在离开页面。常用的方法是监听下面三个事件。</p>
+<blockquote>
+<ul>
+<li><code>pagehide</code></li>
+<li><code>beforeunload</code></li>
+<li><code>unload</code></li>
+</ul>
+</blockquote>
+<p>但是，这些事件在手机上可能不会触发，页面就直接关闭了。因为手机系统可以将一个进程直接转入后台，然后杀死。</p>
+<blockquote>
+<ul>
+<li>用户点击了一条系统通知，切换到另一个 App。</li>
+<li>用户进入任务切换窗口，切换到另一个 App。</li>
+<li>用户点击了 Home 按钮，切换回主屏幕。</li>
+<li>操作系统自动切换到另一个 App（比如，收到一个电话）。</li>
+</ul>
+</blockquote>
+<p>上面这些情况，都会导致手机将浏览器进程切换到后台，然后为了节省资源，可能就会杀死浏览器进程。</p>
+<p>以前，页面被系统切换，以及系统清除浏览器进程，是无法监听到的。开发者想要指定，任何一种页面卸载情况下都会执行的代码，也是无法做到的。为了解决这个问题，就诞生了 Page Visibility API。不管手机或桌面电脑，所有情况下，这个 API 都会监听到页面的可见性发生变化。</p>
+<p>这个新的 API 的意义在于，通过监听网页的可见性，可以预判网页的卸载，还可以用来节省资源，减缓电能的消耗。比如，一旦用户不看网页，下面这些网页行为都是可以暂停的。</p>
+<blockquote>
+<ul>
+<li>对服务器的轮询</li>
+<li>网页动画</li>
+<li>正在播放的音频或视频</li>
+</ul>
+</blockquote>
+<h4 id="document-visibilityState"><a href="#document-visibilityState" class="headerlink" title="document.visibilityState"></a>document.visibilityState</h4><p>这个 API 主要在<code>document</code>对象上，新增了一个<code>document.visibilityState</code>属性。该属性返回一个字符串，表示页面当前的可见性状态，共有三个可能的值。</p>
+<blockquote>
+<ul>
+<li><code>hidden</code>：页面彻底不可见。</li>
+<li><code>visible</code>：页面至少一部分可见。</li>
+<li><code>prerender</code>：页面即将或正在渲染，处于不可见状态。</li>
+</ul>
+</blockquote>
+<p>其中，<code>hidden</code>状态和<code>visible</code>状态是所有浏览器都必须支持的。<code>prerender</code>状态只在支持“预渲染”的浏览器上才会出现，比如 Chrome 浏览器就有预渲染功能，可以在用户不可见的状态下，预先把页面渲染出来，等到用户要浏览的时候，直接展示渲染好的网页。</p>
+<p>只要页面可见，哪怕只露出一个角，<code>document.visibilityState</code>属性就返回<code>visible</code>。只有以下四种情况，才会返回<code>hidden</code>。</p>
+<blockquote>
+<ul>
+<li>浏览器最小化。</li>
+<li>浏览器没有最小化，但是当前页面切换成了背景页。</li>
+<li>浏览器将要卸载（unload）页面。</li>
+<li>操作系统触发锁屏屏幕。</li>
+</ul>
+</blockquote>
+<p>可以看到，上面四种场景涵盖了页面可能被卸载的所有情况。也就是说，页面卸载之前，<code>document.visibilityState</code>属性一定会变成<code>hidden</code>。事实上，这也是设计这个 API 的主要目的。</p>
+<p>另外，早期版本的 API，这个属性还有第四个值<code>unloaded</code>，表示页面即将卸载，现在已经被废弃了。</p>
+<p>注意，<code>document.visibilityState</code>属性只针对顶层窗口，内嵌的<code>&lt;iframe&gt;</code>页面的<code>document.visibilityState</code>属性由顶层窗口决定。使用 CSS 属性隐藏<code>&lt;iframe&gt;</code>页面（比如<code>display: none;</code>），并不会影响内嵌页面的可见性。</p>
+<h4 id="document-hidden"><a href="#document-hidden" class="headerlink" title="document.hidden"></a>document.hidden</h4><p>由于历史原因，这个 API 还定义了<code>document.hidden</code>属性。该属性只读，返回一个布尔值，表示当前页面是否可见。</p>
+<p>当<code>document.visibilityState</code>属性返回<code>visible</code>时，<code>document.hidden</code>属性返回<code>false</code>；其他情况下，都返回<code>true</code>。</p>
+<p>该属性只是出于历史原因而保留的，只要有可能，都应该使用<code>document.visibilityState</code>属性，而不是使用这个属性。</p>
+<h4 id="visibilitychange-事件"><a href="#visibilitychange-事件" class="headerlink" title="visibilitychange 事件"></a>visibilitychange 事件</h4><p>只要<code>document.visibilityState</code>属性发生变化，就会触发<code>visibilitychange</code>事件。因此，可以通过监听这个事件（通过<code>document.addEventListener()</code>方法或<code>document.onvisibilitychange</code>属性），跟踪页面可见性的变化。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">document.addEventListener(&#x27;visibilitychange&#x27;, function () &#123;</span><br><span class="line">  // 用户离开了当前页面</span><br><span class="line">  if (document.visibilityState === &#x27;hidden&#x27;) &#123;</span><br><span class="line">    document.title = &#x27;页面不可见&#x27;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // 用户打开或回到页面</span><br><span class="line">  if (document.visibilityState === &#x27;visible&#x27;) &#123;</span><br><span class="line">    document.title = &#x27;页面可见&#x27;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p>​	•	A 依赖于 lodash，但 B 并不依赖 lodash。<br>​	•	在 npm 或 yarn 的 hoisting 机制下，可能会将 lodash 提升到 node_modules&#x2F; 目录的根目录。</p>
-<p>目录结构可能变成这样：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/node_modules</span><br><span class="line">  /A</span><br><span class="line">    /node_modules</span><br><span class="line">      lodash/  (← 可能不会出现在这里)</span><br><span class="line">  /B</span><br><span class="line">  lodash/  (← 被提升到顶层)</span><br></pre></td></tr></table></figure>
+<p>上面代码是 Page Visibility API 的最基本用法，可以监听可见性变化。</p>
+<p>下面是另一个例子，一旦页面不可见，就暂停视频播放。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var vidElem = document.getElementById(&#x27;video-demo&#x27;);</span><br><span class="line">document.addEventListener(&#x27;visibilitychange&#x27;, startStopVideo);</span><br><span class="line"></span><br><span class="line">function startStopVideo() &#123;</span><br><span class="line">  if (document.visibilityState === &#x27;hidden&#x27;) &#123;</span><br><span class="line">    vidElem.pause();</span><br><span class="line">  &#125; else if (document.visibilityState === &#x27;visible&#x27;) &#123;</span><br><span class="line">    vidElem.play();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>问题：</p>
-<p>B 本来没有依赖 lodash，但它仍然可以直接 require(‘lodash’)，因为 lodash 被提升到了顶层 node_modules&#x2F;，而 Node.js 依赖解析规则会向上查找。</p>
-<p>⸻</p>
-<span id="more"></span>
-
-<h4 id="2-为什么幽灵依赖是个问题？"><a href="#2-为什么幽灵依赖是个问题？" class="headerlink" title="2. 为什么幽灵依赖是个问题？"></a>2. 为什么幽灵依赖是个问题？</h4><p>幽灵依赖会导致代码在某些环境下正常运行，在其他环境下报错，因为依赖项的可用性取决于 node_modules 的结构，而 node_modules 的结构可能因不同的安装方式而变化。</p>
-<p>主要风险：<br>    •	代码不可预测：依赖项不是显式声明的，某些机器上可能找得到，某些机器上可能找不到。<br>    •	团队协作问题：如果一个开发者无意中使用了幽灵依赖，其他开发者（或 CI&#x2F;CD 服务器）可能会遇到 Cannot find module 错误。<br>    •	升级破坏性：如果 A 更新了，可能 lodash 版本变化或者不再依赖 lodash，但 B 仍然错误地依赖它，导致 B 在某些情况下崩溃。</p>
-<p>⸻</p>
-<h4 id="3-如何避免幽灵依赖？"><a href="#3-如何避免幽灵依赖？" class="headerlink" title="3. 如何避免幽灵依赖？"></a>3. 如何避免幽灵依赖？</h4><p>✅ 方法 1：使用 pnpm</p>
-<p>pnpm 不会 hoist 依赖，它使用严格的模块隔离，每个包只能访问自己的依赖。例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/node_modules</span><br><span class="line">  /.pnpm</span><br><span class="line">    A@1.0.0/</span><br><span class="line">      node_modules/</span><br><span class="line">        lodash/</span><br><span class="line">    B@1.0.0/</span><br></pre></td></tr></table></figure>
-
-<p>在 pnpm 下，B 无法 访问 lodash，如果 B 试图 require(‘lodash’)，会报错，除非它自己显式安装 lodash。</p>
-<p>⸻</p>
-<p>✅ 方法 2：在 package.json 显式声明所有依赖</p>
-<p>如果一个包需要 lodash，就应该在自己的 package.json 中添加：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;lodash&quot;: &quot;^4.17.21&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这样无论 npm 还是 yarn，都不会依赖提升带来的不确定性。</p>
-<p>⸻</p>
-<p>✅ 方法 3：使用 –strict-peer-deps 选项</p>
-<p>在 npm 或 yarn 里，你可以使用：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --strict-peer-deps</span><br><span class="line">yarn install --check-files</span><br></pre></td></tr></table></figure>
-
-<p>这样如果有未声明的依赖，安装时就会报错。</p>
-<p>⸻</p>
-<p>✅ 方法 4：使用 npm dedupe 或 yarn-deduplicate</p>
-<p>如果怀疑 node_modules 里有幽灵依赖，可以运行：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm dedupe</span><br></pre></td></tr></table></figure>
-
-<p>或者：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn-deduplicate</span><br></pre></td></tr></table></figure>
-
-<p>清理依赖，重新安装。</p>
-<p>⸻</p>
-<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4><p>​	•	npm 和 yarn 默认可能会导致幽灵依赖，因为它们的 hoisting 机制可能让某些包“意外可用”。<br>​	•	pnpm 不会出现幽灵依赖，因为它有严格的依赖隔离。<br>​	•	避免幽灵依赖的最佳做法是显式声明所有依赖，并使用 –strict-peer-deps 或 pnpm 进行严格管理。</p>
-<p>如果团队经常遇到幽灵依赖问题，建议迁移到 pnpm。</p>
+<h4 id="页面卸载"><a href="#页面卸载" class="headerlink" title="页面卸载"></a>页面卸载</h4><p>下面专门讨论一下，如何正确监听页面卸载。</p>
+<p>页面卸载可以分成三种情况。</p>
+<blockquote>
+<ul>
+<li>页面可见时，用户关闭 Tab 页或浏览器窗口。</li>
+<li>页面可见时，用户在当前窗口前往另一个页面。</li>
+<li>页面不可见时，用户或系统关闭浏览器窗口。</li>
+</ul>
+</blockquote>
+<p>这三种情况，都会触发<code>visibilitychange</code>事件。前两种情况，该事件在用户离开页面时触发；最后一种情况，该事件在页面从可见状态变为不可见状态时触发。</p>
+<p>由此可见，<code>visibilitychange</code>事件比<code>pagehide</code>、<code>beforeunload</code>、<code>unload</code>事件更可靠，所有情况下都会触发（从<code>visible</code>变为<code>hidden</code>）。因此，可以只监听这个事件，运行页面卸载时需要运行的代码，不用监听后面那三个事件。</p>
+<p>甚至可以这样说，<code>unload</code>事件在任何情况下都不必监听，<code>beforeunload</code>事件只有一种适用场景，就是用户修改了表单，没有提交就离开当前页面。另一方面，指定了这两个事件的监听函数，浏览器就不会缓存当前页面。</p>
 
     </div>
 
@@ -387,7 +408,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://exploreoo.github.io/zh-CN/%E5%B9%BD%E7%81%B5%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/" title="幽灵依赖（Phantom Dependency）问题">https://exploreoo.github.io/zh-CN/幽灵依赖问题/</a>
+      <a href="https://exploreoo.github.io/zh-CN/Page%20Visibility%20API/" title="Page Visibility API">https://exploreoo.github.io/zh-CN/Page Visibility API/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -407,14 +428,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/zh-CN/%E8%A7%A3%E5%86%B3win10%E5%8D%A1%E9%A1%BF/" rel="prev" title="解决win10系统CPU占用过高">
-                  <i class="fa fa-chevron-left"></i> 解决win10系统CPU占用过高
+                <a href="/zh-CN/SSE/" rel="prev" title="Server-Sent Events（SSE）">
+                  <i class="fa fa-chevron-left"></i> Server-Sent Events（SSE）
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/zh-CN/SSE/" rel="next" title="Server-Sent Events（SSE）">
-                  Server-Sent Events（SSE） <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -549,7 +567,7 @@ darkmode.showWidget();
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"exploreoo","repo":"exploreoo.github.io","client_id":"Ov23liHNlcDBsZV2oXR4","client_secret":"48d9e04c96efd73c5756e2566791c80d6484bd39","admin_user":"exploreoo","distraction_free_mode":false,"proxy":"https://benevolent-fudge-eddfe7.netlify.app/github_access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"4ba407bafdb3c997d04632ca3ce8f557"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"exploreoo","repo":"exploreoo.github.io","client_id":"Ov23liHNlcDBsZV2oXR4","client_secret":"48d9e04c96efd73c5756e2566791c80d6484bd39","admin_user":"exploreoo","distraction_free_mode":false,"proxy":"https://benevolent-fudge-eddfe7.netlify.app/github_access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"b45d49e96b315e63dd0eaeddf6ebe3d9"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":120,"height":240},"mobile":{"show":true}});</script></body>
