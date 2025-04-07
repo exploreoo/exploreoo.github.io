@@ -8,8 +8,8 @@
 
 <p>目前<u><em>v0.43.5</em></u>版本，新注册获取<code>Pro Trial</code> 15 days，到期续账号即可</p>
 <p>途径如下</p>
-<p>1、<a href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#101;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#x40;&#x78;&#x78;&#120;&#x2e;&#x63;&#x6f;&#x6d;">&#101;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#x40;&#x78;&#x78;&#120;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
-<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#101;&#120;&#97;&#x6d;&#112;&#108;&#101;&#x2b;&#x31;&#64;&#x78;&#x78;&#120;&#x2e;&#99;&#x6f;&#109;">&#101;&#120;&#97;&#x6d;&#112;&#108;&#101;&#x2b;&#x31;&#64;&#x78;&#x78;&#120;&#x2e;&#99;&#x6f;&#109;</a>&#x2F;<a href="mailto:&#101;&#x78;&#97;&#109;&#x70;&#108;&#101;&#43;&#x32;&#64;&#120;&#x78;&#x78;&#46;&#99;&#x6f;&#109;">&#101;&#x78;&#97;&#109;&#x70;&#108;&#101;&#43;&#x32;&#64;&#120;&#x78;&#x78;&#46;&#99;&#x6f;&#109;</a>…</p>
+<p>1、<a href="https://www.2925.com/">注册主邮箱</a>，例 <a href="mailto:&#101;&#x78;&#x61;&#109;&#112;&#108;&#101;&#x40;&#x78;&#x78;&#120;&#x2e;&#x63;&#x6f;&#x6d;">&#101;&#x78;&#x61;&#109;&#112;&#108;&#101;&#x40;&#x78;&#x78;&#120;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p>2、Cursor注册规则，添加后缀，例<a href="mailto:&#101;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#43;&#49;&#x40;&#x78;&#x78;&#120;&#x2e;&#99;&#111;&#x6d;">&#101;&#120;&#97;&#x6d;&#x70;&#108;&#x65;&#43;&#49;&#x40;&#x78;&#x78;&#120;&#x2e;&#99;&#111;&#x6d;</a>&#x2F;<a href="mailto:&#101;&#120;&#97;&#x6d;&#112;&#108;&#101;&#43;&#50;&#64;&#x78;&#120;&#x78;&#46;&#x63;&#111;&#109;">&#101;&#120;&#97;&#x6d;&#112;&#108;&#101;&#43;&#50;&#64;&#x78;&#120;&#x78;&#46;&#x63;&#111;&#109;</a>…</p>
 <h5 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h5><p><strong>Premium models   0 &#x2F; 500</strong></p>
 <p>You’ve used no requests out of your <strong>500</strong> fast requests quota.</p>
 <p><strong>gpt-4o-mini or cursor-small   0 &#x2F; No Limit</strong></p>
@@ -66,80 +66,6 @@
       </categories>
       <tags>
         <tag>Element-UI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JSON（JavaScript Object Notation）</title>
-    <url>/zh-CN/JSON/</url>
-    <content><![CDATA[<p>JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，因其简洁、易读、易于解析的特点，在前后端数据交互、API 设计、配置文件等领域广泛应用。下面是使用 JSON 传输数据的优缺点：</p>
-<h5 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h5><ol>
-<li>简洁、易读：JSON 格式的数据非常简洁易读，使用起来非常方便。可以轻松地通过文本编辑器或浏览器插件进行查看、编辑、调试。</li>
-<li>易于解析：JSON 数据可以使用多种编程语言解析，支持主流的编程语言，如JavaScript、Java、Python、C#等，因此JSON数据格式具有良好的跨平台和可扩展性。</li>
-<li>结构化数据：JSON数据是一种结构化的数据格式，具有良好的扩展性和兼容性，可以非常容易地扩展、更新、维护和重用。</li>
-<li>跨域请求：JSON 支持跨域请求，允许在不同域名之间安全地传输数据。这使得使用 JSON 传输数据成为一个非常有用的选择。</li>
-</ol>
-<h5 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h5><ol>
-<li>不适合传输大文件：JSON 是基于文本的格式，传输大文件时会占用较多的带宽和时间。</li>
-<li>缺乏标准：虽然 JSON 是一种非常流行的数据交换格式，但是没有官方标准或规范，因此可能存在不同实现之间的差异性。</li>
-<li>不支持注释：JSON格式不支持注释，因此无法在数据中添加注释，这可能会导致在一些场景下的不便利。</li>
-<li>安全性：JSON 格式虽然支持跨域请求，但是如果没有正确地处理跨域请求，可能会导致安全问题。</li>
-</ol>
-<h5 id="JSON-parse-JSON-stringify-的缺点"><a href="#JSON-parse-JSON-stringify-的缺点" class="headerlink" title="JSON.parse(JSON.stringify())的缺点"></a>JSON.parse(JSON.stringify())的缺点</h5><ol>
-<li>如果obj里面有<strong>时间对象</strong>，则JSON.stringify后再JSON.parse的结果，时间将只是字符串的形式；</li>
-<li>如果obj里有<strong>RegExp</strong>(正则表达式的缩写)、Error对象，则序列化的结果将只得到空对象； </li>
-<li>如果obj里有<strong>函数、undefined</strong>，则序列化的结果会把函数或 undefined丢失；</li>
-<li>如果obj里有<strong>NaN、Infinity和-Infinity</strong>，则序列化的结果会变成null</li>
-<li>JSON.stringify()只能序列化<strong>对象的可枚举的自有属性</strong>，例如 如果obj中的对象是有构造函数生成的， 则使用JSON.parse(JSON.stringify(obj))深拷贝后，会丢弃对象的constructor；</li>
-<li>如果对象中存在<strong>循环引用</strong>的情况也无法正确实现深拷贝（可利用map结构辅助过滤）；</li>
-</ol>
-<p>综上所述，JSON 是一种非常便捷、灵活和可扩展的数据交换格式，独立于计算机各类语言，但在使用时需要注意其缺点，以确保数据的安全性和完整性。</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>JSON</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Observer观察器</title>
-    <url>/zh-CN/Observer%E8%A7%82%E5%AF%9F%E5%99%A8/</url>
-    <content><![CDATA[<h3 id="Observer观察器"><a href="#Observer观察器" class="headerlink" title="Observer观察器"></a>Observer观察器</h3><ul>
-<li><p><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API">IntersectionObserver</a></strong></p>
-<p>​		过去，相交检测通常要用到事件监听，并且需要频繁调用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect"><code>Element.getBoundingClientRect()</code></a> 方法以获取相关元素的边界信息。事件监听和调用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect"><code>Element.getBoundingClientRect()</code></a> 都是在主线程上运行，因此频繁触发、调用可能会造成性能问题。这种检测方法极其怪异且不优雅。</p>
-<p>​		Intersection Observer API 会注册一个回调函数，每当被监视的元素进入或者退出另外一个元素时 (或者 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Viewport">viewport</a> )，或者两个元素的相交部分大小发生变化时，该回调方法会被触发执行。这样，我们网站的主线程不需要再为了监听元素相交而辛苦劳作，浏览器会自行优化元素相交管理。</p>
-<p>应用场景：</p>
-<ul>
-<li>图片懒加载——当图片滚动到可见时才进行加载</li>
-</ul>
-</li>
-<li><p>内容无限滚动——也就是用户滚动到接近内容底部时直接加载更多，而无需用户操作翻页，给用户一种网页可以无限滚动的错觉</p>
-<ul>
-<li>检测广告的曝光情况——为了计算广告收益，需要知道广告元素的曝光情况</li>
-<li>在用户看见某个区域时执行任务或播放动画</li>
-</ul>
-</li>
-<li><p><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver">MutationObserver</a></strong></p>
-<p>监听一个普通 JS 对象的变化，我们会用 Object.defineProperty 或者 Proxy。</p>
-<p>监听元素属性和子节点变化，比如可以用来做去不掉的水印。MutationObserver 可以监听对元素的属性的修改、对它的子节点的增删改</p>
-</li>
-<li><p><strong>ResizeObserver</strong></p>
-<p>窗口我们可以用 addEventListener 监听 resize 事件。</p>
-<p>监听元素大小变化。使用 ResizeObserver 监听大小的改变，当 width、height 被修改时会触发回调</p>
-</li>
-<li><p><strong>PerformanceObserver</strong></p>
-<p>PerformanceObserver 用于监听记录 performance 数据的行为。一旦记录了就会触发回调，这样我们就可以在回调里把这些数据上报</p>
-</li>
-<li><p><strong>ReportingObserver</strong></p>
-<p>可以保证更全面的了解网页 app 的运行情况。ReportingObserver 可以监听过时的 api、浏览器干预等报告等的打印，在回调里上报，这些是错误监听无法监听到但对了解网页运行情况很有用的数据</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>WEB-API</tag>
       </tags>
   </entry>
   <entry>
@@ -215,6 +141,80 @@
 <p>这三种情况，都会触发<code>visibilitychange</code>事件。前两种情况，该事件在用户离开页面时触发；最后一种情况，该事件在页面从可见状态变为不可见状态时触发。</p>
 <p>由此可见，<code>visibilitychange</code>事件比<code>pagehide</code>、<code>beforeunload</code>、<code>unload</code>事件更可靠，所有情况下都会触发（从<code>visible</code>变为<code>hidden</code>）。因此，可以只监听这个事件，运行页面卸载时需要运行的代码，不用监听后面那三个事件。</p>
 <p>甚至可以这样说，<code>unload</code>事件在任何情况下都不必监听，<code>beforeunload</code>事件只有一种适用场景，就是用户修改了表单，没有提交就离开当前页面。另一方面，指定了这两个事件的监听函数，浏览器就不会缓存当前页面。</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>WEB-API</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JSON（JavaScript Object Notation）</title>
+    <url>/zh-CN/JSON/</url>
+    <content><![CDATA[<p>JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，因其简洁、易读、易于解析的特点，在前后端数据交互、API 设计、配置文件等领域广泛应用。下面是使用 JSON 传输数据的优缺点：</p>
+<h5 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h5><ol>
+<li>简洁、易读：JSON 格式的数据非常简洁易读，使用起来非常方便。可以轻松地通过文本编辑器或浏览器插件进行查看、编辑、调试。</li>
+<li>易于解析：JSON 数据可以使用多种编程语言解析，支持主流的编程语言，如JavaScript、Java、Python、C#等，因此JSON数据格式具有良好的跨平台和可扩展性。</li>
+<li>结构化数据：JSON数据是一种结构化的数据格式，具有良好的扩展性和兼容性，可以非常容易地扩展、更新、维护和重用。</li>
+<li>跨域请求：JSON 支持跨域请求，允许在不同域名之间安全地传输数据。这使得使用 JSON 传输数据成为一个非常有用的选择。</li>
+</ol>
+<h5 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h5><ol>
+<li>不适合传输大文件：JSON 是基于文本的格式，传输大文件时会占用较多的带宽和时间。</li>
+<li>缺乏标准：虽然 JSON 是一种非常流行的数据交换格式，但是没有官方标准或规范，因此可能存在不同实现之间的差异性。</li>
+<li>不支持注释：JSON格式不支持注释，因此无法在数据中添加注释，这可能会导致在一些场景下的不便利。</li>
+<li>安全性：JSON 格式虽然支持跨域请求，但是如果没有正确地处理跨域请求，可能会导致安全问题。</li>
+</ol>
+<h5 id="JSON-parse-JSON-stringify-的缺点"><a href="#JSON-parse-JSON-stringify-的缺点" class="headerlink" title="JSON.parse(JSON.stringify())的缺点"></a>JSON.parse(JSON.stringify())的缺点</h5><ol>
+<li>如果obj里面有<strong>时间对象</strong>，则JSON.stringify后再JSON.parse的结果，时间将只是字符串的形式；</li>
+<li>如果obj里有<strong>RegExp</strong>(正则表达式的缩写)、Error对象，则序列化的结果将只得到空对象； </li>
+<li>如果obj里有<strong>函数、undefined</strong>，则序列化的结果会把函数或 undefined丢失；</li>
+<li>如果obj里有<strong>NaN、Infinity和-Infinity</strong>，则序列化的结果会变成null</li>
+<li>JSON.stringify()只能序列化<strong>对象的可枚举的自有属性</strong>，例如 如果obj中的对象是有构造函数生成的， 则使用JSON.parse(JSON.stringify(obj))深拷贝后，会丢弃对象的constructor；</li>
+<li>如果对象中存在<strong>循环引用</strong>的情况也无法正确实现深拷贝（可利用map结构辅助过滤）；</li>
+</ol>
+<p>综上所述，JSON 是一种非常便捷、灵活和可扩展的数据交换格式，独立于计算机各类语言，但在使用时需要注意其缺点，以确保数据的安全性和完整性。</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>JSON</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Observer观察器</title>
+    <url>/zh-CN/Observer%E8%A7%82%E5%AF%9F%E5%99%A8/</url>
+    <content><![CDATA[<h3 id="Observer观察器"><a href="#Observer观察器" class="headerlink" title="Observer观察器"></a>Observer观察器</h3><ul>
+<li><p><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API">IntersectionObserver</a></strong></p>
+<p>​		过去，相交检测通常要用到事件监听，并且需要频繁调用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect"><code>Element.getBoundingClientRect()</code></a> 方法以获取相关元素的边界信息。事件监听和调用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect"><code>Element.getBoundingClientRect()</code></a> 都是在主线程上运行，因此频繁触发、调用可能会造成性能问题。这种检测方法极其怪异且不优雅。</p>
+<p>​		Intersection Observer API 会注册一个回调函数，每当被监视的元素进入或者退出另外一个元素时 (或者 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Viewport">viewport</a> )，或者两个元素的相交部分大小发生变化时，该回调方法会被触发执行。这样，我们网站的主线程不需要再为了监听元素相交而辛苦劳作，浏览器会自行优化元素相交管理。</p>
+<p>应用场景：</p>
+<ul>
+<li>图片懒加载——当图片滚动到可见时才进行加载</li>
+</ul>
+</li>
+<li><p>内容无限滚动——也就是用户滚动到接近内容底部时直接加载更多，而无需用户操作翻页，给用户一种网页可以无限滚动的错觉</p>
+<ul>
+<li>检测广告的曝光情况——为了计算广告收益，需要知道广告元素的曝光情况</li>
+<li>在用户看见某个区域时执行任务或播放动画</li>
+</ul>
+</li>
+<li><p><strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver">MutationObserver</a></strong></p>
+<p>监听一个普通 JS 对象的变化，我们会用 Object.defineProperty 或者 Proxy。</p>
+<p>监听元素属性和子节点变化，比如可以用来做去不掉的水印。MutationObserver 可以监听对元素的属性的修改、对它的子节点的增删改</p>
+</li>
+<li><p><strong>ResizeObserver</strong></p>
+<p>窗口我们可以用 addEventListener 监听 resize 事件。</p>
+<p>监听元素大小变化。使用 ResizeObserver 监听大小的改变，当 width、height 被修改时会触发回调</p>
+</li>
+<li><p><strong>PerformanceObserver</strong></p>
+<p>PerformanceObserver 用于监听记录 performance 数据的行为。一旦记录了就会触发回调，这样我们就可以在回调里把这些数据上报</p>
+</li>
+<li><p><strong>ReportingObserver</strong></p>
+<p>可以保证更全面的了解网页 app 的运行情况。ReportingObserver 可以监听过时的 api、浏览器干预等报告等的打印，在回调里上报，这些是错误监听无法监听到但对了解网页运行情况很有用的数据</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>前端</category>
@@ -497,35 +497,6 @@
       </tags>
   </entry>
   <entry>
-    <title>前端兼容性问题</title>
-    <url>/zh-CN/%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<ul>
-<li><p><code>Autoprefixer</code>自动添加浏览器前缀插件，属于后处理程序，不像 Sass 以及 Stylus 之类的预处理器。它适用于普通的 CSS，可以实现css3代码自动补全。也可以轻松跟 Sass，LESS及Stylus集成，在CSS编译前或编译后运行。</p>
-</li>
-<li><p>ant-design table树结构折叠图标火狐浏览器内显示错误</p>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这种写法仅火狐识别</span></span><br><span class="line"><span class="variable">@-moz-document</span> <span class="built_in">url-prefix</span>() &#123;</span><br><span class="line">  <span class="selector-class">.surely-table-row-expand-icon</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><h5 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a><a href="https://www.chromium.org/">Chromium</a></h5><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*滚动条整体粗细样式*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="comment">/*高宽分别对应横竖滚动条的尺寸*/</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条里面小方块*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="comment">/* 颜色 */</span></span><br><span class="line">  <span class="comment">/* background:#b6b6b6!important; */</span></span><br><span class="line">  <span class="comment">/* 线性渐变背景 */</span></span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(</span><br><span class="line">    <span class="number">45deg</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">25%</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">25%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">25%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">50%</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">50%</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">75%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">75%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">100%</span></span><br><span class="line">  ) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#1175c2</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条轨道*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-track</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#ededed</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条角落*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-corner</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h5><p>scrollbar-width</p>
-<p>scrollbar-color</p>
-<h5 id="IE"><a href="#IE" class="headerlink" title="IE"></a>IE</h5><p>scrollbar-base-color</p>
-<p>scrollbar-track-color</p>
-<p>scrollbar-arrow-color</p>
-<p>scrollbar-3dlight-color</p>
-<p>scrollbar-shadow-color</p>
-<p>scrollbar-highlight-color</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>兼容</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>分片上传控件</title>
     <url>/zh-CN/%E5%88%86%E7%89%87%E4%B8%8A%E4%BC%A0%E6%8E%A7%E4%BB%B6/</url>
     <content><![CDATA[<p>文件上传是一个常见的需求，尤其是大文件的上传。为了提高上传效率和用户体验，我们可以采用并发切片上传和秒传技术。本文将介绍如何使用这些技术，并提供一个完整的实现示例。</p>
@@ -553,6 +524,66 @@
       </categories>
       <tags>
         <tag>分片上传</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>幽灵依赖（Phantom Dependency）问题</title>
+    <url>/zh-CN/%E5%B9%BD%E7%81%B5%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>幽灵依赖指的是：一个包可以使用它的祖先依赖（祖先的 node_modules 里的包），即使它自己没有在 package.json 中声明该依赖。</p>
+<p>这种情况通常发生在 npm 和 yarn 采用的<strong>Hoisting（依赖提升）</strong>策略下，导致某些包在 node_modules 目录中可访问，但其实不应该被访问。</p>
+<p>⸻</p>
+<h4 id="1-为什么会产生幽灵依赖？"><a href="#1-为什么会产生幽灵依赖？" class="headerlink" title="1. 为什么会产生幽灵依赖？"></a>1. 为什么会产生幽灵依赖？</h4><p>在 npm 和 yarn 的默认 node_modules 结构中，依赖会被“提升”（hoist）到上级目录的 node_modules 中，以减少重复安装。例如：</p>
+<p>示例</p>
+<p>假设 package.json 这样定义：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;A&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">    &quot;B&quot;: &quot;^1.0.0&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	•	A 依赖于 lodash，但 B 并不依赖 lodash。<br>​	•	在 npm 或 yarn 的 hoisting 机制下，可能会将 lodash 提升到 node_modules&#x2F; 目录的根目录。</p>
+<p>目录结构可能变成这样：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/node_modules</span><br><span class="line">  /A</span><br><span class="line">    /node_modules</span><br><span class="line">      lodash/  (← 可能不会出现在这里)</span><br><span class="line">  /B</span><br><span class="line">  lodash/  (← 被提升到顶层)</span><br></pre></td></tr></table></figure>
+
+<p>问题：</p>
+<p>B 本来没有依赖 lodash，但它仍然可以直接 require(‘lodash’)，因为 lodash 被提升到了顶层 node_modules&#x2F;，而 Node.js 依赖解析规则会向上查找。</p>
+<p>⸻</p>
+<span id="more"></span>
+
+<h4 id="2-为什么幽灵依赖是个问题？"><a href="#2-为什么幽灵依赖是个问题？" class="headerlink" title="2. 为什么幽灵依赖是个问题？"></a>2. 为什么幽灵依赖是个问题？</h4><p>幽灵依赖会导致代码在某些环境下正常运行，在其他环境下报错，因为依赖项的可用性取决于 node_modules 的结构，而 node_modules 的结构可能因不同的安装方式而变化。</p>
+<p>主要风险：<br>    •	代码不可预测：依赖项不是显式声明的，某些机器上可能找得到，某些机器上可能找不到。<br>    •	团队协作问题：如果一个开发者无意中使用了幽灵依赖，其他开发者（或 CI&#x2F;CD 服务器）可能会遇到 Cannot find module 错误。<br>    •	升级破坏性：如果 A 更新了，可能 lodash 版本变化或者不再依赖 lodash，但 B 仍然错误地依赖它，导致 B 在某些情况下崩溃。</p>
+<p>⸻</p>
+<h4 id="3-如何避免幽灵依赖？"><a href="#3-如何避免幽灵依赖？" class="headerlink" title="3. 如何避免幽灵依赖？"></a>3. 如何避免幽灵依赖？</h4><p>✅ 方法 1：使用 pnpm</p>
+<p>pnpm 不会 hoist 依赖，它使用严格的模块隔离，每个包只能访问自己的依赖。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/node_modules</span><br><span class="line">  /.pnpm</span><br><span class="line">    A@1.0.0/</span><br><span class="line">      node_modules/</span><br><span class="line">        lodash/</span><br><span class="line">    B@1.0.0/</span><br></pre></td></tr></table></figure>
+
+<p>在 pnpm 下，B 无法 访问 lodash，如果 B 试图 require(‘lodash’)，会报错，除非它自己显式安装 lodash。</p>
+<p>⸻</p>
+<p>✅ 方法 2：在 package.json 显式声明所有依赖</p>
+<p>如果一个包需要 lodash，就应该在自己的 package.json 中添加：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;lodash&quot;: &quot;^4.17.21&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样无论 npm 还是 yarn，都不会依赖提升带来的不确定性。</p>
+<p>⸻</p>
+<p>✅ 方法 3：使用 –strict-peer-deps 选项</p>
+<p>在 npm 或 yarn 里，你可以使用：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --strict-peer-deps</span><br><span class="line">yarn install --check-files</span><br></pre></td></tr></table></figure>
+
+<p>这样如果有未声明的依赖，安装时就会报错。</p>
+<p>⸻</p>
+<p>✅ 方法 4：使用 npm dedupe 或 yarn-deduplicate</p>
+<p>如果怀疑 node_modules 里有幽灵依赖，可以运行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm dedupe</span><br></pre></td></tr></table></figure>
+
+<p>或者：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yarn-deduplicate</span><br></pre></td></tr></table></figure>
+
+<p>清理依赖，重新安装。</p>
+<p>⸻</p>
+<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4><p>​	•	npm 和 yarn 默认可能会导致幽灵依赖，因为它们的 hoisting 机制可能让某些包“意外可用”。<br>​	•	pnpm 不会出现幽灵依赖，因为它有严格的依赖隔离。<br>​	•	避免幽灵依赖的最佳做法是显式声明所有依赖，并使用 –strict-peer-deps 或 pnpm 进行严格管理。</p>
+<p>如果团队经常遇到幽灵依赖问题，建议迁移到 pnpm。</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端工程化</tag>
       </tags>
   </entry>
   <entry>
@@ -787,63 +818,32 @@
       </tags>
   </entry>
   <entry>
-    <title>幽灵依赖（Phantom Dependency）问题</title>
-    <url>/zh-CN/%E5%B9%BD%E7%81%B5%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>幽灵依赖指的是：一个包可以使用它的祖先依赖（祖先的 node_modules 里的包），即使它自己没有在 package.json 中声明该依赖。</p>
-<p>这种情况通常发生在 npm 和 yarn 采用的<strong>Hoisting（依赖提升）</strong>策略下，导致某些包在 node_modules 目录中可访问，但其实不应该被访问。</p>
-<p>⸻</p>
-<h4 id="1-为什么会产生幽灵依赖？"><a href="#1-为什么会产生幽灵依赖？" class="headerlink" title="1. 为什么会产生幽灵依赖？"></a>1. 为什么会产生幽灵依赖？</h4><p>在 npm 和 yarn 的默认 node_modules 结构中，依赖会被“提升”（hoist）到上级目录的 node_modules 中，以减少重复安装。例如：</p>
-<p>示例</p>
-<p>假设 package.json 这样定义：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;A&quot;: &quot;^1.0.0&quot;,</span><br><span class="line">    &quot;B&quot;: &quot;^1.0.0&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>前端兼容性问题</title>
+    <url>/zh-CN/%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<ul>
+<li><p><code>Autoprefixer</code>自动添加浏览器前缀插件，属于后处理程序，不像 Sass 以及 Stylus 之类的预处理器。它适用于普通的 CSS，可以实现css3代码自动补全。也可以轻松跟 Sass，LESS及Stylus集成，在CSS编译前或编译后运行。</p>
+</li>
+<li><p>ant-design table树结构折叠图标火狐浏览器内显示错误</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 这种写法仅火狐识别</span></span><br><span class="line"><span class="variable">@-moz-document</span> <span class="built_in">url-prefix</span>() &#123;</span><br><span class="line">  <span class="selector-class">.surely-table-row-expand-icon</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a><a href="https://www.chromium.org/">Chromium</a></h5><figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*滚动条整体粗细样式*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="comment">/*高宽分别对应横竖滚动条的尺寸*/</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条里面小方块*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="comment">/* 颜色 */</span></span><br><span class="line">  <span class="comment">/* background:#b6b6b6!important; */</span></span><br><span class="line">  <span class="comment">/* 线性渐变背景 */</span></span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(</span><br><span class="line">    <span class="number">45deg</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">25%</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">25%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">25%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">50%</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">50%</span>,</span><br><span class="line">    <span class="number">#ffbd61</span> <span class="number">75%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">75%</span>,</span><br><span class="line">    <span class="number">#ff8800</span> <span class="number">100%</span></span><br><span class="line">  ) <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-thumb</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#1175c2</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条轨道*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-track</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.2</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#ededed</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*滚动条角落*/</span></span><br><span class="line">::<span class="selector-tag">-webkit-scrollbar-corner</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#000</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>​	•	A 依赖于 lodash，但 B 并不依赖 lodash。<br>​	•	在 npm 或 yarn 的 hoisting 机制下，可能会将 lodash 提升到 node_modules&#x2F; 目录的根目录。</p>
-<p>目录结构可能变成这样：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/node_modules</span><br><span class="line">  /A</span><br><span class="line">    /node_modules</span><br><span class="line">      lodash/  (← 可能不会出现在这里)</span><br><span class="line">  /B</span><br><span class="line">  lodash/  (← 被提升到顶层)</span><br></pre></td></tr></table></figure>
-
-<p>问题：</p>
-<p>B 本来没有依赖 lodash，但它仍然可以直接 require(‘lodash’)，因为 lodash 被提升到了顶层 node_modules&#x2F;，而 Node.js 依赖解析规则会向上查找。</p>
-<p>⸻</p>
-<span id="more"></span>
-
-<h4 id="2-为什么幽灵依赖是个问题？"><a href="#2-为什么幽灵依赖是个问题？" class="headerlink" title="2. 为什么幽灵依赖是个问题？"></a>2. 为什么幽灵依赖是个问题？</h4><p>幽灵依赖会导致代码在某些环境下正常运行，在其他环境下报错，因为依赖项的可用性取决于 node_modules 的结构，而 node_modules 的结构可能因不同的安装方式而变化。</p>
-<p>主要风险：<br>    •	代码不可预测：依赖项不是显式声明的，某些机器上可能找得到，某些机器上可能找不到。<br>    •	团队协作问题：如果一个开发者无意中使用了幽灵依赖，其他开发者（或 CI&#x2F;CD 服务器）可能会遇到 Cannot find module 错误。<br>    •	升级破坏性：如果 A 更新了，可能 lodash 版本变化或者不再依赖 lodash，但 B 仍然错误地依赖它，导致 B 在某些情况下崩溃。</p>
-<p>⸻</p>
-<h4 id="3-如何避免幽灵依赖？"><a href="#3-如何避免幽灵依赖？" class="headerlink" title="3. 如何避免幽灵依赖？"></a>3. 如何避免幽灵依赖？</h4><p>✅ 方法 1：使用 pnpm</p>
-<p>pnpm 不会 hoist 依赖，它使用严格的模块隔离，每个包只能访问自己的依赖。例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/node_modules</span><br><span class="line">  /.pnpm</span><br><span class="line">    A@1.0.0/</span><br><span class="line">      node_modules/</span><br><span class="line">        lodash/</span><br><span class="line">    B@1.0.0/</span><br></pre></td></tr></table></figure>
-
-<p>在 pnpm 下，B 无法 访问 lodash，如果 B 试图 require(‘lodash’)，会报错，除非它自己显式安装 lodash。</p>
-<p>⸻</p>
-<p>✅ 方法 2：在 package.json 显式声明所有依赖</p>
-<p>如果一个包需要 lodash，就应该在自己的 package.json 中添加：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;lodash&quot;: &quot;^4.17.21&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这样无论 npm 还是 yarn，都不会依赖提升带来的不确定性。</p>
-<p>⸻</p>
-<p>✅ 方法 3：使用 –strict-peer-deps 选项</p>
-<p>在 npm 或 yarn 里，你可以使用：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --strict-peer-deps</span><br><span class="line">yarn install --check-files</span><br></pre></td></tr></table></figure>
-
-<p>这样如果有未声明的依赖，安装时就会报错。</p>
-<p>⸻</p>
-<p>✅ 方法 4：使用 npm dedupe 或 yarn-deduplicate</p>
-<p>如果怀疑 node_modules 里有幽灵依赖，可以运行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm dedupe</span><br></pre></td></tr></table></figure>
-
-<p>或者：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yarn-deduplicate</span><br></pre></td></tr></table></figure>
-
-<p>清理依赖，重新安装。</p>
-<p>⸻</p>
-<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4><p>​	•	npm 和 yarn 默认可能会导致幽灵依赖，因为它们的 hoisting 机制可能让某些包“意外可用”。<br>​	•	pnpm 不会出现幽灵依赖，因为它有严格的依赖隔离。<br>​	•	避免幽灵依赖的最佳做法是显式声明所有依赖，并使用 –strict-peer-deps 或 pnpm 进行严格管理。</p>
-<p>如果团队经常遇到幽灵依赖问题，建议迁移到 pnpm。</p>
+<h5 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h5><p>scrollbar-width</p>
+<p>scrollbar-color</p>
+<h5 id="IE"><a href="#IE" class="headerlink" title="IE"></a>IE</h5><p>scrollbar-base-color</p>
+<p>scrollbar-track-color</p>
+<p>scrollbar-arrow-color</p>
+<p>scrollbar-3dlight-color</p>
+<p>scrollbar-shadow-color</p>
+<p>scrollbar-highlight-color</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>前端</category>
       </categories>
       <tags>
-        <tag>前端工程化</tag>
+        <tag>兼容</tag>
       </tags>
   </entry>
   <entry>
@@ -997,54 +997,6 @@
       </categories>
       <tags>
         <tag>移动端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>笔试题收录</title>
-    <url>/zh-CN/%E7%AC%94%E8%AF%95%E9%A2%98%E6%94%B6%E5%BD%95/</url>
-    <content><![CDATA[<p>X1、排序</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 冒泡排序</span></span><br><span class="line"><span class="comment">// 核心思想：不停的对数组进行两两比较，将较大（较小）的一项放在前面</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">BubbleSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span> - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; arr.<span class="property">length</span> - <span class="number">1</span> - i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">        [arr[j], arr[j + <span class="number">1</span>]] = [arr[j + <span class="number">1</span>], arr[j]]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// console.log(SelectSort([5, 3, 1, 43, 10, 23, 11]))</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 选择排序</span></span><br><span class="line"><span class="comment">// 核心思想：进入升序排列，保证序列起始值为最小值</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">SelectSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span> - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt;= arr.<span class="property">length</span> - <span class="number">1</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[i] &gt; arr[j]) &#123;</span><br><span class="line">        [arr[i], arr[j]] = [arr[j], arr[i]]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// *快速排序</span></span><br><span class="line"><span class="comment">// 核心思想：</span></span><br><span class="line"><span class="comment">// 1.从序列中选择一个基准数（一般选择第一个数）。</span></span><br><span class="line"><span class="comment">// 2.构建两个临时数组，比中间数小的放到左边，大的放到右边</span></span><br><span class="line"><span class="comment">// 3.递归，对临时数组重复1-2；</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">QuickSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">let</span> base = arr.<span class="title function_">splice</span>(<span class="number">0</span>, <span class="number">1</span>)[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">let</span> left = [];</span><br><span class="line">  <span class="keyword">let</span> right = [];</span><br><span class="line">  arr.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (item &lt; base) &#123;</span><br><span class="line">      left.<span class="title function_">push</span>(item);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      right.<span class="title function_">push</span>(item);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">QuickSort</span>(left).<span class="title function_">concat</span>(base, <span class="title class_">QuickSort</span>(right));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 插入排序</span></span><br><span class="line"><span class="comment">// 核心思想：假定第一项已经排序了。接着， 它和第二项进行比较——第二项是应该待在原位还是插到第一项之前呢？</span></span><br><span class="line"><span class="comment">// 这样，头两项就已正确 排序，接着和第三项比较（它是该插入到第一、第二还是第三的位置呢），以此类推</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">InsertSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> j = i</span><br><span class="line">    <span class="keyword">let</span> temp = arr[i]</span><br><span class="line">    <span class="comment">//插入操作</span></span><br><span class="line">    <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; arr[j - <span class="number">1</span>] &gt; temp) &#123;</span><br><span class="line">      arr[j] = arr[j - <span class="number">1</span>]</span><br><span class="line">      j--</span><br><span class="line">    &#125;</span><br><span class="line">    arr[j] = temp</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 希尔排序 </span></span><br><span class="line"><span class="comment">// 减少增量排序 插入排序的优化版 属于非稳定排序算法。复杂度未被证明，猜测为 O (N ^1.3)</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">ShellSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">  <span class="comment">//获取增量</span></span><br><span class="line">  <span class="keyword">let</span> gap = <span class="title class_">Math</span>.<span class="title function_">floor</span>(arr.<span class="property">length</span> / <span class="number">2</span>)</span><br><span class="line">  <span class="comment">//增量等于1 即为 插入排序 原始。 一定会将数组排好 这个时候结束循环</span></span><br><span class="line">  <span class="keyword">while</span> (gap &gt;= <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="comment">//进行插入排序</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = gap; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">      <span class="keyword">let</span> j = i</span><br><span class="line">      <span class="keyword">let</span> temp = arr[i]</span><br><span class="line">      <span class="keyword">while</span> (j &gt; gap - <span class="number">1</span> &amp;&amp; arr[j - gap] &gt; temp) &#123;</span><br><span class="line">        arr[j] = arr[j - gap]</span><br><span class="line">        j -= gap</span><br><span class="line">      &#125;</span><br><span class="line">      arr[j] = temp</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//缩小增量</span></span><br><span class="line">    gap = <span class="title class_">Math</span>.<span class="title function_">floor</span>(gap / <span class="number">2</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 归并排序</span></span><br><span class="line"><span class="comment">// 核心思想：采用分治法,首先将数组分成若干个子数组变成有序数组，再合并有序数组</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">MergeSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 序列长度为1时退出</span></span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 将序列分为两个子序列，这一块用到“分治法”中的“分割”</span></span><br><span class="line">  <span class="keyword">const</span> middle = <span class="title class_">Math</span>.<span class="title function_">floor</span>(arr.<span class="property">length</span> / <span class="number">2</span>)</span><br><span class="line">  <span class="keyword">const</span> left = arr.<span class="title function_">slice</span>(<span class="number">0</span>, middle)</span><br><span class="line">  <span class="keyword">const</span> right = arr.<span class="title function_">slice</span>(middle)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 递归，这一块用到“分治法”中的“集成（合并）”</span></span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">merge</span>(<span class="title class_">MergeSort</span>(left), <span class="title class_">MergeSort</span>(right))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">merge</span> = (<span class="params">left, right</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> result = []</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 两个子序列进行比较，从小到大放入新的序列result中</span></span><br><span class="line">  <span class="keyword">while</span> (left.<span class="property">length</span> &gt; <span class="number">0</span> &amp;&amp; right.<span class="property">length</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="comment">// 将较小的放入result,并改变left或者right的长度，灵活使用shift方法</span></span><br><span class="line">    <span class="keyword">if</span> (left[<span class="number">0</span>] &lt; right[<span class="number">0</span>]) &#123;</span><br><span class="line">      result.<span class="title function_">push</span>(left.<span class="title function_">shift</span>())</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      result.<span class="title function_">push</span>(right.<span class="title function_">shift</span>())</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 先将小的元素放入result中，直到left或者right为空，剩余的一个数组肯定是大于result的有序序列，所以直接通过concat进行合并返回</span></span><br><span class="line">  <span class="keyword">return</span> result.<span class="title function_">concat</span>(left, right)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h4 id="X2、笔试题"><a href="#X2、笔试题" class="headerlink" title="X2、笔试题"></a>X2、笔试题</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">#<span class="number">1.</span>对象引用赋值问题</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fun</span>(<span class="params">demo</span>) &#123;</span><br><span class="line">  demo.<span class="property">name</span> = <span class="string">&#x27;demo2&#x27;</span></span><br><span class="line">  demo = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;new&#x27;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">18</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> demo</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> demo = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;demo&#x27;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">20</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">fun</span>(demo));  <span class="comment">//&#123; name: &#x27;new&#x27;, age: 18 &#125;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(demo);       <span class="comment">//&#123; name: &#x27;demo2&#x27;, age: 20 &#125;</span></span><br><span class="line"></span><br><span class="line">#<span class="number">2.</span>实现flat方法</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">flat</span> = (<span class="params">arr = [<span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>, [<span class="number">4</span>, [<span class="number">5</span>], <span class="number">6</span>]], [[<span class="number">7</span>, <span class="number">8</span>], <span class="number">9</span>]], counts = <span class="number">4</span></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> arr.<span class="title function_">reduce</span>(<span class="function">(<span class="params">prev, next</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> prev.<span class="title function_">concat</span>(counts &gt; <span class="number">1</span> &amp;&amp; <span class="title class_">Array</span>.<span class="title function_">isArray</span>(next) ? <span class="title function_">flat</span>(next, counts - <span class="number">1</span>) : next)</span><br><span class="line">  &#125;, [])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">flat</span>([<span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>, [<span class="number">4</span>, [<span class="number">5</span>], <span class="number">6</span>]], [[<span class="number">7</span>, [<span class="number">8</span>]], <span class="number">9</span>]], <span class="title class_">Infinity</span>))</span><br><span class="line"></span><br><span class="line">#<span class="number">3.</span>函数柯里化</span><br><span class="line"><span class="keyword">const</span> curry = <span class="keyword">function</span> (<span class="params">fun</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> (fun) !== <span class="string">&#x27;function&#x27;</span>) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;this is not a function&#x27;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> <span class="title function_">curried</span>(<span class="params">...arg</span>) &#123;</span><br><span class="line">      <span class="comment">// 参数足够则立即执行</span></span><br><span class="line">      <span class="keyword">if</span> (arg.<span class="property">length</span> &gt;= fun.<span class="property">length</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, arg)</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">...arg2</span>) &#123;</span><br><span class="line">          <span class="comment">// 递归获取剩余参数</span></span><br><span class="line">          <span class="keyword">return</span> curried.<span class="title function_">apply</span>(<span class="variable language_">this</span>, arg.<span class="title function_">concat</span>(arg2))</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#<span class="number">4.</span>防抖，节流</span><br><span class="line"><span class="keyword">const</span> debounce =  <span class="keyword">function</span>(<span class="params">fun, delay=<span class="number">2000</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">        &#125;, delay);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> throttle1 = <span class="keyword">function</span>(<span class="params">fun, delay=<span class="number">2000</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> lastTime = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> nowTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">        <span class="keyword">if</span> (nowTime - lastTime &gt;= delay) &#123;</span><br><span class="line">            fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">            lastTime = nowTime;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> throttle2 = <span class="keyword">function</span>(<span class="params">fun, delay=<span class="number">2000</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">            timer = <span class="literal">null</span>;</span><br><span class="line">        &#125;, delay);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> throttle3 = <span class="keyword">function</span>(<span class="params">fun, delay=<span class="number">2000</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> lastTime = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> nowTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">        <span class="keyword">let</span> remainingTime = delay - (nowTime - lastTime)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(remainingTime &lt;= <span class="number">0</span> || remainingTime &gt; delay)&#123;</span><br><span class="line">            <span class="keyword">if</span>(timer) &#123;</span><br><span class="line">                <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">                timer = <span class="literal">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">            lastTime = nowTime;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(!timer)&#123;</span><br><span class="line">            timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">                timer = <span class="literal">null</span>;</span><br><span class="line">                lastTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">            &#125;, remainingTime)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#<span class="number">5.</span>深拷贝</span><br><span class="line"><span class="keyword">const</span> deepClone = <span class="keyword">function</span>(<span class="params">obj</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> obj !== <span class="string">&#x27;object&#x27;</span> || obj === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> <span class="title class_">Date</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Date</span>(obj);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(obj <span class="keyword">instanceof</span> <span class="title class_">RegExp</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">RegExp</span>(obj);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(obj <span class="keyword">instanceof</span> <span class="title class_">Set</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> cloneSet = <span class="keyword">new</span> <span class="title class_">Set</span>();</span><br><span class="line">        obj.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">            cloneSet.<span class="title function_">add</span>(<span class="title function_">deepClone</span>(item));</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">return</span> cloneSet;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(obj <span class="keyword">instanceof</span> <span class="title class_">Map</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> cloneMap = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line">        obj.<span class="title function_">forEach</span>(<span class="function">(<span class="params">value, key</span>) =&gt;</span> &#123;</span><br><span class="line">            cloneMap.<span class="title function_">set</span>(key, <span class="title function_">deepClone</span>(value));</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">return</span> cloneMap;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="title class_">Array</span>.<span class="title function_">isArray</span>(obj))&#123;</span><br><span class="line">        <span class="keyword">const</span> copyArr = [];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; obj.<span class="property">length</span>; i++) &#123;</span><br><span class="line">            copy[i] = <span class="title function_">deepClone</span>(obj[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> copyArr;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">const</span> copyObj = &#123;&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">        <span class="keyword">if</span> (obj.<span class="title function_">hasOwnProperty</span>(key)) &#123;</span><br><span class="line">            copyObj[key] = <span class="title function_">deepClone</span>(obj[key]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>JS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端素材汇总</title>
-    <url>/zh-CN/%E7%B4%A0%E6%9D%90/</url>
-    <content><![CDATA[<ul>
-<li><p><em><a href="https://www.17sucai.com/">jQuery 网页特效最全网页模板和网站模板 jQuery 代码</a></em></p>
-</li>
-<li><p><em><a href="https://www.zcool.com.cn/work/ZMzI2MzUwOTY=.html">数据可视化设计 2018 总集_光影年年-站酷 ZCOOL</a></em></p>
-</li>
-</ul>
-<h5 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h5><ul>
-<li><em><a href="https://animate.style/">animate.css</a></em> <em>+ <a href="https://github.com/graingert/wow">wowjs</a></em></li>
-</ul>
-<h5 id="图表"><a href="#图表" class="headerlink" title="图表"></a>图表</h5><ul>
-<li><p><em><a href="https://echarts.apache.org/zh/index.html">Apache ECharts</a></em></p>
-</li>
-<li><p><em><a href="https://www.makeapie.cn/echarts">makeapie echarts 社区图表可视化案例</a></em></p>
-</li>
-<li><p><em><a href="http://ppchart.com/#/">PPChart - 让图表更简单</a></em></p>
-</li>
-<li><p><em><a href="https://www.hcharts.cn/demo/highcharts">Highcharts</a></em></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>素材</tag>
       </tags>
   </entry>
   <entry>
@@ -1283,6 +1235,148 @@
       </categories>
       <tags>
         <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>笔试题收录</title>
+    <url>/zh-CN/%E7%AC%94%E8%AF%95%E9%A2%98%E6%94%B6%E5%BD%95/</url>
+    <content><![CDATA[<p>X1、排序</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 冒泡排序</span></span><br><span class="line"><span class="comment">// 核心思想：不停的对数组进行两两比较，将较大（较小）的一项放在前面</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">BubbleSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span> - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; arr.<span class="property">length</span> - <span class="number">1</span> - i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">        [arr[j], arr[j + <span class="number">1</span>]] = [arr[j + <span class="number">1</span>], arr[j]]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// console.log(SelectSort([5, 3, 1, 43, 10, 23, 11]))</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 选择排序</span></span><br><span class="line"><span class="comment">// 核心思想：进入升序排列，保证序列起始值为最小值</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">SelectSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span> - <span class="number">1</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt;= arr.<span class="property">length</span> - <span class="number">1</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[i] &gt; arr[j]) &#123;</span><br><span class="line">        [arr[i], arr[j]] = [arr[j], arr[i]]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// *快速排序</span></span><br><span class="line"><span class="comment">// 核心思想：</span></span><br><span class="line"><span class="comment">// 1.从序列中选择一个基准数（一般选择第一个数）。</span></span><br><span class="line"><span class="comment">// 2.构建两个临时数组，比中间数小的放到左边，大的放到右边</span></span><br><span class="line"><span class="comment">// 3.递归，对临时数组重复1-2；</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">QuickSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">let</span> base = arr.<span class="title function_">splice</span>(<span class="number">0</span>, <span class="number">1</span>)[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">let</span> left = [];</span><br><span class="line">  <span class="keyword">let</span> right = [];</span><br><span class="line">  arr.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (item &lt; base) &#123;</span><br><span class="line">      left.<span class="title function_">push</span>(item);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      right.<span class="title function_">push</span>(item);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">QuickSort</span>(left).<span class="title function_">concat</span>(base, <span class="title class_">QuickSort</span>(right));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 插入排序</span></span><br><span class="line"><span class="comment">// 核心思想：假定第一项已经排序了。接着， 它和第二项进行比较——第二项是应该待在原位还是插到第一项之前呢？</span></span><br><span class="line"><span class="comment">// 这样，头两项就已正确 排序，接着和第三项比较（它是该插入到第一、第二还是第三的位置呢），以此类推</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">InsertSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> j = i</span><br><span class="line">    <span class="keyword">let</span> temp = arr[i]</span><br><span class="line">    <span class="comment">//插入操作</span></span><br><span class="line">    <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; arr[j - <span class="number">1</span>] &gt; temp) &#123;</span><br><span class="line">      arr[j] = arr[j - <span class="number">1</span>]</span><br><span class="line">      j--</span><br><span class="line">    &#125;</span><br><span class="line">    arr[j] = temp</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 希尔排序 </span></span><br><span class="line"><span class="comment">// 减少增量排序 插入排序的优化版 属于非稳定排序算法。复杂度未被证明，猜测为 O (N ^1.3)</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">ShellSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    </span><br><span class="line">  <span class="comment">//获取增量</span></span><br><span class="line">  <span class="keyword">let</span> gap = <span class="title class_">Math</span>.<span class="title function_">floor</span>(arr.<span class="property">length</span> / <span class="number">2</span>)</span><br><span class="line">  <span class="comment">//增量等于1 即为 插入排序 原始。 一定会将数组排好 这个时候结束循环</span></span><br><span class="line">  <span class="keyword">while</span> (gap &gt;= <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="comment">//进行插入排序</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = gap; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">      <span class="keyword">let</span> j = i</span><br><span class="line">      <span class="keyword">let</span> temp = arr[i]</span><br><span class="line">      <span class="keyword">while</span> (j &gt; gap - <span class="number">1</span> &amp;&amp; arr[j - gap] &gt; temp) &#123;</span><br><span class="line">        arr[j] = arr[j - gap]</span><br><span class="line">        j -= gap</span><br><span class="line">      &#125;</span><br><span class="line">      arr[j] = temp</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//缩小增量</span></span><br><span class="line">    gap = <span class="title class_">Math</span>.<span class="title function_">floor</span>(gap / <span class="number">2</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 归并排序</span></span><br><span class="line"><span class="comment">// 核心思想：采用分治法,首先将数组分成若干个子数组变成有序数组，再合并有序数组</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">MergeSort</span> = (<span class="params">arr</span>) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 序列长度为1时退出</span></span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 将序列分为两个子序列，这一块用到“分治法”中的“分割”</span></span><br><span class="line">  <span class="keyword">const</span> middle = <span class="title class_">Math</span>.<span class="title function_">floor</span>(arr.<span class="property">length</span> / <span class="number">2</span>)</span><br><span class="line">  <span class="keyword">const</span> left = arr.<span class="title function_">slice</span>(<span class="number">0</span>, middle)</span><br><span class="line">  <span class="keyword">const</span> right = arr.<span class="title function_">slice</span>(middle)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 递归，这一块用到“分治法”中的“集成（合并）”</span></span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">merge</span>(<span class="title class_">MergeSort</span>(left), <span class="title class_">MergeSort</span>(right))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">merge</span> = (<span class="params">left, right</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> result = []</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 两个子序列进行比较，从小到大放入新的序列result中</span></span><br><span class="line">  <span class="keyword">while</span> (left.<span class="property">length</span> &gt; <span class="number">0</span> &amp;&amp; right.<span class="property">length</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="comment">// 将较小的放入result,并改变left或者right的长度，灵活使用shift方法</span></span><br><span class="line">    <span class="keyword">if</span> (left[<span class="number">0</span>] &lt; right[<span class="number">0</span>]) &#123;</span><br><span class="line">      result.<span class="title function_">push</span>(left.<span class="title function_">shift</span>())</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      result.<span class="title function_">push</span>(right.<span class="title function_">shift</span>())</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 先将小的元素放入result中，直到left或者right为空，剩余的一个数组肯定是大于result的有序序列，所以直接通过concat进行合并返回</span></span><br><span class="line">  <span class="keyword">return</span> result.<span class="title function_">concat</span>(left, right)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h4 id="X2、笔试题"><a href="#X2、笔试题" class="headerlink" title="X2、笔试题"></a>X2、笔试题</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">#<span class="number">1.</span>对象引用赋值问题</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fun</span>(<span class="params">demo</span>) &#123;</span><br><span class="line">  demo.<span class="property">name</span> = <span class="string">&#x27;demo2&#x27;</span></span><br><span class="line">  demo = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;new&#x27;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">18</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> demo</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> demo = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;demo&#x27;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">20</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">fun</span>(demo));  <span class="comment">//&#123; name: &#x27;new&#x27;, age: 18 &#125;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(demo);       <span class="comment">//&#123; name: &#x27;demo2&#x27;, age: 20 &#125;</span></span><br><span class="line"></span><br><span class="line">#<span class="number">2.</span>实现flat方法</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">flat</span> = (<span class="params">arr = [<span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>, [<span class="number">4</span>, [<span class="number">5</span>], <span class="number">6</span>]], [[<span class="number">7</span>, <span class="number">8</span>], <span class="number">9</span>]], counts = <span class="number">4</span></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> arr.<span class="title function_">reduce</span>(<span class="function">(<span class="params">prev, next</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> prev.<span class="title function_">concat</span>(counts &gt; <span class="number">1</span> &amp;&amp; <span class="title class_">Array</span>.<span class="title function_">isArray</span>(next) ? <span class="title function_">flat</span>(next, counts - <span class="number">1</span>) : next)</span><br><span class="line">  &#125;, [])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">flat</span>([<span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>, [<span class="number">4</span>, [<span class="number">5</span>], <span class="number">6</span>]], [[<span class="number">7</span>, [<span class="number">8</span>]], <span class="number">9</span>]], <span class="title class_">Infinity</span>))</span><br><span class="line"></span><br><span class="line">#<span class="number">3.</span>函数柯里化</span><br><span class="line"><span class="keyword">const</span> curry = <span class="keyword">function</span> (<span class="params">fun</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> (fun) !== <span class="string">&#x27;function&#x27;</span>) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;this is not a function&#x27;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> <span class="title function_">curried</span>(<span class="params">...arg</span>) &#123;</span><br><span class="line">      <span class="comment">// 参数足够则立即执行</span></span><br><span class="line">      <span class="keyword">if</span> (arg.<span class="property">length</span> &gt;= fun.<span class="property">length</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, arg)</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">...arg2</span>) &#123;</span><br><span class="line">          <span class="comment">// 递归获取剩余参数</span></span><br><span class="line">          <span class="keyword">return</span> curried.<span class="title function_">apply</span>(<span class="variable language_">this</span>, arg.<span class="title function_">concat</span>(arg2))</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#<span class="number">4.</span>防抖，节流</span><br><span class="line"><span class="keyword">const</span> debounce =  <span class="keyword">function</span>(<span class="params">fun, delay=<span class="number">2000</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">        &#125;, delay);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> throttle1 = <span class="keyword">function</span>(<span class="params">fun, delay=<span class="number">2000</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> lastTime = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> nowTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">        <span class="keyword">if</span> (nowTime - lastTime &gt;= delay) &#123;</span><br><span class="line">            fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">            lastTime = nowTime;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> throttle2 = <span class="keyword">function</span>(<span class="params">fun, delay=<span class="number">2000</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">            timer = <span class="literal">null</span>;</span><br><span class="line">        &#125;, delay);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> throttle3 = <span class="keyword">function</span>(<span class="params">fun, delay=<span class="number">2000</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> lastTime = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> timer = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> nowTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">        <span class="keyword">let</span> remainingTime = delay - (nowTime - lastTime)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(remainingTime &lt;= <span class="number">0</span> || remainingTime &gt; delay)&#123;</span><br><span class="line">            <span class="keyword">if</span>(timer) &#123;</span><br><span class="line">                <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">                timer = <span class="literal">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">            lastTime = nowTime;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(!timer)&#123;</span><br><span class="line">            timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                fun.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">                timer = <span class="literal">null</span>;</span><br><span class="line">                lastTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">            &#125;, remainingTime)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#<span class="number">5.</span>深拷贝</span><br><span class="line"><span class="keyword">const</span> deepClone = <span class="keyword">function</span>(<span class="params">obj</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> obj !== <span class="string">&#x27;object&#x27;</span> || obj === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (obj <span class="keyword">instanceof</span> <span class="title class_">Date</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Date</span>(obj);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(obj <span class="keyword">instanceof</span> <span class="title class_">RegExp</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">RegExp</span>(obj);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(obj <span class="keyword">instanceof</span> <span class="title class_">Set</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> cloneSet = <span class="keyword">new</span> <span class="title class_">Set</span>();</span><br><span class="line">        obj.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">            cloneSet.<span class="title function_">add</span>(<span class="title function_">deepClone</span>(item));</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">return</span> cloneSet;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(obj <span class="keyword">instanceof</span> <span class="title class_">Map</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> cloneMap = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line">        obj.<span class="title function_">forEach</span>(<span class="function">(<span class="params">value, key</span>) =&gt;</span> &#123;</span><br><span class="line">            cloneMap.<span class="title function_">set</span>(key, <span class="title function_">deepClone</span>(value));</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">return</span> cloneMap;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="title class_">Array</span>.<span class="title function_">isArray</span>(obj))&#123;</span><br><span class="line">        <span class="keyword">const</span> copyArr = [];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; obj.<span class="property">length</span>; i++) &#123;</span><br><span class="line">            copy[i] = <span class="title function_">deepClone</span>(obj[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> copyArr;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">const</span> copyObj = &#123;&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">        <span class="keyword">if</span> (obj.<span class="title function_">hasOwnProperty</span>(key)) &#123;</span><br><span class="line">            copyObj[key] = <span class="title function_">deepClone</span>(obj[key]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端素材汇总</title>
+    <url>/zh-CN/%E7%B4%A0%E6%9D%90/</url>
+    <content><![CDATA[<ul>
+<li><p><em><a href="https://www.17sucai.com/">jQuery 网页特效最全网页模板和网站模板 jQuery 代码</a></em></p>
+</li>
+<li><p><em><a href="https://www.zcool.com.cn/work/ZMzI2MzUwOTY=.html">数据可视化设计 2018 总集_光影年年-站酷 ZCOOL</a></em></p>
+</li>
+</ul>
+<h5 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h5><ul>
+<li><em><a href="https://animate.style/">animate.css</a></em> <em>+ <a href="https://github.com/graingert/wow">wowjs</a></em></li>
+</ul>
+<h5 id="图表"><a href="#图表" class="headerlink" title="图表"></a>图表</h5><ul>
+<li><p><em><a href="https://echarts.apache.org/zh/index.html">Apache ECharts</a></em></p>
+</li>
+<li><p><em><a href="https://www.makeapie.cn/echarts">makeapie echarts 社区图表可视化案例</a></em></p>
+</li>
+<li><p><em><a href="http://ppchart.com/#/">PPChart - 让图表更简单</a></em></p>
+</li>
+<li><p><em><a href="https://www.hcharts.cn/demo/highcharts">Highcharts</a></em></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>素材</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端请求取消与进度条控制的优雅解决方案</title>
+    <url>/zh-CN/%E8%AF%B7%E6%B1%82%E5%8F%96%E6%B6%88/</url>
+    <content><![CDATA[<h2 id="问题场景"><a href="#问题场景" class="headerlink" title="问题场景"></a>问题场景</h2><p>在实现ESOP文档显示功能时，需要根据文档分类和工序查询大文件（视频&#x2F;文档）并解析。由于解析接口耗时，当用户快速切换分类或工序时，会遇到以下核心问题：</p>
+<ol>
+<li><p><strong>请求残留问题</strong><br>批量取消旧请求后立即发起新请求，Network面板无新请求产生</p>
+</li>
+<li><p><strong>进度条异常</strong><br>NProgress进度条在取消操作后不显示</p>
+</li>
+</ol>
+<h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><h3 id="请求取消机制失效"><a href="#请求取消机制失效" class="headerlink" title="请求取消机制失效"></a>请求取消机制失效</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">queryStep</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">source</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">source</span>.<span class="title function_">cancel</span>(<span class="string">&#x27;Operation canceled by the user.&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">source</span> = axios.<span class="property">CancelToken</span>.<span class="title function_">source</span>(); <span class="comment">// 关键点</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">refreshQuery</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>问题本质</strong>：<br>当使用同一个<code>CancelToken.source()</code>实例时，旧请求取消操作会污染新请求的令牌实例，导致请求未实际发出。</p>
+<h3 id="进度条同步控制问题"><a href="#进度条同步控制问题" class="headerlink" title="进度条同步控制问题"></a>进度条同步控制问题</h3><p>拦截器配置：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">axios.<span class="property">interceptors</span>.<span class="property">request</span>.<span class="title function_">use</span>(<span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="title class_">NProgress</span>.<span class="title function_">start</span>(); <span class="comment">// 同步执行</span></span><br><span class="line">&#125;, <span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="title class_">NProgress</span>.<span class="title function_">done</span>();</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">axios.<span class="property">interceptors</span>.<span class="property">response</span>.<span class="title function_">use</span>(</span><br><span class="line">    <span class="function"><span class="params">response</span> =&gt;</span> <span class="title class_">NProgress</span>.<span class="title function_">done</span>(),</span><br><span class="line">    <span class="function"><span class="params">error</span> =&gt;</span> <span class="title class_">NProgress</span>.<span class="title function_">done</span>()</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p><strong>问题本质</strong>：<br>取消操作(<code>source.cancel()</code>)作为同步代码会立即触发响应拦截器的<code>error</code>分支，导致进度条提前关闭。</p>
+<hr>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="方案一：请求计数器模式（推荐）"><a href="#方案一：请求计数器模式（推荐）" class="headerlink" title="方案一：请求计数器模式（推荐）"></a>方案一：请求计数器模式（推荐）</h3><h4 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> requestCount = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">responseHandler</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    requestCount--;</span><br><span class="line">    <span class="keyword">if</span> (requestCount === <span class="number">0</span>) <span class="title class_">NProgress</span>.<span class="title function_">done</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 请求拦截器</span></span><br><span class="line">axios.<span class="property">interceptors</span>.<span class="property">request</span>.<span class="title function_">use</span>(<span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">    requestCount++;</span><br><span class="line">    <span class="keyword">if</span> (requestCount === <span class="number">1</span>) <span class="title class_">NProgress</span>.<span class="title function_">start</span>();</span><br><span class="line">    <span class="keyword">return</span> config;</span><br><span class="line">&#125;, <span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="title function_">responseHandler</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(error);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 响应拦截器</span></span><br><span class="line">axios.<span class="property">interceptors</span>.<span class="property">response</span>.<span class="title function_">use</span>(</span><br><span class="line">    <span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="title function_">responseHandler</span>();</span><br><span class="line">        <span class="keyword">return</span> response;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="title function_">responseHandler</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(error);</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p><strong>方案优势</strong>：</p>
+<ol>
+<li>自动处理并发请求</li>
+<li>精确控制进度条状态</li>
+<li>避免取消操作的副作用</li>
+</ol>
+<h3 id="方案二：异步任务隔离"><a href="#方案二：异步任务隔离" class="headerlink" title="方案二：异步任务隔离"></a>方案二：异步任务隔离</h3><h4 id="实现原理-1"><a href="#实现原理-1" class="headerlink" title="实现原理"></a>实现原理</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">queryStep</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">source</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">source</span>.<span class="title function_">cancel</span>(<span class="string">&#x27;Operation canceled by the user.&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">source</span> = axios.<span class="property">CancelToken</span>.<span class="title function_">source</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 将新请求放入事件队列下一周期</span></span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">refreshQuery</span>();</span><br><span class="line">    &#125;, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="方案对比"><a href="#方案对比" class="headerlink" title="方案对比"></a>方案对比</h2><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>请求计数器</th>
+<th>异步隔离</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>适用场景</td>
+<td>多并发请求场景</td>
+<td>简单请求场景</td>
+</tr>
+<tr>
+<td>代码侵入性</td>
+<td>需要改造拦截器</td>
+<td>仅修改业务方法</td>
+</tr>
+<tr>
+<td>维护成本</td>
+<td>需要全局状态管理</td>
+<td>局部修改即可</td>
+</tr>
+<tr>
+<td>进度条精确度</td>
+<td>精确控制（推荐）</td>
+<td>可能有微小延迟</td>
+</tr>
+<tr>
+<td>浏览器兼容性</td>
+<td>全兼容</td>
+<td>依赖事件循环机制</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="实施建议"><a href="#实施建议" class="headerlink" title="实施建议"></a>实施建议</h2><ol>
+<li><p><strong>常规项目首选方案一</strong><br>适合中大型项目，建立全局请求管理机制</p>
+</li>
+<li><p><strong>快速修复可选用方案二</strong><br>适合紧急问题修复或简单项目场景</p>
+</li>
+<li><p><strong>注意axios版本兼容性</strong>  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install axios@^1.3.4 --save <span class="comment"># 推荐稳定版本</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>必要测试用例</strong>  </p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 测试用例示例</span></span><br><span class="line"><span class="title function_">test</span>(<span class="string">&#x27;快速切换请求应正确显示进度条&#x27;</span>, <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> source1 = axios.<span class="property">CancelToken</span>.<span class="title function_">source</span>();</span><br><span class="line">    <span class="keyword">const</span> source2 = axios.<span class="property">CancelToken</span>.<span class="title function_">source</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 发起并取消请求</span></span><br><span class="line">    axios.<span class="title function_">get</span>(<span class="string">&#x27;/api1&#x27;</span>, &#123; <span class="attr">cancelToken</span>: source1.<span class="property">token</span> &#125;);</span><br><span class="line">    source1.<span class="title function_">cancel</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 发起新请求</span></span><br><span class="line">    <span class="keyword">await</span> axios.<span class="title function_">get</span>(<span class="string">&#x27;/api2&#x27;</span>, &#123; <span class="attr">cancelToken</span>: source2.<span class="property">token</span> &#125;);</span><br><span class="line">    </span><br><span class="line">    <span class="title function_">expect</span>(<span class="title class_">NProgress</span>.<span class="title function_">isStarted</span>()).<span class="title function_">toBe</span>(<span class="literal">false</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过本文的两种方案，开发者可以：</p>
+<ol>
+<li>彻底解决请求取消导致的进度条异常</li>
+<li>确保高频操作下的请求可靠性</li>
+<li>提升用户交互体验</li>
+</ol>
+<blockquote>
+<p>“优秀的请求管理就像空气——用户感受不到它的存在，但缺失时体验会立即崩溃。” - 前端工程之道</p>
+</blockquote>
+<p>实际应用中建议根据项目规模选择方案，并配合完善的单元测试。更多前端工程化实践技巧，欢迎关注我的博客专栏。</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>性能优化</tag>
       </tags>
   </entry>
   <entry>
