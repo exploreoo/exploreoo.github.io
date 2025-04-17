@@ -2591,7 +2591,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #4616d6;
+  background: #ff4699;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2655,18 +2655,7 @@ header.header {
 }
 .sidebar {
   background: linear-gradient(45deg, #222, #000, #3b0606);
-  background: url("../images/tuo.jpg") center/cover no-repeat;
-  box-shadow: unset;
-}
-.sidebar::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
+  background: #333;
 }
 @media (max-width: 767px) {
   .sidebar {
@@ -2693,6 +2682,30 @@ header.header {
 }
 .post-block:last-of-type .post-eof {
   display: none;
+}
+.posts-expand .post-header {
+  padding-top: 20px;
+  margin-bottom: 30px !important;
+}
+body {
+  line-height: 1.9;
+}
+.post-block:first-of-type {
+  padding-top: 0;
+}
+.posts-collapse .post-content {
+  margin-top: 35px;
+}
+.main-inner {
+  padding-top: 35px;
+}
+.posts-expand .post-header {
+  margin-bottom: 50px;
+}
+.post-body {
+  font-size: 1em;
+  word-break: break-word;
+  text-align: unset;
 }
 .post-body p a {
   color: #0593d3;
@@ -2740,7 +2753,8 @@ header.header {
   background: transparent;
   color: #f7ed00;
 }
-.site-meta .brand h1 {
+.site-meta .brand h1,
+.site-meta .brand .site-title {
   font-family: serif;
 }
 .site-meta .site-subtitle {
@@ -2758,7 +2772,7 @@ header.header {
   line-height: 20px;
 }
 .site-author-image {
-  border-radius: 15%;
+  border-radius: 18%;
 }
 .links-of-blogroll-title {
   color: #cea916;

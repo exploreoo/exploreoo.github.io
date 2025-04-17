@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">28</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -163,7 +163,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -193,15 +193,15 @@
             </li>
           
             <li class="recent_posts_li">
+              <a href="/zh-CN/useLayoutEffect%E5%92%8CuseEffect%E7%9A%84%E5%8C%BA%E5%88%AB/" title="useLayoutEffect Vs useEffect" target="_blank">useLayoutEffect Vs useEffect</a>
+            </li>
+          
+            <li class="recent_posts_li">
               <a href="/zh-CN/%E9%87%8D%E4%BB%BB%E5%8A%A1%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" title="重任务性能优化的最佳实践" target="_blank">重任务性能优化的最佳实践</a>
             </li>
           
             <li class="recent_posts_li">
               <a href="/zh-CN/%E9%A1%B5%E9%9D%A2%E5%8D%B8%E8%BD%BD%E7%9B%91%E5%90%AC%EF%BC%88Page%20Visibility%20API%EF%BC%89/" title="页面卸载监听（Page Visibility API）" target="_blank">页面卸载监听（Page Visibility API）</a>
-            </li>
-          
-            <li class="recent_posts_li">
-              <a href="/zh-CN/SSE/" title="Server-Sent Events（SSE）" target="_blank">Server-Sent Events（SSE）</a>
             </li>
           
         </ul>
@@ -395,6 +395,172 @@
             </div>
           <!--/noindex-->
         
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/useLayoutEffect%E5%92%8CuseEffect%E7%9A%84%E5%8C%BA%E5%88%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1___6779236___0___.jpg">
+      <meta itemprop="name" content="CHANCEUX">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WS的博客日志">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WS的博客日志">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/zh-CN/useLayoutEffect%E5%92%8CuseEffect%E7%9A%84%E5%8C%BA%E5%88%AB/" class="post-title-link" itemprop="url">useLayoutEffect Vs useEffect</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-02-20 22:35:05" itemprop="dateCreated datePublished" datetime="2025-02-20T22:35:05+08:00">2025-02-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><code>useLayoutEffect</code> 和 <code>useEffect</code> 都是 React 提供的 Hook，用于处理副作用，但它们在执行时机上有重要区别。</p>
+<h2 id="主要区别"><a href="#主要区别" class="headerlink" title="主要区别"></a>主要区别</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th><code>useEffect</code></th>
+<th><code>useLayoutEffect</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>执行时机</strong></td>
+<td>在浏览器绘制<strong>之后</strong>异步执行</td>
+<td>在浏览器绘制<strong>之前</strong>同步执行</td>
+</tr>
+<tr>
+<td><strong>对用户的影响</strong></td>
+<td>可能导致布局闪烁</td>
+<td>阻止浏览器绘制直到 effect 完成</td>
+</tr>
+<tr>
+<td><strong>使用场景</strong></td>
+<td>数据获取、订阅等</td>
+<td>需要同步读取&#x2F;操作 DOM 的情况</td>
+</tr>
+<tr>
+<td><strong>性能影响</strong></td>
+<td>对渲染性能影响较小</td>
+<td>可能阻塞渲染，导致性能问题</td>
+</tr>
+</tbody></table>
+<h2 id="详细解释"><a href="#详细解释" class="headerlink" title="详细解释"></a>详细解释</h2><h3 id="1-执行时机"><a href="#1-执行时机" class="headerlink" title="1. 执行时机"></a>1. 执行时机</h3><ul>
+<li><p><strong><code>useEffect</code></strong>:</p>
+<ul>
+<li>在组件渲染到屏幕<strong>之后</strong>执行</li>
+<li>异步执行，不会阻塞浏览器绘制</li>
+</ul>
+</li>
+<li><p><strong><code>useLayoutEffect</code></strong>:</p>
+<ul>
+<li>在 React 计算完 DOM 变更后，但在浏览器实际绘制<strong>之前</strong>执行</li>
+<li>同步执行，会阻塞浏览器绘制</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-使用场景示例"><a href="#2-使用场景示例" class="headerlink" title="2. 使用场景示例"></a>2. 使用场景示例</h3><p><strong>适合 <code>useLayoutEffect</code> 的情况</strong>：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Tooltip</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> ref = <span class="title function_">useRef</span>(<span class="literal">null</span>);</span><br><span class="line">  <span class="keyword">const</span> [position, setPosition] = <span class="title function_">useState</span>(&#123; <span class="attr">top</span>: <span class="number">0</span>, <span class="attr">left</span>: <span class="number">0</span> &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useLayoutEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 在浏览器绘制前测量元素位置</span></span><br><span class="line">    <span class="keyword">const</span> &#123; top, left &#125; = ref.<span class="property">current</span>.<span class="title function_">getBoundingClientRect</span>();</span><br><span class="line">    <span class="title function_">setPosition</span>(&#123; top, left &#125;);</span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ref</span>=<span class="string">&#123;ref&#125;</span> <span class="attr">style</span>=<span class="string">&#123;&#123;</span> <span class="attr">position:</span> &#x27;<span class="attr">absolute</span>&#x27;, <span class="attr">...position</span> &#125;&#125;&gt;</span>Tooltip<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>适合 <code>useEffect</code> 的情况</strong>：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">UserProfile</span>(<span class="params">&#123; userId &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [user, setUser] = <span class="title function_">useState</span>(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="title function_">useEffect</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 异步获取数据</span></span><br><span class="line">    <span class="title function_">fetchUser</span>(userId).<span class="title function_">then</span>(<span class="function"><span class="params">data</span> =&gt;</span> <span class="title function_">setUser</span>(data));</span><br><span class="line">  &#125;, [userId]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;user?.name&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-为什么选择其中一个而不是另一个"><a href="#3-为什么选择其中一个而不是另一个" class="headerlink" title="3. 为什么选择其中一个而不是另一个"></a>3. 为什么选择其中一个而不是另一个</h3><ul>
+<li><p><strong>使用 <code>useLayoutEffect</code> 当</strong>：</p>
+<ul>
+<li>你需要读取 DOM 布局并同步触发重渲染</li>
+<li>你需要执行 DOM 操作以避免视觉闪烁或不一致</li>
+</ul>
+</li>
+<li><p><strong>使用 <code>useEffect</code> 当</strong>：</p>
+<ul>
+<li>你的副作用不需要与 DOM 交互</li>
+<li>你的代码可以容忍短暂的布局不一致</li>
+<li>你需要执行数据获取或订阅等异步操作</li>
+</ul>
+</li>
+</ul>
+<h2 id="重要注意事项"><a href="#重要注意事项" class="headerlink" title="重要注意事项"></a>重要注意事项</h2><ol>
+<li><p>**服务端渲染 (SSR)**：</p>
+<ul>
+<li><code>useLayoutEffect</code> 在 SSR 期间会导致警告（因为它不能在服务端执行）</li>
+<li>在 SSR 应用中，React 建议先用 <code>useEffect</code>，如果发现问题再考虑 <code>useLayoutEffect</code></li>
+</ul>
+</li>
+<li><p><strong>性能影响</strong>：</p>
+<ul>
+<li>过度使用 <code>useLayoutEffect</code> 可能导致性能问题，因为它会阻塞渲染</li>
+<li>大多数情况下 <code>useEffect</code> 是更好的默认选择</li>
+</ul>
+</li>
+<li><p><strong>执行顺序</strong>：</p>
+<ul>
+<li>在同一个组件中，<code>useLayoutEffect</code> 总是比 <code>useEffect</code> 先执行</li>
+</ul>
+</li>
+</ol>
+<h2 id="经验法则"><a href="#经验法则" class="headerlink" title="经验法则"></a>经验法则</h2><ol>
+<li><strong>默认使用 <code>useEffect</code></strong> - 这是最安全的选择</li>
+<li><strong>只有在需要同步测量或操作 DOM 时才使用 <code>useLayoutEffect</code></strong></li>
+<li><strong>如果你不确定，先尝试 <code>useEffect</code>，只有出现视觉问题时再考虑 <code>useLayoutEffect</code></strong></li>
+</ol>
+
       
     </div>
 
@@ -683,7 +849,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>服务器向客户端推送数据，有很多解决方案。除了“轮询” 和 WebSocket，HTML 5 还提供了 Server-Sent Events（以下简称 SSE）。</p>
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>服务器向客户端推送数据，有很多解决方案。除了“轮询” 和 WebSocket，HTML 5 还提供了 Server-Sent Events（以下简称 SSE）。</p>
 <p>一般来说，HTTP 协议只能客户端向服务器发起请求，服务器不能主动向客户端推送。但是有一种特殊情况，就是服务器向客户端声明，接下来要发送的是流信息（streaming）。也就是说，发送的不是一次性的数据包，而是一个数据流，会连续不断地发送过来。这时，客户端不会关闭连接，会一直等着服务器发过来的新的数据流。本质上，这种通信就是以流信息的方式，完成一次用时很长的下载。</p>
 <p>SSE 就是利用这种机制，使用流信息向浏览器推送信息。它基于 HTTP 协议，目前除了 IE&#x2F;Edge，其他浏览器都支持。</p>
 <h2 id="与-WebSocket-的比较"><a href="#与-WebSocket-的比较" class="headerlink" title="与 WebSocket 的比较"></a>与 WebSocket 的比较</h2><p>SSE 与 WebSocket 作用相似，都是建立浏览器与服务器之间的通信渠道，然后服务器向浏览器推送信息。</p>
@@ -966,7 +1132,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/AI/" itemprop="url" rel="index"><span itemprop="name">AI</span></a>
+          <a href="/categories/Ai/" itemprop="url" rel="index"><span itemprop="name">Ai</span></a>
         </span>
     </span>
 
@@ -1080,111 +1246,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/zh-CN/SSR/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/1___6779236___0___.jpg">
-      <meta itemprop="name" content="CHANCEUX">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WS的博客日志">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WS的博客日志">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="post-title-link" itemprop="url">前端性能优化</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-11-30 22:35:05" itemprop="dateCreated datePublished" datetime="2024-11-30T22:35:05+08:00">2024-11-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4 id="性能优化目标"><a href="#性能优化目标" class="headerlink" title="性能优化目标"></a>性能优化目标</h4><ul>
-<li><h5 id="保证资源更快的-加载速度（网络层面）"><a href="#保证资源更快的-加载速度（网络层面）" class="headerlink" title="保证资源更快的 加载速度（网络层面）"></a><strong>保证资源更快的 加载速度（网络层面）</strong></h5></li>
-<li><h5 id="保证视图更快的-渲染速度-x2F-交互速度-（浏览器层面）"><a href="#保证视图更快的-渲染速度-x2F-交互速度-（浏览器层面）" class="headerlink" title="保证视图更快的 渲染速度&#x2F;交互速度 （浏览器层面）"></a><strong>保证视图更快的 渲染速度&#x2F;交互速度 （浏览器层面）</strong></h5></li>
-</ul>
-<h4 id="性能检测工具"><a href="#性能检测工具" class="headerlink" title="性能检测工具"></a>性能检测工具</h4><ul>
-<li><p><code>Network</code></p>
-</li>
-<li><p><code>performance</code> 面板（提供一个具体的执行过程)</p>
-</li>
-<li><p><code>lighthouse</code> 面板（网站整体评估) </p>
-</li>
-<li><p><code>webPageTest</code>、 <code>webpack-bundle-analyze</code>（依赖打包构建图）、 <code>speed-measure-webpack-plugin</code>（构建费时分析）</p>
-</li>
-</ul>
-<h4 id="性能指标数据收集"><a href="#性能指标数据收集" class="headerlink" title="性能指标数据收集"></a>性能指标数据收集</h4><ul>
-<li><p><code>performance API</code></p>
-<p>浏览器端的全局对象 <code>window</code> 上有一个名为 <code>performance</code> 的属性，它是一个用于支持 <code>IE9</code> 以上及 <code>webkit</code> 内核浏览器中用于记录页面 <strong>加载</strong> 和 <strong>解析</strong> 过程中关键时间点的机制</p>
-</li>
-<li><p><code>Web Vitals</code> 模块化库</p>
-</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/zh-CN/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
