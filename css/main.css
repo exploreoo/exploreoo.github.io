@@ -2591,7 +2591,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #b09e4a;
+  background: #ddff67;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2745,7 +2745,7 @@ body {
 }
 @media (max-width: 767px) {
   .main>.column {
-    background: url("../images/4kfengjing1de492cc-4260-3316-8360-48c7ea3d33b8.jpg") center/cover no-repeat;
+    background: url("../images/LockScreen.jpg") center/cover no-repeat;
   }
   .main>.column .header {
     background: rgba(0,0,0,0.3);
