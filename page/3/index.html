@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -234,6 +234,113 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/Observer%E8%A7%82%E5%AF%9F%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1___6779236___0___.jpg">
+      <meta itemprop="name" content="CHANCEUX">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WS的博客日志">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WS的博客日志">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/zh-CN/Observer%E8%A7%82%E5%AF%9F%E5%99%A8/" class="post-title-link" itemprop="url">Observer观察器</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-10-15 22:35:05" itemprop="dateCreated datePublished" datetime="2023-10-15T22:35:05+08:00">2023-10-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Observer观察器"><a href="#Observer观察器" class="headerlink" title="Observer观察器"></a>Observer观察器</h3><ul>
+<li><p><strong><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API">IntersectionObserver</a></strong></p>
+<p>​		过去，相交检测通常要用到事件监听，并且需要频繁调用 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect"><code>Element.getBoundingClientRect()</code></a> 方法以获取相关元素的边界信息。事件监听和调用 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect"><code>Element.getBoundingClientRect()</code></a> 都是在主线程上运行，因此频繁触发、调用可能会造成性能问题。这种检测方法极其怪异且不优雅。</p>
+<p>​		Intersection Observer API 会注册一个回调函数，每当被监视的元素进入或者退出另外一个元素时 (或者 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Glossary/Viewport">viewport</a> )，或者两个元素的相交部分大小发生变化时，该回调方法会被触发执行。这样，我们网站的主线程不需要再为了监听元素相交而辛苦劳作，浏览器会自行优化元素相交管理。</p>
+<p>应用场景：</p>
+<ul>
+<li>图片懒加载——当图片滚动到可见时才进行加载</li>
+</ul>
+</li>
+<li><p>内容无限滚动——也就是用户滚动到接近内容底部时直接加载更多，而无需用户操作翻页，给用户一种网页可以无限滚动的错觉</p>
+<ul>
+<li>检测广告的曝光情况——为了计算广告收益，需要知道广告元素的曝光情况</li>
+<li>在用户看见某个区域时执行任务或播放动画</li>
+</ul>
+</li>
+<li><p><strong><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver">MutationObserver</a></strong></p>
+<p>监听一个普通 JS 对象的变化，我们会用 Object.defineProperty 或者 Proxy。</p>
+<p>监听元素属性和子节点变化，比如可以用来做去不掉的水印。MutationObserver 可以监听对元素的属性的修改、对它的子节点的增删改</p>
+</li>
+<li><p><strong>ResizeObserver</strong></p>
+<p>窗口我们可以用 addEventListener 监听 resize 事件。</p>
+<p>监听元素大小变化。使用 ResizeObserver 监听大小的改变，当 width、height 被修改时会触发回调</p>
+</li>
+<li><p><strong>PerformanceObserver</strong></p>
+<p>PerformanceObserver 用于监听记录 performance 数据的行为。一旦记录了就会触发回调，这样我们就可以在回调里把这些数据上报</p>
+</li>
+<li><p><strong>ReportingObserver</strong></p>
+<p>可以保证更全面的了解网页 app 的运行情况。ReportingObserver 可以监听过时的 api、浏览器干预等报告等的打印，在回调里上报，这些是错误监听无法监听到但对了解网页运行情况很有用的数据</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
