@@ -152,7 +152,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -163,7 +163,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -185,6 +185,10 @@
           
           
             <li class="recent_posts_li">
+              <a href="/zh-CN/PWA/" title="Vue CLI + PWA 最佳实践" target="_blank">Vue CLI + PWA 最佳实践</a>
+            </li>
+          
+            <li class="recent_posts_li">
               <a href="/zh-CN/CDN%E5%8A%A0%E9%80%9F/" title="前端 CDN 加速与 Fallback 策略全解析" target="_blank">前端 CDN 加速与 Fallback 策略全解析</a>
             </li>
           
@@ -198,10 +202,6 @@
           
             <li class="recent_posts_li">
               <a href="/zh-CN/%E9%87%8D%E4%BB%BB%E5%8A%A1%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" title="重任务性能优化的最佳实践" target="_blank">重任务性能优化的最佳实践</a>
-            </li>
-          
-            <li class="recent_posts_li">
-              <a href="/zh-CN/%E9%A1%B5%E9%9D%A2%E5%8D%B8%E8%BD%BD%E7%9B%91%E5%90%AC%EF%BC%88Page%20Visibility%20API%EF%BC%89/" title="页面卸载监听（Page Visibility API）" target="_blank">页面卸载监听（Page Visibility API）</a>
             </li>
           
         </ul>
@@ -234,6 +234,100 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/PWA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/LockScreen.jpg">
+      <meta itemprop="name" content="CHANCEUX">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WS的博客日志">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | WS的博客日志">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/zh-CN/PWA/" class="post-title-link" itemprop="url">Vue CLI + PWA 最佳实践</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-04-10 22:35:05" itemprop="dateCreated datePublished" datetime="2025-04-10T22:35:05+08:00">2025-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="一、什么是-PWA（Progressive-Web-App-渐进式网络应用）"><a href="#一、什么是-PWA（Progressive-Web-App-渐进式网络应用）" class="headerlink" title="一、什么是 PWA（Progressive Web App 渐进式网络应用）"></a>一、什么是 PWA（Progressive Web App 渐进式网络应用）</h2><p>PWA 是一种结合了 Web 与原生应用优势的前端技术架构，核心能力包括：</p>
+<ul>
+<li><strong>离线访问</strong>：即使断网也能使用应用</li>
+<li><strong>可安装</strong>：可以被添加到手机主屏幕，像 App 一样运行</li>
+<li><strong>性能优化</strong>：资源按需缓存，提高加载速度</li>
+<li><strong>自动更新</strong>：通过 Service Worker 实现静默或提示式资源更新</li>
+</ul>
+<hr>
+<h2 id="二、快速集成-Vue-CLI-PWA-插件"><a href="#二、快速集成-Vue-CLI-PWA-插件" class="headerlink" title="二、快速集成 Vue CLI PWA 插件"></a>二、快速集成 Vue CLI PWA 插件</h2><p>在 Vue CLI 5 项目中一键集成 PWA（@vue&#x2F;cli-plugin-pwa基于workbox）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue add pwa</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/zh-CN/PWA/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1098,98 +1192,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/zh-CN/Cursor%E7%BC%96%E8%BE%91%E5%99%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/SSR/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/LockScreen.jpg">
-      <meta itemprop="name" content="CHANCEUX">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WS的博客日志">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | WS的博客日志">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/zh-CN/SSR/" class="post-title-link" itemprop="url">vue SSR服务端渲染</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-12-01 22:35:05" itemprop="dateCreated datePublished" datetime="2024-12-01T22:35:05+08:00">2024-12-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>服务器端渲染（Server-Side Rendering，简称 SSR）是指在服务器端生成 HTML 内容并发送到客户端的过程。与客户端渲染（Client-Side Rendering，简称 CSR）相比，SSR 可以提高首屏加载速度和 SEO 友好性。<br>如需更高级的集成框架可以使用nuxtjs</p>
-<h3 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">my-ssr-app/</span><br><span class="line">├── dist/                      # 构建输出目录</span><br><span class="line">├── public/                    # 公共资源目录</span><br><span class="line">│   └── index.html             # HTML 模板</span><br><span class="line">├── src/                       # 源代码目录</span><br><span class="line">│   ├── entry-client.js        # 客户端入口文件</span><br><span class="line">│   ├── entry-server.js        # 服务器端入口文件</span><br><span class="line">|   └── main.js</span><br><span class="line">├── package.json               # 项目配置文件</span><br><span class="line">├── server.js                  # Express 服务器配置</span><br><span class="line">└── vue.config.js   					 # Webpack 服务器端配置</span><br></pre></td></tr></table></figure>
-
-<h2 id="构造流程"><a href="#构造流程" class="headerlink" title="构造流程"></a>构造流程</h2><h3 id="1-安装必要的依赖"><a href="#1-安装必要的依赖" class="headerlink" title="1. 安装必要的依赖"></a>1. 安装必要的依赖</h3><p>SSR 需要一些额外的依赖包，如 <code>@vue/server-renderer</code> 和 <code>express</code>。在项目根目录下运行以下命令安装这些依赖：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @vue/server-renderer express webpack-manifest-plugin webpack-node-externals --save-dev</span><br></pre></td></tr></table></figure>
-
-<p>相关版本：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;@vue/cli-service&quot;: &quot;~5.0.0&quot;,</span><br><span class="line">&quot;express&quot;: &quot;^4.21.2&quot;,</span><br><span class="line">&quot;@vue/server-renderer&quot;: &quot;^3.5.13&quot;,</span><br><span class="line">&quot;webpack-manifest-plugin&quot;: &quot;^5.0.0&quot;,</span><br><span class="line">&quot;webpack-node-externals&quot;: &quot;^3.0.0&quot;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/zh-CN/SSR/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>

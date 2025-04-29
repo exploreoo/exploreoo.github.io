@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="green"><meta name="generator" content="Hexo 7.0.0-rc1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="green">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/green/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"exploreoo.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"hide","padding":15,"offset":6},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="一、什么是 PWA（Progressive Web App 渐进式网络应用）PWA 是一种结合了 Web 与原生应用优势的前端技术架构，核心能力包括：  离线访问：即使断网也能使用应用 可安装：可以被添加到手机主屏幕，像 App 一样运行 性能优化：资源按需缓存，提高加载速度 自动更新：通过 Service Worker 实现静默或提示式资源更新   二、快速集成 Vue CLI PWA 插件在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue CLI + PWA 最佳实践">
+<meta property="og:url" content="https://exploreoo.github.io/zh-CN/PWA/index.html">
+<meta property="og:site_name" content="WS的博客日志">
+<meta property="og:description" content="一、什么是 PWA（Progressive Web App 渐进式网络应用）PWA 是一种结合了 Web 与原生应用优势的前端技术架构，核心能力包括：  离线访问：即使断网也能使用应用 可安装：可以被添加到手机主屏幕，像 App 一样运行 性能优化：资源按需缓存，提高加载速度 自动更新：通过 Service Worker 实现静默或提示式资源更新   二、快速集成 Vue CLI PWA 插件在">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-04-10T14:35:05.000Z">
+<meta property="article:modified_time" content="2025-04-29T13:22:05.924Z">
+<meta property="article:author" content="CHANCEUX">
+<meta property="article:tag" content="PWA">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://exploreoo.github.io/zh-CN/PWA/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://exploreoo.github.io/zh-CN/PWA/","path":"zh-CN/PWA/","title":"Vue CLI + PWA 最佳实践"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Vue CLI + PWA 最佳实践 | WS的博客日志</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">WS的博客日志</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">奔赴山海，保持热爱</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-xmark"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AF-PWA%EF%BC%88Progressive-Web-App-%E6%B8%90%E8%BF%9B%E5%BC%8F%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">一、什么是 PWA（Progressive Web App 渐进式网络应用）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90-Vue-CLI-PWA-%E6%8F%92%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">二、快速集成 Vue CLI PWA 插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E9%85%8D%E7%BD%AE-vue-config-js"><span class="nav-number">3.</span> <span class="nav-text">三、配置 vue.config.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%B3%A8%E5%86%8C-Service-Worker-%E5%B9%B6%E7%9B%91%E5%90%AC%E6%9B%B4%E6%96%B0"><span class="nav-number">4.</span> <span class="nav-text">四、注册 Service Worker 并监听更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E5%BC%80%E5%8F%91%E4%B8%8E%E6%B5%8B%E8%AF%95%E6%8A%80%E5%B7%A7"><span class="nav-number">5.</span> <span class="nav-text">五、开发与测试技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94"><span class="nav-number">6.</span> <span class="nav-text">六、常见问题解答</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%96%AD%E7%BD%91%E5%90%8E%E4%B8%8D%E8%83%BD%E8%AE%BF%E9%97%AE%E9%A1%B5%E9%9D%A2%EF%BC%9F"><span class="nav-number">6.1.</span> <span class="nav-text">为什么断网后不能访问页面？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9B%B4%E6%96%B0%E4%BA%86%E4%BB%A3%E7%A0%81%EF%BC%8C%E4%BD%86%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B2%A1%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9%EF%BC%9F"><span class="nav-number">6.2.</span> <span class="nav-text">为什么更新了代码，但浏览器没更新内容？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E7%BB%93%E8%AF%AD"><span class="nav-number">7.</span> <span class="nav-text">七、结语</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="CHANCEUX"
+      src="/images/LockScreen.jpg">
+  <p class="site-author-name" itemprop="name">CHANCEUX</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    
+      <div class="links-of-blogroll motion-element links-of-blogroll-block">
+        <div class="links-of-blogroll-title">
+          <!-- modify icon to fire by szw -->
+          <i class="fa fa-history fa-" aria-hidden="true"></i>
+          近期文章
+        </div>
+        <ul class="links-of-blogroll-list">
+          
+          
+            <li class="recent_posts_li">
+              <a href="/zh-CN/PWA/" title="Vue CLI + PWA 最佳实践" target="_blank">Vue CLI + PWA 最佳实践</a>
+            </li>
+          
+            <li class="recent_posts_li">
+              <a href="/zh-CN/CDN%E5%8A%A0%E9%80%9F/" title="前端 CDN 加速与 Fallback 策略全解析" target="_blank">前端 CDN 加速与 Fallback 策略全解析</a>
+            </li>
+          
+            <li class="recent_posts_li">
+              <a href="/zh-CN/http%E5%8F%96%E6%B6%88%E8%AF%B7%E6%B1%82%E4%B8%8E%E8%BF%9B%E5%BA%A6%E6%9D%A1%E6%8E%A7%E5%88%B6%E7%9A%84%E4%BC%98%E9%9B%85%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="http取消请求" target="_blank">http取消请求</a>
+            </li>
+          
+            <li class="recent_posts_li">
+              <a href="/zh-CN/useLayoutEffect%E5%92%8CuseEffect%E7%9A%84%E5%8C%BA%E5%88%AB/" title="useLayoutEffect Vs useEffect" target="_blank">useLayoutEffect Vs useEffect</a>
+            </li>
+          
+            <li class="recent_posts_li">
+              <a href="/zh-CN/%E9%87%8D%E4%BB%BB%E5%8A%A1%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" title="重任务性能优化的最佳实践" target="_blank">重任务性能优化的最佳实践</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/" title="https:&#x2F;&#x2F;github.com&#x2F;" rel="noopener" target="_blank">GitHub</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://developer.mozilla.org/zh-CN/docs/Web" title="https:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;Web" rel="noopener" target="_blank">Web开发技术 | MDN</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.deepseek.com/" title="https:&#x2F;&#x2F;www.deepseek.com&#x2F;" rel="noopener" target="_blank">deepseek</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/PWA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/LockScreen.jpg">
+      <meta itemprop="name" content="CHANCEUX">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WS的博客日志">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Vue CLI + PWA 最佳实践 | WS的博客日志">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Vue CLI + PWA 最佳实践
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-04-10 22:35:05" itemprop="dateCreated datePublished" datetime="2025-04-10T22:35:05+08:00">2025-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="一、什么是-PWA（Progressive-Web-App-渐进式网络应用）"><a href="#一、什么是-PWA（Progressive-Web-App-渐进式网络应用）" class="headerlink" title="一、什么是 PWA（Progressive Web App 渐进式网络应用）"></a>一、什么是 PWA（Progressive Web App 渐进式网络应用）</h2><p>PWA 是一种结合了 Web 与原生应用优势的前端技术架构，核心能力包括：</p>
+<ul>
+<li><strong>离线访问</strong>：即使断网也能使用应用</li>
+<li><strong>可安装</strong>：可以被添加到手机主屏幕，像 App 一样运行</li>
+<li><strong>性能优化</strong>：资源按需缓存，提高加载速度</li>
+<li><strong>自动更新</strong>：通过 Service Worker 实现静默或提示式资源更新</li>
+</ul>
+<hr>
+<h2 id="二、快速集成-Vue-CLI-PWA-插件"><a href="#二、快速集成-Vue-CLI-PWA-插件" class="headerlink" title="二、快速集成 Vue CLI PWA 插件"></a>二、快速集成 Vue CLI PWA 插件</h2><p>在 Vue CLI 5 项目中一键集成 PWA（@vue&#x2F;cli-plugin-pwa基于workbox）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue add pwa</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<hr>
+<h2 id="三、配置-vue-config-js"><a href="#三、配置-vue-config-js" class="headerlink" title="三、配置 vue.config.js"></a>三、配置 vue.config.js</h2><p>以下是一份推荐的完整配置，适用于大多数业务场景：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">pwa</span>: &#123;</span><br><span class="line">    <span class="comment">// 应用名称，会注入 index.html 和 manifest.json 的 name 字段</span></span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;My App&quot;</span>,</span><br><span class="line">    <span class="comment">// 主题色，会注入 &lt;meta name=&quot;theme-color&quot; /&gt;</span></span><br><span class="line">    <span class="attr">themeColor</span>: <span class="string">&quot;#42b983&quot;</span>,</span><br><span class="line">    <span class="comment">// Windows 磁贴颜色 &lt;meta name=&quot;msapplication-TileColor&quot; /&gt;</span></span><br><span class="line">    <span class="attr">msTileColor</span>: <span class="string">&quot;#000000&quot;</span>,</span><br><span class="line">    <span class="comment">// 设置是否以 Web App 模式运行（iOS 专用）&lt;meta name=&quot;apple-mobile-web-app-capable&quot; /&gt;</span></span><br><span class="line">    <span class="attr">appleMobileWebAppCapable</span>: <span class="string">&quot;yes&quot;</span>,</span><br><span class="line">    <span class="comment">// iOS 状态栏样式 &lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; /&gt;</span></span><br><span class="line">    <span class="attr">appleMobileWebAppStatusBarStyle</span>: <span class="string">&quot;black&quot;</span>,</span><br><span class="line">    <span class="comment">// manifest.json 的自定义配置，会与插件默认值合并</span></span><br><span class="line">    <span class="comment">// manifestOptions: &#123;</span></span><br><span class="line">    <span class="comment">//   short_name: &#x27;App&#x27;,</span></span><br><span class="line">    <span class="comment">//   start_url: &#x27;.&#x27;,</span></span><br><span class="line">    <span class="comment">//   display: &#x27;standalone&#x27;,</span></span><br><span class="line">    <span class="comment">//   background_color: &#x27;#ffffff&#x27;,</span></span><br><span class="line">    <span class="comment">//   icons: [</span></span><br><span class="line">    <span class="comment">//     &#123;</span></span><br><span class="line">    <span class="comment">//       src: &#x27;/img/icons/android-chrome-192x192.png&#x27;,</span></span><br><span class="line">    <span class="comment">//       sizes: &#x27;192x192&#x27;,</span></span><br><span class="line">    <span class="comment">//       type: &#x27;image/png&#x27;</span></span><br><span class="line">    <span class="comment">//     &#125;,</span></span><br><span class="line">    <span class="comment">//     &#123;</span></span><br><span class="line">    <span class="comment">//       src: &#x27;/img/icons/android-chrome-512x512.png&#x27;,</span></span><br><span class="line">    <span class="comment">//       sizes: &#x27;512x512&#x27;,</span></span><br><span class="line">    <span class="comment">//       type: &#x27;image/png&#x27;</span></span><br><span class="line">    <span class="comment">//     &#125;</span></span><br><span class="line">    <span class="comment">//   ]</span></span><br><span class="line">    <span class="comment">// &#125;,</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Service Worker 插件模式</span></span><br><span class="line">    <span class="comment">// &#x27;GenerateSW&#x27;: 自动生成 SW（推荐）</span></span><br><span class="line">    <span class="comment">// &#x27;InjectManifest&#x27;: 使用自定义的 service-worker 源文件</span></span><br><span class="line">    <span class="attr">workboxPluginMode</span>: <span class="string">&quot;GenerateSW&quot;</span>,</span><br><span class="line">    <span class="comment">// workbox 的详细配置项</span></span><br><span class="line">    <span class="attr">workboxOptions</span>: &#123;</span><br><span class="line">      <span class="comment">// 仅在使用 InjectManifest 时需要指定</span></span><br><span class="line">      <span class="comment">// swSrc: &#x27;src/service-worker.js&#x27;,</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">// 跳过等待，立即激活新 SW</span></span><br><span class="line">      <span class="attr">skipWaiting</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="comment">// 激活新 SW 后立即接管所有页面</span></span><br><span class="line">      <span class="attr">clientsClaim</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="comment">// 指定缓存白名单（默认使用 Workbox 生成的规则）</span></span><br><span class="line">      <span class="attr">exclude</span>: [<span class="regexp">/\.map$/</span>, <span class="regexp">/manifest\.json$/</span>],</span><br><span class="line">      <span class="comment">// **运行时缓存配置**（重点）</span></span><br><span class="line">      <span class="attr">runtimeCaching</span>: [</span><br><span class="line">        <span class="comment">// 首页 HTML，确保用户获取最新内容</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">urlPattern</span>: <span class="regexp">/^\/(index\.html)?$/</span>,</span><br><span class="line">          <span class="attr">handler</span>: <span class="string">&quot;NetworkFirst&quot;</span>,</span><br><span class="line">          <span class="attr">options</span>: &#123;</span><br><span class="line">            <span class="attr">cacheName</span>: <span class="string">&quot;html-cache&quot;</span>,</span><br><span class="line">            <span class="attr">networkTimeoutSeconds</span>: <span class="number">10</span>,</span><br><span class="line">            <span class="attr">expiration</span>: &#123;</span><br><span class="line">              <span class="attr">maxEntries</span>: <span class="number">5</span>,</span><br><span class="line">              <span class="attr">maxAgeSeconds</span>: <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span>, <span class="comment">// 1 天</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">cacheableResponse</span>: &#123;</span><br><span class="line">              <span class="attr">statuses</span>: [<span class="number">0</span>, <span class="number">200</span>],</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// JS 和 CSS 文件，使用缓存同时后台更新</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">urlPattern</span>: <span class="regexp">/\.(?:js|css)$/</span>,</span><br><span class="line">          <span class="attr">handler</span>: <span class="string">&quot;StaleWhileRevalidate&quot;</span>,</span><br><span class="line">          <span class="attr">options</span>: &#123;</span><br><span class="line">            <span class="attr">cacheName</span>: <span class="string">&quot;static-resources&quot;</span>,</span><br><span class="line">            <span class="attr">expiration</span>: &#123;</span><br><span class="line">              <span class="attr">maxEntries</span>: <span class="number">50</span>,</span><br><span class="line">              <span class="attr">maxAgeSeconds</span>: <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span> * <span class="number">30</span>, <span class="comment">// 30 天</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">cacheableResponse</span>: &#123;</span><br><span class="line">              <span class="attr">statuses</span>: [<span class="number">0</span>, <span class="number">200</span>],</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// 图片资源，使用缓存优先策略</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">urlPattern</span>: <span class="regexp">/\.(?:png|jpg|jpeg|gif|webp|svg|ico)$/</span>,</span><br><span class="line">          <span class="attr">handler</span>: <span class="string">&quot;CacheFirst&quot;</span>,</span><br><span class="line">          <span class="attr">options</span>: &#123;</span><br><span class="line">            <span class="attr">cacheName</span>: <span class="string">&quot;image-cache&quot;</span>,</span><br><span class="line">            <span class="attr">expiration</span>: &#123;</span><br><span class="line">              <span class="attr">maxEntries</span>: <span class="number">60</span>,</span><br><span class="line">              <span class="attr">maxAgeSeconds</span>: <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span> * <span class="number">60</span>, <span class="comment">// 60 天</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">cacheableResponse</span>: &#123;</span><br><span class="line">              <span class="attr">statuses</span>: [<span class="number">0</span>, <span class="number">200</span>],</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// 字体资源</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">urlPattern</span>: <span class="regexp">/\.(?:woff2?|ttf|otf|eot)$/</span>,</span><br><span class="line">          <span class="attr">handler</span>: <span class="string">&quot;CacheFirst&quot;</span>,</span><br><span class="line">          <span class="attr">options</span>: &#123;</span><br><span class="line">            <span class="attr">cacheName</span>: <span class="string">&quot;font-cache&quot;</span>,</span><br><span class="line">            <span class="attr">expiration</span>: &#123;</span><br><span class="line">              <span class="attr">maxEntries</span>: <span class="number">20</span>,</span><br><span class="line">              <span class="attr">maxAgeSeconds</span>: <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span> * <span class="number">60</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">cacheableResponse</span>: &#123;</span><br><span class="line">              <span class="attr">statuses</span>: [<span class="number">0</span>, <span class="number">200</span>],</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// CDN 第三方依赖（如 jsDelivr / unpkg）</span></span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">urlPattern</span>: <span class="regexp">/^https:\/\/(cdn\.jsdelivr\.net|unpkg\.com)\//</span>,</span><br><span class="line">          <span class="attr">handler</span>: <span class="string">&quot;CacheFirst&quot;</span>,</span><br><span class="line">          <span class="attr">options</span>: &#123;</span><br><span class="line">            <span class="attr">cacheName</span>: <span class="string">&quot;cdn-cache&quot;</span>,</span><br><span class="line">            <span class="attr">expiration</span>: &#123;</span><br><span class="line">              <span class="attr">maxEntries</span>: <span class="number">30</span>,</span><br><span class="line">              <span class="attr">maxAgeSeconds</span>: <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span> * <span class="number">30</span>,</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">cacheableResponse</span>: &#123;</span><br><span class="line">              <span class="attr">statuses</span>: [<span class="number">0</span>, <span class="number">200</span>],</span><br><span class="line">            &#125;,</span><br><span class="line">          &#125;,</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// // 可选：API 接口缓存（仅在有 API 请求时使用）</span></span><br><span class="line">        <span class="comment">// &#123;</span></span><br><span class="line">        <span class="comment">//   urlPattern: /^https:\/\/your-api\.com\/.+/,</span></span><br><span class="line">        <span class="comment">//   handler: &quot;NetworkFirst&quot;,</span></span><br><span class="line">        <span class="comment">//   method: &quot;GET&quot;,</span></span><br><span class="line">        <span class="comment">//   options: &#123;</span></span><br><span class="line">        <span class="comment">//     cacheName: &quot;api-cache&quot;,</span></span><br><span class="line">        <span class="comment">//     expiration: &#123;</span></span><br><span class="line">        <span class="comment">//       maxEntries: 30,</span></span><br><span class="line">        <span class="comment">//       maxAgeSeconds: 60 * 60 * 24,</span></span><br><span class="line">        <span class="comment">//     &#125;,</span></span><br><span class="line">        <span class="comment">//     cacheableResponse: &#123;</span></span><br><span class="line">        <span class="comment">//       statuses: [0, 200],</span></span><br><span class="line">        <span class="comment">//     &#125;,</span></span><br><span class="line">        <span class="comment">//   &#125;,</span></span><br><span class="line">        <span class="comment">// &#125;,</span></span><br><span class="line">      ],</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 是否启用 service worker 注册（默认 true）</span></span><br><span class="line">    <span class="comment">// 如果设置为 false，将不会注册任何 SW</span></span><br><span class="line">    <span class="comment">// 通常在开发环境中可以关闭</span></span><br><span class="line">    <span class="comment">// 注意：这不是官方文档中的标准字段，但部分社区方案支持</span></span><br><span class="line">    <span class="comment">// workboxEnabled: process.env.NODE_ENV === &#x27;production&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="四、注册-Service-Worker-并监听更新"><a href="#四、注册-Service-Worker-并监听更新" class="headerlink" title="四、注册 Service Worker 并监听更新"></a>四、注册 Service Worker 并监听更新</h2><p>在 <code>main.js</code> 中引入：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./registerServiceWorker&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>然后在 <code>src/registerServiceWorker.js</code> 中监听更新并提示用户刷新页面：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; register &#125; <span class="keyword">from</span> <span class="string">&quot;register-service-worker&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!(<span class="string">&quot;serviceWorker&quot;</span> <span class="keyword">in</span> navigator)) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;【PWA】PWA not supported&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&quot;production&quot;</span>) &#123;</span><br><span class="line">  <span class="title function_">register</span>(<span class="string">`<span class="subst">$&#123;process.env.BASE_URL&#125;</span>service-worker.js`</span>, &#123;</span><br><span class="line">    <span class="title function_">ready</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(</span><br><span class="line">        <span class="string">&quot;【PWA】App is being served from cache by a service worker.\n&quot;</span> +</span><br><span class="line">          <span class="string">&quot;For more details, visit https://goo.gl/AFskqB&quot;</span></span><br><span class="line">      );</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">registered</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;【PWA】Service worker has been registered.&quot;</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">cached</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;【PWA】Content has been cached for offline use.&quot;</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">updatefound</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;【PWA】New content is downloading.&quot;</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">updated</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;【PWA】New content is available; please refresh.&quot;</span>);</span><br><span class="line">      <span class="comment">// if (confirm(&quot;检测到新版本，是否更新？&quot;)) &#123;</span></span><br><span class="line">      <span class="comment">//   window.location.reload();</span></span><br><span class="line">      <span class="comment">// &#125;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">offline</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(</span><br><span class="line">        <span class="string">&quot;【PWA】No internet connection found. App is running in offline mode.&quot;</span></span><br><span class="line">      );</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">error</span>(<span class="params">error</span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&quot;【PWA】Error during service worker registration:&quot;</span>, error);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="五、开发与测试技巧"><a href="#五、开发与测试技巧" class="headerlink" title="五、开发与测试技巧"></a>五、开发与测试技巧</h2><ul>
+<li>开发环境下默认不启用 PWA（避免调试缓存）</li>
+<li>建议使用 <code>live-server dist/</code> 或 <code>serve -s dist</code> 方式本地测试生产版本</li>
+<li>打开 DevTools → Application → Service Workers 查看缓存与更新状态</li>
+</ul>
+<hr>
+<h2 id="六、常见问题解答"><a href="#六、常见问题解答" class="headerlink" title="六、常见问题解答"></a>六、常见问题解答</h2><h3 id="为什么断网后不能访问页面？"><a href="#为什么断网后不能访问页面？" class="headerlink" title="为什么断网后不能访问页面？"></a>为什么断网后不能访问页面？</h3><p>确保你访问的是构建后的生产环境，并已注册成功的 Service Worker。首次访问必须联网才能缓存资源。</p>
+<h3 id="为什么更新了代码，但浏览器没更新内容？"><a href="#为什么更新了代码，但浏览器没更新内容？" class="headerlink" title="为什么更新了代码，但浏览器没更新内容？"></a>为什么更新了代码，但浏览器没更新内容？</h3><p>默认 Service Worker 安装后不会立刻接管，需设置：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">workboxOptions</span>: &#123;</span><br><span class="line">  <span class="attr">skipWaiting</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">clientsClaim</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>并在更新时主动 <code>reload()</code> 页面。</p>
+<hr>
+<h2 id="七、结语"><a href="#七、结语" class="headerlink" title="七、结语"></a>七、结语</h2><p>PWA 是现代 Web 的重要趋势，使用 Vue CLI 你可以非常方便地实现一个支持离线、可安装、自动更新的 Web 应用。掌握正确的缓存策略和更新机制，是确保良好用户体验的关键。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>不如来一杯咖啡吧~</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/1___6779236___0___.jpg" alt="CHANCEUX 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/1___6779236___0___.jpg" alt="CHANCEUX 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_twitter"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_skype"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/zh-CN/CDN%E5%8A%A0%E9%80%9F/" rel="prev" title="前端 CDN 加速与 Fallback 策略全解析">
+                  <i class="fa fa-chevron-left"></i> 前端 CDN 加速与 Fallback 策略全解析
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-mug-saucer"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">CHANCEUX</span>
+  </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <!-- <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div> -->
+
+
+<!-- 网站运行时间的设置 -->
+<div class="run-date">
+  <span id="timeDate">载入天数...</span>
+  <span id="times">载入时分秒...</span>
+</div>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/01/2020 10:00:00"); //此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "Safely Running: "+dnum+"天 ";
+        document.getElementById("times").innerHTML = hnum + "时" + mnum + "分" + snum + "秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  <script src="/js/third-party/addtoany.js"></script>
+
+  
+  <script defer src="https://vercount.one/js"></script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '120px',
+  right: '46px',
+  left: 'unset',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"exploreoo","repo":"exploreoo.github.io","client_id":"Ov23liHNlcDBsZV2oXR4","client_secret":"48d9e04c96efd73c5756e2566791c80d6484bd39","admin_user":"exploreoo","distraction_free_mode":false,"proxy":"https://benevolent-fudge-eddfe7.netlify.app/github_access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"3cd78f440f4aeb85a1c00e8c5f9ed546"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":120,"height":240},"mobile":{"show":true}});</script></body>
+</html>
