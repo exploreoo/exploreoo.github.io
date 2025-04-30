@@ -1399,21 +1399,6 @@ pre code {
   line-height: 1.8;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.post-toc .nav .nav-child {
-  --height: 0;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition-property: height, opacity, visibility;
-  transition: 0.2s ease-in-out;
-  visibility: hidden;
-}
-.post-toc .nav .active > .nav-child {
-  height: var(--height, auto);
-  opacity: 1;
-  visibility: unset;
 }
 .post-toc .nav .active > a {
   border-bottom-color: #87daff;
@@ -1424,28 +1409,6 @@ pre code {
 }
 .post-toc .nav .active-current > a:hover {
   color: #87daff;
-}
-.site-state {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  line-height: 1.4;
-}
-.site-state-item {
-  padding: 0 15px;
-}
-.site-state-item a {
-  border-bottom: 0;
-  display: block;
-}
-.site-state-item-count {
-  display: block;
-  font-size: 1.2em;
-  font-weight: 600;
-}
-.site-state-item-name {
-  color: inherit;
-  font-size: 0.875em;
 }
 .sidebar-post-related {
   font-size: 0.8125em;
@@ -2591,7 +2554,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #75ff5b;
+  background: #25ff95;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2728,14 +2691,34 @@ body {
     margin-top: 0px;
   }
 }
-.post-toc .nav .nav-child {
-  display: block;
-  height: unset;
-  opacity: 1;
-  visibility: unset;
+@media (min-width: 1200px) {
+  body {
+    padding-left: 320px !important;
+  }
+  body::before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 100%;
+    background: #333;
+  }
+  .sidebar {
+    transition: unset;
+  }
 }
 .links-of-blogroll-title {
   text-align: center;
+}
+.sidebar-toggle {
+  display: none;
+}
+@media (max-width: 767px) {
+  .sidebar-toggle {
+    display: block;
+  }
 }
 .main>.column {
   background: url("../images/1.jpg") center 45%/cover no-repeat;
@@ -2801,6 +2784,7 @@ header.header {
 .links-of-blogroll-title,
 .menu .menu-item a.menu-item-active {
   color: #ffea00;
+  margin-bottom: 6px;
 }
 @media (max-width: 767px) {
   .links-of-blogroll-title,

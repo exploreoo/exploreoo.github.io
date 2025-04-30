@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/green/pace-theme-minimal.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"exploreoo.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"hide","padding":15,"offset":6},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"exploreoo.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":15,"offset":6},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="WS的博客日志">
@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="WS的博客日志">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="CHANCEUX">
-<meta property="article:tag" content="日志,博客,weblog,js,ai,AI,javaScript,编程技术,资料,总结">
+<meta property="article:tag" content="博客,日志,jsAi,javaScript,编程技术,资料,总结,Vue,前端">
 <meta name="twitter:card" content="summary">
 
 
@@ -87,7 +87,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">21</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">30</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -148,26 +148,11 @@
   <p class="site-author-name" itemprop="name">CHANCEUX</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-<div class="site-state-wrap animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">30</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-          <a href="/categories/">
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-          <a href="/tags/">
-        <span class="site-state-item-count">21</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:3351550900@qq.com" title="E-Mail → mailto:3351550900@qq.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
         </div>
       </div>
@@ -216,13 +201,16 @@
         </div>
         <ul class="links-of-blogroll-list">
             <li class="links-of-blogroll-item">
-              <a href="https://github.com/" title="https:&#x2F;&#x2F;github.com&#x2F;" rel="noopener" target="_blank">GitHub</a>
+              <a href="https://www.tophub.today/" title="https:&#x2F;&#x2F;www.tophub.today&#x2F;" rel="noopener" target="_blank">Top Hacker News</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://wangdoc.com/" title="https:&#x2F;&#x2F;wangdoc.com&#x2F;" rel="noopener" target="_blank">WangDoc</a>
             </li>
             <li class="links-of-blogroll-item">
               <a href="https://developer.mozilla.org/zh-CN/docs/Web" title="https:&#x2F;&#x2F;developer.mozilla.org&#x2F;zh-CN&#x2F;docs&#x2F;Web" rel="noopener" target="_blank">Web开发技术 | MDN</a>
             </li>
             <li class="links-of-blogroll-item">
-              <a href="https://www.deepseek.com/" title="https:&#x2F;&#x2F;www.deepseek.com&#x2F;" rel="noopener" target="_blank">deepseek</a>
+              <a href="https://dnsspeedtest.online/" title="https:&#x2F;&#x2F;dnsspeedtest.online&#x2F;" rel="noopener" target="_blank">DNS Speed Test</a>
             </li>
         </ul>
       </div>
@@ -294,7 +282,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="一、什么是-PWA（Progressive-Web-App-渐进式网络应用）"><a href="#一、什么是-PWA（Progressive-Web-App-渐进式网络应用）" class="headerlink" title="一、什么是 PWA（Progressive Web App 渐进式网络应用）"></a>一、什么是 PWA（Progressive Web App 渐进式网络应用）</h2><p>PWA 是一种结合了 Web 与原生应用优势的前端技术架构，核心能力包括：</p>
+          <h2 id="什么是-PWA（Progressive-Web-App-渐进式网络应用）"><a href="#什么是-PWA（Progressive-Web-App-渐进式网络应用）" class="headerlink" title="什么是 PWA（Progressive Web App 渐进式网络应用）"></a>什么是 PWA（Progressive Web App 渐进式网络应用）</h2><p>PWA 是一种结合了 Web 与原生应用优势的前端技术架构，核心能力包括：</p>
 <ul>
 <li><strong>离线访问</strong>：即使断网也能使用应用</li>
 <li><strong>可安装</strong>：可以被添加到手机主屏幕，像 App 一样运行</li>
@@ -302,7 +290,7 @@
 <li><strong>自动更新</strong>：通过 Service Worker 实现静默或提示式资源更新</li>
 </ul>
 <hr>
-<h2 id="二、快速集成-Vue-CLI-PWA-插件"><a href="#二、快速集成-Vue-CLI-PWA-插件" class="headerlink" title="二、快速集成 Vue CLI PWA 插件"></a>二、快速集成 Vue CLI PWA 插件</h2><p>在 Vue CLI 5 项目中一键集成 PWA（@vue&#x2F;cli-plugin-pwa基于workbox）：</p>
+<h2 id="集成-Vue-CLI-PWA-插件"><a href="#集成-Vue-CLI-PWA-插件" class="headerlink" title="集成 Vue CLI PWA 插件"></a>集成 Vue CLI PWA 插件</h2><p>在 Vue CLI 5 项目中集成 PWA使用的是@vue&#x2F;cli-plugin-pwa，其实也是基于 Google Chrome 团队的 workbox开发的，参考<a target="_blank" rel="noopener" href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa">https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa</a><br>使用安装命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue add pwa</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
