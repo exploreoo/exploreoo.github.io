@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="green"><meta name="generator" content="Hexo 7.0.0-rc1">
+<meta name="theme-color" content="#ff8439"><meta name="generator" content="Hexo 7.0.0-rc1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
-  <link rel="mask-icon" href="/images/logo.svg" color="green">
+  <link rel="mask-icon" href="/images/logo.svg" color="#ff8439">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -383,7 +383,7 @@
 </li>
 <li><p><code>performance</code> 面板（提供一个具体的执行过程)</p>
 </li>
-<li><p><code>lighthouse</code> 面板（网站整体评估) </p>
+<li><p><code>lighthouse</code> 面板（网站整体评估)</p>
 </li>
 <li><p><code>webPageTest</code>、 <code>webpack-bundle-analyze</code>（依赖打包构建图）、 <code>speed-measure-webpack-plugin</code>（构建费时分析）</p>
 </li>
@@ -726,7 +726,6 @@
     <div class="post-body" itemprop="articleBody">
           <p>代码示例</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">export default class WorkerWrapper &#123;</span><br><span class="line">  constructor(work, options) &#123;</span><br><span class="line">    this.worker = new work();</span><br><span class="line">    this.callbacks = new Map();</span><br><span class="line">    this.worker.onmessage = (event) =&gt; &#123;</span><br><span class="line">      const &#123; id, data &#125; = event.data;</span><br><span class="line">      const callback = this.callbacks.get(id);</span><br><span class="line">      if (callback) &#123;</span><br><span class="line">        callback(data);</span><br><span class="line">        this.callbacks.delete(id);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  postMessage(data, callback) &#123;</span><br><span class="line">    const id = Math.random().toString(36).substr(2);</span><br><span class="line">    if (callback) &#123;</span><br><span class="line">      this.callbacks.set(id, callback);</span><br><span class="line">    &#125;</span><br><span class="line">    this.worker.postMessage(&#123; id, data &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // 终止进程</span><br><span class="line">  terminate() &#123;</span><br><span class="line">    this.worker.terminate();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 
       
     </div>
@@ -1093,7 +1092,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>物理引擎cannon-es  <a target="_blank" rel="noopener" href="https://pmndrs.github.io/cannon-es/docs/">https://pmndrs.github.io/cannon-es/docs/</a></p>
+          <p>物理引擎cannon-es <a target="_blank" rel="noopener" href="https://pmndrs.github.io/cannon-es/docs/">https://pmndrs.github.io/cannon-es/docs/</a></p>
 
       
     </div>
