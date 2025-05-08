@@ -21,28 +21,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"exploreoo.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.17.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":15,"offset":6},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":true,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Observer观察器 IntersectionObserver ​ 过去，相交检测通常要用到事件监听，并且需要频繁调用 Element.getBoundingClientRect() 方法以获取相关元素的边界信息。事件监听和调用 Element.getBoundingClientRect() 都是在主线程上运行，因此频繁触发、调用可能会造成性能问题。这种检测方法极其怪异且不优雅。 ​ Inter">
+    <meta name="description" content="什么是 OPTIONS 预检请求？必须是跨域的场景下，当你通过浏览器发送一个请求时，为了保证跨域安全控制，浏览器不会立即发送该请求，而是自动先发起一个 OPTIONS 请求，询问目标服务器是否允许你真正的请求行为，这就是所谓的预检请求（preflight request）。 另外，预检请求不会携带cookies，即使设置了withCredentials: true或者**credentials:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Observer观察器">
-<meta property="og:url" content="https://exploreoo.github.io/zh-CN/Observer%E8%A7%82%E5%AF%9F%E5%99%A8/index.html">
+<meta property="og:title" content="OPTIONS 预检请求">
+<meta property="og:url" content="https://exploreoo.github.io/zh-CN/OPTIONS%E9%A2%84%E6%A3%80%E8%AF%B7%E6%B1%82%E8%AF%A6%E8%A7%A3/index.html">
 <meta property="og:site_name" content="WS的博客日志">
-<meta property="og:description" content="Observer观察器 IntersectionObserver ​ 过去，相交检测通常要用到事件监听，并且需要频繁调用 Element.getBoundingClientRect() 方法以获取相关元素的边界信息。事件监听和调用 Element.getBoundingClientRect() 都是在主线程上运行，因此频繁触发、调用可能会造成性能问题。这种检测方法极其怪异且不优雅。 ​ Inter">
+<meta property="og:description" content="什么是 OPTIONS 预检请求？必须是跨域的场景下，当你通过浏览器发送一个请求时，为了保证跨域安全控制，浏览器不会立即发送该请求，而是自动先发起一个 OPTIONS 请求，询问目标服务器是否允许你真正的请求行为，这就是所谓的预检请求（preflight request）。 另外，预检请求不会携带cookies，即使设置了withCredentials: true或者**credentials:">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-15T14:35:05.000Z">
-<meta property="article:modified_time" content="2025-05-06T12:47:39.112Z">
+<meta property="article:published_time" content="2025-03-15T14:35:05.000Z">
+<meta property="article:modified_time" content="2025-05-08T14:08:47.697Z">
 <meta property="article:author" content="CHANCEUX">
-<meta property="article:tag" content="Api">
+<meta property="article:tag" content="Http">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://exploreoo.github.io/zh-CN/Observer%E8%A7%82%E5%AF%9F%E5%99%A8/">
+<link rel="canonical" href="https://exploreoo.github.io/zh-CN/OPTIONS%E9%A2%84%E6%A3%80%E8%AF%B7%E6%B1%82%E8%AF%A6%E8%A7%A3/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://exploreoo.github.io/zh-CN/Observer%E8%A7%82%E5%AF%9F%E5%99%A8/","path":"zh-CN/Observer观察器/","title":"Observer观察器"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://exploreoo.github.io/zh-CN/OPTIONS%E9%A2%84%E6%A3%80%E8%AF%B7%E6%B1%82%E8%AF%A6%E8%A7%A3/","path":"zh-CN/OPTIONS预检请求详解/","title":"OPTIONS 预检请求"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Observer观察器 | WS的博客日志</title>
+<title>OPTIONS 预检请求 | WS的博客日志</title>
   
 
 
@@ -142,7 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-              <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Observer%E8%A7%82%E5%AF%9F%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">Observer观察器</span></a></li></ol></div>
+              <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-OPTIONS-%E9%A2%84%E6%A3%80%E8%AF%B7%E6%B1%82%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">什么是 OPTIONS 预检请求？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%AA%E4%BA%9B%E8%AF%B7%E6%B1%82%E4%BC%9A%E8%A7%A6%E5%8F%91%E9%A2%84%E6%A3%80%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">哪些请求会触发预检？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OPTIONS-%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B%E7%AE%80%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">OPTIONS 请求流程简析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OPTIONS-%E8%AF%B7%E6%B1%82%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">4.</span> <span class="nav-text">OPTIONS 请求的优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E7%82%B9%EF%BC%9A"><span class="nav-number">4.1.</span> <span class="nav-text">优点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9%EF%BC%9A"><span class="nav-number">4.2.</span> <span class="nav-text">缺点：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-CLI-%E4%B8%AD%E7%9A%84%E5%BC%80%E5%8F%91%E4%BB%A3%E7%90%86%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E9%A2%84%E6%A3%80%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">Vue CLI 中的开发代理如何影响预检？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-x2F-1-1-%E4%B8%8E-HTTP-x2F-2-%E5%AF%B9-CORS-%E9%A2%84%E6%A3%80%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">6.</span> <span class="nav-text">HTTP&#x2F;1.1 与 HTTP&#x2F;2 对 CORS 预检的影响</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%9C%BA%E6%99%AF%E5%BA%94%E7%94%A8"><span class="nav-number">7.</span> <span class="nav-text">常见场景应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BC%98%E5%8C%96%E9%A2%84%E6%A3%80%E8%AF%B7%E6%B1%82%EF%BC%9F"><span class="nav-number">8.</span> <span class="nav-text">如何优化预检请求？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">9.</span> <span class="nav-text">总结</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -237,7 +237,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/Observer%E8%A7%82%E5%AF%9F%E5%99%A8/">
+    <link itemprop="mainEntityOfPage" href="https://exploreoo.github.io/zh-CN/OPTIONS%E9%A2%84%E6%A3%80%E8%AF%B7%E6%B1%82%E8%AF%A6%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/LockScreen.jpg">
@@ -250,12 +250,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Observer观察器 | WS的博客日志">
+      <meta itemprop="name" content="OPTIONS 预检请求 | WS的博客日志">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Observer观察器
+          OPTIONS 预检请求
         </h1>
 
         <div class="post-meta-container">
@@ -266,7 +266,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-10-15 22:35:05" itemprop="dateCreated datePublished" datetime="2023-10-15T22:35:05+08:00">2023-10-15</time>
+      <time title="创建时间：2025-03-15 22:35:05" itemprop="dateCreated datePublished" datetime="2025-03-15T22:35:05+08:00">2025-03-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -294,36 +294,129 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h3 id="Observer观察器"><a href="#Observer观察器" class="headerlink" title="Observer观察器"></a>Observer观察器</h3><ul>
-<li><p><strong><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API">IntersectionObserver</a></strong></p>
-<p>​ 过去，相交检测通常要用到事件监听，并且需要频繁调用 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect"><code>Element.getBoundingClientRect()</code></a> 方法以获取相关元素的边界信息。事件监听和调用 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect"><code>Element.getBoundingClientRect()</code></a> 都是在主线程上运行，因此频繁触发、调用可能会造成性能问题。这种检测方法极其怪异且不优雅。</p>
-<p>​ Intersection Observer API 会注册一个回调函数，每当被监视的元素进入或者退出另外一个元素时 (或者 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Glossary/Viewport">viewport</a> )，或者两个元素的相交部分大小发生变化时，该回调方法会被触发执行。这样，我们网站的主线程不需要再为了监听元素相交而辛苦劳作，浏览器会自行优化元素相交管理。</p>
-<p>应用场景：</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="什么是-OPTIONS-预检请求？"><a href="#什么是-OPTIONS-预检请求？" class="headerlink" title="什么是 OPTIONS 预检请求？"></a>什么是 OPTIONS 预检请求？</h2><p>必须是<strong>跨域</strong>的场景下，当你通过浏览器发送一个请求时，为了保证<strong>跨域安全控制</strong>，浏览器不会立即发送该请求，而是<strong>自动先发起一个 <code>OPTIONS</code> 请求</strong>，询问目标服务器是否允许你真正的请求行为，这就是所谓的<strong>预检请求（preflight request）</strong>。</p>
+<p>另外，预检请求<strong>不会携带cookies</strong>，即使设置了<strong>withCredentials: true</strong>或者**credentials: ‘include’**。</p>
+<h2 id="哪些请求会触发预检？"><a href="#哪些请求会触发预检？" class="headerlink" title="哪些请求会触发预检？"></a>哪些请求会触发预检？</h2><p><strong>跨域</strong>场景的前提下，只要<strong>满足以下任一条件</strong>，就会触发预检请求：</p>
 <ul>
-<li>图片懒加载——当图片滚动到可见时才进行加载</li>
+<li>请求方法不是 <code>GET</code>、<code>POST</code> 或 <code>HEAD</code>（如：<code>PUT</code>、<code>DELETE</code>）</li>
+<li>使用了自定义请求头（如：<code>Authorization</code>、<code>X-Token</code>、<code>Content-Type: application/json</code>），也就是除以下这些之外的：<ul>
+<li><code>Accept</code></li>
+<li><code>Accept-Language</code></li>
+<li><code>Content-Language</code></li>
+<li><code>Content-Type</code>（仅限 <code>text/plain</code>、<code>multipart/form-data</code>、<code>application/x-www-form-urlencoded</code>）</li>
 </ul>
 </li>
-<li><p>内容无限滚动——也就是用户滚动到接近内容底部时直接加载更多，而无需用户操作翻页，给用户一种网页可以无限滚动的错觉</p>
+</ul>
+<span id="more"></span>
+
+<h2 id="OPTIONS-请求流程简析"><a href="#OPTIONS-请求流程简析" class="headerlink" title="OPTIONS 请求流程简析"></a>OPTIONS 请求流程简析</h2><p>请求发出前，浏览器会：</p>
+<ol>
+<li><p>向服务器发一个 <code>OPTIONS</code> 请求，头部中包含实际请求的信息（方法、请求头等）。</p>
+</li>
+<li><p>如果服务器返回了正确的 CORS 头（如 <code>Access-Control-Allow-*</code>），浏览器才会继续发实际请求。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Allow-Origin: https://example.com</span><br><span class="line">Access-Control-Allow-Methods: PUT, DELETE</span><br><span class="line">Access-Control-Allow-Headers: Authorization</span><br><span class="line">Access-Control-Allow-Credentials: true</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>否则，请求会被拦截，控制台报错。</p>
+</li>
+</ol>
+<h2 id="OPTIONS-请求的优缺点"><a href="#OPTIONS-请求的优缺点" class="headerlink" title="OPTIONS 请求的优缺点"></a>OPTIONS 请求的优缺点</h2><h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><ul>
+<li><strong>增强安全性</strong>：服务器有机会拒绝潜在危险的跨域请求。</li>
+<li><strong>标准化机制</strong>：跨浏览器一致，支持精细化跨域控制。</li>
+</ul>
+<h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><ul>
+<li><strong>增加性能开销</strong>：每次预检多了一次 HTTP 往返。</li>
+<li><strong>难以调试</strong>：很多开发者误以为接口被调用多次。</li>
+<li><strong>受限于浏览器控制</strong>：客户端无法完全规避。</li>
+</ul>
+<h2 id="Vue-CLI-中的开发代理如何影响预检？"><a href="#Vue-CLI-中的开发代理如何影响预检？" class="headerlink" title="Vue CLI 中的开发代理如何影响预检？"></a>Vue CLI 中的开发代理如何影响预检？</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue.config.js</span></span><br><span class="line"><span class="attr">devServer</span>: &#123;</span><br><span class="line">  <span class="attr">proxy</span>: &#123;</span><br><span class="line">    <span class="string">&#x27;/api&#x27;</span>: &#123;</span><br><span class="line">      <span class="attr">target</span>: <span class="string">&#x27;http://localhost:3000&#x27;</span>,</span><br><span class="line">      <span class="attr">changeOrigin</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">pathRewrite</span>: &#123; <span class="string">&#x27;^/api&#x27;</span>: <span class="string">&#x27;&#x27;</span> &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个配置让浏览器以为它是在本地请求本地接口，实际上是由 dev server 中转到后端。<strong>因为浏览器感知不到跨域行为，所以不会触发预检请求。</strong></p>
+<p><strong>一旦进入生产环境</strong>，前后端部署在不同源上，CORS 就生效，预检请求便真实发生。</p>
+<h2 id="HTTP-x2F-1-1-与-HTTP-x2F-2-对-CORS-预检的影响"><a href="#HTTP-x2F-1-1-与-HTTP-x2F-2-对-CORS-预检的影响" class="headerlink" title="HTTP&#x2F;1.1 与 HTTP&#x2F;2 对 CORS 预检的影响"></a>HTTP&#x2F;1.1 与 HTTP&#x2F;2 对 CORS 预检的影响</h2><p>虽然 OPTIONS 请求不是 HTTP 协议的专属特性（而是浏览器行为），但不同的协议版本会<strong>对其性能产生明显影响</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>HTTP&#x2F;1.1</th>
+<th>HTTP&#x2F;2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>请求连接数</td>
+<td>同域最多 6 条连接</td>
+<td>单连接多路复用，避免连接阻塞</td>
+</tr>
+<tr>
+<td>OPTIONS 等待</td>
+<td>请求顺序执行，预检阻塞主请求</td>
+<td>并发发起，预检不会阻塞主请求</td>
+</tr>
+<tr>
+<td>延迟表现</td>
+<td>预检和实际请求串行，延迟高</td>
+<td>并行传输，整体响应更快</td>
+</tr>
+<tr>
+<td>实践影响</td>
+<td>预检耗时更明显，尤其高频接口场景</td>
+<td>即使触发预检，用户感知也较小</td>
+</tr>
+</tbody></table>
+<h2 id="常见场景应用"><a href="#常见场景应用" class="headerlink" title="常见场景应用"></a>常见场景应用</h2><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>是否会触发预检？</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>POST + <code>Content-Type: application/json</code></td>
+<td>会</td>
+<td>非简单请求头</td>
+</tr>
+<tr>
+<td>GET 请求，无认证</td>
+<td>否</td>
+<td>简单请求</td>
+</tr>
+<tr>
+<td>使用 fetch + token</td>
+<td>会</td>
+<td>自定义头触发预检</td>
+</tr>
+<tr>
+<td>Vue CLI + devServer 代理</td>
+<td>否</td>
+<td>非跨域（由代理伪装）</td>
+</tr>
+<tr>
+<td>生产环境调用后端接口</td>
+<td>会</td>
+<td>跨域访问</td>
+</tr>
+</tbody></table>
+<h2 id="如何优化预检请求？"><a href="#如何优化预检请求？" class="headerlink" title="如何优化预检请求？"></a>如何优化预检请求？</h2><ol>
+<li><p><strong>尽量使用简单请求</strong>：</p>
 <ul>
-<li>检测广告的曝光情况——为了计算广告收益，需要知道广告元素的曝光情况</li>
-<li>在用户看见某个区域时执行任务或播放动画</li>
+<li>请求方法用 <code>GET</code> 或 <code>POST</code></li>
+<li>请求头避免使用 <code>application/json</code>，可用 <code>x-www-form-urlencoded</code> 替代</li>
 </ul>
 </li>
-<li><p><strong><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver">MutationObserver</a></strong></p>
-<p>监听一个普通 JS 对象的变化，我们会用 Object.defineProperty 或者 Proxy。</p>
-<p>监听元素属性和子节点变化，比如可以用来做去不掉的水印。MutationObserver 可以监听对元素的属性的修改、对它的子节点的增删改</p>
-</li>
-<li><p><strong>ResizeObserver</strong></p>
-<p>窗口我们可以用 addEventListener 监听 resize 事件。</p>
-<p>监听元素大小变化。使用 ResizeObserver 监听大小的改变，当 width、height 被修改时会触发回调</p>
-</li>
-<li><p><strong>PerformanceObserver</strong></p>
-<p>PerformanceObserver 用于监听记录 performance 数据的行为。一旦记录了就会触发回调，这样我们就可以在回调里把这些数据上报</p>
-</li>
-<li><p><strong>ReportingObserver</strong></p>
-<p>可以保证更全面的了解网页 app 的运行情况。ReportingObserver 可以监听过时的 api、浏览器干预等报告等的打印，在回调里上报，这些是错误监听无法监听到但对了解网页运行情况很有用的数据</p>
-</li>
+<li><p><strong>设置预检缓存</strong>：</p>
+<ul>
+<li>后端响应中添加 <code>Access-Control-Max-Age: 3600</code>，让浏览器缓存预检结果</li>
 </ul>
+</li>
+<li><p><strong>后端统一允许请求头&#x2F;方法</strong>：</p>
+<ul>
+<li>避免因为接口策略差异导致每个接口都触发预检</li>
+</ul>
+</li>
+<li><p><strong>使用代理在开发时屏蔽跨域</strong>（仅限开发时）</p>
+</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>预检请求是现代浏览器出于安全考虑而引入的机制。它本身是中立的，但在实际开发中会带来性能和复杂度的权衡。理解它的原理与触发机制后，我们不仅能正确调试跨域问题，也能在性能上做出有效优化。</p>
 
     </div>
 
@@ -344,13 +437,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/zh-CN/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%90%88%E9%9B%86/" rel="prev" title="移动端合集">
-                  <i class="fa fa-chevron-left"></i> 移动端合集
+                <a href="/zh-CN/CDN%E5%8A%A0%E9%80%9F/" rel="prev" title="前端 CDN 加速与 Fallback 策略全解析">
+                  <i class="fa fa-chevron-left"></i> 前端 CDN 加速与 Fallback 策略全解析
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/zh-CN/El-table%E8%B7%A8%E8%A1%8C%E5%88%97%E8%AE%BE%E8%AE%A1/" rel="next" title="El-table跨行列设计">
-                  El-table跨行列设计 <i class="fa fa-chevron-right"></i>
+                <a href="/zh-CN/PWA/" rel="next" title="Vue CLI + PWA 最佳实践">
+                  Vue CLI + PWA 最佳实践 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -486,7 +579,7 @@ darkmode.showWidget();
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"exploreoo","repo":"exploreoo.github.io","client_id":"Ov23liHNlcDBsZV2oXR4","client_secret":"48d9e04c96efd73c5756e2566791c80d6484bd39","admin_user":"exploreoo","distraction_free_mode":false,"proxy":"https://benevolent-fudge-eddfe7.netlify.app/github_access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"9a5764ed709a8d5d7b2838629c284bad"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"exploreoo","repo":"exploreoo.github.io","client_id":"Ov23liHNlcDBsZV2oXR4","client_secret":"48d9e04c96efd73c5756e2566791c80d6484bd39","admin_user":"exploreoo","distraction_free_mode":false,"proxy":"https://benevolent-fudge-eddfe7.netlify.app/github_access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"a0196125219ec17348b282acae20db09"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":120,"height":240},"mobile":{"show":true}});</script></body>
