@@ -1,0 +1,352 @@
+---
+title: 笔试题收录
+index: false
+icon: laptop-code
+category:
+  - Test
+---
+
+## 排序
+
+```javascript
+// 冒泡排序
+// 核心思想：不停的对数组进行两两比较，将较大（较小）的一项放在前面
+const BubbleSort = (arr) => {
+  if (arr.length <= 1) return arr;
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = 0; j < arr.length - 1 - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
+    }
+  }
+};
+// console.log(SelectSort([5, 3, 1, 43, 10, 23, 11]))
+
+// 选择排序
+// 核心思想：进入升序排列，保证序列起始值为最小值
+const SelectSort = (arr) => {
+  if (arr.length <= 1) return arr;
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = i + 1; j <= arr.length - 1; j++) {
+      if (arr[i] > arr[j]) {
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+    }
+  }
+  return arr;
+};
+
+// *快速排序
+// 核心思想：
+// 1.从序列中选择一个基准数（一般选择第一个数）。
+// 2.构建两个临时数组，比中间数小的放到左边，大的放到右边
+// 3.递归，对临时数组重复1-2；
+const QuickSort = (arr) => {
+  if (arr.length <= 1) return arr;
+
+  let base = arr.splice(0, 1)[0];
+  let left = [];
+  let right = [];
+  arr.forEach((item) => {
+    if (item < base) {
+      left.push(item);
+    } else {
+      right.push(item);
+    }
+  });
+  return QuickSort(left).concat(base, QuickSort(right));
+};
+
+// 插入排序
+// 核心思想：假定第一项已经排序了。接着， 它和第二项进行比较——第二项是应该待在原位还是插到第一项之前呢？
+// 这样，头两项就已正确 排序，接着和第三项比较（它是该插入到第一、第二还是第三的位置呢），以此类推
+const InsertSort = (arr) => {
+  if (arr.length <= 1) return arr;
+
+  for (let i = 1; i < arr.length; i++) {
+    let j = i;
+    let temp = arr[i];
+    //插入操作
+    while (j > 0 && arr[j - 1] > temp) {
+      arr[j] = arr[j - 1];
+      j--;
+    }
+    arr[j] = temp;
+  }
+  return arr;
+};
+
+// 希尔排序
+// 减少增量排序 插入排序的优化版 属于非稳定排序算法。复杂度未被证明，猜测为 O (N ^1.3)
+const ShellSort = (arr) => {
+  if (arr.length <= 1) return arr;
+
+  //获取增量
+  let gap = Math.floor(arr.length / 2);
+  //增量等于1 即为 插入排序 原始。 一定会将数组排好 这个时候结束循环
+  while (gap >= 1) {
+    //进行插入排序
+    for (let i = gap; i < arr.length; i++) {
+      let j = i;
+      let temp = arr[i];
+      while (j > gap - 1 && arr[j - gap] > temp) {
+        arr[j] = arr[j - gap];
+        j -= gap;
+      }
+      arr[j] = temp;
+    }
+    //缩小增量
+    gap = Math.floor(gap / 2);
+  }
+  return arr;
+};
+
+// 归并排序
+// 核心思想：采用分治法,首先将数组分成若干个子数组变成有序数组，再合并有序数组
+const MergeSort = (arr) => {
+  // 序列长度为1时退出
+  if (arr.length <= 1) return arr;
+
+  // 将序列分为两个子序列，这一块用到“分治法”中的“分割”
+  const middle = Math.floor(arr.length / 2);
+  const left = arr.slice(0, middle);
+  const right = arr.slice(middle);
+
+  // 递归，这一块用到“分治法”中的“集成（合并）”
+  return merge(MergeSort(left), MergeSort(right));
+};
+
+const merge = (left, right) => {
+  const result = [];
+
+  // 两个子序列进行比较，从小到大放入新的序列result中
+  while (left.length > 0 && right.length > 0) {
+    // 将较小的放入result,并改变left或者right的长度，灵活使用shift方法
+    if (left[0] < right[0]) {
+      result.push(left.shift());
+    } else {
+      result.push(right.shift());
+    }
+  }
+
+  // 先将小的元素放入result中，直到left或者right为空，剩余的一个数组肯定是大于result的有序序列，所以直接通过concat进行合并返回
+  return result.concat(left, right);
+};
+```
+
+<!-- more -->
+
+## 笔试题
+
+1. 对象引用赋值问题
+
+   ```javascript
+   function fun(demo) {
+     demo.name = "demo2";
+     demo = {
+       name: "new",
+       age: 18,
+     };
+     return demo;
+   }
+   const demo = {
+     name: "demo",
+     age: 20,
+   };
+
+   console.log(fun(demo)); //{ name: 'new', age: 18 }
+   console.log(demo); //{ name: 'demo2', age: 20 }
+   ```
+
+2. 实现flat方法
+
+   ```javascript
+   const flat = (arr = [1, [2, 3, [4, [5], 6]], [[7, 8], 9]], counts = 4) => {
+     return arr.reduce((prev, next) => {
+       return prev.concat(
+         counts > 1 && Array.isArray(next) ? flat(next, counts - 1) : next,
+       );
+     }, []);
+   };
+
+   console.log(flat([1, [2, 3, [4, [5], 6]], [[7, [8]], 9]], Infinity));
+   ```
+
+3. 函数柯里化
+
+   ```javascript
+   const curry = function (fun) {
+     if (typeof fun !== "function") throw new Error("this is not a function");
+     return function curried(...arg) {
+       // 参数足够则立即执行
+       if (arg.length >= fun.length) {
+         return fun.apply(this, arg);
+       } else {
+         return function (...arg2) {
+           // 递归获取剩余参数
+           return curried.apply(this, arg.concat(arg2));
+         };
+       }
+     };
+   };
+   ```
+
+4. 防抖，节流
+
+   ```javascript
+   // 前置防抖
+   function debounceLeading(fn, delay) {
+     let timer = null;
+     return function () {
+       // 如果没有定时器，说明可以立即执行
+       if (!timer) {
+         fn.apply(this, arguments);
+       }
+       // 不管是否执行，都清除之前的定时器
+       clearTimeout(timer);
+       // 设置新的定时器，delay 时间后重置状态
+       timer = setTimeout(() => {
+         timer = null; // 允许下一次立即执行
+       }, delay);
+     };
+   }
+
+   // 后置防抖
+   const debounce = function (fun, delay = 2000) {
+     let timer = null;
+     return function () {
+       clearTimeout(timer);
+       setTimeout(() => {
+         fun.apply(this, arguments);
+       }, delay);
+     };
+   };
+
+   // 前置+后置 增强版防抖
+   function debounceBoth(fn, delay) {
+     let timer = null;
+     let lastExecTime = 0;
+     return function () {
+       const now = Date.now();
+       const remaining = delay - (now - lastExecTime);
+
+       // 如果剩余时间 <=0，说明可以立即执行（前缘）
+       if (remaining <= 0) {
+         clearTimeout(timer);
+         fn.apply(this, arguments);
+         lastExecTime = now;
+       }
+       // 否则设置定时器（后缘）
+       else if (!timer) {
+         timer = setTimeout(() => {
+           fn.apply(this, arguments);
+           lastExecTime = Date.now();
+           timer = null;
+         }, remaining);
+       }
+     };
+   }
+
+   // 前置节流
+   const throttle1 = function (fun, delay = 2000) {
+     let lastTime = 0;
+     return function () {
+       let nowTime = Date.now();
+       if (nowTime - lastTime >= delay) {
+         fun.apply(this, arguments);
+         lastTime = nowTime;
+       }
+     };
+   };
+
+   // 后置节流
+   const throttle2 = function (fun, delay = 2000) {
+     let timer = null;
+     return function () {
+       if (timer) {
+         return;
+       }
+       timer = setTimeout(() => {
+         fun.apply(this, arguments);
+         timer = null;
+       }, delay);
+     };
+   };
+
+   // 前置+后置 增强版节流
+   const throttle3 = function (fun, delay = 2000) {
+     let lastTime = 0;
+     let timer = null;
+     return function () {
+       let nowTime = Date.now();
+       let remainingTime = delay - (nowTime - lastTime);
+
+       if (remainingTime <= 0 || remainingTime > delay) {
+         if (timer) {
+           clearTimeout(timer);
+           timer = null;
+         }
+         fun.apply(this, arguments);
+         lastTime = nowTime;
+       } else if (!timer) {
+         timer = setTimeout(() => {
+           fun.apply(this, arguments);
+           timer = null;
+           lastTime = Date.now();
+         }, remainingTime);
+       }
+     };
+   };
+   ```
+
+5. 深拷贝
+
+   ```javascript
+   const deepClone = function (obj) {
+     if (typeof obj !== "object" || obj === null) {
+       return obj;
+     }
+
+     if (obj instanceof Date) {
+       return new Date(obj);
+     }
+
+     if (obj instanceof RegExp) {
+       return new RegExp(obj);
+     }
+
+     if (obj instanceof Set) {
+       let cloneSet = new Set();
+       obj.forEach((item) => {
+         cloneSet.add(deepClone(item));
+       });
+       return cloneSet;
+     }
+
+     if (obj instanceof Map) {
+       let cloneMap = new Map();
+       obj.forEach((value, key) => {
+         cloneMap.set(key, deepClone(value));
+       });
+       return cloneMap;
+     }
+
+     if (Array.isArray(obj)) {
+       const copyArr = [];
+       for (let i = 0; i < obj.length; i++) {
+         copy[i] = deepClone(obj[i]);
+       }
+       return copyArr;
+     }
+
+     const copyObj = {};
+     for (const key in obj) {
+       if (obj.hasOwnProperty(key)) {
+         copyObj[key] = deepClone(obj[key]);
+       }
+     }
+   };
+   ```
