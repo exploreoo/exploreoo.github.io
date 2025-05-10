@@ -219,7 +219,7 @@ h6 {
   font-size: 0.875em;
 }
 p {
-  margin: 0 0 5px;
+  margin: 0 0 6px;
 }
 a {
   border-bottom: 1px solid #999;
@@ -2537,7 +2537,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #22d2e4;
+  background: #a8cd17;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2632,7 +2632,6 @@ header.header {
 }
 .posts-expand .post-header {
   padding-top: 20px;
-  margin-bottom: 30px !important;
 }
 body {
   line-height: 1.9;
@@ -2645,9 +2644,6 @@ body {
 }
 .main-inner {
   padding-top: 35px;
-}
-.posts-expand .post-header {
-  margin-bottom: 50px;
 }
 .post-body {
   font-size: 1em;
