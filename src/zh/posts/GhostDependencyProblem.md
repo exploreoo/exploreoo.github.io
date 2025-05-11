@@ -1,0 +1,142 @@
+---
+icon: pen-to-square
+date: 2025-01-12
+category:
+  - 前端
+tag:
+  - 工程化
+---
+
+# 幽灵依赖（Phantom Dependency）问题
+
+#### 前言
+
+幽灵依赖指的是：一个包可以使用它的祖先依赖（祖先的 node_modules 里的包），即使它自己没有在 package.json 中声明该依赖。
+
+这种情况通常发生在 npm 和 yarn 采用的**Hoisting（依赖提升）**策略下，导致某些包在 node_modules 目录中可访问，但其实不应该被访问。
+
+⸻
+
+#### 1. 为什么会产生幽灵依赖？
+
+在 npm 和 yarn 的默认 node_modules 结构中，依赖会被“提升”（hoist）到上级目录的 node_modules 中，以减少重复安装。例如：
+
+示例
+
+假设 package.json 这样定义：
+
+```
+{
+  "dependencies": {
+    "A": "^1.0.0",
+    "B": "^1.0.0"
+  }
+}
+```
+
+ • A 依赖于 lodash，但 B 并不依赖 lodash。
+​ • 在 npm 或 yarn 的 hoisting 机制下，可能会将 lodash 提升到 node_modules/ 目录的根目录。
+
+目录结构可能变成这样：
+
+```
+/node_modules
+  /A
+    /node_modules
+      lodash/  (← 可能不会出现在这里)
+  /B
+  lodash/  (← 被提升到顶层)
+```
+
+问题：
+
+B 本来没有依赖 lodash，但它仍然可以直接 require('lodash')，因为 lodash 被提升到了顶层 node_modules/，而 Node.js 依赖解析规则会向上查找。
+
+<!-- more -->
+
+⸻
+
+#### 2. 为什么幽灵依赖是个问题？
+
+幽灵依赖会导致代码在某些环境下正常运行，在其他环境下报错，因为依赖项的可用性取决于 node_modules 的结构，而 node_modules 的结构可能因不同的安装方式而变化。
+
+主要风险：
+• 代码不可预测：依赖项不是显式声明的，某些机器上可能找得到，某些机器上可能找不到。
+• 团队协作问题：如果一个开发者无意中使用了幽灵依赖，其他开发者（或 CI/CD 服务器）可能会遇到 Cannot find module 错误。
+• 升级破坏性：如果 A 更新了，可能 lodash 版本变化或者不再依赖 lodash，但 B 仍然错误地依赖它，导致 B 在某些情况下崩溃。
+
+⸻
+
+#### 3. 如何避免幽灵依赖？
+
+✅ 方法 1：使用 pnpm
+
+pnpm 不会 hoist 依赖，它使用严格的模块隔离，每个包只能访问自己的依赖。例如：
+
+```
+/node_modules
+  /.pnpm
+    A@1.0.0/
+      node_modules/
+        lodash/
+    B@1.0.0/
+```
+
+在 pnpm 下，B 无法 访问 lodash，如果 B 试图 require('lodash')，会报错，除非它自己显式安装 lodash。
+
+⸻
+
+✅ 方法 2：在 package.json 显式声明所有依赖
+
+如果一个包需要 lodash，就应该在自己的 package.json 中添加：
+
+```
+{
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
+```
+
+这样无论 npm 还是 yarn，都不会依赖提升带来的不确定性。
+
+⸻
+
+✅ 方法 3：使用 --strict-peer-deps 选项
+
+在 npm 或 yarn 里，你可以使用：
+
+```
+npm install --strict-peer-deps
+yarn install --check-files
+```
+
+这样如果有未声明的依赖，安装时就会报错。
+
+⸻
+
+✅ 方法 4：使用 npm dedupe 或 yarn-deduplicate
+
+如果怀疑 node_modules 里有幽灵依赖，可以运行：
+
+```
+npm dedupe
+```
+
+或者：
+
+```
+yarn-deduplicate
+```
+
+清理依赖，重新安装。
+
+⸻
+
+#### 结论
+
+ • npm 和 yarn 默认可能会导致幽灵依赖，因为它们的 hoisting 机制可能让某些包“意外可用”。
+​ • pnpm 不会出现幽灵依赖，因为它有严格的依赖隔离。
+​ • 避免幽灵依赖的最佳做法是显式声明所有依赖，并使用 --strict-peer-deps 或 pnpm 进行严格管理。
+
+如果团队经常遇到幽灵依赖问题，建议迁移到 pnpm。

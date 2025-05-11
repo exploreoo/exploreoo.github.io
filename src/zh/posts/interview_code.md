@@ -1,10 +1,13 @@
 ---
-title: 笔试题收录
-index: false
-icon: laptop-code
+icon: pen-to-square
+date: 2022-01-09
 category:
   - Test
+tag:
+  - 算法
 ---
+
+# 笔试题收录
 
 ## 排序
 
