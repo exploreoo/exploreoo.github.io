@@ -1,5 +1,7 @@
 import { defineUserConfig } from "vuepress";
 
+import { docsearchPlugin } from '@vuepress/plugin-docsearch'
+
 import theme from "./theme.js";
 
 export default defineUserConfig({
@@ -22,4 +24,12 @@ export default defineUserConfig({
 
   // Enable it with pwa
   // shouldPrefetch: false,
+
+  // plugins: [
+  //   docsearchPlugin({
+  //     appId: '你的appId',
+  //     apiKey: '你的apiKey',
+  //     indexName: '你的indexName',
+  //   }),
+  // ],
 });

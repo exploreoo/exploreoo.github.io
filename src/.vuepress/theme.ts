@@ -116,8 +116,14 @@ export default hopeTheme({
         hint: "Password: 1234",
         password: "1234",
       },
+      "/zh/posts/interview_code.html": {
+        hint: "",
+        password: "911",
+      },
     },
   },
+
+  navbarLayout: { start: ["Brand"], center: [], end: ["Links", "Language", "Repo", "Outlook", "Search"] },
 
   // enable it to preview all changes in time
   // hotReload: true,
