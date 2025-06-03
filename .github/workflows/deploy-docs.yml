@@ -36,6 +36,11 @@ jobs:
         run: |
           corepack enable
           pnpm install --frozen-lockfile
+        cache:
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          paths:
+            - ~/.pnpm-store
+            - node_modules/
 
       - name: Build Docs
         env:
