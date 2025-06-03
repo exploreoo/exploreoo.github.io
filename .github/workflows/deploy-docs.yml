@@ -16,8 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          GIT_SSL_NO_VERIFY: "true"  # 临时禁用 SSL 验证
-          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
           # if your docs needs submodules, uncomment the following line
           # submodules: true
@@ -25,7 +23,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 9
+          version: 8
 
 
       - name: Setup Node.js
