@@ -16,6 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          GIT_SSL_NO_VERIFY: "true"  # 临时禁用 SSL 验证
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
           # if your docs needs submodules, uncomment the following line
