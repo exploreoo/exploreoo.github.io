@@ -12,7 +12,7 @@ export default hopeTheme({
     email: "3351550900@qq.com",
   },
 
-  logo: "./public/logo.png",
+  logo: "/logo.png",
 
   repo: "vuepress-theme-hope/vuepress-theme-hope",
 
