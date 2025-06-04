@@ -35,6 +35,7 @@ jobs:
         run: |
           corepack enable
           pnpm install --frozen-lockfile
+          cache: pnpm
 
       - name: Build Docs
         env:
