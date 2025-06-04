@@ -4,15 +4,15 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://mister-hope.github.io",
+  hostname: "https://exploreoo.github.io/blog/",
 
   author: {
     name: "Mr.WS",
-    url: "https://mister-hope.com",
+    url: "https://exploreoo.github.io/blog/",
     email: "3351550900@qq.com",
   },
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "./public/logo.png",
 
   repo: "vuepress-theme-hope/vuepress-theme-hope",
 
