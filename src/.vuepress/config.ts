@@ -1,8 +1,7 @@
 import { defineUserConfig } from "vuepress";
-
-import { docsearchPlugin } from '@vuepress/plugin-docsearch'
-
 import theme from "./theme.js";
+import { docsearchPlugin } from '@vuepress/plugin-docsearch'
+import { commentPlugin } from '@vuepress/plugin-comment'
 
 export default defineUserConfig({
   base: "/",
@@ -25,11 +24,18 @@ export default defineUserConfig({
   // Enable it with pwa
   // shouldPrefetch: false,
 
-  // plugins: [
-  //   docsearchPlugin({
-  //     appId: '你的appId',
-  //     apiKey: '你的apiKey',
-  //     indexName: '你的indexName',
-  //   }),
-  // ],
+  plugins: [
+    // docsearchPlugin({
+    //   appId: '你的appId',
+    //   apiKey: '你的apiKey',
+    //   indexName: '你的indexName',
+    // }),
+    commentPlugin({
+      provider: 'Giscus',
+      repo: 'exploreoo/exploreoo.github.io',
+      repoId: 'R_kgDOO2SJWw',
+      category: 'General',
+      categoryId: 'DIC_kwDOO2SJW84CrEBx',
+    }),
+  ],
 });

@@ -10,12 +10,12 @@ export const zhNavbar = navbar([
   {
     text: "标签",
     icon: "book",
-    link: "/zh/tag/",
+    link: "/zh/tag/api/",
   },
   {
     text: "归档",
     icon: "book",
-    link: "/zh/demo/",
+    link: "/zh/posts/",
   },
   // {
   //   text: "博文",

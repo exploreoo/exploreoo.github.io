@@ -6,6 +6,7 @@ category:
 tag:
   - vue
   - PWA
+star: true
 ---
 
 # Vue CLI + PWA 最佳实践

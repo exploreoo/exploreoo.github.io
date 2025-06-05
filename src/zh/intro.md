@@ -5,4 +5,4 @@ cover: /assets/images/cover3.jpg
 
 # 介绍页
 
-将你的个人介绍和档案放置在此处。
+欢迎来到exploreoo的网络日志，有任何疑问请联系[3351550900@qq.com](mailto:3351550900@qq.com)。
