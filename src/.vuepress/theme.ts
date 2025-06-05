@@ -4,11 +4,11 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://exploreoo.github.io/blog/",
+  hostname: "https://exploreoo.github.io/",
 
   author: {
     name: "Mr.WS",
-    url: "https://exploreoo.github.io/blog/",
+    url: "https://exploreoo.github.io/",
     email: "3351550900@qq.com",
   },
 
