@@ -1,7 +1,7 @@
 [build]
   command = "pnpm install && pnpm run docs:build"
-  publish = ".vuepress/dist"
+  publish = "src/.vuepress/dist"
 
 [build.environment]
-  NODE_VERSION = "22"  # VuePress 2 推荐版本
+  NODE_VERSION = "18"  # VuePress 2 推荐版本
   PNPM_VERSION = "9"   # 根据项目选择
