@@ -25,11 +25,11 @@ export default defineUserConfig({
   // shouldPrefetch: false,
 
   plugins: [
-    // docsearchPlugin({
-    //   appId: '你的appId',
-    //   apiKey: '你的apiKey',
-    //   indexName: '你的indexName',
-    // }),
+    docsearchPlugin({
+      appId: 'IHBMSXPS86',
+      apiKey: 'b924a6afea5f1afeb0d1645eb20535ca',
+      indexName: 'exploreooio',
+    }),
     commentPlugin({
       provider: 'Giscus',
       repo: 'exploreoo/exploreoo.github.io',
