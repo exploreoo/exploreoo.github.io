@@ -27,7 +27,7 @@ export default defineUserConfig({
   plugins: [
     docsearchPlugin({
       appId: 'IHBMSXPS86',
-      apiKey: 'b924a6afea5f1afeb0d1645eb20535ca',
+      apiKey: 'ef8c6a7d640d8995506193777f336d70',
       indexName: 'exploreooio',
     }),
     commentPlugin({
