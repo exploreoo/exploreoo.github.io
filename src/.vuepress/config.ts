@@ -2,6 +2,9 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 import { commentPlugin } from '@vuepress/plugin-comment'
+import dotenv from 'dotenv'
+
+dotenv.config({ path: '.env.local' })
 
 export default defineUserConfig({
   base: "/",
@@ -26,9 +29,9 @@ export default defineUserConfig({
 
   plugins: [
     docsearchPlugin({
-      appId: 'IHBMSXPS86',
-      apiKey: 'ef8c6a7d640d8995506193777f336d70',
-      indexName: 'exploreooio',
+      appId: process.env.VUE_APP_ALGOLIA_APP_ID,
+      apiKey: process.env.VUE_APP_ALGOLIA_API_KEY,
+      indexName: process.env.VUE_APP_ALGOLIA_INDEX_NAME,
     }),
     commentPlugin({
       provider: 'Giscus',

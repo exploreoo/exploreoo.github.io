@@ -31,6 +31,12 @@ jobs:
       - name: 安装依赖
         run: pnpm install --frozen-lockfile
 
+      - name: Create env file
+        run: |
+          echo "VUE_APP_ALGOLIA_APP_ID=${{ secrets.ALGOLIA_APP_ID }}" > .env.local
+          echo "VUE_APP_ALGOLIA_API_KEY=${{ secrets.ALGOLIA_API_KEY }}" >> .env.local
+          echo "VUE_APP_ALGOLIA_INDEX_NAME=${{ secrets.ALGOLIA_INDEX_NAME }}" >> .env.local
+
       - name: 构建 VuePress 站点
         run: pnpm docs:build
 
