@@ -7,7 +7,7 @@ export default hopeTheme({
   hostname: "https://exploreoo.github.io/",
 
   author: {
-    name: "Mr.WS",
+    name: "Mr.ws",
     url: "https://exploreoo.github.io/",
     email: "3351550900@qq.com",
   },
@@ -17,6 +17,8 @@ export default hopeTheme({
   repo: "https://exploreoo.github.io/",
 
   docsDir: "src",
+
+  darkmode: "toggle",
 
   blog: {
     medias: {
@@ -66,7 +68,7 @@ export default hopeTheme({
       // sidebar
       sidebar: enSidebar,
 
-      footer: "Welcome to my weblog. Have a nice day!",
+      footer: "Welcome. Have a nice day!",
 
       displayFooter: true,
 
@@ -90,7 +92,7 @@ export default hopeTheme({
       // sidebar
       sidebar: zhSidebar,
 
-      footer: "Welcome to my weblog. Have a nice day!",
+      footer: "Welcome. Have a nice day!",
 
       displayFooter: true,
 
@@ -112,11 +114,11 @@ export default hopeTheme({
         hint: "Password: 1234",
         password: "1234",
       },
-      "/zh/demo/encrypt.html": {
-        hint: "Password: 1234",
-        password: "1234",
+      "/zh/posts/合集/笔试题收录.html": {
+        hint: "",
+        password: "911",
       },
-      "/zh/posts/interview_code.html": {
+      "/zh/posts/cursor.html": {
         hint: "",
         password: "911",
       },

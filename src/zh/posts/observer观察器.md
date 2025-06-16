@@ -7,7 +7,7 @@ tag:
   - web-api
 ---
 
-# Observer观察器
+# Observer API
 
 - **[IntersectionObserver](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API)**
 

@@ -7,7 +7,7 @@ tag:
   - api
 ---
 
-# 页面卸载监听（Page Visibility API）
+# 页面卸载监听
 
 #### 前言
 

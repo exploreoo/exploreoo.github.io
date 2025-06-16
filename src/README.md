@@ -4,8 +4,9 @@ layout: Blog
 icon: house
 title: Blog Home
 heroImage: /assets/icon/logo.png
-heroText: The name of your blog
-tagline: You can put your slogan here
+bgImage: /assets/images/th4.jpg
+heroText: 
+tagline: 
 heroFullScreen: true
 projects:
   - icon: folder-open
@@ -38,7 +39,7 @@ projects:
     desc: Detailed description of this custom item
     link: https://link.to.your.friend
 
-footer: customize your footer text
+footer: 
 ---
 
 This is a blog home page demo.

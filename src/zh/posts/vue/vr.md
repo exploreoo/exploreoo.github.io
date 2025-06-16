@@ -8,7 +8,7 @@ tag:
   - React
 ---
 
-# Vue vs React：全面对比与技术选型指南
+# Vue vs React
 
 ## 前言
 

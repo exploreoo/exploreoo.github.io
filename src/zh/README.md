@@ -3,8 +3,8 @@ home: true
 layout: Blog
 icon: house
 title: 博客主页
-heroImage: /assets/icon/sun.png
-bgImage: /assets/images/1.jpg
+heroImage: /assets/icon/logo.png
+bgImage: /assets/images/th4.jpg
 heroText: 
 heroFullScreen: true
 tagline: 
@@ -39,7 +39,7 @@ tagline:
 #     desc: 自定义详细介绍
 #     link: https://你的自定义链接
 
-footer: Welcome to my weblog. Have a nice day!
+footer: 
 ---
 
 <!-- 这是一个博客主页的案例。

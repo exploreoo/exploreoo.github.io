@@ -8,7 +8,7 @@ tag:
   - SSR
 ---
 
-# vue SSR服务端渲染
+# SSR
 
 ## 引言
 

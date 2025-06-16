@@ -7,7 +7,7 @@ tag:
   - json
 ---
 
-# JSON（JavaScript Object Notation）
+# JSON
 
 JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，因其简洁、易读、易于解析的特点，在前后端数据交互、API 设计、配置文件等领域广泛应用。下面是使用 JSON 传输数据的优缺点：
 

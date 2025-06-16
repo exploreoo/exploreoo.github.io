@@ -1,10 +1,10 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
-import { docsearchPlugin } from '@vuepress/plugin-docsearch'
-import { commentPlugin } from '@vuepress/plugin-comment'
-import dotenv from 'dotenv'
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+import { commentPlugin } from "@vuepress/plugin-comment";
+import dotenv from "dotenv";
 
-dotenv.config({ path: '.env.local' })
+dotenv.config({ path: ".env.local" });
 
 export default defineUserConfig({
   base: "/",
@@ -34,11 +34,11 @@ export default defineUserConfig({
       indexName: process.env.VUE_APP_ALGOLIA_INDEX_NAME,
     }),
     commentPlugin({
-      provider: 'Giscus',
-      repo: 'exploreoo/exploreoo.github.io',
-      repoId: 'R_kgDOO2SJWw',
-      category: 'General',
-      categoryId: 'DIC_kwDOO2SJW84CrEBx',
+      provider: "Giscus",
+      repo: "exploreoo/exploreoo.github.io",
+      repoId: "R_kgDOO2SJWw",
+      category: "General",
+      categoryId: "DIC_kwDOO2SJW84CrEBx",
     }),
   ],
 });

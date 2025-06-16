@@ -7,7 +7,7 @@ tag:
   - SSE
 ---
 
-# Server-Sent Events（SSE）
+# SSE
 
 # 前言
 
