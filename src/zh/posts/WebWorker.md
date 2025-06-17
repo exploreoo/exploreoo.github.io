@@ -8,7 +8,7 @@ tag:
   - api
 ---
 
-# WebWorker Hook
+# WebWorker
 
 代码示例
 
