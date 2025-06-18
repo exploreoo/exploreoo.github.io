@@ -8,7 +8,7 @@ tag:
   - js
 ---
 
-# Untils工具合集
+# Untils
 
 ##### 全排列算法
 
