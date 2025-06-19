@@ -7,7 +7,7 @@ tag:
   - js
 ---
 
-# Proxy
+# Proxy中的this
 
 ## Proxy并不是透明代理
 
@@ -58,6 +58,7 @@ console.log(proxy.name); // undefined - this指向改变导致无法获取值
 ### 2. 内置对象的特殊问题
 
 ```javascript
+//以Date类型为例
 const date = new Date();
 const proxy = new Proxy(date, {});
 
@@ -99,7 +100,7 @@ proxy.foo; // 输出 true
 
 
 
-## 为什么proxy中需要reflect？
+## 为什么Proxy中需要Reflect？
 
 ### 1. 原型链中的属性访问
 
@@ -168,7 +169,7 @@ console.log(proxy.secret);
     - 当 getter 中访问 `this._secret` 时，会再次触发 Proxy 的 `get` trap
     - 抛出错误，符合私有属性保护的设计意图
 
-### 总结
+### 结论
 
 1. **保持操作完整性**：
     - 维护完整的原型链和属性访问链
@@ -187,7 +188,7 @@ console.log(proxy.secret);
 
 ## 最佳实践
 
-### 1. 使用 Reflect 正确传递 receiver
+### 1. 使用 Reflect 正确传递 receiver，保持一致性
 
 ```javascript
 const handler = {
@@ -197,7 +198,7 @@ const handler = {
 };
 ```
 
-### 2. 针对内置对象和集合做特殊处理（Set/Map）
+### 2. 针对内置对象做特殊处理（Set/Map/RegExp/Array等场景）
 
 ```javascript
 const setHandler = {
@@ -212,5 +213,68 @@ const setHandler = {
     return value;
   }
 };
+```
+
+### 3.观察者模式
+
+```javascript
+const mapQueue = new Map();
+
+const observe = (key, callback) => {
+  if (!mapQueue.has(key)) {
+    mapQueue.set(key, []);
+  }
+  mapQueue.get(key).push(callback);
+};
+const unobserve = (key, callback) => {
+  if (mapQueue.has(key)) {
+    mapQueue.get(key).splice(mapQueue.get(key).indexOf(callback), 1);
+  }
+};
+const observable = (obj) => {
+  return new Proxy(obj, {
+    set(target, prop, value) {
+      const result = Reflect.set(target, prop, value);
+      if (mapQueue.has(prop)) {
+        mapQueue.get(prop).forEach((callback) => callback());
+      }
+      return result;
+    },
+  });
+};
+
+const obj = observable({
+  name: "John",
+  age: 20,
+});
+
+observe("name", () => {
+  console.log(`name changed: ${obj.name}`);
+});
+observe("name", () => {
+  console.log(`function-2`);
+});
+const test = () => {
+  console.log(`unobserve function`);
+};
+observe("name", test);
+unobserve("name", test);
+
+obj.name = "Jane"; 
+// 输出
+// name changed: Jane
+// function-2        
+```
+
+### 4.客户端网络请求
+
+```javascript
+function createWebService(baseUrl) {
+  return new Proxy({}, {
+    get(target, propKey, receiver) {
+      return () => httpGet(baseUrl + '/' + propKey);
+    }
+  });
+}
 ```
 
