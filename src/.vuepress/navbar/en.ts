@@ -1,17 +1,17 @@
 import { navbar } from "vuepress-theme-hope";
 
 export const enNavbar = navbar([
-  "/",
-  "/demo/",
+  "/en/",
+  "/en/demo/",
   {
     text: "Posts",
     icon: "pen-to-square",
-    prefix: "/posts/",
+    prefix: "/en/posts/",
     children: [
       {
         text: "Apple",
         icon: "pen-to-square",
-        prefix: "apple/",
+        prefix: "/en/posts/apple/",
         children: [
           { text: "Apple1", icon: "pen-to-square", link: "1" },
           { text: "Apple2", icon: "pen-to-square", link: "2" },
@@ -22,7 +22,7 @@ export const enNavbar = navbar([
       {
         text: "Banana",
         icon: "pen-to-square",
-        prefix: "banana/",
+        prefix: "/en/posts/banana/",
         children: [
           {
             text: "Banana 1",
@@ -38,10 +38,10 @@ export const enNavbar = navbar([
           "4",
         ],
       },
-      { text: "Cherry", icon: "pen-to-square", link: "cherry" },
-      { text: "Dragon Fruit", icon: "pen-to-square", link: "dragonfruit" },
-      "tomato",
-      "strawberry",
+      { text: "Cherry", icon: "pen-to-square", link: "/en/posts/cherry" },
+      { text: "Dragon Fruit", icon: "pen-to-square", link: "/en/posts/dragonfruit" },
+      "/en/posts/tomato",
+      "/en/posts/strawberry",
     ],
   },
   // {

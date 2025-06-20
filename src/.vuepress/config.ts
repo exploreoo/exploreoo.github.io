@@ -10,12 +10,12 @@ export default defineUserConfig({
   base: "/",
 
   locales: {
-    "/": {
+    "/en/": {
       lang: "en-US",
       title: "WS's Blog",
       description: "",
     },
-    "/zh/": {
+    "/": {
       lang: "zh-CN",
       title: "WS的博客",
       description: "",

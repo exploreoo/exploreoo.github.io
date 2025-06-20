@@ -2,48 +2,48 @@
 home: true
 layout: Blog
 icon: house
-title: Blog Home
+title: 博客主页
 heroImage: /assets/icon/logo.png
 bgImage: /assets/images/th4.jpg
 heroText: 
-tagline: 
 heroFullScreen: true
-projects:
-  - icon: folder-open
-    name: project name
-    desc: project detailed description
-    link: https://your.project.link
+tagline: 
+# projects:
+#   - icon: folder-open
+#     name: 项目名称
+#     desc: 项目详细描述
+#     link: https://你的项目链接
 
-  - icon: link
-    name: link name
-    desc: link detailed description
-    link: https://link.address
+#   - icon: link
+#     name: 链接名称
+#     desc: 链接详细描述
+#     link: https://链接地址
 
-  - icon: book
-    name: book name
-    desc: Detailed description of the book
-    link: https://link.to.your.book
+#   - icon: book
+#     name: 书籍名称
+#     desc: 书籍详细描述
+#     link: https://你的书籍链接
 
-  - icon: newspaper
-    name: article name
-    desc: Detailed description of the article
-    link: https://link.to.your.article
+#   - icon: newspaper
+#     name: 文章名称
+#     desc: 文章详细描述
+#     link: https://你的文章链接
 
-  - icon: user-group
-    name: friend name
-    desc: Detailed description of friend
-    link: https://link.to.your.friend
+#   - icon: user-group
+#     name: 伙伴名称
+#     desc: 伙伴详细介绍
+#     link: https://你的伙伴链接
 
-  - icon: /logo.png
-    name: custom item
-    desc: Detailed description of this custom item
-    link: https://link.to.your.friend
+#   - icon: /logo.png
+#     name: 自定义项目
+#     desc: 自定义详细介绍
+#     link: https://你的自定义链接
 
 footer: 
 ---
 
-This is a blog home page demo.
+<!-- 这是一个博客主页的案例。
 
-To use this layout, you should set both `layout: Blog` and `home: true` in the page front matter.
+要使用此布局，你应该在页面前端设置 `layout: Blog` 和 `home: true`。
 
-For related configuration docs, please see [blog homepage](https://theme-hope.vuejs.press/guide/blog/home.html).
+相关配置文档请见 [博客主页](https://theme-hope.vuejs.press/zh/guide/blog/home.html)。 -->

@@ -18,6 +18,8 @@ tag:
 - 横向产品展示
 - 幻灯片演示
 
+<!-- more -->
+
 ## 核心 CSS 属性
 
 实现吸附滚动效果主要依赖以下三个 CSS 属性，完整配置见https://developer.mozilla.org/zh-CN/docs/Web/CSS/scroll-snap-type：

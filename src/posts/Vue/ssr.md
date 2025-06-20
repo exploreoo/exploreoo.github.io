@@ -15,6 +15,8 @@ tag:
 服务器端渲染（Server-Side Rendering，简称 SSR）是指在服务器端生成 HTML 内容并发送到客户端的过程。与客户端渲染（Client-Side Rendering，简称 CSR）相比，SSR 可以提高首屏加载速度和 SEO 友好性。
 如需更高级的集成框架可以使用nuxtjs
 
+<!-- more -->
+
 ### 文件结构
 
 ```
@@ -50,8 +52,6 @@ npm install @vue/server-renderer express webpack-manifest-plugin webpack-node-ex
 "webpack-manifest-plugin": "^5.0.0",
 "webpack-node-externals": "^3.0.0"
 ```
-
-<!-- more -->
 
 ### 2. 配置 Webpack
 

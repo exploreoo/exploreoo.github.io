@@ -5,6 +5,7 @@ category:
   - 前端
 tag:
   - js
+star: true
 ---
 
 # Proxy中的this

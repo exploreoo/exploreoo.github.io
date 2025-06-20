@@ -6,7 +6,6 @@ category:
 tag:
   - vue
   - PWA
-star: true
 ---
 
 # Vue CLI+PWA
@@ -20,6 +19,8 @@ PWA 是一种结合了 Web 与原生应用优势的前端技术架构，核心�
 - **性能优化**：资源按需缓存，提高加载速度
 - **自动更新**：通过 Service Worker 实现静默或提示式资源更新
 
+<!-- more -->
+
 ---
 
 ## 集成 Vue CLI PWA 插件
@@ -30,8 +31,6 @@ PWA 是一种结合了 Web 与原生应用优势的前端技术架构，核心�
 ```bash
 vue add pwa
 ```
-
-<!-- more -->
 
 ---
 

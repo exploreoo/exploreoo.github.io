@@ -1,26 +1,26 @@
 import { navbar } from "vuepress-theme-hope";
 
 export const zhNavbar = navbar([
-  "/zh/",
+  "/",
   {
     text: "分类",
     icon: "book",
-    link: "/zh/category/前端/",
+    link: "/category/前端/",
   },
   {
     text: "标签",
     icon: "book",
-    link: "/zh/tag/api/",
+    link: "/tag/api/",
   },
   {
     text: "归档",
     icon: "book",
-    link: "/zh/posts/",
+    link: "/posts/",
   },
   // {
   //   text: "博文",
   //   icon: "pen-to-square",
-  //   prefix: "/zh/posts/",
+  //   prefix: "/posts/",
   //   children: [
   //     {
   //       text: "苹果",
@@ -61,6 +61,6 @@ export const zhNavbar = navbar([
   // {
   //   text: "V2 文档",
   //   icon: "book",
-  //   link: "https://theme-hope.vuejs.press/zh/",
+  //   link: "https://theme-hope.vuejs.press/",
   // },
 ]);

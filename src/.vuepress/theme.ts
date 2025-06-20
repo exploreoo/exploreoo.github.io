@@ -4,7 +4,10 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
+  
+  lastUpdated: false,
   contributors: false,
+
   hostname: "https://exploreoo.github.io/",
 
   author: {
@@ -62,7 +65,7 @@ export default hopeTheme({
   },
 
   locales: {
-    "/": {
+    "/en/": {
       // navbar
       navbar: enNavbar,
 
@@ -75,7 +78,7 @@ export default hopeTheme({
 
       blog: {
         description: "A FrontEnd programmer",
-        intro: "/intro.html",
+        intro: "/en/intro.html",
       },
 
       metaLocales: {
@@ -86,7 +89,7 @@ export default hopeTheme({
     /**
      * Chinese locale config
      */
-    "/zh/": {
+    "/": {
       // navbar
       navbar: zhNavbar,
 
@@ -99,7 +102,7 @@ export default hopeTheme({
 
       blog: {
         description: "一个前端开发者",
-        intro: "/zh/intro.html",
+        intro: "/intro.html",
       },
 
       // page meta
@@ -111,15 +114,11 @@ export default hopeTheme({
 
   encrypt: {
     config: {
-      "/demo/encrypt.html": {
+      "/en/demo/encrypt.html": {
         hint: "Password: 1234",
         password: "1234",
       },
-      "/zh/posts/合集/笔试题收录.html": {
-        hint: "",
-        password: "911",
-      },
-      "/zh/posts/cursor.html": {
+      "/posts/合集/笔试题收录.html": {
         hint: "",
         password: "911",
       },
