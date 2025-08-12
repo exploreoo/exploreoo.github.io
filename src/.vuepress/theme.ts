@@ -118,7 +118,11 @@ export default hopeTheme({
         hint: "Password: 1234",
         password: "1234",
       },
-      "/posts/合集/笔试题收录.html": {
+      "/posts/合集/知识库.html": {
+        hint: "",
+        password: "911",
+      },
+      "/posts/合集/收录.html": {
         hint: "",
         password: "911",
       },
