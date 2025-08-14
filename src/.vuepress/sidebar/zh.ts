@@ -9,17 +9,9 @@ export const zhSidebar = sidebar({
       prefix: "posts/",
       children: [
         {
-          text: "Vue",
+          text: "框架",
           icon: "book",
-          prefix: "Vue/",
-          collapsible: true,
-          expanded: false,
-          children: "structure",
-        },
-        {
-          text: "React",
-          icon: "book",
-          prefix: "React/",
+          prefix: "框架/",
           collapsible: true,
           expanded: false,
           children: "structure",
@@ -33,9 +25,9 @@ export const zhSidebar = sidebar({
           children: "structure",
         },
         {
-          text: "网络请求",
+          text: "网络",
           icon: "book",
-          prefix: "网络请求/",
+          prefix: "网络/",
           collapsible: true,
           expanded: false,
           children: "structure",

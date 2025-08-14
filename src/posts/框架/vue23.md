@@ -7,7 +7,7 @@ tag:
   - VUe
 ---
 
-# vue2、Vue3对比
+# vue2/3升级策略
 
 ## 1. 性能提升
 
@@ -125,16 +125,16 @@ tag:
 
 Vue 3 中新增了一套用于 Composition API 的生命周期钩子名称，虽然与 Options API 保持一致功能，但使用上有细微差别：
 
-| Vue 2         | Vue 3 (Composition API) |
-| ------------- | ----------------------- |
-| beforeCreate  | **使用 setup()**        |
-| created       | **使用 setup()**        |
-| beforeMount   | onBeforeMount           |
-| mounted       | onMounted               |
-| beforeUpdate  | onBeforeUpdate          |
-| updated       | onUpdated               |
-| beforeDestroy | onBeforeUnmount         |
-| destroyed     | onUnmounted             |
+| Vue 2             | Vue 3 (Composition API) |
+| ----------------- | ----------------------- |
+| beforeCreate      | **使用 setup()**        |
+| created           | **使用 setup()**        |
+| beforeMount       | onBeforeMount           |
+| mounted           | onMounted               |
+| beforeUpdate      | onBeforeUpdate          |
+| updated           | onUpdated               |
+| **beforeDestroy** | onBeforeUnmount         |
+| **destroyed**     | onUnmounted             |
 
 ---
 
