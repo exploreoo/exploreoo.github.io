@@ -10,6 +10,70 @@ tag:
 
 # 工具
 
+##### HTML元素自动滚动
+
+```
+export class ScrollWrapper {
+    constructor(vm, { scrollDirection = 1, speed = 0.3, bodyWrapper } = {}) {
+        this.vm = vm;
+        this.scrollDirection = scrollDirection;
+        this.speed = speed;
+        this.bodyWrapper = bodyWrapper;
+        this.startScroll();
+    }
+
+    clearScroll() {
+        cancelAnimationFrame(this.animationId);
+    }
+
+    startScroll() {
+        this.vm.$nextTick(() => {
+            if (!this.bodyWrapper) return;
+            if (this.bodyWrapper.clientHeight >= this.bodyWrapper.scrollHeight) return;
+            this.bodyWrapper.addEventListener('mouseenter', () => this.pauseScroll());
+            this.bodyWrapper.addEventListener('mouseleave', () => this.resumeScroll());
+            this.bodyWrapper.scrollTop = 0;
+            this.scrollDirection = 1;
+            this.pos = 0;
+            this.clearScroll();
+            this.startScrollFn();
+        });
+    }
+
+    startScrollFn() {
+        const step = () => {
+            if (this.bodyWrapper && !this.isPaused) {
+                this.pos += this.speed * this.scrollDirection;
+                this.bodyWrapper.scrollTop = this.pos;
+                if (this.bodyWrapper.scrollTop + this.bodyWrapper.clientHeight >= this.bodyWrapper.scrollHeight - 1) {
+                    this.scrollDirection = -1;
+                }
+                if (this.bodyWrapper.scrollTop <= 0) {
+                    this.scrollDirection = 1;
+                }
+            }
+            this.animationId = requestAnimationFrame(step);
+        };
+        this.animationId = requestAnimationFrame(step);
+    }
+
+    pauseScroll() {
+        this.isPaused = true;
+    }
+
+    resumeScroll() {
+        this.isPaused = false;
+    }
+}
+
+```
+
+```
+this.bodyWrapper.scrollTop = this.pos;
+```
+
+此处由于HTMLElement取值scrollTop会取整，为了保证浮点数滚动，所以声明pos过渡
+
 ##### 全排列算法
 
 ```javascript
