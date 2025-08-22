@@ -30,6 +30,7 @@ export class ScrollWrapper {
         this.vm.$nextTick(() => {
             if (!this.bodyWrapper) return;
             if (this.bodyWrapper.clientHeight >= this.bodyWrapper.scrollHeight) return;
+            this.bodyWrapper.addEventListener('scroll', () => this.scroll());
             this.bodyWrapper.addEventListener('mouseenter', () => this.pauseScroll());
             this.bodyWrapper.addEventListener('mouseleave', () => this.resumeScroll());
             this.bodyWrapper.scrollTop = 0;
@@ -63,6 +64,12 @@ export class ScrollWrapper {
 
     resumeScroll() {
         this.isPaused = false;
+    }
+
+    scroll() {
+        if (this.isPaused) {
+            this.pos = this.bodyWrapper.scrollTop;
+        }
     }
 }
 
