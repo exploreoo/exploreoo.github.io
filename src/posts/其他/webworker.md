@@ -1,12 +1,11 @@
 ---
-icon: pen-to-square
+icon: file-contract
 date: 2024-10-17
 category:
   - 前端
 tag:
   - js
-  - api
-
+  - 多线程
 ---
 
 # worker

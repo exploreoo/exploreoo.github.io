@@ -4,17 +4,17 @@ export const zhNavbar = navbar([
   "/",
   {
     text: "分类",
-    icon: "book",
+    icon: "folder-minus",
     link: "/category/前端/",
   },
   {
     text: "标签",
-    icon: "book",
+    icon: "tags",
     link: "/tag/api/",
   },
   {
     text: "归档",
-    icon: "book",
+    icon: "file-contract",
     link: "/posts/",
   },
   // {

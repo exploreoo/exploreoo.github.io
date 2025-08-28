@@ -1,28 +1,29 @@
 ---
 home: true
 layout: Blog
-icon: house
+icon: rocket
 title: 博客主页
 heroImage: /assets/icon/logo.png
 bgImage: /assets/images/th4.jpg
 heroText: 
 heroFullScreen: true
-tagline: 
-# projects:
-#   - icon: folder-open
-#     name: 项目名称
-#     desc: 项目详细描述
-#     link: https://你的项目链接
+tagline: Reliable and transparent programs are usually not in the interest of the programmers
 
-#   - icon: link
-#     name: 链接名称
-#     desc: 链接详细描述
-#     link: https://链接地址
+projects:
+  - icon: hammer
+    name: 常用工具库
+    desc: devtool
+    link: https://devtool.tech/
 
-#   - icon: book
-#     name: 书籍名称
-#     desc: 书籍详细描述
-#     link: https://你的书籍链接
+  - icon: link
+    name: 在线工具
+    desc: tool
+    link: https://tool.lu/
+
+  - icon: chart-simple
+    name: 图表设计
+    desc: chart
+    link: https://chartfromtext.com/floating-bar-chart
 
 #   - icon: newspaper
 #     name: 文章名称

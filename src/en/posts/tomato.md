@@ -1,6 +1,6 @@
 ---
 cover: /assets/images/cover2.jpg
-icon: pen-to-square
+icon: file-contract
 date: 2022-01-12
 category:
   - Vegetable

@@ -12,12 +12,12 @@ export default defineUserConfig({
   locales: {
     "/en/": {
       lang: "en-US",
-      title: "WS's Blog",
+      title: "WSPACE",
       description: "",
     },
     "/": {
       lang: "zh-CN",
-      title: "WS的博客",
+      title: "WSPACE",
       description: "",
     },
   },

@@ -72,12 +72,12 @@ export default hopeTheme({
       // sidebar
       sidebar: enSidebar,
 
-      footer: "Welcome. Have a nice day!",
+      footer: "have a nice day!",
 
       displayFooter: true,
 
       blog: {
-        description: "A FrontEnd programmer",
+        description: "A program developer",
         intro: "/en/intro.html",
       },
 
@@ -96,12 +96,12 @@ export default hopeTheme({
       // sidebar
       sidebar: zhSidebar,
 
-      footer: "Welcome. Have a nice day!",
+      footer: "have a nice day!",
 
       displayFooter: true,
 
       blog: {
-        description: "一个前端开发者",
+        description: "一个程序开发者",
         intro: "/intro.html",
       },
 

@@ -2,15 +2,15 @@ import { sidebar } from "vuepress-theme-hope";
 
 export const zhSidebar = sidebar({
   "/": [
-    "",
+    "intro",
     {
       text: "文章",
-      icon: "book",
+      icon: "signature",
       prefix: "posts/",
       children: [
         {
           text: "框架",
-          icon: "book",
+          icon: "folder-minus",
           prefix: "框架/",
           collapsible: true,
           expanded: false,
@@ -18,7 +18,7 @@ export const zhSidebar = sidebar({
         },
         {
           text: "合集",
-          icon: "book",
+          icon: "folder-minus",
           prefix: "合集/",
           collapsible: true,
           expanded: false,
@@ -26,7 +26,7 @@ export const zhSidebar = sidebar({
         },
         {
           text: "网络",
-          icon: "book",
+          icon: "folder-minus",
           prefix: "网络/",
           collapsible: true,
           expanded: false,
@@ -34,7 +34,7 @@ export const zhSidebar = sidebar({
         },
         {
           text: "性能优化",
-          icon: "book",
+          icon: "folder-minus",
           prefix: "性能优化/",
           collapsible: true,
           expanded: false,
@@ -42,7 +42,7 @@ export const zhSidebar = sidebar({
         },
         {
           text: "Demo",
-          icon: "book",
+          icon: "folder-minus",
           prefix: "Demo/",
           collapsible: true,
           expanded: false,
@@ -50,7 +50,7 @@ export const zhSidebar = sidebar({
         },
         {
           text: "其他",
-          icon: "book",
+          icon: "folder-minus",
           prefix: "其他/",
           collapsible: true,
           expanded: true,
@@ -58,6 +58,5 @@ export const zhSidebar = sidebar({
         },
       ],
     },
-    "intro",
   ],
 });

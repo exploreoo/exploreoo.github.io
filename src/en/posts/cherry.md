@@ -1,5 +1,5 @@
 ---
-icon: pen-to-square
+icon: file-contract
 date: 2022-01-09
 category:
   - Cherry
