@@ -3,9 +3,11 @@ icon: file-contract
 date: 2024-08-02
 category:
   - 前端
+  - vue
+  - React
 tag:
   - 框架
-  - VUe
+  - vue
   - React
 ---
 

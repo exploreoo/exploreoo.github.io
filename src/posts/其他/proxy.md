@@ -2,9 +2,10 @@
 icon: file-contract
 date: 2025-06-15
 category:
-  - 前端
+  - 前端 
+  - es6
 tag:
-  - js
+  - es6
 star: true
 ---
 

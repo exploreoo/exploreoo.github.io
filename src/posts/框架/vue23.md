@@ -3,8 +3,9 @@ icon: file-contract
 date: 2024-05-17
 category:
   - 前端
+  - vue
 tag:
-  - VUe
+  - vue
 ---
 
 # vue2/3升级策略

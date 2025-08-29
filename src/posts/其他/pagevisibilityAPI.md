@@ -4,7 +4,7 @@ date: 2025-02-15
 category:
   - 前端
 tag:
-  - api
+  - web-api
 ---
 
 # 页面卸载监听

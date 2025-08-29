@@ -2,10 +2,10 @@
 icon: file-contract
 date: 2024-06-02
 category:
-  - 前端
+  - 前端 
+  - Threejs
 tag:
   - Threejs
-  - WebGL
 ---
 
 # threeJs

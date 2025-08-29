@@ -18,7 +18,7 @@ export default hopeTheme({
 
   logo: "/logo.png",
 
-  repo: "https://exploreoo.github.io/",
+  repo: "https://github.com/exploreoo/exploreoo.github.io.git",
 
   docsDir: "src",
 
@@ -49,7 +49,7 @@ export default hopeTheme({
       QQ: "https://qm.qq.com/q/W09Nu9Pck4",
       // Qzone: "https://example.com",
       // Reddit: "https://example.com",
-      Rss: "https://example.com",
+      // Rss: "https://example.com",
       // Steam: "https://example.com",
       // Twitter: "https://example.com",
       // Wechat: "https://example.com",
@@ -129,7 +129,7 @@ export default hopeTheme({
     },
   },
 
-  navbarLayout: { start: ["Brand"], center: [], end: ["Links", "Language", "Repo", "Outlook", "Search"] },
+  navbarLayout: { start: ["Brand"], center: [], end: ["Links", "Search", "Outlook", "Language", "Repo"] },
 
   // enable it to preview all changes in time
   // hotReload: true,

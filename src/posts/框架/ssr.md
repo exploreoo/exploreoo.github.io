@@ -3,6 +3,7 @@ icon: file-contract
 date: 2024-12-01
 category:
   - 前端
+  - vue
 tag:
   - vue
   - SSR

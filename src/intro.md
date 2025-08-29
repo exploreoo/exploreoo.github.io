@@ -1,5 +1,5 @@
 ---
-icon: user-ninja
+icon: user-secret
 cover: /assets/images/th2.jpg
 ---
 

@@ -2,7 +2,7 @@
 home: true
 layout: Blog
 icon: rocket
-title: 博客主页
+title: 主页
 heroImage: /assets/icon/logo.png
 bgImage: /assets/images/th4.jpg
 heroText: 
@@ -10,7 +10,7 @@ heroFullScreen: true
 tagline: Reliable and transparent programs are usually not in the interest of the programmers
 
 projects:
-  - icon: hammer
+  - icon: screwdriver-wrench
     name: 常用工具库
     desc: devtool
     link: https://devtool.tech/
@@ -25,10 +25,10 @@ projects:
     desc: chart
     link: https://chartfromtext.com/floating-bar-chart
 
-#   - icon: newspaper
-#     name: 文章名称
-#     desc: 文章详细描述
-#     link: https://你的文章链接
+  - icon: icons
+    name: 3D-icon
+    desc: thiings
+    link: https://www.thiings.co/things
 
 #   - icon: user-group
 #     name: 伙伴名称

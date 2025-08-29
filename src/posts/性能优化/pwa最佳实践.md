@@ -3,9 +3,11 @@ icon: file-contract
 date: 2025-04-10
 category:
   - 前端
+  - 性能优化
 tag:
   - vue
   - PWA
+star: true
 ---
 
 # Vue CLI+PWA
