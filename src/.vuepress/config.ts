@@ -3,6 +3,9 @@ import theme from "./theme.js";
 import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import { commentPlugin } from "@vuepress/plugin-comment";
 import dotenv from "dotenv";
+import { getDirname, path } from "vuepress/utils";
+
+const __dirname = getDirname(import.meta.url);
 
 dotenv.config({ path: ".env.local" });
 
@@ -20,6 +23,10 @@ export default defineUserConfig({
       title: "WSPACE",
       description: "",
     },
+  },
+
+  alias: {
+    "@MyComponent": path.resolve(__dirname, "example/index.vue"),
   },
 
   theme,
