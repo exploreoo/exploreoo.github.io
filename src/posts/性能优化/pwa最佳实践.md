@@ -10,7 +10,7 @@ tag:
 star: true
 ---
 
-# Vue CLI+PWA
+# Vue+PWA
 
 ## 什么是 PWA（Progressive Web App 渐进式网络应用）
 

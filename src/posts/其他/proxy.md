@@ -6,10 +6,11 @@ category:
   - es6
 tag:
   - es6
+  - 代理
 star: true
 ---
 
-# Proxy中的this
+# Proxy解析
 
 ## Proxy并不是透明代理
 
