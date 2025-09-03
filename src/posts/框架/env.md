@@ -1,15 +1,14 @@
 ---
 icon: file-contract
-date: 2024-12-01
+date: 2025-05-01
 category:
   - 前端
 tag:
   - env
   - 工程化
-
 ---
 
-## 环境变量配置与实践全指南（全面解释 + 示例）
+# 环境变量配置
 
 > 适用场景：前端（Vite、Vue CLI/Webpack、CRA、Next.js、Nuxt）、Node.js 服务端、容器化（Docker/K8s）、CI/CD。涵盖 **构建时 vs 运行时**、**命名约定**、**优先级与加载顺序**、**安全与密钥管理**、**跨平台**、**类型校验** 等。
 
