@@ -1,0 +1,74 @@
+import{_ as a}from"./plugin-vue_export-helper-DlAUqK2U.js";import{c as i,b as s,a as e,f as l,o as p}from"./app-6tg6kd_l.js";const d={};function t(r,n){return p(),i("div",null,[n[0]||(n[0]=s("h1",{id:"css实现吸附滚动效果",tabindex:"-1"},[s("a",{class:"header-anchor",href:"#css实现吸附滚动效果"},[s("span",null,"CSS实现吸附滚动效果")])],-1)),n[1]||(n[1]=s("h2",{id:"什么是吸附滚动效果",tabindex:"-1"},[s("a",{class:"header-anchor",href:"#什么是吸附滚动效果"},[s("span",null,"什么是吸附滚动效果？")])],-1)),n[2]||(n[2]=s("p",null,'吸附滚动（Snap Scrolling）是指当用户滚动内容时，页面会自动"吸附"到预定义的停留点。这种效果常见于：',-1)),n[3]||(n[3]=s("ul",null,[s("li",null,"移动端全屏分页"),s("li",null,"图片画廊"),s("li",null,"横向产品展示"),s("li",null,"幻灯片演示")],-1)),e(" more "),n[4]||(n[4]=l(`<h2 id="核心-css-属性" tabindex="-1"><a class="header-anchor" href="#核心-css-属性"><span>核心 CSS 属性</span></a></h2><p>实现吸附滚动效果主要依赖以下三个 CSS 属性，完整配置见<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/scroll-snap-type%EF%BC%9A" target="_blank" rel="noopener noreferrer">https://developer.mozilla.org/zh-CN/docs/Web/CSS/scroll-snap-type：</a></p><h3 id="_1-scroll-snap-type" tabindex="-1"><a class="header-anchor" href="#_1-scroll-snap-type"><span>1. <code>scroll-snap-type</code></span></a></h3><p>定义滚动容器的捕捉行为：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>.container {</span></span>
+<span class="line"><span>  scroll-snap-type: y mandatory;</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul><li><code>y</code> 表示垂直方向滚动（<code>x</code> 表示水平方向）</li><li><code>mandatory</code> 表示必须停在吸附点（<code>proximity</code> 表示接近时吸附）</li></ul><h3 id="_2-scroll-snap-align" tabindex="-1"><a class="header-anchor" href="#_2-scroll-snap-align"><span>2. <code>scroll-snap-align</code></span></a></h3><p>定义子元素的吸附对齐位置：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>.item {</span></span>
+<span class="line"><span>  scroll-snap-align: start;</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可选值：<code>start</code>、<code>center</code>、<code>end</code></p><h3 id="_3-scroll-snap-stop" tabindex="-1"><a class="header-anchor" href="#_3-scroll-snap-stop"><span>3. <code>scroll-snap-stop</code></span></a></h3><p>控制是否必须在每个捕捉点停止：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>.item {</span></span>
+<span class="line"><span>  scroll-snap-stop: always;</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="完整实现代码" tabindex="-1"><a class="header-anchor" href="#完整实现代码"><span>完整实现代码</span></a></h2><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>&lt;!DOCTYPE html&gt;</span></span>
+<span class="line"><span>&lt;html lang=&quot;en&quot;&gt;</span></span>
+<span class="line"><span>&lt;head&gt;</span></span>
+<span class="line"><span>    &lt;meta charset=&quot;UTF-8&quot;&gt;</span></span>
+<span class="line"><span>    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span></span>
+<span class="line"><span>    &lt;title&gt;CSS 实现吸附滚动效果&lt;/title&gt;</span></span>
+<span class="line"><span>    &lt;style&gt;</span></span>
+<span class="line"><span>        body {</span></span>
+<span class="line"><span>            margin: 0;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        .container {</span></span>
+<span class="line"><span>            width: 100%;</span></span>
+<span class="line"><span>            height: 100vh;</span></span>
+<span class="line"><span>            overflow-y: scroll;</span></span>
+<span class="line"><span>            /* 核心 css */</span></span>
+<span class="line"><span>            scroll-snap-type: y mandatory;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        .item {</span></span>
+<span class="line"><span>            flex-shrink: 0;</span></span>
+<span class="line"><span>            width: 100%;</span></span>
+<span class="line"><span>            height: 100vh;</span></span>
+<span class="line"><span>            display: flex;</span></span>
+<span class="line"><span>            justify-content: center;</span></span>
+<span class="line"><span>            align-items: center;</span></span>
+<span class="line"><span>            font-size: 3em;</span></span>
+<span class="line"><span>            /* 核心 */</span></span>
+<span class="line"><span>            scroll-snap-align: start;</span></span>
+<span class="line"><span>            scroll-snap-stop: always;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        .item:nth-child(1) {</span></span>
+<span class="line"><span>            background-color: rgba(255, 0, 0, 0.518);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        .item:nth-child(2) {</span></span>
+<span class="line"><span>            background-color: rgba(0, 128, 0, 0.293);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        .item:nth-child(3) {</span></span>
+<span class="line"><span>            background-color: rgba(0, 0, 255, 0.397);</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    &lt;/style&gt;</span></span>
+<span class="line"><span>&lt;/head&gt;</span></span>
+<span class="line"><span>&lt;body&gt;</span></span>
+<span class="line"><span>    &lt;div class=&quot;container&quot;&gt;</span></span>
+<span class="line"><span>        &lt;div class=&quot;item&quot;&gt;1&lt;/div&gt;</span></span>
+<span class="line"><span>        &lt;div class=&quot;item&quot;&gt;2&lt;/div&gt;</span></span>
+<span class="line"><span>        &lt;div class=&quot;item&quot;&gt;3&lt;/div&gt;</span></span>
+<span class="line"><span>    &lt;/div&gt;</span></span>
+<span class="line"><span>&lt;/body&gt;</span></span>
+<span class="line"><span>&lt;/html&gt;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="进阶技巧" tabindex="-1"><a class="header-anchor" href="#进阶技巧"><span>进阶技巧</span></a></h2><ol><li><p><strong>部分高度吸附</strong>：<br> 如果不想全屏吸附，可以设置子元素为部分高度：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>.item {</span></span>
+<span class="line"><span>  height: 80vh;</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li><li><p><strong>水平滚动画廊</strong>：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>.gallery {</span></span>
+<span class="line"><span>  scroll-snap-type: x mandatory;</span></span>
+<span class="line"><span>  overflow-x: scroll;</span></span>
+<span class="line"><span>  display: flex;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>.slide {</span></span>
+<span class="line"><span>  scroll-snap-align: center;</span></span>
+<span class="line"><span>  min-width: 100vw;</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li><li><p><strong>边距控制</strong>：<br> 使用 <code>scroll-padding</code> 和 <code>scroll-margin</code> 调整吸附位置：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34;"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>.container {</span></span>
+<span class="line"><span>  scroll-padding: 20px;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>.item {</span></span>
+<span class="line"><span>  scroll-margin: 20px;</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li></ol><h2 id="浏览器兼容性" tabindex="-1"><a class="header-anchor" href="#浏览器兼容性"><span>浏览器兼容性</span></a></h2><p>大多数现代浏览器都支持 scroll-snap 属性：</p><ul><li>Chrome 69+</li><li>Firefox 68+</li><li>Safari 11+</li><li>Edge 79+</li></ul><p>对于不支持的浏览器，这些属性会被安全地忽略，回退到普通滚动行为。</p><h2 id="为什么选择-css-而非-javascript-实现" tabindex="-1"><a class="header-anchor" href="#为什么选择-css-而非-javascript-实现"><span>为什么选择 CSS 而非 JavaScript 实现？</span></a></h2><ol><li><strong>性能更好</strong>：浏览器原生支持，无脚本开销</li><li><strong>更流畅</strong>：与浏览器渲染引擎深度集成</li><li><strong>更简单</strong>：几行 CSS 即可实现复杂效果</li><li><strong>响应更快</strong>：不受 JavaScript 主线程阻塞影响</li></ol>`,23))])}const v=a(d,[["render",t]]),h=JSON.parse('{"path":"/posts/Demo/css%E6%BB%9A%E5%8A%A8%E5%90%B8%E9%99%84%E6%95%88%E6%9E%9C.html","title":"CSS实现吸附滚动效果","lang":"zh-CN","frontmatter":{"icon":"file-contract","date":"2024-11-09T00:00:00.000Z","category":["前端"],"tag":["css"],"description":"什么是吸附滚动效果？ 吸附滚动（Snap Scrolling）是指当用户滚动内容时，页面会自动\\"吸附\\"到预定义的停留点。这种效果常见于： 移动端全屏分页 图片画廊 横向产品展示 幻灯片演示","head":[["script",{"type":"application/ld+json"},"{\\"@context\\":\\"https://schema.org\\",\\"@type\\":\\"Article\\",\\"headline\\":\\"CSS实现吸附滚动效果\\",\\"image\\":[\\"\\"],\\"datePublished\\":\\"2024-11-09T00:00:00.000Z\\",\\"dateModified\\":\\"2025-08-28T09:19:21.000Z\\",\\"author\\":[{\\"@type\\":\\"Person\\",\\"name\\":\\"Mr.ws\\",\\"url\\":\\"https://exploreoo.github.io/\\",\\"email\\":\\"3351550900@qq.com\\"}]}"],["meta",{"property":"og:url","content":"https://exploreoo.github.io/posts/Demo/css%E6%BB%9A%E5%8A%A8%E5%90%B8%E9%99%84%E6%95%88%E6%9E%9C.html"}],["meta",{"property":"og:site_name","content":"WSPACE"}],["meta",{"property":"og:title","content":"CSS实现吸附滚动效果"}],["meta",{"property":"og:description","content":"什么是吸附滚动效果？ 吸附滚动（Snap Scrolling）是指当用户滚动内容时，页面会自动\\"吸附\\"到预定义的停留点。这种效果常见于： 移动端全屏分页 图片画廊 横向产品展示 幻灯片演示"}],["meta",{"property":"og:type","content":"article"}],["meta",{"property":"og:locale","content":"zh-CN"}],["meta",{"property":"og:updated_time","content":"2025-08-28T09:19:21.000Z"}],["meta",{"property":"article:tag","content":"css"}],["meta",{"property":"article:published_time","content":"2024-11-09T00:00:00.000Z"}],["meta",{"property":"article:modified_time","content":"2025-08-28T09:19:21.000Z"}]]},"git":{"createdTime":1750152263000,"updatedTime":1756372761000,"contributors":[{"name":"wangshuang70","username":"wangshuang70","email":"wangshuang70@meicloud.com","commits":3,"url":"https://github.com/wangshuang70"}]},"readingTime":{"minutes":1.98,"words":595},"filePathRelative":"posts/Demo/css滚动吸附效果.md","excerpt":"\\n<h2>什么是吸附滚动效果？</h2>\\n<p>吸附滚动（Snap Scrolling）是指当用户滚动内容时，页面会自动\\"吸附\\"到预定义的停留点。这种效果常见于：</p>\\n<ul>\\n<li>移动端全屏分页</li>\\n<li>图片画廊</li>\\n<li>横向产品展示</li>\\n<li>幻灯片演示</li>\\n</ul>\\n","autoDesc":true}');export{v as comp,h as data};
