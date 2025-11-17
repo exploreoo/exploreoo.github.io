@@ -7,7 +7,7 @@ heroImage: /assets/icon/logo.png
 bgImage: /assets/images/th4.jpg
 heroText: 
 heroFullScreen: true
-tagline: Reliable and transparent programs are usually not in the interest of the programmers
+tagline: Reliable And Transparent Programs Are Usually Not In The Interest Of The Programmers.
 
 projects:
   - icon: screwdriver-wrench

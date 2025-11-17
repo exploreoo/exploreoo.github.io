@@ -72,7 +72,7 @@ export default hopeTheme({
       // sidebar
       sidebar: enSidebar,
 
-      footer: "have a nice day!",
+      footer: "nice day!",
 
       displayFooter: true,
 
@@ -96,7 +96,7 @@ export default hopeTheme({
       // sidebar
       sidebar: zhSidebar,
 
-      footer: "have a nice day!",
+      footer: "nice day!",
 
       displayFooter: true,
 

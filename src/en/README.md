@@ -6,7 +6,7 @@ title: Blog Home
 heroImage: /assets/icon/logo.png
 bgImage: /assets/images/th4.jpg
 heroText: 
-tagline: Reliable and transparent programs often do not align with the interests of their designers
+tagline: Reliable And Transparent Programs Are Usually Not In The Interest Of The Programmers.
 heroFullScreen: true
 projects:
   - icon: folder-open
